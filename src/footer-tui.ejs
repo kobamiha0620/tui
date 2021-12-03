@@ -1,0 +1,18 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : 'true',
+  category : ['home'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:[]
+};
+%>
+<%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>

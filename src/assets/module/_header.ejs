@@ -1,0 +1,12 @@
+<% if(pageinit.shopify==='true'){%>
+<a href="{{ routes.cart_url }}" class="site-header__icon site-header__cart">
+  <div id="CartCount" class="site-header__cart-count{% if cart.item_count == 0 %} hide{% endif %} critical-hidden" data-cart-count-bubble>
+    <span data-cart-count>{{ cart.item_count }}</span>
+  </div>
+</a>
+<% }%>
+<header>
+  <div class="inner">
+  </div>
+  <!-- /.inner -->
+</header>

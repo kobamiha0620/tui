@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript">
+  var _ua = (function(u){
+    return {
+      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1)
+        || u.indexOf("ipad") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+        || u.indexOf("kindle") != -1
+        || u.indexOf("silk") != -1
+        || u.indexOf("playbook") != -1,
+      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+        || u.indexOf("iphone") != -1
+        || u.indexOf("ipod") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+        || u.indexOf("blackberry") != -1
+    }
+  })(window.navigator.userAgent.toLowerCase());
+  if(_ua.Mobile){
+  	document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
+  }else{
+  	document.write('<meta name="viewport" content="width=1280">');
+  }
+  </script>
+  
+  <title>tui</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta name="format-detection" content="telephone=no">
+  <script type="text/javascript">
+    if (window.MSInputMethodContext && document.documentMode) {
+      var scripts = document.getElementsByTagName('script')[0];
+      var polyfill = document.createElement("script");
+      polyfill.defer = true;
+      polyfill.src = "{{ 'ie11CustomProperties.min.js' | asset_url }}";
+
+      scripts.parentNode.insertBefore(polyfill, scripts);
+    }
+  </script>
+  <link rel="stylesheet" href="https://use.typekit.net/tfo5tsn.css">
+  
+  <link rel="stylesheet" type="text/css" media="all" href="assets/css/main.css">
+  
+  
+</head>
+
+<body>
+  <div id="loading"></div>
+  <div id="wrapper" class="home ">
+    <div id="clickBlocker"></div>
+
+
+
+<header>
+  <div class="inner">
+  </div>
+  <!-- /.inner -->
+</header>
+
+<div id="mainNav">
+  <div class="inner">
+  </div>
+  <!-- /.inner -->
+  <div class="closeArea"></div>
+  <!-- /.closeArea -->
+</div>
+<!-- /#mainNav -->
+
+
+<div id="outerMenu">
+  
+  <main role="main">
+    <div id="homeContainer">
+    </div>
+    <!-- /#homeContainer -->
+  </main>
+  
+  
+  <footer>
+</footer>
+
+  
+</div>
+<!-- /#outerMenu -->
+</div>
+<!-- /#wrapper -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="assets/js/master.js" type="text/javascript"></script>
+
+
+<script>
+  $(function() {
+    
+    
+    
+  });
+</script>
+
+
+
+</body>
+</html>
+

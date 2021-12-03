@@ -1,0 +1,542 @@
+@charset "utf-8";
+// vars
+@mixin clearfix {
+    clear: both;
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+///decorate
+@mixin underShadow{
+	@include box-shadow( 0 5px 5px -3px rgba($black, 0.1));
+}
+
+@mixin topShadow{
+	@include box-shadow( 0 8px 12px -8px rgba($black, 0.8));
+}
+
+@mixin basicShadow{
+	@include box-shadow(rgba(0, 0, 0, 0.2) 0px 0px 6px 3px);
+}
+
+///outLineo
+@mixin contentWrap($base-width:$content-width){
+	position:relative;
+	//width:100%;
+	//max-width:$content-width;
+  max-width: $base-width;
+  //width: $content-num-base/$design-num*100vw;
+  margin: 0 auto;
+  //padding: 0 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@mixin contentWrap2{
+	position:relative;
+	//width:100%;
+	//max-width:$content-width;
+  max-width: $content-width2;
+  //width: $content-num-base/$design-num*100vw;
+  margin: 0 auto;
+  //padding: 0 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@mixin setTbl{
+	display:table;
+	width:100%;
+	table-layout:fixed;
+	>*{
+		display:table-cell;
+		vertical-align:middle;
+		text-align:left;
+	}
+}
+
+@mixin basicLink{
+	color:$link-color;
+	text-decoration:none;
+	&:hover{
+		text-decoration:underline;
+		color:$hover-color;
+	}
+	&.ex:before{
+		font-family: 'FontAwesome';
+		content:"\f08e";
+		padding:0 4px;
+		text-decoration:none!important;
+	}
+}
+
+@mixin btnsetting{
+  outline: 0;
+  @include appearance(none);
+  cursor: pointer;
+  border: none;
+  @include box-shadow(none);
+}
+//////////////////////
+@mixin dotted($color:rgba(#000, 1.0), $stripe: 1, $spacing: 4, $height:1){
+	background-image:(linear-gradient(left, color-stops($color, $color ($stripe/($stripe+$spacing))*100%, transparent ($stripe/($stripe+$spacing))*100%, transparent 100%)));
+	background-size: ($stripe+$spacing)*1px ($stripe+$spacing)*1px;
+	height: $height*1px;
+	border: none;
+}
+//////////////////////
+@mixin dotbox($color:$black,$stripe: 3, $spacing: 5, $height: 1){
+  position: relative;
+  &::before{
+    @include transition(.3s);
+    content: "";
+    background-image: linear-gradient(to right, $color, $color $stripe*1px, transparent $stripe*1px, transparent ($stripe+$spacing)*1px),
+    linear-gradient(to right, $color, $color $stripe*1px, transparent $stripe*1px, transparent ($stripe+$spacing)*1px),
+    linear-gradient(to bottom, $color, $color $stripe*1px, transparent $stripe*1px, transparent ($stripe+$spacing)*1px),
+    linear-gradient(to bottom, $color, $color $stripe*1px, transparent $stripe*1px, transparent ($stripe+$spacing)*1px);
+    background-size: ($stripe+$spacing)*1px $height*1px, ($stripe+$spacing)*1px $height*1px, $height*1px ($stripe+$spacing)*1px, $height*1px ($stripe+$spacing)*1px;
+    background-position: left top, left bottom, left top, right top;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+//////////////////////
+@mixin box{
+	@include box-sizing(border-box);
+}
+//////////////////////
+@mixin iconFont{
+	font-family: "myfont";
+}
+//////////////////////
+@mixin killSpace{
+	letter-spacing: -.4em;
+	>*{
+		display:inline-block;
+		letter-spacing: normal;
+	}
+}
+//////////////////////
+@mixin inputStyle_01{
+	@include appearance(none);
+	margin: 0;
+	border: none;
+  border-radius: 0px;
+	outline: none;
+	@include fz_vw(32);
+	line-height: 1.6em;
+	padding-left: 10/375*100vw;
+	padding-right: 10/375*100vw;
+	@media screen and (min-width: $break-point-middle) {
+		font-size:1.8rem;
+    padding-left: 10px;
+    padding-right: 10px;
+	}
+	border:1px solid $key-gray2;
+	color:$text-color!important;
+	min-height:3em;
+	@include box;
+	width:100%;
+	//background-color:#FCFCFC;
+  background-color: $white;
+  @include transition(.2s);
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type="number"]{
+    -moz-appearance:textfield;
+  }
+  &.err{
+    //border: 1px solid $err-color;
+    background-color: $white;
+  	background-color:$err-color;
+  }
+	&:focus{
+  	background-color:$white;
+		border:1px solid $key-color;
+	}
+	/* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
+	&:placeholder-shown {
+		color:$key-gray2;
+	}
+
+	/* Google Chrome, Safari, Opera 15+, Android, iOS */
+	&::-webkit-input-placeholder {
+		color:$key-gray2;
+	}
+
+	/* Firefox 18- */
+	&:-moz-placeholder {
+		color:$key-gray2;
+	}
+
+	/* Firefox 19+ */
+	&::-moz-placeholder {
+		color:$key-gray2;
+	}
+
+	/* IE 10+ */
+	&:-ms-input-placeholder {
+		color:$key-gray2;
+	}
+}
+
+//////////////////////
+@mixin lineOver{
+  color: $text-color;
+  &:after{
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: $key-black;
+    width: 0;
+    @include transition(.3s ease-in-out);
+  }
+  &:hover{
+    @include opacity(.8);
+  }
+  &:hover:after{
+	@media screen and (min-width: $break-point-middle) {
+    width: 100%;
+	}
+  }
+  &.current{
+    cursor: default;
+    pointer-events: none;
+    &:after{
+      width: 100%;
+      @include opacity(.8);
+    }
+  }
+}
+
+/////////////////////
+@mixin contentMax{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/////////////////////
+@mixin over_01($color:$black){
+  position: relative;
+  padding-bottom: 3px;
+  &:before{
+    content: '';
+    height: 1px;
+    width: 0%;
+    //background-color: $hover-color;
+    bottom: 0;
+    position: absolute;
+    @include transition(.3s);
+    background-color: $color;
+  }
+  @media screen and (min-width: $break-point-middle) {
+  &:hover:before{
+    width: 100%;
+  }
+  }
+}
+/////////////////////
+@mixin over_02($color:$black,$pos:0px){
+  position: relative;
+  &:before{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: $color;
+    bottom: $pos;
+    position: absolute;
+    @include transform(translateX(0%));
+  }
+  @media screen and (min-width: $break-point-middle) {
+  &:hover:before{
+    animation:linemove_01 0.8s cubic-bezier(0.58, 0.3, 0.005, 1) 0s 1;
+  }
+  }
+}
+/////////////////////
+@mixin over_03($color:$white){
+  position: relative;
+  &:before{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: $color;
+    bottom: 0;
+    position: absolute;
+    @include transition($ease_01);
+    @include scale(0);
+    @include transform-origin(50%,50%);
+    //@include transform(translateX(-100%));
+  }
+  @media screen and (min-width: $break-point-middle) {
+  &:hover:before{
+    @include scale(1);
+  }
+  }
+}
+/////////////////////
+@mixin over_04($color:$white){
+  position: relative;
+  &:after{
+    content: '';
+    height: 2px;
+    background-color: $color;
+    position: absolute;
+    width: 0%;
+    top: -webkit-calc(50% - 1px);
+    top: calc(50% - 1px);
+    left: 0;
+    @include transition($ease_01);
+  }
+  &.current::after{
+    width: 100%;
+  }
+  @media screen and (min-width: $break-point-middle) {
+  &:hover:after{
+    width: 100%;
+  }
+  }
+}
+/////////////////////
+@mixin over_05{
+  position: relative;
+  padding-bottom: 1px;
+  &:before{
+    content: '';
+    height: 1px;
+    width: 0%;
+    background-color: $key-black;
+    bottom: 0;
+    position: absolute;
+    @include transition(.3s);
+  }
+  @media screen and (min-width: $break-point-middle) {
+  &:hover:before{
+    width: 100%;
+  }
+  }
+}
+//////////////////////
+@mixin maskFade_01{
+  position: relative;
+  left: -100%;
+  @include transition(1.3s);
+  .active &{
+    left: 0;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $white;
+    @include transition(.7s);
+    @include scale(1,1);
+    @include transform-origin(100%,0%);
+    .active &{
+      @include scale(0,1);
+      @include transition-delay(.7s);
+    }
+  }
+}
+//////////////////////
+@mixin maskFade_02{
+  >*{
+    overflow: hidden;
+    position: relative;
+    left: -100%;
+    @include transition(1.3s);
+  }
+  >*>*:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $white;
+    @include transition(.7s);
+    @include scale(1,1);
+    @include transform-origin(100%,0%);
+    .active &{
+    }
+  }
+  &.active{
+    >*{
+      left: 0;
+    }
+    >*>*:after{
+      @include scale(0,1);
+      @include transition-delay(.7s);
+    }
+  }
+}
+//////////////////////
+@mixin tagit{
+  .ui-widget-content{
+    @include border-radius(6px);
+    border:1px solid #E2E2E2;
+  }
+  ul.tagit{
+    padding: 12px 200px 12px 24px;
+    //overflow: auto;
+    //white-space: nowrap;
+  }
+  ul.tagit input[type=text]{
+    border: none;
+  }
+  ul.tagit li{
+    //display: inline-block;
+    //float: none;
+  }
+  ul.tagit li input{
+    min-width: 20em;
+    font-size: 1.6rem;
+  }
+  ul.tagit li.tagit-choice-editable{
+    padding-right: 30px;
+  }
+  ul.tagit li.tagit-choice .tagit-close{
+    right: .5em;
+  }
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background-color: $key-blue2;
+    background-image: none;
+    color: $white;
+    border: none;
+  }
+  .ui-icon-close{
+    background-image: none;
+    text-indent: 0;
+    &:before{
+      content: '';
+      @include iconFont;
+      content: "\E004";
+      color: $white;
+      font-size: 1.4rem;
+      line-height: 1em;
+    }
+  }
+  .tagit-label{
+    font-size: 1.6rem;
+  }
+}
+//////////////////////
+@mixin resetTbl{
+  table{
+    display: table;
+  }
+  tbody{
+    display: table-row-group;
+  }
+  thead{
+    display: table-header-group;
+  }
+  tr{
+    display: table-row;
+  }
+  th,td{
+    display: table-cell;
+  }
+}
+///////////////////////
+@mixin imgset{
+  max-width: none;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  @media all and (-ms-high-contrast: none) {
+    width: auto;
+  }
+}
+///////////////////////
+@mixin kvshadow{
+  @include filter(drop-shadow(0px 0px 10px rgba(18,126,180,.7)));
+}
+///////////////////////
+@mixin shadowStyle_01{
+  @include box-shadow(0px 0px 20px -6px rgba(18,126,172,.8));
+}
+///////////////////////
+@mixin bgRatio{
+  &.style1x{
+    display: block;
+  }
+  &.style2x,&.style3x{
+    display: none;
+  }
+  @media screen and (-webkit-device-pixel-ratio: 2) {
+    &.style2x{
+      display: block;
+    }
+    &.style1x,&.style3x{
+      display: none;
+    }
+  }
+  @media screen and (-webkit-device-pixel-ratio: 3) {
+    &.style3x{
+      display: block;
+    }
+    &.style1x,&.style2x{
+      display: none;
+    }
+  }
+  @media screen and (min-width: $break-point-middle) {
+    &.spElem{
+      display: none;
+    }
+  }
+}
+//////////////////////
+@mixin fontEn{
+  font-family: ff-cocon-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+//////////////////////
+@mixin baseSpPad{
+  padding-left: 40/$design-num-sp*100vw;
+  padding-right: 40/$design-num-sp*100vw;
+}
+//////////////////////
+@function get_keycolor($alpha:1){
+  $setC:rgba(53, 123, 94, $alpha);
+  @return $setC;
+}
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport:$design-num-sp){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+////
+@function get_vwpc($size, $viewport:$design-num){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vwpc($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vwpc($font_size);
+}
+//////////////////////

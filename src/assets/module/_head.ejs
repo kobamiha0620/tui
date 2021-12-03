@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#"<% if(pageinit.shopify==='true'){%> lang="{{ request.locale.iso_code }}<% }%>>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript">
+  var _ua = (function(u){
+    return {
+      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1)
+        || u.indexOf("ipad") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+        || u.indexOf("kindle") != -1
+        || u.indexOf("silk") != -1
+        || u.indexOf("playbook") != -1,
+      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+        || u.indexOf("iphone") != -1
+        || u.indexOf("ipod") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+        || u.indexOf("blackberry") != -1
+    }
+  })(window.navigator.userAgent.toLowerCase());
+  if(_ua.Mobile){
+  	document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
+  }else{
+  	document.write('<meta name="viewport" content="width=1280">');
+  }
+  </script>
+  <% if(pageinit.shopify==='true'){%>
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+
+  {%- if canonical_url != blank  -%}
+    <link rel="canonical" href="{{ canonical_url }}">
+  {%- endif -%}
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+  {%- capture seo_title -%}
+    {%- if request.page_type == 'search' and search.performed == true -%}
+      {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+    {%- else -%}
+      {{ page_title }}
+    {%- endif -%}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- assign escaped_page_title = page_title | escape -%}
+    {%- unless escaped_page_title contains shop.name -%}
+      &ndash; {{ shop.name }}
+    {%- endunless -%}
+  {%- endcapture -%}
+  <title>{{ seo_title | strip }}</title>
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {% include 'social-meta-tags' %}
+  {% include 'css-variables' %}
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  <% } else {%>
+  <title><% if(pageinit.title){ %><%= pageinit.title %> | <% } %>tui</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= pageinit.path %>assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= pageinit.path %>assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= pageinit.path %>assets/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="<%= pageinit.path %>assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <% }%>
+
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta name="format-detection" content="telephone=no">
+  <script type="text/javascript">
+    if (window.MSInputMethodContext && document.documentMode) {
+      var scripts = document.getElementsByTagName('script')[0];
+      var polyfill = document.createElement("script");
+      polyfill.defer = true;
+      polyfill.src = "{{ 'ie11CustomProperties.min.js' | asset_url }}";
+
+      scripts.parentNode.insertBefore(polyfill, scripts);
+    }
+  </script>
+  <link rel="stylesheet" href="https://use.typekit.net/tfo5tsn.css">
+  <% if(pageinit.shopify==='true'){%>
+  <link rel="stylesheet" type="text/css" media="all" href="{{ 'main.css' | asset_url }}">
+  <% } else {%>
+  <link rel="stylesheet" type="text/css" media="all" href="<%= pageinit.path %>assets/css/main.css">
+  <% }%>
+  <% if(pageinit.css){
+   pageinit.css.forEach(function (value) {
+  %>
+  <link rel="stylesheet" href="<%= value %>">
+  <% })}; %>
+</head>
+<% if(pageinit.shopify!=='true'){%>
+<body>
+  <div id="loading"></div>
+  <div id="wrapper" class="<% if(pageinit.category){pageinit.category.forEach(function (value) {%><%= value %> <% })}; %>">
+    <div id="clickBlocker"></div>
+<% } else {%>
+<body class="template-{{ request.page_type | handle }}">
+  <div id="loading"></div>
+  <div id="wrapper" class="
+  {% if template == 'index' %}
+  home
+  {% elsif template == 'blog' %}
+  news
+  {% endif %}
+  {% if collection.handle == 'p1' %}p1 single-product
+  {% elsif collection.handle == 'p6' %}
+  p6 single-product
+  {% elsif collection.handle == 'p124' %}
+  p124 single-product
+  {% elsif collection.handle == 'giftbox' %}
+  giftbox single-product
+  {% elsif page.handle == 'about' %}
+  about
+  {% elsif page.handle == 'sctl' %}
+  sctl
+  {% endif %}
+  ">
+    <div id="clickBlocker"></div>
+<% }%>

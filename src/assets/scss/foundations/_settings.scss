@@ -1,0 +1,162 @@
+@charset "utf-8";
+// Color
+$black:#000;
+$white:#fff;
+
+///////////
+$key-black:#595757;
+$key-white:#f7f8f8;
+$key-white-rgba:rgba(247, 248, 248, 1);
+$key-color:$key-black;
+
+$key-gray1:#dcdddd;
+
+///////////////
+$text-color:$key-black;
+
+///////////
+//$err-color:#D22C25;
+$err-color:#ff0000;
+
+/////////
+//$text-color:$key-gray1;
+$link-color:$key-color;
+//$hover-color:#888888;
+//$hover-color:lighten($key-color,10%);
+//$hover-color:lighten($key-black,10%);
+//$hover-color:#E4DCCC;
+$hover-color:lighten($link-color,10%);
+$hover-color2:lighten($link-color,10%);
+//$hover-color:#66574F;
+//$hover-color:lighten($link-color,5%);
+//$hover-color:#EEE;
+//$hover-color:lighten($key-red,5%);
+//$active-color:#8CC63E;
+//$hover-color:$key-blue2;
+//$hover-color2:#f86767;
+$bg-color:$white;
+$bg-color-sp:$white;
+
+$facebook-color:#3b5998;
+$twitter-color:#55acee;
+$pocket-color:#d3505a;
+$google-color:#f63e28;
+$youtube-color:#ff1138;
+$line-color:#1dcd00;
+$instagram-color:#7c4a3b;
+$mail-color:#696867;
+//$pinterest-color:$key-color4;
+
+$base-font-size:14px;
+$base-line-height:1.8;
+//$base-font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+//$base-font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+//$font-go:"Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", 'Noto Sans JP',Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+//$fontEn: 'Roboto', sans-serif;
+$base-font-family:"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif,"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+//$base-font-family:"Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", 'Noto Sans JP',Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// $fontEn:"Helvetica Neue", "Helvetica", "Arial", "Meiryo", sans-serif;
+// $fontEn:Helvetica , "Helvetica Neue" , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+$fontMix:ff-cocon-pro , "Helvetica Neue" , "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif,"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+// $base-font-family:$fontMix;
+// $fontMin:"游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", 'Noto Serif JP', serif;
+//font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif;
+//$base-font-family:'Noto Sans JP',"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+//$fontEn: 'Roboto', sans-serif;
+//$base-font-family:"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+//$fontGo:YuGothic,'Yu Gothic',sans-serif,"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+//$fontGo:"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+//$base-font-family: 'Noto Serif JP',"ヒラギノ明朝 ProN W3", "Times New Roman", "游明朝", YuMincho,  "Hiragino Mincho ProN", "メイリオ", Meiryo, serif;
+//$base-font-family:'Open Sans', sans-serif;
+
+//$fontMin: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+//$base-font-family:$fontGo;
+//$fontEn: 'Roboto', sans-serif;
+//$fontEn2: 'Abel', sans-serif;
+
+//Layout
+$design-num:1280;
+$design-width:$design-num+px;
+$design-num-sp:375;
+$design-width-sp:$design-num-sp+px;
+$break-point-design:$design-num+1+px;
+
+$content-num-base:1024;
+$content-width-base:$content-num-base+px;
+$content-num:$content-num-base+80;
+$content-width:$content-num+px;
+
+$break-point-full:1001px;
+$break-point-large:1025px;
+//$break-point-middle:$content-width;
+//$break-point-middle:600px;
+$break-point-middle:769px;
+//$break-point-small:600px;
+$break-point-xsmall:480px-1;
+
+$wrapMrg:($design-num - $content-num-base)/2/$design-num*100vw;
+
+$kv:100;
+$kvH:$kv+vh;
+//$header-size:90px;
+$header-size:55px;
+//$header-size-sp:120/$design-num-sp*100vw;
+
+$side-num:250;
+$side-width:$side-num+px;
+$main-num:720;
+$main-width:$main-num+px;
+$single-num:720;
+$single-width:$single-num+px;
+
+$cont-num_01:850;
+$cont-width_01:$cont-num_01+px;
+//$wide-num:1140;
+//$wide-width:$wide-num+px;
+
+// Custom easing functions.
+// http://easings.net/ja
+
+////////////////////////////////////////////////
+$ease_01:.3s cubic-bezier(.55, .085, .68, .53);
+$ease_02:1s cubic-bezier(.55, .085, .68, .53);
+
+// sine
+$ease-in-sine:cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-out-sine:cubic-bezier(0.39, 0.575, 0.565, 1);
+$ease-in-out-sine:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+// quad
+$ease-in-quad:cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-out-quad:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-in-out-quad:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+// cubic
+$ease-in-cubic:cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out-cubic:cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in-out-cubic:cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// quart
+$ease-in-quart:cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-out-quart:cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-in-out-quart:cubic-bezier(0.77, 0, 0.175, 1);
+
+// quint
+$ease-in-quint:cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-out-quint:cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-out-quint:cubic-bezier(0.86, 0, 0.07, 1);
+
+// expo
+$ease-in-expo:cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-out-expo:cubic-bezier(0.19, 1, 0.22, 1);
+$ease-in-out-expo:cubic-bezier(1, 0, 0, 1);
+
+// circ
+$ease-in-circ:cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$ease-out-circ:cubic-bezier(0.075, 0.82, 0.165, 1);
+$ease-in-out-circ:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+// back
+$ease-in-back:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$ease-out-back:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$ease-in-out-back:cubic-bezier(0.68, -0.55, 0.265, 1.55);

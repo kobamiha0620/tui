@@ -1,0 +1,24 @@
+<div id="headLine">
+  <div class="inner">
+    <% if(pageinit.shopify!=='true'){%>
+    <article>
+      <a href="./news.html#news_01">
+        <h2>【ご注文商品の配送に関するお知らせ】</h2>
+        <span>詳細はこちら</span>
+      </a>
+    </article>
+    <% } else {%>
+    {%- assign blog = blogs['news'] -%}
+    {% for article in blog.articles  limit: 1 %}
+    <article>
+      <a href="{{ routes.root_url }}blogs/news/#news_{{ article.id }}">
+        <h2>【{{article.title}}】</h2>
+        <span>詳細はこちら</span>
+      </a>
+    </article>
+    {% endfor %}
+    <% }%>
+  </div>
+  <!-- /.inner -->
+</div>
+<!-- /#headLine -->

@@ -1,0 +1,17 @@
+<%# pc別出し shopify%>
+<picture>
+  <source
+    data-srcset="{{ '<%= imgInfo.path %>_pc.<%= imgInfo.type %>' | file_url }}"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="{{ '<%= imgInfo.path %>.<%= imgInfo.type %>' | file_url }}"
+  >
+  <img
+    data-src="{{ '<%= imgInfo.path %>.<%= imgInfo.type %>' | file_url }}"
+    alt="<%= imgInfo.alt %>"
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>

@@ -1,0 +1,14 @@
+<%# PC/SP共通画像 lazyloadなし%>
+<picture>
+  <source
+    srcset="assets/images/<%= imgInfo.path %>.webp"
+    type="image/webp"
+  >
+  <source
+    srcset="assets/images/<%= imgInfo.path %>.<%= imgInfo.type %>"
+  >
+  <img
+    src="assets/images/<%= imgInfo.path %>.<%= imgInfo.type %>"
+    alt="<%= imgInfo.alt %>"
+  >
+</picture>

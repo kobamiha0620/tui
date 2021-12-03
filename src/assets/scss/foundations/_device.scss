@@ -1,0 +1,57 @@
+@charset "utf-8";
+@media screen and (min-width: $break-point-middle) {
+.pc {
+	display: block!important;
+}
+
+.sp {
+	display: none!important;
+}
+
+.pcInline {
+	display:inline!important;
+}
+
+.spInline {
+	display: none!important;
+}
+
+.pcInlineB {
+	display:inline-block!important;
+}
+
+.spInlineB {
+	display: none!important;
+}
+
+.pcTd {
+	display:table-cell!important;
+}
+
+.spTd {
+	display: none!important;
+}
+
+.pcTbl {
+	display:table!important;
+}
+
+.spTbl {
+	display: none!important;
+}
+}
+
+@media screen and (min-width: $break-point-full) {
+}
+
+@media screen and (min-width: $break-point-large) {
+}
+
+@media screen and (min-width: 1190px) {
+}
+
+@media screen and (max-width: 320px) {
+.facebookWidget.sp{
+	width:100%;
+}
+}

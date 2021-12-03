@@ -1,0 +1,15 @@
+<%# SPのみ%>
+<picture>
+  <source
+    data-srcset="assets/images/<%= imgInfo.path %>_sp.webp 1x,assets/images/<%= imgInfo.path %>_sp@2x.webp 2x,assets/images/<%= imgInfo.path %>_sp@3x.webp 3x"
+    type="image/webp"
+  >
+  <source
+    data-srcset="assets/images/<%= imgInfo.path %>_sp.<%= imgInfo.type %> 1x,assets/images/<%= imgInfo.path %>_sp@2x.<%= imgInfo.type %> 2x,assets/images/<%= imgInfo.path %>_sp@3x.<%= imgInfo.type %> 3x"
+  >
+  <img
+    data-src="assets/images/<%= imgInfo.path %>_sp.<%= imgInfo.type %>"
+    alt="<%= imgInfo.alt %>"
+    class="lazyload"
+  >
+</picture>

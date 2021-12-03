@@ -1,0 +1,104 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['home'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<header>
+  <div class="inner"></div>
+  <!-- /.inner -->
+</header>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div id="mainVis">
+      <div class="galleryWidget">
+        <div class="inner">
+          <div class="item active">
+            <div class="imgSec">
+              <div class="inner">
+                <% var imgInfo = {path:'kv_img_01',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.imgStyle -->
+          </div>
+          <!-- /.item -->
+          <div class="item">
+            <div class="imgSec">
+              <div class="inner">
+                <% var imgInfo = {path:'kv_img_02',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.imgStyle -->
+          </div>
+          <!-- /.item -->
+          <div class="item">
+            <div class="imgSec">
+              <div class="inner">
+                <% var imgInfo = {path:'kv_img_03',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.imgStyle -->
+          </div>
+          <!-- /.item -->
+          <div class="mask">
+            <span><%- include('assets/module/_mask_01.ejs') %></span>
+            <span><%- include('assets/module/_mask_02.ejs') %></span>
+          </div>
+          <!-- /.mask -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.galleryWidget -->
+    </div>
+    <!-- /#mainVis -->
+    <div id="homeContainer">
+      <div class="dummy">
+        aaa
+      </div>
+      <!-- /.dummy -->
+    </div>
+    <!-- /#homeContainer -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>

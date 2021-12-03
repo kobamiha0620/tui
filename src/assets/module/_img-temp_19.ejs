@@ -1,0 +1,17 @@
+<%# pc別出し%>
+<picture>
+  <source
+    data-srcset="assets/images/<%= imgInfo.path %>_pc.<%= imgInfo.type %>"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/<%= imgInfo.path %>.<%= imgInfo.type %>"
+  >
+  <img
+    data-src="assets/images/<%= imgInfo.path %>.<%= imgInfo.type %>"
+    alt="<%= imgInfo.alt %>"
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>

@@ -1,0 +1,36 @@
+</div>
+<!-- /#wrapper -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<% if(pageinit.shopify==='true'){%>
+<script src="{{ 'master.js' | asset_url }}" type="text/javascript"></script>
+<% } else {%>
+<script src="<%= pageinit.path %>assets/js/master.js" type="text/javascript"></script>
+<% }%>
+<% if(pageinit.js){
+ pageinit.js.forEach(function (value) {
+%>
+<script src="<%= value %>"></script>
+<% })}; %>
+<script>
+  $(function() {
+    <% if(pageinit.jsfunc){
+     pageinit.jsfunc.forEach(function (value) {
+    %>
+    <%= value %>
+    <% })}; %>
+  });
+</script>
+<% if(pageinit.shopify==='true'){%>
+<script type="application/json" data-cart-routes>
+  {
+    "cartUrl": "{{ routes.cart_url }}",
+    "cartAddUrl": "{{ routes.cart_add_url }}",
+    "cartChangeUrl": "{{ routes.cart_change_url }}"
+  }
+</script>
+
+<ul hidden>
+  <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+  <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+</ul>
+<% }%>

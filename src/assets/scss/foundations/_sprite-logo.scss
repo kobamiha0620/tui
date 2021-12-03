@@ -1,0 +1,354 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$sprite-logo0001-name: 'sprite-logo0001';
+$sprite-logo0001-x: 0px;
+$sprite-logo0001-y: 0px;
+$sprite-logo0001-offset-x: 0px;
+$sprite-logo0001-offset-y: 0px;
+$sprite-logo0001-width: 900px;
+$sprite-logo0001-height: 501px;
+$sprite-logo0001-total-width: 22500px;
+$sprite-logo0001-total-height: 501px;
+$sprite-logo0001-image: '../images/sprite-logo.png';
+$sprite-logo0001: (0px, 0px, 0px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0001', );
+$sprite-logo0002-name: 'sprite-logo0002';
+$sprite-logo0002-x: 900px;
+$sprite-logo0002-y: 0px;
+$sprite-logo0002-offset-x: -900px;
+$sprite-logo0002-offset-y: 0px;
+$sprite-logo0002-width: 900px;
+$sprite-logo0002-height: 501px;
+$sprite-logo0002-total-width: 22500px;
+$sprite-logo0002-total-height: 501px;
+$sprite-logo0002-image: '../images/sprite-logo.png';
+$sprite-logo0002: (900px, 0px, -900px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0002', );
+$sprite-logo0003-name: 'sprite-logo0003';
+$sprite-logo0003-x: 1800px;
+$sprite-logo0003-y: 0px;
+$sprite-logo0003-offset-x: -1800px;
+$sprite-logo0003-offset-y: 0px;
+$sprite-logo0003-width: 900px;
+$sprite-logo0003-height: 501px;
+$sprite-logo0003-total-width: 22500px;
+$sprite-logo0003-total-height: 501px;
+$sprite-logo0003-image: '../images/sprite-logo.png';
+$sprite-logo0003: (1800px, 0px, -1800px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0003', );
+$sprite-logo0004-name: 'sprite-logo0004';
+$sprite-logo0004-x: 2700px;
+$sprite-logo0004-y: 0px;
+$sprite-logo0004-offset-x: -2700px;
+$sprite-logo0004-offset-y: 0px;
+$sprite-logo0004-width: 900px;
+$sprite-logo0004-height: 501px;
+$sprite-logo0004-total-width: 22500px;
+$sprite-logo0004-total-height: 501px;
+$sprite-logo0004-image: '../images/sprite-logo.png';
+$sprite-logo0004: (2700px, 0px, -2700px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0004', );
+$sprite-logo0005-name: 'sprite-logo0005';
+$sprite-logo0005-x: 3600px;
+$sprite-logo0005-y: 0px;
+$sprite-logo0005-offset-x: -3600px;
+$sprite-logo0005-offset-y: 0px;
+$sprite-logo0005-width: 900px;
+$sprite-logo0005-height: 501px;
+$sprite-logo0005-total-width: 22500px;
+$sprite-logo0005-total-height: 501px;
+$sprite-logo0005-image: '../images/sprite-logo.png';
+$sprite-logo0005: (3600px, 0px, -3600px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0005', );
+$sprite-logo0006-name: 'sprite-logo0006';
+$sprite-logo0006-x: 4500px;
+$sprite-logo0006-y: 0px;
+$sprite-logo0006-offset-x: -4500px;
+$sprite-logo0006-offset-y: 0px;
+$sprite-logo0006-width: 900px;
+$sprite-logo0006-height: 501px;
+$sprite-logo0006-total-width: 22500px;
+$sprite-logo0006-total-height: 501px;
+$sprite-logo0006-image: '../images/sprite-logo.png';
+$sprite-logo0006: (4500px, 0px, -4500px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0006', );
+$sprite-logo0007-name: 'sprite-logo0007';
+$sprite-logo0007-x: 5400px;
+$sprite-logo0007-y: 0px;
+$sprite-logo0007-offset-x: -5400px;
+$sprite-logo0007-offset-y: 0px;
+$sprite-logo0007-width: 900px;
+$sprite-logo0007-height: 501px;
+$sprite-logo0007-total-width: 22500px;
+$sprite-logo0007-total-height: 501px;
+$sprite-logo0007-image: '../images/sprite-logo.png';
+$sprite-logo0007: (5400px, 0px, -5400px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0007', );
+$sprite-logo0008-name: 'sprite-logo0008';
+$sprite-logo0008-x: 6300px;
+$sprite-logo0008-y: 0px;
+$sprite-logo0008-offset-x: -6300px;
+$sprite-logo0008-offset-y: 0px;
+$sprite-logo0008-width: 900px;
+$sprite-logo0008-height: 501px;
+$sprite-logo0008-total-width: 22500px;
+$sprite-logo0008-total-height: 501px;
+$sprite-logo0008-image: '../images/sprite-logo.png';
+$sprite-logo0008: (6300px, 0px, -6300px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0008', );
+$sprite-logo0009-name: 'sprite-logo0009';
+$sprite-logo0009-x: 7200px;
+$sprite-logo0009-y: 0px;
+$sprite-logo0009-offset-x: -7200px;
+$sprite-logo0009-offset-y: 0px;
+$sprite-logo0009-width: 900px;
+$sprite-logo0009-height: 501px;
+$sprite-logo0009-total-width: 22500px;
+$sprite-logo0009-total-height: 501px;
+$sprite-logo0009-image: '../images/sprite-logo.png';
+$sprite-logo0009: (7200px, 0px, -7200px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0009', );
+$sprite-logo0010-name: 'sprite-logo0010';
+$sprite-logo0010-x: 8100px;
+$sprite-logo0010-y: 0px;
+$sprite-logo0010-offset-x: -8100px;
+$sprite-logo0010-offset-y: 0px;
+$sprite-logo0010-width: 900px;
+$sprite-logo0010-height: 501px;
+$sprite-logo0010-total-width: 22500px;
+$sprite-logo0010-total-height: 501px;
+$sprite-logo0010-image: '../images/sprite-logo.png';
+$sprite-logo0010: (8100px, 0px, -8100px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0010', );
+$sprite-logo0011-name: 'sprite-logo0011';
+$sprite-logo0011-x: 9000px;
+$sprite-logo0011-y: 0px;
+$sprite-logo0011-offset-x: -9000px;
+$sprite-logo0011-offset-y: 0px;
+$sprite-logo0011-width: 900px;
+$sprite-logo0011-height: 501px;
+$sprite-logo0011-total-width: 22500px;
+$sprite-logo0011-total-height: 501px;
+$sprite-logo0011-image: '../images/sprite-logo.png';
+$sprite-logo0011: (9000px, 0px, -9000px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0011', );
+$sprite-logo0012-name: 'sprite-logo0012';
+$sprite-logo0012-x: 9900px;
+$sprite-logo0012-y: 0px;
+$sprite-logo0012-offset-x: -9900px;
+$sprite-logo0012-offset-y: 0px;
+$sprite-logo0012-width: 900px;
+$sprite-logo0012-height: 501px;
+$sprite-logo0012-total-width: 22500px;
+$sprite-logo0012-total-height: 501px;
+$sprite-logo0012-image: '../images/sprite-logo.png';
+$sprite-logo0012: (9900px, 0px, -9900px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0012', );
+$sprite-logo0013-name: 'sprite-logo0013';
+$sprite-logo0013-x: 10800px;
+$sprite-logo0013-y: 0px;
+$sprite-logo0013-offset-x: -10800px;
+$sprite-logo0013-offset-y: 0px;
+$sprite-logo0013-width: 900px;
+$sprite-logo0013-height: 501px;
+$sprite-logo0013-total-width: 22500px;
+$sprite-logo0013-total-height: 501px;
+$sprite-logo0013-image: '../images/sprite-logo.png';
+$sprite-logo0013: (10800px, 0px, -10800px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0013', );
+$sprite-logo0014-name: 'sprite-logo0014';
+$sprite-logo0014-x: 11700px;
+$sprite-logo0014-y: 0px;
+$sprite-logo0014-offset-x: -11700px;
+$sprite-logo0014-offset-y: 0px;
+$sprite-logo0014-width: 900px;
+$sprite-logo0014-height: 501px;
+$sprite-logo0014-total-width: 22500px;
+$sprite-logo0014-total-height: 501px;
+$sprite-logo0014-image: '../images/sprite-logo.png';
+$sprite-logo0014: (11700px, 0px, -11700px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0014', );
+$sprite-logo0015-name: 'sprite-logo0015';
+$sprite-logo0015-x: 12600px;
+$sprite-logo0015-y: 0px;
+$sprite-logo0015-offset-x: -12600px;
+$sprite-logo0015-offset-y: 0px;
+$sprite-logo0015-width: 900px;
+$sprite-logo0015-height: 501px;
+$sprite-logo0015-total-width: 22500px;
+$sprite-logo0015-total-height: 501px;
+$sprite-logo0015-image: '../images/sprite-logo.png';
+$sprite-logo0015: (12600px, 0px, -12600px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0015', );
+$sprite-logo0016-name: 'sprite-logo0016';
+$sprite-logo0016-x: 13500px;
+$sprite-logo0016-y: 0px;
+$sprite-logo0016-offset-x: -13500px;
+$sprite-logo0016-offset-y: 0px;
+$sprite-logo0016-width: 900px;
+$sprite-logo0016-height: 501px;
+$sprite-logo0016-total-width: 22500px;
+$sprite-logo0016-total-height: 501px;
+$sprite-logo0016-image: '../images/sprite-logo.png';
+$sprite-logo0016: (13500px, 0px, -13500px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0016', );
+$sprite-logo0017-name: 'sprite-logo0017';
+$sprite-logo0017-x: 14400px;
+$sprite-logo0017-y: 0px;
+$sprite-logo0017-offset-x: -14400px;
+$sprite-logo0017-offset-y: 0px;
+$sprite-logo0017-width: 900px;
+$sprite-logo0017-height: 501px;
+$sprite-logo0017-total-width: 22500px;
+$sprite-logo0017-total-height: 501px;
+$sprite-logo0017-image: '../images/sprite-logo.png';
+$sprite-logo0017: (14400px, 0px, -14400px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0017', );
+$sprite-logo0018-name: 'sprite-logo0018';
+$sprite-logo0018-x: 15300px;
+$sprite-logo0018-y: 0px;
+$sprite-logo0018-offset-x: -15300px;
+$sprite-logo0018-offset-y: 0px;
+$sprite-logo0018-width: 900px;
+$sprite-logo0018-height: 501px;
+$sprite-logo0018-total-width: 22500px;
+$sprite-logo0018-total-height: 501px;
+$sprite-logo0018-image: '../images/sprite-logo.png';
+$sprite-logo0018: (15300px, 0px, -15300px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0018', );
+$sprite-logo0019-name: 'sprite-logo0019';
+$sprite-logo0019-x: 16200px;
+$sprite-logo0019-y: 0px;
+$sprite-logo0019-offset-x: -16200px;
+$sprite-logo0019-offset-y: 0px;
+$sprite-logo0019-width: 900px;
+$sprite-logo0019-height: 501px;
+$sprite-logo0019-total-width: 22500px;
+$sprite-logo0019-total-height: 501px;
+$sprite-logo0019-image: '../images/sprite-logo.png';
+$sprite-logo0019: (16200px, 0px, -16200px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0019', );
+$sprite-logo0020-name: 'sprite-logo0020';
+$sprite-logo0020-x: 17100px;
+$sprite-logo0020-y: 0px;
+$sprite-logo0020-offset-x: -17100px;
+$sprite-logo0020-offset-y: 0px;
+$sprite-logo0020-width: 900px;
+$sprite-logo0020-height: 501px;
+$sprite-logo0020-total-width: 22500px;
+$sprite-logo0020-total-height: 501px;
+$sprite-logo0020-image: '../images/sprite-logo.png';
+$sprite-logo0020: (17100px, 0px, -17100px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0020', );
+$sprite-logo0021-name: 'sprite-logo0021';
+$sprite-logo0021-x: 18000px;
+$sprite-logo0021-y: 0px;
+$sprite-logo0021-offset-x: -18000px;
+$sprite-logo0021-offset-y: 0px;
+$sprite-logo0021-width: 900px;
+$sprite-logo0021-height: 501px;
+$sprite-logo0021-total-width: 22500px;
+$sprite-logo0021-total-height: 501px;
+$sprite-logo0021-image: '../images/sprite-logo.png';
+$sprite-logo0021: (18000px, 0px, -18000px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0021', );
+$sprite-logo0022-name: 'sprite-logo0022';
+$sprite-logo0022-x: 18900px;
+$sprite-logo0022-y: 0px;
+$sprite-logo0022-offset-x: -18900px;
+$sprite-logo0022-offset-y: 0px;
+$sprite-logo0022-width: 900px;
+$sprite-logo0022-height: 501px;
+$sprite-logo0022-total-width: 22500px;
+$sprite-logo0022-total-height: 501px;
+$sprite-logo0022-image: '../images/sprite-logo.png';
+$sprite-logo0022: (18900px, 0px, -18900px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0022', );
+$sprite-logo0023-name: 'sprite-logo0023';
+$sprite-logo0023-x: 19800px;
+$sprite-logo0023-y: 0px;
+$sprite-logo0023-offset-x: -19800px;
+$sprite-logo0023-offset-y: 0px;
+$sprite-logo0023-width: 900px;
+$sprite-logo0023-height: 501px;
+$sprite-logo0023-total-width: 22500px;
+$sprite-logo0023-total-height: 501px;
+$sprite-logo0023-image: '../images/sprite-logo.png';
+$sprite-logo0023: (19800px, 0px, -19800px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0023', );
+$sprite-logo0024-name: 'sprite-logo0024';
+$sprite-logo0024-x: 20700px;
+$sprite-logo0024-y: 0px;
+$sprite-logo0024-offset-x: -20700px;
+$sprite-logo0024-offset-y: 0px;
+$sprite-logo0024-width: 900px;
+$sprite-logo0024-height: 501px;
+$sprite-logo0024-total-width: 22500px;
+$sprite-logo0024-total-height: 501px;
+$sprite-logo0024-image: '../images/sprite-logo.png';
+$sprite-logo0024: (20700px, 0px, -20700px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0024', );
+$sprite-logo0025-name: 'sprite-logo0025';
+$sprite-logo0025-x: 21600px;
+$sprite-logo0025-y: 0px;
+$sprite-logo0025-offset-x: -21600px;
+$sprite-logo0025-offset-y: 0px;
+$sprite-logo0025-width: 900px;
+$sprite-logo0025-height: 501px;
+$sprite-logo0025-total-width: 22500px;
+$sprite-logo0025-total-height: 501px;
+$sprite-logo0025-image: '../images/sprite-logo.png';
+$sprite-logo0025: (21600px, 0px, -21600px, 0px, 900px, 501px, 22500px, 501px, '../images/sprite-logo.png', 'sprite-logo0025', );
+$spritesheet-width: 22500px;
+$spritesheet-height: 501px;
+$spritesheet-image: '../images/sprite-logo.png';
+$spritesheet-sprites: ($sprite-logo0001, $sprite-logo0002, $sprite-logo0003, $sprite-logo0004, $sprite-logo0005, $sprite-logo0006, $sprite-logo0007, $sprite-logo0008, $sprite-logo0009, $sprite-logo0010, $sprite-logo0011, $sprite-logo0012, $sprite-logo0013, $sprite-logo0014, $sprite-logo0015, $sprite-logo0016, $sprite-logo0017, $sprite-logo0018, $sprite-logo0019, $sprite-logo0020, $sprite-logo0021, $sprite-logo0022, $sprite-logo0023, $sprite-logo0024, $sprite-logo0025, );
+$spritesheet: (22500px, 501px, '../images/sprite-logo.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

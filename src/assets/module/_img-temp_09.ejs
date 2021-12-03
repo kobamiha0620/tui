@@ -1,0 +1,17 @@
+<%# webPなし retinaなし%>
+<picture>
+  <source
+    data-srcset="assets/images/<%= imgInfo.path %>.<%= imgInfo.type %>"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/<%= imgInfo.path %>_sp.<%= imgInfo.type %>"
+  >
+  <img
+    data-src="assets/images/<%= imgInfo.path %>.<%= imgInfo.type %>"
+    alt="<%= imgInfo.alt %>"
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>

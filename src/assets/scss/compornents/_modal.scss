@@ -1,0 +1,117 @@
+@charset "utf-8";
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+#modalWrapper{
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  @include opacity(0);
+  @include transition(opacity .3s);
+  z-index: 9999;
+  >.outer{
+    @include setTbl;
+    height: 100vh;
+  }
+  >.outer>.inner{
+    height: 100%;
+  }
+  >.closeArea{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &.active{
+    height:auto;
+    min-height: 100vh;
+    @include opacity(1);
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.modalSection{
+  padding: 0 15/375*100vw;
+  position: relative;
+  top: 50px;
+  height: 0;
+  overflow: hidden;
+  @include opacity(0);
+  @include transition(.5s $ease-in-out-sine);
+  >.inner{
+    position: relative;
+    padding:  40/375*100vw 20/375*100vw;
+    background-color: $white;
+    @include border-radius(8px);
+  }
+  .scroll-inner{
+    position: relative;
+    padding: 45/375*100vw 25/375*100vw;
+    background-color: $white;
+    @include border-radius(8px);
+    >.inner{
+      overflow: auto;
+      max-height: 60vh;
+    }
+  }
+  .closeBtn,.closeBtnCb{
+    position: absolute;
+    right: 20/375*100vw;
+    top: 20/375*100vw;
+    line-height: 1em;
+    @include fz_vw(16);
+    z-index: 10;
+    cursor: pointer;
+    @include transition(.3s);
+  }
+  &.active{
+    height: auto;
+    top: 0;
+    @include opacity(1);
+  }
+  &.style_01{
+    >.inner{
+      padding-bottom: 50/375*100vw;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.modalSection{
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 20px;
+  >.inner{
+    padding: 40px;
+  }
+  .scroll-inner{
+    padding: 60px 20px;
+    >.inner{
+      max-width: 648px;
+      margin: 0 auto;
+      max-height: 600px;
+    }
+  }
+  .closeBtn,.closeBtnCb{
+    right: 20px;
+    top: 20px;
+    font-size: 1.6rem;
+    &:hover{
+      @include opacity(.8);
+    }
+  }
+  &.style_01{
+    >.inner{
+      padding-bottom: 50px;
+    }
+  }
+  &.style_02{
+    max-width: 750px;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
