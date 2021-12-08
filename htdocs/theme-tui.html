@@ -50,6 +50,16 @@
       scripts.parentNode.insertBefore(polyfill, scripts);
     }
   </script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'zse7yzg',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
   <link rel="stylesheet" href="https://use.typekit.net/tfo5tsn.css">
   
   <link rel="stylesheet" type="text/css" media="all" href="assets/css/main.css">
@@ -66,16 +76,108 @@
 
 <header>
   <div class="inner">
+    <div class="col-logo">
+      <h1 class="logo">
+        <a href="javascript:void(0);">
+        
+        
+          
+<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
+
+        
+        </a>
+      </h1>
+      <p class="navTtl style_01"><a href="javascript:void(0);">About tui</a></p>
+      <p class="navTtl style_02"><a href="javascript:void(0);">BOOSTER OIL</a></p>
+      <p class="navTtl style_03"><a href="javascript:void(0);">MOISTURE SERUM</a></p>
+      <p class="navTtl style_04"><a href="javascript:void(0);">SET PACKAGE</a></p>
+      <p class="navTtl style_05"><a href="javascript:void(0);">About NtDDS</a></p>
+      <p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
+      <p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
+    </div>
+    <!-- /.col-logo -->
+    <div class="col-nav">
+      <p class="parent"><a href="javascript:void(0);">View the products</a></p>
+      <ul class="productNav">
+        <li><a href="javascript:void(0);">BOOSTER OIL</a></li>
+        <li><a href="javascript:void(0);">MOISTURE SERUM</a></li>
+        <li><a href="javascript:void(0);">SET PACKAGE</a></li>
+      </ul>
+      <!-- /.productNav -->
+    </div>
+    <!-- /.col-nav -->
+    <div class="col-EcNav">
+      <p><a href="javascript:void(0);">Cart</a></p>
+    </div>
+    <!-- /.colEc -->
   </div>
   <!-- /.inner -->
 </header>
+<!-- /header -->
 
 <div id="mainNav">
   <div class="inner">
+    <div class="cel">
+      <div class="inner">
+        <p class="logoNav">
+          <a href="javascript:void(0);">
+          
+          
+            
+<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
+
+          
+          </a>
+        </p>
+        <div class="mainNavSec">
+          <div class="inner">
+            <div class="mainMenu">
+              <nav>
+                <ul class="parent">
+                  <li>
+                    <a href="javascript:void(0);">Products</a>
+                    <ul class="child">
+                      <li><a href="javascript:void(0);">BOOSTER OIL</a></li>
+                      <li><a href="javascript:void(0);">MOISTURE SERUM</a></li>
+                      <li><a href="javascript:void(0);">SET PACKAGE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:void(0);">About us</a></li>
+                  <li><a href="javascript:void(0);">News</a></li>
+                  <li><a href="javascript:void(0);">FAQ</a></li>
+                  <li><a href="javascript:void(0);">Contact</a></li>
+                </ul>
+                <ul class="smallMenu">
+                  <li><a href="javascript:void(0);">ご利用ガイド／会社概要</a></li>
+                  <li><a href="javascript:void(0);">プライバシーポリシー</a></li>
+                  <li><a href="javascript:void(0);">特定商取引法</a></li>
+                  <li><a href="javascript:void(0);">My page</a></li>
+                  <li><a href="javascript:void(0);">Cart</a></li>
+                  <li><a href="javascript:void(0);">Instagram</a></li>
+                </ul>
+                <!-- /.smallMenu -->
+              </nav>
+            </div>
+            <!-- /.mainMenu -->
+          </div>
+          <!-- /.inner -->
+        </div>
+        <!-- /.mainNavSec -->
+      </div>
+      <!-- /.inner -->
+    </div>
+    <!-- /.cel -->
   </div>
   <!-- /.inner -->
-  <div class="closeArea"></div>
-  <!-- /.closeArea -->
+  <div class="closeBtn">
+    
+    
+      
+<img data-src="assets/images/icon-close.svg" alt="tui" class="lazyload">
+
+    
+  </div>
+  <!-- /.closeBtn -->
 </div>
 <!-- /#mainNav -->
 

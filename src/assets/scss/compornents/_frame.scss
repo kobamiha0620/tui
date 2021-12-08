@@ -229,7 +229,7 @@ $efspeed:.05;
 	&.scrollSet{
 		@include setTbl;
 		height: 100vh;
-		background-color: $key-white;
+		//background-color: $key-white;
 		position: fixed;
 		top: 0;
 		left: 0;

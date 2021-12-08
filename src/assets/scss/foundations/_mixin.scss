@@ -230,13 +230,13 @@
 /////////////////////
 @mixin over_01($color:$black){
   position: relative;
-  padding-bottom: 3px;
+  padding-bottom: 0px;
   &:before{
     content: '';
     height: 1px;
     width: 0%;
     //background-color: $hover-color;
-    bottom: 0;
+    bottom: 1px;
     position: absolute;
     @include transition(.3s);
     background-color: $color;
@@ -325,6 +325,19 @@
   @media screen and (min-width: $break-point-middle) {
   &:hover:before{
     width: 100%;
+  }
+  }
+}
+/////////////////////
+@mixin over_06{
+  position: relative;
+  transition: .3s;
+  left: 0;
+  opacity: 1;
+  @media screen and (min-width: $break-point-middle) {
+  &:hover{
+    left: 5px;
+    opacity: .8;
   }
   }
 }

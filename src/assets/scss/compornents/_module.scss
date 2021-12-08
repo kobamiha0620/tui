@@ -3,9 +3,11 @@
 ////////////////////////////////////////////////////////////
 #wrapper{
   padding-top: $header-size;
+  position: relative;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+$delayH:200px;
 .galleryWidget{
   .mask{
     span{
@@ -30,29 +32,34 @@
   }
   .item.active+.mask{
     span{
-      top: 0;
-      position: relative;
+      // top: 0;
+      // position: absolute;
     }
   }
   .item{
-    height: -webkit-calc(100vh - #{$header-size})!important;
-    height: calc(100vh - #{$header-size})!important;
+    position: relative;
+    height: -webkit-calc(100vh - #{$header-size} + #{$delayH})!important;
+    height: calc(100vh - #{$header-size} + #{$delayH})!important;
+    &:nth-child(n+2){
+      padding-top: $delayH;
+    }
     @for $i from 1 through 50 {
 		  &:nth-child(#{$i}) {
-        .imgSec{
+        .wrapper{
           z-index: 50 - $i;
         }
 		  }
 		}
   }
-  .imgSec{
+  .wrapper{
     position: fixed;
     top: $header-size;
     left: 0px;
     width: 100%;
     // width: -webkit-calc(100% - 40px);
     // width: calc(100% - 40px);
-    height: 100%;
+    height: -webkit-calc(100vh - #{$header-size})!important;
+    height: calc(100vh - #{$header-size})!important;
     >.inner{
       padding: 0 20px;
       height: 100%;
@@ -71,16 +78,137 @@
     }
   }
   .item.active{
-    .imgSec{
-      top: 0;
+    .wrapper{
+      top: 0px;
       position: relative;
     }
   }
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+.galleryWidget .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  a{
+    display: block;
+  }
+}
+//////////////////////////////////
+.galleryWidget .content.style_01{
+  .wrap{
+    @include setTbl;
+    height: 100%;
+    >*{
+      text-align: center;
+    }
+  }
+  h2{
+    @include fontEn;
+    line-height: 1em;
+    font-size: 2.4rem;
+    color: $white;
+    letter-spacing: .01em;
+    position: relative;
+    opacity: 0;
+    transition: .8s;
+  }
+}
+.galleryWidget .item.move .content.style_01{
+  h2{
+    opacity: 1;
+  }
+}
+//////////////////////////////////
+.galleryWidget .content.style_02{
+  .wrap{
+    @include setTbl;
+    width: 50%;
+    height: 100%;
+    margin: 0 0 0 auto;
+    transition: .8s;
+    opacity: 0;
+    >*{
+      text-align: center;
+    }
+  }
+  a{
+    width: 100%;
+    height: 100%;
+    color: $white;
+    h2{
+      font-size: 1.8rem;
+      line-height: 1em;
+      @include fontEn;
+      letter-spacing: .12em;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+    h3{
+      font-size: 2.2rem;
+      line-height: 1em;
+      letter-spacing: .1em;
+      margin-bottom: 12px;
+      span{
+        position: relative;
+        font-size: 1.2rem;
+        top: -.6em;
+      }
+      img{
+        width: 188px;
+        display: inline-block;
+      }
+    }
+    .caution{
+      font-size: 1.0rem;
+      line-height: 1em;
+      font-weight: bold;
+    }
+    .btn{
+      margin-top: 24px;
+      @include fontEn;
+      font-weight: 400;
+      letter-spacing: .1em;
+      >span{
+        display: inline-block;
+        left: 0;
+        position: relative;
+        transition: .3s;
+        &::after{
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 8px;
+          line-height: 1em;
+          display: inline-block;
+          background-color: $white;
+          margin-left: 4px;
+        }
+      }
+      >span:hover{
+        left: 5px;
+      }
+    }
+  }
+}
+.galleryWidget .item.move .content.style_02{
+  .wrap{
+    opacity: 1;
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+#homeContainer{
+  position: relative;
+  z-index: 101;
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 .dummy{
-  height: 500px;
+  height: 2000px;
   background-color: #ff0000;
 }
 ////////////////////////////////////////////////////////////

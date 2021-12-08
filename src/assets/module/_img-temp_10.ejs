@@ -1,11 +1,7 @@
-<%# svg画像直接 代替はwebP%>
+<%# svg画像直接 代替は指定%>
 <picture>
   <source
     data-srcset="assets/images/<%= imgInfo.path %>.svg"
-  >
-  <source
-    data-srcset="assets/images/<%= imgInfo.path %>.webp"
-    type="image/webp"
   >
   <img
     data-src="assets/images/<%= imgInfo.path %>.<%= imgInfo.type %>"

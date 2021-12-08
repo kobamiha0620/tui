@@ -7,6 +7,41 @@
 <% }%>
 <header>
   <div class="inner">
+    <div class="col-logo">
+      <h1 class="logo">
+        <a href="javascript:void(0);">
+        <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
+        <% if(pageinit.shopify!=='true'){%>
+          <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+        <% } else {%>
+          <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+        <% }%>
+        </a>
+      </h1>
+      <p class="navTtl style_01"><a href="javascript:void(0);">About tui</a></p>
+      <p class="navTtl style_02"><a href="javascript:void(0);">BOOSTER OIL</a></p>
+      <p class="navTtl style_03"><a href="javascript:void(0);">MOISTURE SERUM</a></p>
+      <p class="navTtl style_04"><a href="javascript:void(0);">SET PACKAGE</a></p>
+      <p class="navTtl style_05"><a href="javascript:void(0);">About NtDDS</a></p>
+      <p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
+      <p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
+    </div>
+    <!-- /.col-logo -->
+    <div class="col-nav">
+      <p class="parent"><a href="javascript:void(0);">View the products</a></p>
+      <ul class="productNav">
+        <li><a href="javascript:void(0);">BOOSTER OIL</a></li>
+        <li><a href="javascript:void(0);">MOISTURE SERUM</a></li>
+        <li><a href="javascript:void(0);">SET PACKAGE</a></li>
+      </ul>
+      <!-- /.productNav -->
+    </div>
+    <!-- /.col-nav -->
+    <div class="col-EcNav">
+      <p><a href="javascript:void(0);">Cart</a></p>
+    </div>
+    <!-- /.colEc -->
   </div>
   <!-- /.inner -->
 </header>
+<!-- /header -->

@@ -42,18 +42,31 @@ $(window).on('load', function () {
   // heightLineGroup()
   svg4everybody();
   judgeWinSize();
-  // setMainMenu()
+  setMainMenu();
   setAcc();
   setWay();
   // setSVG()
   setLoaded();
   displayCart();
+  setMega();
   // setScrollTop()
   // setTextile()
   if ($('#wrapper').hasClass('home')) {
     // setMainVis()
   }
 });
+
+// ヘッダーナビメガメニュー
+function setMega () {
+  $('header .col-nav .parent a').hover(function () {
+    $('header .productNav').slideDown('fast');
+    $(this).addClass('active');
+  }, function () {});
+  $('header').hover(function () {}, function () {
+    $('header .productNav').slideUp('fast');
+    $('header .col-nav .parent a').removeClass('active');
+  });
+}
 
 // カートボタンの表示
 function displayCart () {
@@ -131,7 +144,7 @@ var menuOpenFlag = false;
 // //////////////////////////メインメニュー
 function setMainMenu () {
   var current_scrollY;
-  $('.menuBtn').on('click', function () {
+  $('#mainNav,h1.logo').on('click', function () {
     if (!$(this).hasClass('active')) {
       openFnc();
     }else {
@@ -163,32 +176,33 @@ function setMainMenu () {
   });
 
   function openFnc () {
-    current_scrollY = $(window).scrollTop();
-    $('body').addClass('breakH');
-    $('.menuBtn').addClass('active');
+    // current_scrollY = $(window).scrollTop()
+    // $('body').addClass('breakH')
+    $('#mainNav').addClass('active');
     $('#wrapper').addClass('menuOpen');
-    $('#outerMenu').css('top', -(current_scrollY));
+    // $('#outerMenu').css('top', -(current_scrollY))
     menuOpenFlag = true;
-    setTimeout(function () {
-      $('html, body').prop({
-        scrollTop: 0
-      });
-    }, 100);
+  // setTimeout(function () {
+  //   $('html, body').prop({
+  //     scrollTop: 0
+  //   })
+  // }, 100)
   }
 
   function closeFnc () {
-    $('body').removeClass('breakH');
-    $('#wrapper').addClass('breakLuxy');
-    $('.menuBtn').removeClass('active');
-    $('#outerMenu').css('top', '');
+    // $('body').removeClass('breakH')
+    // $('#wrapper').addClass('breakLuxy')
+    $('#mainNav').removeClass('active');
+    // $('#outerMenu').css('top', '')
     $('#wrapper').removeClass('menuOpen');
-    $('html, body').prop({
-      scrollTop: current_scrollY
-    });
-    setTimeout(function () {
-      $('#wrapper').removeClass('breakLuxy');
-      menuOpenFlag = false;
-    }, 2000);
+    menuOpenFlag = false;
+  // $('html, body').prop({
+  //   scrollTop: current_scrollY
+  // })
+  // setTimeout(function () {
+  //   // $('#wrapper').removeClass('breakLuxy')
+  //   menuOpenFlag = false
+  // }, 2000)
   }
 }
 
@@ -290,12 +304,108 @@ function setWay () {
     var target = $(this.element);
     if (direction === 'down') { // scroll down
       activePoint.addClass('active');
-    }else { // scroll up
+      if (activePoint.attr('id') == 'cont_01') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_01').show();
+      }else if (activePoint.attr('id') == 'cont_02') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_02').show();
+      }else if (activePoint.attr('id') == 'cont_03') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_03').show();
+      }else if (activePoint.attr('id') == 'cont_04') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_04').show();
+      }else if (activePoint.attr('id') == 'cont_05') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_05').show();
+      }else if (activePoint.attr('id') == 'cont_06') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_06').show();
+      }else if (activePoint.attr('id') == 'cont_07') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_07').show();
+      }
+    }
+  }, {
+    offset: '-200px'
+  });
+  $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'up') { // scroll down
       activePoint.removeClass('active');
     }
   }, {
-    offset: '0%'
+    offset: '-155px'
   });
+
+  $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'up') { // scroll down
+      if (activePoint.attr('id') == 'homeCont') {
+        $('h1.logo').removeClass('hidden');
+        $('.navTtl').hide();
+      }else if (activePoint.attr('id') == 'cont_01' || activePoint.attr('id') == 'cont_01_02' || activePoint.attr('id') == 'cont_01_03') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_01').show();
+      }else if (activePoint.attr('id') == 'cont_02') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_02').show();
+      }else if (activePoint.attr('id') == 'cont_03') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_03').show();
+      }else if (activePoint.attr('id') == 'cont_04') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_04').show();
+      }else if (activePoint.attr('id') == 'cont_05') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_05').show();
+      }else if (activePoint.attr('id') == 'cont_06') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_06').show();
+      }else if (activePoint.attr('id') == 'cont_07') {
+        $('h1.logo').addClass('hidden');
+        $('.navTtl').hide();
+        $('.navTtl.style_07').show();
+      }
+    }
+  }, {
+    offset: '-95%'
+  });
+
+  $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'down') { // scroll down
+      activePoint.addClass('move');
+    }
+  }, {
+    offset: '30%'
+  });
+  // $('.galleryWidget .item').waypoint(function (direction) {
+  //   var activePoint = $(this.element)
+  //   var target = $(this.element)
+  //   if (direction === 'up') { // scroll down
+  //     activePoint.removeClass('move')
+  //   }
+  // }, {
+  //   offset: '-155px'
+  // })
 
   $('.shuffle').waypoint(function (direction) {
     var activePoint = $(this.element);

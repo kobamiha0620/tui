@@ -1,8 +1,65 @@
 <div id="mainNav">
   <div class="inner">
+    <div class="cel">
+      <div class="inner">
+        <p class="logoNav">
+          <a href="javascript:void(0);">
+          <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
+          <% if(pageinit.shopify!=='true'){%>
+            <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+          <% } else {%>
+            <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+          <% }%>
+          </a>
+        </p>
+        <div class="mainNavSec">
+          <div class="inner">
+            <div class="mainMenu">
+              <nav>
+                <ul class="parent">
+                  <li>
+                    <a href="javascript:void(0);">Products</a>
+                    <ul class="child">
+                      <li><a href="javascript:void(0);">BOOSTER OIL</a></li>
+                      <li><a href="javascript:void(0);">MOISTURE SERUM</a></li>
+                      <li><a href="javascript:void(0);">SET PACKAGE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:void(0);">About us</a></li>
+                  <li><a href="javascript:void(0);">News</a></li>
+                  <li><a href="javascript:void(0);">FAQ</a></li>
+                  <li><a href="javascript:void(0);">Contact</a></li>
+                </ul>
+                <ul class="smallMenu">
+                  <li><a href="javascript:void(0);">ご利用ガイド／会社概要</a></li>
+                  <li><a href="javascript:void(0);">プライバシーポリシー</a></li>
+                  <li><a href="javascript:void(0);">特定商取引法</a></li>
+                  <li><a href="javascript:void(0);">My page</a></li>
+                  <li><a href="javascript:void(0);">Cart</a></li>
+                  <li><a href="javascript:void(0);">Instagram</a></li>
+                </ul>
+                <!-- /.smallMenu -->
+              </nav>
+            </div>
+            <!-- /.mainMenu -->
+          </div>
+          <!-- /.inner -->
+        </div>
+        <!-- /.mainNavSec -->
+      </div>
+      <!-- /.inner -->
+    </div>
+    <!-- /.cel -->
   </div>
   <!-- /.inner -->
-  <div class="closeArea"></div>
-  <!-- /.closeArea -->
+  <div class="closeBtn">
+    <% var imgInfo = {path:'icon-close',type:'svg',alt:'tui'};%>
+    <% if(pageinit.shopify!=='true'){%>
+      <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+    <% } else {%>
+      <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+    <% }%>
+  </div>
+  <!-- /.closeBtn -->
 </div>
 <!-- /#mainNav -->

@@ -5,10 +5,93 @@ header{
   position: fixed;
   width: 100%;
   background-color: $white;
-  height: 55px;
+  //height: $header-size;
   top: 0;
   left: 0;
   z-index: 1000;
+  padding: 30px 20px 10px;
+  @include fontEn;
+  font-size: 1.2rem;
+  line-height: 1em;
+  letter-spacing: .02em;
+  >.inner{
+    @include setTbl;
+    >*{
+      vertical-align: top;
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+header .col-logo{
+  width: 314/1232*100%;
+  position: relative;
+  .logo{
+    opacity: 1;
+    transition: .3s;
+    &.hidden{
+      opacity: 0;
+    }
+    a{
+      display: inline-block;
+      @include over_06;
+      img{
+        width: 22px;
+      }
+    }
+    .menuOpen &{
+      opacity: 0;
+    }
+  }
+  .navTtl{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    letter-spacing: .02em;
+    @include fontEn;
+    line-height: 1em;
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+header .col-nav{
+  .productNav{
+    display: none;
+    padding: 56px 0 46px;
+    li{
+      margin-bottom: 28px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  a{
+    color: $key-black;
+    //@include over_01($key-black);
+    @include over_06;
+  }
+  // .parent{
+  //   a{
+  //     cursor: default;
+  //     &.active{
+  //       &::before{
+  //         width: 100%;
+  //       }
+  //     }
+  //   }
+  // }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+header .col-EcNav{
+  text-align: right;
+  a{
+    color: $key-black;
+    //@include over_01($key-black);
+    @include over_06;
+  }
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

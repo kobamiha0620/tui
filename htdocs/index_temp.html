@@ -51,6 +51,16 @@
       scripts.parentNode.insertBefore(polyfill, scripts);
     }
   </script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'zse7yzg',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
   <link rel="stylesheet" href="https://use.typekit.net/tfo5tsn.css">
   
   <link rel="stylesheet" type="text/css" media="all" href="assets/css/main.css">
@@ -64,10 +74,114 @@
     <div id="clickBlocker"></div>
 
 
+
 <header>
-  <div class="inner"></div>
+  <div class="inner">
+    <div class="col-logo">
+      <h1 class="logo">
+        <a href="javascript:void(0);">
+        
+        
+          
+<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
+
+        
+        </a>
+      </h1>
+      <p class="navTtl style_01"><a href="javascript:void(0);">About tui</a></p>
+      <p class="navTtl style_02"><a href="javascript:void(0);">BOOSTER OIL</a></p>
+      <p class="navTtl style_03"><a href="javascript:void(0);">MOISTURE SERUM</a></p>
+      <p class="navTtl style_04"><a href="javascript:void(0);">SET PACKAGE</a></p>
+      <p class="navTtl style_05"><a href="javascript:void(0);">About NtDDS</a></p>
+      <p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
+      <p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
+    </div>
+    <!-- /.col-logo -->
+    <div class="col-nav">
+      <p class="parent"><a href="javascript:void(0);">View the products</a></p>
+      <ul class="productNav">
+        <li><a href="javascript:void(0);">BOOSTER OIL</a></li>
+        <li><a href="javascript:void(0);">MOISTURE SERUM</a></li>
+        <li><a href="javascript:void(0);">SET PACKAGE</a></li>
+      </ul>
+      <!-- /.productNav -->
+    </div>
+    <!-- /.col-nav -->
+    <div class="col-EcNav">
+      <p><a href="javascript:void(0);">Cart</a></p>
+    </div>
+    <!-- /.colEc -->
+  </div>
   <!-- /.inner -->
 </header>
+<!-- /header -->
+
+<div id="mainNav">
+  <div class="inner">
+    <div class="cel">
+      <div class="inner">
+        <p class="logoNav">
+          <a href="javascript:void(0);">
+          
+          
+            
+<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
+
+          
+          </a>
+        </p>
+        <div class="mainNavSec">
+          <div class="inner">
+            <div class="mainMenu">
+              <nav>
+                <ul class="parent">
+                  <li>
+                    <a href="javascript:void(0);">Products</a>
+                    <ul class="child">
+                      <li><a href="javascript:void(0);">BOOSTER OIL</a></li>
+                      <li><a href="javascript:void(0);">MOISTURE SERUM</a></li>
+                      <li><a href="javascript:void(0);">SET PACKAGE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:void(0);">About us</a></li>
+                  <li><a href="javascript:void(0);">News</a></li>
+                  <li><a href="javascript:void(0);">FAQ</a></li>
+                  <li><a href="javascript:void(0);">Contact</a></li>
+                </ul>
+                <ul class="smallMenu">
+                  <li><a href="javascript:void(0);">ご利用ガイド／会社概要</a></li>
+                  <li><a href="javascript:void(0);">プライバシーポリシー</a></li>
+                  <li><a href="javascript:void(0);">特定商取引法</a></li>
+                  <li><a href="javascript:void(0);">My page</a></li>
+                  <li><a href="javascript:void(0);">Cart</a></li>
+                  <li><a href="javascript:void(0);">Instagram</a></li>
+                </ul>
+                <!-- /.smallMenu -->
+              </nav>
+            </div>
+            <!-- /.mainMenu -->
+          </div>
+          <!-- /.inner -->
+        </div>
+        <!-- /.mainNavSec -->
+      </div>
+      <!-- /.inner -->
+    </div>
+    <!-- /.cel -->
+  </div>
+  <!-- /.inner -->
+  <div class="closeBtn">
+    
+    
+      
+<img data-src="assets/images/icon-close.svg" alt="tui" class="lazyload">
+
+    
+  </div>
+  <!-- /.closeBtn -->
+</div>
+<!-- /#mainNav -->
+
 
 <div id="outerMenu">
   
@@ -75,8 +189,8 @@
     <div id="mainVis">
       <div class="galleryWidget">
         <div class="inner">
-          <div class="item active">
-            <div class="imgSec">
+          <div class="item active" id="homeCont">
+            <div class="wrapper">
               <div class="inner">
                 
                 
@@ -102,11 +216,11 @@
               </div>
               <!-- /.inner -->
             </div>
-            <!-- /.imgStyle -->
+            <!-- /.wrapper -->
           </div>
           <!-- /.item -->
-          <div class="item">
-            <div class="imgSec">
+          <div class="item" id="cont_01">
+            <div class="wrapper">
               <div class="inner">
                 
                 
@@ -132,11 +246,11 @@
               </div>
               <!-- /.inner -->
             </div>
-            <!-- /.imgStyle -->
+            <!-- /.wrapper -->
           </div>
           <!-- /.item -->
-          <div class="item">
-            <div class="imgSec">
+          <div class="item" id="cont_01_02">
+            <div class="wrapper">
               <div class="inner">
                 
                 
@@ -162,7 +276,222 @@
               </div>
               <!-- /.inner -->
             </div>
-            <!-- /.imgStyle -->
+            <!-- /.wrapper -->
+          </div>
+          <!-- /.item -->
+          <section class="item" id="cont_01_03">
+            <div class="wrapper">
+              <div class="inner">
+                
+                
+                  
+<picture>
+  <source
+    data-srcset="assets/images/kv_img_04.jpg"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/kv_img_04_sp.jpg"
+  >
+  <img
+    data-src="assets/images/kv_img_04.jpg"
+    alt=""
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>
+
+                
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.wrapper -->
+            <div class="content style_01">
+              <div class="wrap">
+                <div class="inner">
+                  <h2>Reshape the Norm</h2>
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </section>
+          <!-- /.item -->
+          <section class="item" id="cont_02">
+            <div class="wrapper">
+              <div class="inner">
+                
+                
+                  
+<picture>
+  <source
+    data-srcset="assets/images/kv_img_05.jpg"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/kv_img_05_sp.jpg"
+  >
+  <img
+    data-src="assets/images/kv_img_05.jpg"
+    alt=""
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>
+
+                
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.wrapper -->
+            <div class="content style_02">
+              <a href="javascript:void(0);">
+              <div class="wrap">
+                <div class="inner">
+                  <h2>BOOSTER OIL</h2>
+                  <h3>
+                    
+                    
+                      
+<img data-src="assets/images/tx-01.svg" alt="体感する浸透力" class="lazyload">
+
+                    
+                  </h3>
+                  <p class="caution">※角質層まで</p>
+                  <div class="btn">
+                    <span>View</span>
+                  </div>
+                  <!-- /.btn -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+              </a>
+            </div>
+            <!-- /.content -->
+          </section>
+          <!-- /.item -->
+          <div class="item" id="cont_03">
+            <div class="wrapper">
+              <div class="inner">
+                
+                
+                  
+<picture>
+  <source
+    data-srcset="assets/images/kv_img_06.jpg"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/kv_img_06_sp.jpg"
+  >
+  <img
+    data-src="assets/images/kv_img_06.jpg"
+    alt=""
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>
+
+                
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.wrapper -->
+          </div>
+          <!-- /.item -->
+          <div class="item" id="cont_04">
+            <div class="wrapper">
+              <div class="inner">
+                
+                
+                  
+<picture>
+  <source
+    data-srcset="assets/images/kv_img_07.jpg"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/kv_img_07_sp.jpg"
+  >
+  <img
+    data-src="assets/images/kv_img_07.jpg"
+    alt=""
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>
+
+                
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.wrapper -->
+          </div>
+          <!-- /.item -->
+          <div class="item" id="cont_05">
+            <div class="wrapper">
+              <div class="inner">
+                
+                
+                  
+<picture>
+  <source
+    data-srcset="assets/images/kv_img_08.jpg"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/kv_img_08_sp.jpg"
+  >
+  <img
+    data-src="assets/images/kv_img_08.jpg"
+    alt=""
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>
+
+                
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.wrapper -->
+          </div>
+          <!-- /.item -->
+          <div class="item" id="cont_06">
+            <div class="wrapper">
+              <div class="inner">
+                
+                
+                  
+<picture>
+  <source
+    data-srcset="assets/images/kv_img_09.jpg"
+    media="(min-width: 768px)"
+  >
+  <source
+    data-srcset="assets/images/kv_img_09_sp.jpg"
+  >
+  <img
+    data-src="assets/images/kv_img_09.jpg"
+    alt=""
+    class="lazyload"
+  >
+  <div class="loadImg"></div>
+  <!-- /.loadImg -->
+</picture>
+
+                
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.wrapper -->
           </div>
           <!-- /.item -->
           <div class="mask">
