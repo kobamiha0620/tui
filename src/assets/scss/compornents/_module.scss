@@ -9,8 +9,9 @@
 ////////////////////////////////////////////////////////////
 $delayH:200px;
 .galleryWidget{
+  position: relative;
   .mask{
-    span{
+    span.head{
       position: fixed;
       top: $header-size;
       width: 10px;
@@ -18,7 +19,21 @@ $delayH:200px;
       display: block;
       left: 20px;
       z-index: 100;
-      &:last-child{
+      &:nth-child(2){
+        left: auto;
+        right: 20px;
+      }
+    }
+    span.foot{
+      position: absolute;
+      transform: rotate(180deg);
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      display: block;
+      left: 20px;
+      z-index: 100;
+      &:nth-child(4){
         left: auto;
         right: 20px;
       }
@@ -50,6 +65,28 @@ $delayH:200px;
         }
 		  }
 		}
+    a{
+      >.wrapper>.inner{
+        &::before{
+          content: '';
+          background-color: rgba(0, 0, 0, .03);
+          position: absolute;
+          width: -webkit-calc(100% - 40px);
+          width: calc(100% - 40px);
+          top: 0;
+          left: 20px;
+          bottom: 0;
+          transition: .3s;
+        }
+      }
+    }
+    a:hover{
+      >.wrapper>.inner{
+        &::before{
+          opacity: 0;
+        }
+      }
+    }
   }
   .wrapper{
     position: fixed;
@@ -63,6 +100,7 @@ $delayH:200px;
     >.inner{
       padding: 0 20px;
       height: 100%;
+      position: relative;
     }
     // span{
     //   width: 100%;
@@ -93,8 +131,8 @@ $delayH:200px;
   width: 100%;
   height: 100%;
   z-index: 100;
-  a{
-    display: block;
+  .wrap{
+    position: relative;
   }
 }
 //////////////////////////////////
@@ -122,6 +160,13 @@ $delayH:200px;
     opacity: 1;
   }
 }
+@media screen and (min-width: $design-width) {
+.galleryWidget .content.style_01{
+  h2{
+    @include fz_vwpc(24);
+  }
+}
+}
 //////////////////////////////////
 .galleryWidget .content.style_02{
   .wrap{
@@ -131,66 +176,84 @@ $delayH:200px;
     margin: 0 0 0 auto;
     transition: .8s;
     opacity: 0;
+    color: $white;
     >*{
       text-align: center;
+      padding: 0 40px;
     }
   }
-  a{
-    width: 100%;
-    height: 100%;
-    color: $white;
-    h2{
-      font-size: 1.8rem;
-      line-height: 1em;
-      @include fontEn;
-      letter-spacing: .12em;
-      margin-bottom: 28px;
-      font-weight: 400;
+  h2{
+    font-size: 1.8rem;
+    line-height: 1em;
+    @include fontEn;
+    letter-spacing: .12em;
+    margin-bottom: 36px;
+    font-weight: 400;
+  }
+  h3{
+    font-size: 2.2rem;
+    line-height: 1em;
+    letter-spacing: .1em;
+    margin-bottom: 12px;
+    span{
+      position: relative;
+      font-size: 1.2rem;
+      top: -.6em;
     }
-    h3{
-      font-size: 2.2rem;
-      line-height: 1em;
-      letter-spacing: .1em;
-      margin-bottom: 12px;
-      span{
-        position: relative;
-        font-size: 1.2rem;
-        top: -.6em;
-      }
-      img{
-        width: 188px;
+    img{
+      width: 188px;
+      display: inline-block;
+    }
+    &.style_01 img{
+      width: 248px;
+    }
+    &.style_02 img{
+      width: 320px;
+    }
+    &.style_03 img{
+      width: 412px;
+    }
+  }
+  .caution{
+    font-size: 1.0rem;
+    line-height: 1em;
+    font-weight: bold;
+  }
+  .summary{
+    font-size: 1.2rem;
+    line-height: (30/12)+em;
+    font-weight: bold;
+    letter-spacing: .05em;
+    text-align: justify;
+    br{
+      display: none;
+    }
+  }
+  .btn{
+    margin-top: 44px;
+    @include fontEn;
+    font-weight: 400;
+    letter-spacing: .1em;
+    font-size: 1.2rem;
+    line-height: 1em;
+    >span{
+      display: inline-block;
+      left: 0;
+      position: relative;
+      transition: .3s;
+      &::after{
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        line-height: 1em;
         display: inline-block;
+        background-color: $white;
+        margin-left: 4px;
       }
     }
-    .caution{
-      font-size: 1.0rem;
-      line-height: 1em;
-      font-weight: bold;
-    }
-    .btn{
-      margin-top: 24px;
-      @include fontEn;
-      font-weight: 400;
-      letter-spacing: .1em;
-      >span{
-        display: inline-block;
-        left: 0;
-        position: relative;
-        transition: .3s;
-        &::after{
-          content: '';
-          width: 8px;
-          height: 8px;
-          border-radius: 8px;
-          line-height: 1em;
-          display: inline-block;
-          background-color: $white;
-          margin-left: 4px;
-        }
-      }
-      >span:hover{
-        left: 5px;
-      }
+    >span:hover{
+      left: 5px;
     }
   }
 }
@@ -199,17 +262,161 @@ $delayH:200px;
     opacity: 1;
   }
 }
+@media screen and (min-width: 1075px) {
+.galleryWidget .content.style_02{
+  .summary{
+    text-align: center;
+    br{
+      display: block;
+    }
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.galleryWidget .content.style_02{
+  h2{
+    @include fz_vwpc(18);
+    margin-bottom: 36/$design-num*100vw;
+  }
+  h3{
+    @include fz_vwpc(22);
+    margin-bottom: 12/$design-num*100vw;
+    span{
+      @include fz_vwpc(12);
+    }
+    img{
+      width: 188/$design-num*100vw;
+    }
+    &.style_01 img{
+      width: 248/$design-num*100vw;
+    }
+    &.style_02 img{
+      width: 320/$design-num*100vw;
+    }
+    &.style_03 img{
+      width: 412/$design-num*100vw;
+    }
+  }
+  .caution{
+    @include fz_vwpc(10);
+  }
+  .summary{
+    @include fz_vwpc(12);
+  }
+  .btn{
+    margin-top: 44/$design-num*100vw;
+    @include fz_vwpc(12);
+    >span{
+      &::after{
+        width: 8/$design-num*100vw;
+        height: 8/$design-num*100vw;
+        border-radius: 8/$design-num*100vw;
+        margin-left: 4/$design-num*100vw;
+      }
+    }
+  }
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 #homeContainer{
   position: relative;
   z-index: 101;
+  margin-top: 20px;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-.dummy{
-  height: 2000px;
-  background-color: #ff0000;
+.homeContentSec{
+  padding: 0 20px;
+  >.inner{
+    @include setTbl;
+    >*{
+      &:first-child{
+        padding-right: 10px;
+      }
+      &:last-child{
+        padding-left: 10px;
+      }
+    }
+  }
+  section{
+    position: relative;
+    a{
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      .bg{
+        width: 100%;
+        position: relative;
+        img{
+          @include imgset;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, .03);
+          transition: .3s;
+        }
+      }
+      .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include setTbl;
+        >*{
+          text-align: center;
+        }
+      }
+      h2{
+        @include fontEn;
+        color: $white;
+        letter-spacing: .04em;
+        font-size: 1.8rem;
+        transition: opacity 1s,top 1s,left .3s;
+        opacity: 0;
+        position: relative;
+        top: 20px;
+        left: 0;
+        //font-weight: 400;
+      }
+    }
+    a:hover{
+      .bg{
+        &::after{
+          opacity: 0;
+        }
+      }
+      h2{
+        left: 5px;
+      }
+    }
+    &.active{
+      a{
+        h2{
+          opacity: 1;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $design-width) {
+.homeContentSec{
+  section{
+    a{
+      h2{
+        @include fz_vwpc(18);
+      }
+    }
+  }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

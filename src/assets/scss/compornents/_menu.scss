@@ -90,7 +90,7 @@
   .closeBtn{
     display: none;
 		opacity: 0;
-		transition: opacity .6s;
+		//transition: opacity .6s;
   }
 }
 ////////////////////////////////////////////////////////////
@@ -121,11 +121,11 @@
 	}
 	.mainNavSec{
 		display: block;
-		opacity: 1;
+		animation: show .5s linear 0s forwards;
 	}
 	.closeBtn{
 		display: block;
-		opacity: 1;
+		animation: show .5s linear 0s forwards;
 		position: absolute;
 		bottom: 20px;
 		left: 55px;
@@ -157,7 +157,7 @@
 #mainNav .mainNavSec{
   display: none;
 	opacity: 0;
-	transition: opacity .3s 1s;
+	//transition: opacity .3s;
 	padding: 0 55px;
 	text-align: left;
 	li{

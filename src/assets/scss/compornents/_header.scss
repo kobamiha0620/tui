@@ -21,6 +21,28 @@ header{
     }
   }
 }
+@media screen and (min-width: $break-point-middle) {
+header{
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  //height: $header-size;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 30px 20px 10px;
+  @include fontEn;
+  font-size: 1.2rem;
+  line-height: 1em;
+  letter-spacing: .02em;
+  >.inner{
+    @include setTbl;
+    >*{
+      vertical-align: top;
+    }
+  }
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 header .col-logo{
@@ -52,6 +74,10 @@ header .col-logo{
     letter-spacing: .02em;
     @include fontEn;
     line-height: 1em;
+    a{
+      display: inline-block;
+      @include over_06;
+    }
   }
 }
 ////////////////////////////////////////////////////////////

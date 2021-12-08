@@ -304,6 +304,24 @@ function setWay () {
     var target = $(this.element);
     if (direction === 'down') { // scroll down
       activePoint.addClass('active');
+    }
+  }, {
+    offset: '-145px'
+  });
+  $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'up') { // scroll down
+      activePoint.removeClass('active');
+    }
+  }, {
+    offset: '-155px'
+  });
+
+  $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'down') { // scroll down
       if (activePoint.attr('id') == 'cont_01') {
         $('h1.logo').addClass('hidden');
         $('.navTtl').hide();
@@ -328,25 +346,22 @@ function setWay () {
         $('h1.logo').addClass('hidden');
         $('.navTtl').hide();
         $('.navTtl.style_06').show();
-      }else if (activePoint.attr('id') == 'cont_07') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_07').show();
       }
     }
   }, {
-    offset: '-200px'
+    offset: '10px'
   });
-  $('.galleryWidget .item').waypoint(function (direction) {
+  $('#cont_07').waypoint(function (direction) {
     var activePoint = $(this.element);
     var target = $(this.element);
-    if (direction === 'up') { // scroll down
-      activePoint.removeClass('active');
+    if (direction === 'down') { // scroll down
+      $('h1.logo').addClass('hidden');
+      $('.navTtl').hide();
+      $('.navTtl.style_07').show();
     }
   }, {
-    offset: '-155px'
+    offset: '90%'
   });
-
   $('.galleryWidget .item').waypoint(function (direction) {
     var activePoint = $(this.element);
     var target = $(this.element);
@@ -397,15 +412,15 @@ function setWay () {
   }, {
     offset: '30%'
   });
-  // $('.galleryWidget .item').waypoint(function (direction) {
-  //   var activePoint = $(this.element)
-  //   var target = $(this.element)
-  //   if (direction === 'up') { // scroll down
-  //     activePoint.removeClass('move')
-  //   }
-  // }, {
-  //   offset: '-155px'
-  // })
+  $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'up') { // scroll down
+      activePoint.removeClass('move');
+    }
+  }, {
+    offset: '-155px'
+  });
 
   $('.shuffle').waypoint(function (direction) {
     var activePoint = $(this.element);
