@@ -5,15 +5,15 @@ header{
   position: fixed;
   width: 100%;
   background-color: $white;
-  //height: $header-size;
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 30px 20px 10px;
+  padding: 55/$design-num-sp*100vw 28/$design-num-sp*100vw 32/$design-num-sp*100vw;
   @include fontEn;
-  font-size: 1.2rem;
+  @include fz_vw(26);
   line-height: 1em;
   letter-spacing: .02em;
+  min-height: $header-size-sp;
   >.inner{
     @include setTbl;
     >*{
@@ -23,42 +23,36 @@ header{
 }
 @media screen and (min-width: $break-point-middle) {
 header{
-  position: fixed;
-  width: 100%;
-  background-color: $white;
-  //height: $header-size;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   padding: 30px 20px 10px;
-  @include fontEn;
   font-size: 1.2rem;
-  line-height: 1em;
-  letter-spacing: .02em;
-  >.inner{
-    @include setTbl;
-    >*{
-      vertical-align: top;
-    }
-  }
+  min-height: $header-size;
 }
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 header .col-logo{
-  width: 314/1232*100%;
+  width: 60%;
   position: relative;
-  .logo{
+  h1{
+    @include fz_vw(26);
+    letter-spacing: .02em;
+    @include fontEn;
+    line-height: 1em;
+    text-transform: capitalize;
+    a{
+      display: inline-block;
+      @include over_06;
+    }
+  }
+  h1.logo{
     opacity: 1;
     transition: .3s;
     &.hidden{
       opacity: 0;
     }
     a{
-      display: inline-block;
-      @include over_06;
       img{
-        width: 22px;
+        width: 46/$design-num-sp*100vw;
       }
     }
     .menuOpen &{
@@ -70,7 +64,7 @@ header .col-logo{
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.2rem;
+    @include fz_vw(26);
     letter-spacing: .02em;
     @include fontEn;
     line-height: 1em;
@@ -80,9 +74,32 @@ header .col-logo{
     }
   }
 }
+@media screen and (min-width: $break-point-middle) {
+header .col-logo{
+  width: 314/1232*100%;
+  h1{
+    font-size: 1.2rem;
+  }
+  h1.logo{
+    a{
+      img{
+        width: 22px;
+      }
+    }
+  }
+  .navTtl{
+    font-size: 1.2rem;
+  }
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 header .col-nav{
+  display: none;
+}
+@media screen and (min-width: $break-point-middle) {
+header .col-nav{
+  display: table-cell;
   .productNav{
     display: none;
     padding: 56px 0 46px;
@@ -95,19 +112,9 @@ header .col-nav{
   }
   a{
     color: $key-black;
-    //@include over_01($key-black);
     @include over_06;
   }
-  // .parent{
-  //   a{
-  //     cursor: default;
-  //     &.active{
-  //       &::before{
-  //         width: 100%;
-  //       }
-  //     }
-  //   }
-  // }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -115,7 +122,6 @@ header .col-EcNav{
   text-align: right;
   a{
     color: $key-black;
-    //@include over_01($key-black);
     @include over_06;
   }
 }

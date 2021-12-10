@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#">
+<html lang="ja" prefix="og: http://ogp.me/ns#" lang="{{ request.locale.iso_code }}>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,13 +29,41 @@
   }
   </script>
   
-  <title>tui</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+
+  {%- if canonical_url != blank  -%}
+    <link rel="canonical" href="{{ canonical_url }}">
+  {%- endif -%}
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+  {%- capture seo_title -%}
+    {%- if request.page_type == 'search' and search.performed == true -%}
+      {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+    {%- else -%}
+      {{ page_title }}
+    {%- endif -%}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- assign escaped_page_title = page_title | escape -%}
+    {%- unless escaped_page_title contains shop.name -%}
+      &ndash; {{ shop.name }}
+    {%- endunless -%}
+  {%- endcapture -%}
+  <title>{{ seo_title | strip }}</title>
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {% include 'social-meta-tags' %}
+  {% include 'css-variables' %}
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
   
 
   <meta http-equiv="content-script-type" content="text/javascript">
@@ -62,38 +90,71 @@
   </script>
   <link rel="stylesheet" href="https://use.typekit.net/tfo5tsn.css">
   
-  <link rel="stylesheet" type="text/css" media="all" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" media="all" href="{{ 'main.css' | asset_url }}">
   
   
 </head>
 
-<body>
+<body class="template-{{ request.page_type | handle }}">
   <div id="loading"></div>
-  <div id="wrapper" class="home ">
+  <div id="wrapper" class="
+  {% if template == 'index' %}
+  home
+  {% elsif template == 'blog' %}
+  news
+  {% endif %}
+  {% if collection.handle == 'p1' %}p1 single-product
+  {% elsif collection.handle == 'p6' %}
+  p6 single-product
+  {% elsif collection.handle == 'p124' %}
+  p124 single-product
+  {% elsif collection.handle == 'giftbox' %}
+  giftbox single-product
+  {% elsif page.handle == 'about' %}
+  about
+  {% elsif page.handle == 'sctl' %}
+  sctl
+  {% endif %}
+  ">
     <div id="clickBlocker"></div>
 
 
 
+<a href="{{ routes.cart_url }}" class="site-header__icon site-header__cart">
+  <div id="CartCount" class="site-header__cart-count{% if cart.item_count == 0 %} hide{% endif %} critical-hidden" data-cart-count-bubble>
+    <span data-cart-count>{{ cart.item_count }}</span>
+  </div>
+</a>
+
 <header>
   <div class="inner">
     <div class="col-logo">
-      <h1 class="logo">
-        <a href="javascript:void(0);">
-        
-        
-          
-<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
+      
+        {% if template == 'index' %}
+        <h1 class="logo">
+  <a href="javascript:void(0);">
+  
+  
+    
+<img data-src="{{ 'logo-tui_01.svg' | file_url }}" alt="tui" class="lazyload">
 
-        
-        </a>
-      </h1>
-      <p class="navTtl style_01"><a href="javascript:void(0);">About tui</a></p>
-      <p class="navTtl style_02"><a href="javascript:void(0);">BOOSTER OIL</a></p>
-      <p class="navTtl style_03"><a href="javascript:void(0);">MOISTURE SERUM</a></p>
-      <p class="navTtl style_04"><a href="javascript:void(0);">SET PACKAGE</a></p>
-      <p class="navTtl style_05"><a href="javascript:void(0);">About NtDDS</a></p>
-      <p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
-      <p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
+  
+  </a>
+</h1>
+<p class="navTtl style_01"><a href="javascript:void(0);">About tui</a></p>
+<p class="navTtl style_02"><a href="javascript:void(0);">BOOSTER OIL</a></p>
+<p class="navTtl style_03"><a href="javascript:void(0);">MOISTURE SERUM</a></p>
+<p class="navTtl style_04"><a href="javascript:void(0);">SET PACKAGE</a></p>
+<p class="navTtl style_05"><a href="javascript:void(0);">About NtDDS</a></p>
+<p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
+<p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
+
+        {% else %}
+        <h1 class="logo">
+          <a href="javascript:void(0);">{{page.handle}}</a>
+        </h1>
+        {% endif %}
+      
     </div>
     <!-- /.col-logo -->
     <div class="col-nav">
@@ -124,7 +185,7 @@
           
           
             
-<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
+<img data-src="{{ 'logo-tui_01.svg' | file_url }}" alt="tui" class="lazyload">
 
           
           </a>
@@ -173,7 +234,7 @@
     
     
       
-<img data-src="assets/images/icon-close.svg" alt="tui" class="lazyload">
+<img data-src="{{ 'icon-close.svg' | file_url }}" alt="tui" class="lazyload">
 
     
   </div>

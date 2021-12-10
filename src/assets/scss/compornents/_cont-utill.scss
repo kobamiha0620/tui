@@ -1,5 +1,90 @@
 @charset "utf-8";
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+.setMrg_01{
+  margin-bottom: 80/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_01{
+  margin-bottom: 36px;
+}
+}
+///////////////////////////////////////
+.setMrg_02{
+  margin-bottom: 40/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_02{
+  margin-bottom: 26px;
+}
+}
+///////////////////////////////////////
+.setMrg_03{
+  margin-bottom: 40/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_03{
+  margin-bottom: 10px;
+}
+}
+///////////////////////////////////////
+.setMrg_04{
+  margin-top: 80/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_04{
+  margin-top: 60px;
+}
+}
+///////////////////////////////////////
+.setMrg_05{
+  margin-bottom: 180/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_05{
+  margin-bottom: 55px;
+}
+}
+///////////////////////////////////////
+.setMrg_06{
+  margin-bottom: 180/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_06{
+  margin-bottom: 160px;
+}
+}
+///////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.setMrg_07{
+  margin-bottom: 95px;
+}
+}
+///////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.setMrg_08{
+  margin-bottom: 50px;
+}
+}
+///////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.setMrg_09{
+  margin-bottom: 20px;
+}
+}
+///////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.setMrg_10{
+  margin-bottom: 50px;
+}
+}
+///////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.setMrg_11{
+  margin-bottom: 196px;
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {
 }

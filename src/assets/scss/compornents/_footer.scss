@@ -2,30 +2,50 @@
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 footer{
-  padding: 178px 20px 40px;
+  padding: 350/$design-num-sp*100vw 28/$design-num-sp*100vw 40/$design-num-sp*100vw 140/$design-num-sp*100vw;
   >.inner{
     position: relative;
   }
 }
+@media screen and (min-width: $break-point-middle) {
+footer{
+  padding: 178px 20px 40px;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+.footNav{
+  @include fz_vw(20);
+  line-height: 1em;
+  @include fontEn;
+  letter-spacing: .04em;
+  padding-bottom: 30/$design-num-sp*100vw;
+  >*{
+    display: inline-block;
+    width: 138/$design-num-sp*100vw;
+    margin-bottom: 30/$design-num-sp*100vw;
+  }
+  a{
+    display: inline-block;
+    @include over_06;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
 .footNav{
   @include setTbl;
   width: auto;
   table-layout: auto;
   margin: 0 auto;
   font-size: 1.2rem;
-  line-height: 1em;
-  @include fontEn;
   letter-spacing: .02em;
+  padding-bottom: 0;
   >*{
     text-align: center;
     padding: 0 25px;
+    width: auto;
+    margin-bottom: 0;
   }
-  a{
-    display: inline-block;
-    @include over_06;
-  }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -34,9 +54,14 @@ footer{
   right: 0;
   bottom: 0;
   @include fontEn;
-  font-size: 1.0rem;
+  @include fz_vw(20);
   line-height: 1em;
   letter-spacing: .02em;
+}
+@media screen and (min-width: $break-point-middle) {
+.copyRightSec{
+  font-size: 1.0rem;
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

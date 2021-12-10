@@ -1,6 +1,302 @@
 @charset "utf-8";
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+.heroStyle_01{
+  @include baseSpPad;
+  opacity: 0;
+  transition: .3s;
+  >.inner{
+    height: -webkit-calc(100vh - #{$header-size-sp});
+    height: calc(100vh - #{$header-size-sp});
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .imgStyle{
+    height: 100%;
+  }
+  img{
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%!important;
+    object-fit: cover;
+  }
+  .loaded &{
+    opacity: 1;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.heroStyle_01{
+  padding: 0 20px;
+  >.inner{
+    height: 100vh;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.ttlStyle_01{
+  @include fontEn;
+  letter-spacing: .05em;
+  @include fz_vw(30);
+  line-height: 1em;
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_01{
+  font-size: 1.8rem;
+}
+}
+@media screen and (min-width: $design-width) {
+.ttlStyle_01{
+  @include fz_vwpc(18);
+}
+}
+//////////////////////////////////
+.ttlStyle_02{
+  img{
+    width: 287/$design-num-sp*100vw;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_02{
+  img{
+    width: 184px;
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.ttlStyle_02{
+  img{
+    width: 184/$design-num*100vw;
+  }
+}
+}
+//////////////////////////////////
+.ttlStyle_03{
+  img{
+    width: 388/$design-num-sp*100vw;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_03{
+  img{
+    width: 248px;
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.ttlStyle_03{
+  img{
+    width: 248/$design-num*100vw;
+  }
+}
+}
+//////////////////////////////////
+.ttlStyle_04{
+  img{
+    width: 502/$design-num-sp*100vw;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_04{
+  img{
+    width: 325px;
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.ttlStyle_04{
+  img{
+    width: 325/$design-num*100vw;
+  }
+}
+}
+//////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_05{
+  @include fontEn;
+  font-size: 2.4rem;
+  line-height: 1em;
+  letter-spacing: .06em;
+}
+}
+//////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_06{
+  line-height: 1em;
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: .06em;
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.btnStyle_01{
+  @include fz_vw(20);
+  line-height: 1em;
+  @include fontEn;
+  letter-spacing: .03em;
+  display: inline-block;
+  @include over_06;
+  &::after{
+    content: '';
+    width: 12/$design-num-sp*100vw;
+    height: 12/$design-num-sp*100vw;
+    border-radius: 12/$design-num-sp*100vw;
+    background-color: $key-color1;
+    margin-left: 12/$design-num-sp*100vw;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.btnStyle_01{
+  font-size: 1.2rem;
+  &::after{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    margin-left: 6px;
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.btnStyle_01{
+  @include fz_vwpc(12);
+  &::after{
+    width: 8/$design-num*100vw;
+    height: 8/$design-num*100vw;
+    border-radius: 8/$design-num*100vw;
+    margin-left: 6/$design-num*100vw;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+.btnStyle_02{
+  @extend .btnStyle_01;
+  &::after{
+    background-color: $key-color2;
+  }
+}
+////////////////////////////////////////////////////////////
+.btnStyle_03{
+  @extend .btnStyle_01;
+  &::after{
+    background-color: $key-color3;
+  }
+}
+////////////////////////////////////////////////////////////
+.btnStyle_04{
+  @extend .btnStyle_01;
+  &::after{
+    background-color: $key-color4;
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.summaryStyle_01{
+  @include fz_vw(26);
+  line-height: (56/26)+em;
+  letter-spacing: .05em;
+  text-align: justify;
+  >*{
+    margin-bottom: (12/12)+em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  sup{
+    @include fz_vw(18);
+    position: relative;
+    top: -2px;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.summaryStyle_01{
+  font-size: 1.2rem;
+  line-height: (30/12)+em;
+  text-align: left;
+  sup{
+    font-size: .8rem;
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.summaryStyle_01{
+  @include fz_vwpc(12);
+  sup{
+    @include fz_vwpc(10);
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.summaryStyle_02{
+  font-size: 1.2rem;
+  line-height: (24/12)+em;
+  letter-spacing: .02em;
+  >*{
+    margin-bottom: (12/12)+em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.summaryStyle_03{
+  font-size: 1.2rem;
+  line-height: (30/12)+em;
+  letter-spacing: .02em;
+  >*{
+    margin-bottom: (12/12)+em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.txStyle_01{
+  font-size: 1.0rem;
+}
+}
+@media screen and (min-width: $design-width) {
+.txStyle_01{
+  @include fz_vwpc(10);
+}
+}
+///////////////////////////////////
+.txStyle_02{
+  @include fz_vw(20);
+}
+@media screen and (min-width: $break-point-middle) {
+.txStyle_02{
+  font-size: 1.0rem;
+}
+}
+@media screen and (min-width: $design-width) {
+.txStyle_02{
+  @include fz_vwpc(10);
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.listStyle_01{
+  li{
+    padding-left: 1em;
+    text-indent: -1em;
+    &::before{
+      content: '◯';
+    }
+  }
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {

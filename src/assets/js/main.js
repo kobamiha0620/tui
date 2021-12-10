@@ -56,6 +56,28 @@ $(window).on('load', function () {
   }
 });
 
+// 写真切り替え
+function setPhotoChanger () {
+  $('.photoChanger').each(function () {
+    var imgCount = $(this).find('li').length;
+    $(this).find('li:nth-child(1)').addClass('action');
+    if (imgCount > 1) {
+      var target = $(this);
+      setInterval(function () {
+        setSlide(target);
+      }, 5000);
+    }
+  });
+
+  function setSlide (target) {
+    target.find('li:nth-child(2)').addClass('action');
+    setTimeout(function () {
+      target.find('li:nth-child(1)').removeClass('action');
+      target.find('li:nth-child(1)').appendTo(target);
+    }, 2000);
+  }
+}
+
 // ヘッダーナビメガメニュー
 function setMega () {
   $('header .col-nav .parent a').hover(function () {
@@ -175,13 +197,20 @@ function setMainMenu () {
     }, 200);
   });
 
+  // iosスクロール制御
+  function handleTouchMove (event) {
+    event.preventDefault();
+  }
+
   function openFnc () {
-    // current_scrollY = $(window).scrollTop()
+    current_scrollY = $(window).scrollTop();
     // $('body').addClass('breakH')
     $('#mainNav').addClass('active');
     $('#wrapper').addClass('menuOpen');
     // $('#outerMenu').css('top', -(current_scrollY))
     menuOpenFlag = true;
+    // スクロール禁止
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
   // setTimeout(function () {
   //   $('html, body').prop({
   //     scrollTop: 0
@@ -195,16 +224,30 @@ function setMainMenu () {
     $('#mainNav').removeClass('active');
     // $('#outerMenu').css('top', '')
     $('#wrapper').removeClass('menuOpen');
+    // スクロール復帰
+    document.removeEventListener('touchmove', handleTouchMove, { passive: false });
     menuOpenFlag = false;
-  // $('html, body').prop({
-  //   scrollTop: current_scrollY
-  // })
+    $('html, body').prop({
+      scrollTop: current_scrollY
+    });
   // setTimeout(function () {
   //   // $('#wrapper').removeClass('breakLuxy')
   //   menuOpenFlag = false
   // }, 2000)
   }
 }
+
+// /最下部イベント
+$(window).on('load scroll resize', function () {
+  var scrollTop = $(window).scrollTop();
+  var scrollMax = $(document).height() - window.innerHeight;
+
+  if (scrollTop >= scrollMax) {
+    $('#mainNav').addClass('foot');
+  }else {
+    $('#mainNav').removeClass('foot');
+  }
+});
 
 // ///////ヘッダー制御
 function setHeader () {
@@ -306,6 +349,7 @@ function setWay () {
       activePoint.addClass('active');
     }
   }, {
+    // 遊び分の200px-ヘッダーサイズ
     offset: '-145px'
   });
   $('.galleryWidget .item').waypoint(function (direction) {
@@ -319,6 +363,25 @@ function setWay () {
   });
 
   $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'down') { // scroll down
+      activePoint.addClass('move');
+    }
+  }, {
+    offset: '30%'
+  });
+  $('.galleryWidget .item').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'up') { // scroll down
+      activePoint.removeClass('move');
+    }
+  }, {
+    offset: '-155px'
+  });
+
+  $('#homeWidget .item').waypoint(function (direction) {
     var activePoint = $(this.element);
     var target = $(this.element);
     if (direction === 'down') { // scroll down
@@ -362,7 +425,7 @@ function setWay () {
   }, {
     offset: '90%'
   });
-  $('.galleryWidget .item').waypoint(function (direction) {
+  $('#homeWidget .item').waypoint(function (direction) {
     var activePoint = $(this.element);
     var target = $(this.element);
     if (direction === 'up') { // scroll down
@@ -401,25 +464,6 @@ function setWay () {
     }
   }, {
     offset: '-95%'
-  });
-
-  $('.galleryWidget .item').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'down') { // scroll down
-      activePoint.addClass('move');
-    }
-  }, {
-    offset: '30%'
-  });
-  $('.galleryWidget .item').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'up') { // scroll down
-      activePoint.removeClass('move');
-    }
-  }, {
-    offset: '-155px'
   });
 
   $('.shuffle').waypoint(function (direction) {

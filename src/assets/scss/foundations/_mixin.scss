@@ -524,8 +524,8 @@
 }
 //////////////////////
 @mixin baseSpPad{
-  padding-left: 40/$design-num-sp*100vw;
-  padding-right: 40/$design-num-sp*100vw;
+  padding-left: 28/$design-num-sp*100vw;
+  padding-right: 28/$design-num-sp*100vw;
 }
 //////////////////////
 @function get_keycolor($alpha:1){

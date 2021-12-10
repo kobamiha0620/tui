@@ -8,23 +8,23 @@
 <header>
   <div class="inner">
     <div class="col-logo">
-      <h1 class="logo">
-        <a href="javascript:void(0);">
-        <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
-        <% if(pageinit.shopify!=='true'){%>
-          <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
-        <% } else {%>
-          <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+      <% if(pageinit.shopify!=='true'){%>
+        <% if(pageinit.category=='home'){%>
+        <%- include(pageinit.path + '_nav-header_01.ejs', {pageinit:pageinit});%>
+        <% } else if (pageinit.category=='products') { %>
+        <h1 class="logo">
+          <a href="javascript:void(0);"><%= pageinit.category %></a>
+        </h1>
         <% }%>
-        </a>
-      </h1>
-      <p class="navTtl style_01"><a href="javascript:void(0);">About tui</a></p>
-      <p class="navTtl style_02"><a href="javascript:void(0);">BOOSTER OIL</a></p>
-      <p class="navTtl style_03"><a href="javascript:void(0);">MOISTURE SERUM</a></p>
-      <p class="navTtl style_04"><a href="javascript:void(0);">SET PACKAGE</a></p>
-      <p class="navTtl style_05"><a href="javascript:void(0);">About NtDDS</a></p>
-      <p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
-      <p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
+      <% } else {%>
+        {% if template == 'index' %}
+        <%- include(pageinit.path + '_nav-header_01.ejs', {pageinit:pageinit});%>
+        {% else %}
+        <h1 class="logo">
+          <a href="javascript:void(0);">{{page.handle}}</a>
+        </h1>
+        {% endif %}
+      <% }%>
     </div>
     <!-- /.col-logo -->
     <div class="col-nav">

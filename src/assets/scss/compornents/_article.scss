@@ -1,5 +1,85 @@
 @charset "utf-8";
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+.articleStyle_01{
+  a{
+    display: block;
+    >.inner{
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .eyeCatch{
+      img{
+        @include imgset;
+      }
+    }
+    .content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include setTbl;
+      height: 486/$design-num-sp*100vw;
+      >.inner{
+        text-align: center;
+      }
+    }
+    h2{
+      color: $white;
+      @include fontEn;
+      letter-spacing: .03em;
+      line-height: 1em;
+      @include fz_vw(36);
+      transition: .3s;
+      position: relative;
+      left: 0;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.articleStyle_01{
+  a{
+    .eyeCatch{
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .03);
+        transition: .3s;
+      }
+    }
+    .content{
+      height: 400/$design-num*100vw;
+    }
+    h2{
+      font-size: 1.8rem;
+    }
+  }
+  a:hover{
+    .eyeCatch{
+      &::after{
+        opacity: 0;
+      }
+    }
+    h2{
+      left: 5px;
+    }
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.articleStyle_01{
+  a{
+    h2{
+      @include fz_vwpc(18);
+    }
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {
 }
