@@ -1,0 +1,461 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['about'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ()']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_menu.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div id="container" class="multiGallery">
+      <div class="galleryWidget top nullWay setMrg_12">
+        <div class="inner">
+          <div class="item active">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_02',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+          </div>
+          <!-- /.item -->
+          <section class="item">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_03',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_03">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <h2>
+                      <% var imgInfo = {path:'tx-08',type:'svg',alt:'当たり前を、変えるもの'};%>
+                      <% if(pageinit.shopify!=='true'){%>
+                        <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                      <% } else {%>
+                        <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                      <% }%>
+                    </h2>
+                    <div class="summary">
+                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
+                    </div>
+                    <!-- /.summary -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </section>
+          <!-- /.item -->
+          <div class="mask">
+            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
+            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+          </div>
+          <!-- /.mask -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.galleryWidget -->
+      <div class="gallerySep">
+        <section class="secStyle_02 setMrg_14">
+          <div class="inner">
+            <h2 class="ttlStyle_07">
+              <% var imgInfo = {path:'tx-09',type:'svg',alt:'肌のしくみ'};%>
+              <% if(pageinit.shopify!=='true'){%>
+                <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+              <% } else {%>
+                <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+              <% }%>
+            </h2>
+            <div class="imgStyle_01 setMrg_13">
+              <span>
+                <% var imgInfo = {path:'img_11',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </span>
+            </div>
+            <!-- /.imgStyle_01 -->
+            <div class="articleWrap_01">
+              <div class="articleStyle_02">
+                <p class="numbering">Structure 1</p>
+                <h3>角質層の乱れが、<br class="sp">肌を無防備な状態に</h3>
+                <div class="summary">
+                  <p>胞間脂質、NMF、皮脂膜が減少、不足すると角質層の水分が蒸発しやすくなり、<br class="pc">肌の乾燥、肌荒れなどのトラブルを招きます。</p>
+                </div>
+                <!-- /.summary -->
+              </div>
+              <!-- /.articleStyle_02 -->
+              <div class="articleStyle_02">
+                <p class="numbering">Structure 2</p>
+                <h3>表皮の新陳代謝と、<br class="sp">肌荒れはつながっている</h3>
+                <div class="summary">
+                  <p>表皮の新陳代謝が鈍化すると、肌の生まれ変わり<span>（ターンオーバー）</span>が不安定になり、<br class="pc">キメの乱れ、肌荒れ、保湿機能の衰えを招きます。</p>
+                </div>
+                <!-- /.summary -->
+              </div>
+              <!-- /.articleStyle_02 -->
+              <div class="articleStyle_02">
+                <p class="numbering">Structure 3</p>
+                <h3>バリア機能が低下することで<br class="sp">さまざまなトラブルが発生</h3>
+                <div class="summary">
+                  <p>間違ったスキンケアをしたり食事や睡眠などの生活が乱れると、角質層の代謝が乱れて健康な角質細胞が育たなくなります。<br class="pc">細胞間脂質も作られにくく、スカスカの状態になると外的刺激が侵入し、<br class="pc">さまざまな肌トラブルを引き起こしやすくなります。</p>
+                </div>
+                <!-- /.summary -->
+              </div>
+              <!-- /.articleStyle_02 -->
+            </div>
+            <!-- /.articleWrap_01 -->
+          </div>
+          <!-- /.inner -->
+        </section>
+        <!-- /.secStyle_02 -->
+        <div class="setMrg_15">
+          <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
+        </div>
+        <!-- /.setMrg_15 -->
+      </div>
+      <!-- /.gallerySep -->
+      <div class="galleryWidget bottom onlyPc">
+        <div class="inner">
+          <section class="item active setMrg_20">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_04',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_04">
+              <div class="wrap">
+                <div class="inner">
+                  <h2>
+                    <% var imgInfo = {path:'tx-10',type:'svg',alt:'肌が実感する、角質層へのアプローチ'};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </h2>
+                  <div class="summary">
+                    <p>水溶性・高分子成分をそのままNtDDS技術で油性素材・水溶性素材に<br class="pc">ナノ分散することで、 角質層のすみずみまでダイレクトに浸透します。<br class="pc">これらの保湿美容成分を NtDDS 技術で角質層のすみずみまで届けることにより、<br class="pc">肌にうるおいを与えハリや肌荒れなどさまざまな肌悩みに多角的にアプローチします。</p>
+                  </div>
+                  <!-- /.summary -->
+                  <div class="childWrap">
+                    <div class="sec">
+                      <div class="inner">
+                        <div class="eyeCatch">
+                          <%- include(pageinit.path + 'assets/module/_elem_01.ejs');%>
+                        </div>
+                        <!-- /.eyeCatch -->
+                        <div class="childSummary">
+                          <p>角質層にうるおいを与え、肌トラブルを防ぎ肌のハリを保つ。</p>
+                        </div>
+                        <!-- /.summary -->
+                      </div>
+                      <!-- /.inner -->
+                    </div>
+                    <!-- /.sec -->
+                    <div class="sec">
+                      <div class="inner">
+                        <div class="eyeCatch">
+                          <%- include(pageinit.path + 'assets/module/_elem_02.ejs');%>
+                        </div>
+                        <!-- /.eyeCatch -->
+                        <div class="childSummary">
+                          <p>肌を整え、外部からの刺激にもゆるがない肌を保つ。</p>
+                        </div>
+                        <!-- /.summary -->
+                      </div>
+                      <!-- /.inner -->
+                    </div>
+                    <!-- /.sec -->
+                    <div class="sec">
+                      <div class="inner">
+                        <div class="eyeCatch">
+                          <%- include(pageinit.path + 'assets/module/_elem_03.ejs');%>
+                        </div>
+                        <!-- /.eyeCatch -->
+                        <div class="childSummary">
+                          <p>肌全体にうるおいを与え、皮膚の乾燥を防ぐ。</p>
+                        </div>
+                        <!-- /.summary -->
+                      </div>
+                      <!-- /.inner -->
+                    </div>
+                    <!-- /.sec -->
+                  </div>
+                  <!-- /.childWrap -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </section>
+          <!-- /.item -->
+          <section class="item setMrg_20">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_05',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_05">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <p class="numbering">Point 1</p>
+                    <h2>肌と、透過</h2>
+                    <div class="summary">
+                      <p>私たちの身体は、皮膚表面を覆っている油分のバリア機能により異物の侵入を防いでいます。本来は一定以上の高分子のものを吸収しなかったため、必要な成分が届きませんでした。NtDDSの技術は成分と肌の親和性を高くすることにより、角質層に透過、 届けたい成分を浸透（角質層まで）させることができます。独自の高浸透技術で満ち足りた肌へ。</p>
+                    </div>
+                    <!-- /.summary -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </section>
+          <!-- /.item -->
+          <section class="item setMrg_20">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_06',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_06 setStyle_01">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <p class="numbering">Point 2</p>
+                    <h2>ビタミンC<span>（リン酸アスコルビルMg/整肌成分）</span>を<br class="pc">深層部へ、ダイレクトに</h2>
+                    <div class="summary">
+                      <p>一般論、肌の弾力を左右する繊維芽細胞はビタミンC（リン酸アスコルビルMg/整肌成分）を与えることで活性化。角質層まで保湿美容成分がダイレクトに浸透することで肌サイクルを取り戻し、肌にハリ・弾力を与えます。</p>
+                    </div>
+                    <!-- /.summary -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </section>
+          <!-- /.item -->
+          <section class="item">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_07',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_06 setStyle_02">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <p class="numbering">Point 3</p>
+                    <h2>独自開発した<br class="sp">浸透技術が可能にする、<br>角質層すみずみへのアプローチ</h2>
+                    <ul class="specList">
+                      <li>NtDDS技術が必要な成分を<br class="sp">角質層までしっかり届ける。</li>
+                      <li>ビタミンC<span>（リン酸アスコルビルMg/整肌成分）</span>を<br class="sp">はじめとする<br class="pc">保湿美容成分が、肌サイクルを取り戻す。</li>
+                      <li>酸化することなく、クリアで<br class="sp">フレッシュな使用感が持続する。</li>
+                      <li>使い続けるほど実感する、なめらかな肌。</li>
+                    </ul>
+                    <!-- /.specList -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </section>
+          <!-- /.item -->
+          <div class="mask">
+            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
+            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+          </div>
+          <!-- /.mask -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.galleryWidget -->
+      <div class="gallerySep setMrg_16">
+        <section class="secStyle_02 setMrg_19">
+          <div class="inner">
+            <h2 class="ttlStyle_05 setMrg_01">Skincare Routine</h2>
+            <div class="summaryStyle_03 setMrg_17">
+              <p>ビタミンC<span class="txStyle_02">（リン酸アスコルビルMg/整肌成分）</span>をはじめとする保湿美容成分を集中的に角質層のすみずみまで<br class="pc">届けることで肌サイクルを取り戻す。肌全体のコンディションを根本から整えたい方におすすめ。</p>
+            </div>
+            <!-- /.summaryStyle_03 -->
+            <div class="imgStyle_01 setMrg_18">
+              <span>
+                <% var imgInfo = {path:'img_12',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </span>
+            </div>
+            <!-- /.imgStyle_01 -->
+            <div class="stepUnit">
+              <div class="sec nullWay">
+                <span class="circle"></span>
+                <div class="inner">
+                  <div class="cont">
+                    <div class="inner">
+                      <p class="step">STEP 1</p>
+                      <h3><span class="en">BOOSTER OIL</span><span class="ja">（オイル & 美容液）</span></h3>
+                      <h4>洗顔後すぐに<br class="sp">“オイル” の新習慣</h4>
+                      <div class="summary">
+                        <p>表皮と親和性の高いオイルで浸透<span>※</span>を高め、 柔らかくなった肌表面から<br class="pc">NtDDSの技術で保湿美容成分を深層部まで届けます。<br class="pc">ベタつくことなくスーっと肌に馴染んでいくテクスチャーは、<br class="pc">その後のスキンケアやメイクの邪魔をしません。</p>
+                        <p class="caution">※角質層まで</p>
+                      </div>
+                      <!-- /.summry -->
+                      <div class="elemWrap"><a href="javascript:void(0);" class="btnStyle_01 style_01"><span>View</span></a></div>
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.cont -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.sec -->
+              <div class="sec nullWay">
+                <span class="circle"></span>
+                <div class="inner">
+                  <div class="cont">
+                    <div class="inner">
+                      <p class="step">STEP 2</p>
+                      <h3><span class="en">MOISTURE SERUM</span><span class="ja">（化粧水 & 美容液）</span></h3>
+                      <h4>化粧水なしで“セラム” だけ</h4>
+                      <div class="summary">
+                        <p>保湿美容成分を閉じ込めたオイルのカプセルをセラムで包み込むことで、<br class="pc">これまでにないうるおいを実現。バリア機能を担うセラミド<sup>※</sup>配合により、<br class="pc">肌にうるおいを蓄え、もっちりとした肌に。親油性が高いテクスチャーは、<br class="pc">オイルと併用しても弾かず馴染み、肌を整えます。</p>
+                        <p class="caution">※セラミドEOP,セラミドNP,セラミドAP</p>
+                      </div>
+                      <!-- /.summry -->
+                      <div class="elemWrap"><a href="javascript:void(0);" class="btnStyle_02 style_01"><span>View</span></a></div>
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.cont -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.sec -->
+              <div class="sec nullWay">
+                <span class="circle"></span>
+                <div class="inner">
+                  <div class="cont">
+                    <div class="inner">
+                      <p class="step">STEP 3</p>
+                      <h4>乳液 or クリーム</h4>
+                      <div class="summary">
+                        <p>お好みでプラスしてください。</p>
+                      </div>
+                      <!-- /.summry -->
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.cont -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.sec -->
+            </div>
+            <!-- /.stepUnit -->
+          </div>
+          <!-- /.inner -->
+        </section>
+        <!-- /.secStyle_02 -->
+        <%- include(pageinit.path + 'assets/module/_nav-product.ejs', {pageinit:pageinit});%>
+      </div>
+      <!-- /.gallerySep -->
+    </div>
+    <!-- /#container -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+  <% if(pageinit.shopify!=='true'){%>
+  <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+  <% } else {%>
+  {% include 'footer-tui' %}
+  <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>

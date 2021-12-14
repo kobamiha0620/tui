@@ -1,0 +1,189 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['product_01','detail-product'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ()']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_menu.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div id="container" class="multiGallery">
+      <div class="galleryWidget top nullWay setMrg_12">
+        <div class="inner">
+          <div class="item active">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_08',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+          </div>
+          <!-- /.item -->
+          <div class="item">
+            <div class="bgImg">
+              <div class="inner">
+                <ul class="photoChanger style_02">
+                  <li>
+                    <% var imgInfo = {path:'hero_img_09',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                  <li>
+                    <% var imgInfo = {path:'hero_img_10',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                </ul>
+                <!-- /.photoChanger -->
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_07">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <div class="summary">
+                      <p>表皮と親和性が高く、<br class="sp">肌にスーッと馴染む、<br>洗顔後すぐに使える“新オイル”</p>
+                    </div>
+                    <!-- /.summary -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.item -->
+          <div class="mask">
+            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
+            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+          </div>
+          <!-- /.mask -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.galleryWidget -->
+      <div class="gallerySep">
+        <section class="secStyle_03 setMrg_22">
+          <div class="inner">
+            <article class="productSec_01">
+              <div class="eyeCatch">
+                <span>
+                  <% var imgInfo = {path:'product_img_01',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </span>
+              </div>
+              <!-- /.eyeCatch -->
+              <div class="ttl">
+                <h2>BOOSTER OIL</h2>
+                <p>ブースターオイル</p>
+              </div>
+              <!-- /.ttl -->
+              <%- include('assets/module/_temp-product_01.ejs') %>
+              <div class="btnWrap setMrg_23">
+                <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+              </div>
+              <!-- /.btnWrap -->
+              <div class="content">
+                <div class="sec">
+                  <h3>体感する浸透力<span>※1</span></h3>
+                  <div class="summary">
+                    <p>洗顔後すぐに“オイル”の新習慣。 表皮と親和性の高いオイルが肌表面を柔らかく、ベタつくことなくスーッと肌に馴染んでいく。独自開発したNtDDS<sup>※2</sup>が美容成分を深層部までしっかりと届け、肌をすこやかに保ちます。</p>
+                    <ul class="cautionList">
+                      <li>※1  角質層まで</li>
+                      <li>※2  ナノ分散浸透技術</li>
+                    </ul>
+                  </div>
+                  <!-- /.summary -->
+                </div>
+                <!-- /.sec -->
+                <div class="sec">
+                  <dl>
+                    <dt>容量</dt>
+                    <dd>30ml</dd>
+                  </dl>
+                  <dl>
+                    <dt>使い方</dt>
+                    <dd>朝晩の洗顔後に1プッシュを手に取り、お顔全体に優しくなじませてください。</dd>
+                  </dl>
+                  <dl>
+                    <dt>全成分</dt>
+                    <dd>ホホバ種子油、リン酸アスコルビルMg、酢酸トコフェロール、水溶性プロテオグリカン、α–アルブチン、ポリリシノレイン酸ポリグリセリル–6、水、BG</dd>
+                  </dl>
+                  <p class="strong">パラベン、アルコール、合成香料、合成着色料 不使用</p>
+                </div>
+                <!-- /.sec -->
+              </div>
+              <!-- /.content -->
+            </article>
+            <!-- /.productSec_01 -->
+          </div>
+          <!-- /.inner -->
+        </section>
+        <!-- /.secStyle_03 -->
+        <div class="setMrg_24">
+          <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
+        </div>
+        <!-- /.setMrg_24 -->
+        <div class="setMrg_25">
+          <%- include(pageinit.path + 'assets/module/_cont-routine.ejs', {pageinit:pageinit});%>
+        </div>
+        <!-- /.setMrg_25 -->
+        <%- include(pageinit.path + 'assets/module/_nav-product.ejs', {pageinit:pageinit});%>
+      </div>
+      <!-- /.gallerySep -->
+    </div>
+    <!-- /#container -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+  <% if(pageinit.shopify!=='true'){%>
+  <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+  <% } else {%>
+  {% include 'footer-tui' %}
+  <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>

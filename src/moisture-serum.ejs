@@ -1,0 +1,187 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['product_02','detail-product'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ()']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_menu.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div id="container" class="multiGallery">
+      <div class="galleryWidget top nullWay setMrg_12">
+        <div class="inner">
+          <div class="item active">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_12',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+          </div>
+          <!-- /.item -->
+          <div class="item">
+            <div class="bgImg">
+              <div class="inner">
+                <ul class="photoChanger style_02">
+                  <li>
+                    <% var imgInfo = {path:'hero_img_13',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                  <li>
+                    <% var imgInfo = {path:'hero_img_14',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                </ul>
+                <!-- /.photoChanger -->
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_07">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <div class="summary">
+                      <p>高い保湿力が、<br class="sp">肌にうるおいを閉じ込める</p>
+                    </div>
+                    <!-- /.summary -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.item -->
+          <div class="mask">
+            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
+            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+          </div>
+          <!-- /.mask -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.galleryWidget -->
+      <div class="gallerySep">
+        <section class="secStyle_03 setMrg_22">
+          <div class="inner">
+            <article class="productSec_01">
+              <div class="eyeCatch">
+                <span>
+                  <% var imgInfo = {path:'product_img_02',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </span>
+              </div>
+              <!-- /.eyeCatch -->
+              <div class="ttl">
+                <h2>MOISTURE SERUM</h2>
+                <p>モイスチャーセラム</p>
+              </div>
+              <!-- /.ttl -->
+              <%- include('assets/module/_temp-product_02.ejs') %>
+              <div class="btnWrap setMrg_23">
+                <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+              </div>
+              <!-- /.btnWrap -->
+              <div class="content">
+                <div class="sec">
+                  <h3>うるおい、肌にとどまる</h3>
+                  <div class="summary">
+                    <p>化粧水なしで“セラム” だけ。 オイルのカプセルをセラムが包み、想像を超える保湿力。セラミド成分※が肌にうるおいを与え、そのたっぷりの水分を蓄えたままの肌が持続します。親油性が高く、オイルとの併用も弾かず馴染む圧巻のセラム。</p>
+                    <ul class="cautionList">
+                      <li>※セラミドEOP,セラミドNP,セラミドAP</li>
+                    </ul>
+                  </div>
+                  <!-- /.summary -->
+                </div>
+                <!-- /.sec -->
+                <div class="sec">
+                  <dl>
+                    <dt>容量</dt>
+                    <dd>50ml</dd>
+                  </dl>
+                  <dl>
+                    <dt>使い方</dt>
+                    <dd>tuiブースターオイルをお持ちの方：ブースター使用後<br>tuiブースターをお持ちでない方：洗顔後すぐ<br>1～2プッシュを手に取り、お顔全体に優しくなじませてください。<br>乾燥が気になる箇所には重ね付けしてご使用ください。<br>朝晩2 回のご使用をおすすめ致します。</dd>
+                  </dl>
+                  <dl>
+                    <dt>全成分</dt>
+                    <dd>水、グリセリン、PEG-40 水添ヒマシ油、 BG、PEG-60 水添ヒマシ油、ホホバ種子油、 リン酸アスコルビルMg、酢酸トコフェロー ル、ポリリシノレイン酸ポリグリセリル-6、水溶性プロテオグリカン、セラミドEOP、セラミドNP、セラミドAP、 キサンタンガム、(PEG-240/デシルテトラ デセス-20/HDI)コポリマー、ポリソル ベート20、PEG-20ソルビタンココエート、フィトスフィンゴシン、コレステロール、カルボマー、ラウロイルラクチレートNa、 カプリリルグリコール、1,2-ヘキサンジ オール、フェノキシエタノール</dd>
+                  </dl>
+                </div>
+                <!-- /.sec -->
+              </div>
+              <!-- /.content -->
+            </article>
+            <!-- /.productSec_01 -->
+          </div>
+          <!-- /.inner -->
+        </section>
+        <!-- /.secStyle_03 -->
+        <div class="setMrg_24">
+          <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
+        </div>
+        <!-- /.setMrg_24 -->
+        <div class="setMrg_25">
+          <%- include(pageinit.path + 'assets/module/_cont-routine.ejs', {pageinit:pageinit});%>
+        </div>
+        <!-- /.setMrg_25 -->
+        <%- include(pageinit.path + 'assets/module/_nav-product.ejs', {pageinit:pageinit});%>
+      </div>
+      <!-- /.gallerySep -->
+    </div>
+    <!-- /#container -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+  <% if(pageinit.shopify!=='true'){%>
+  <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+  <% } else {%>
+  {% include 'footer-tui' %}
+  <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>

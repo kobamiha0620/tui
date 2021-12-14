@@ -9,14 +9,56 @@
   padding: 0 20px;
 }
 }
-////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////
+//////////////////////////////////////
 .secStyle_02{
-  text-align: center;
-  >.inner{
-    display: inline-block;
-    text-align: left;
+  @include baseSpPad;
+  &.style_01{
+    padding-left: 0;
+    padding-right: 12/$design-num-sp*100vw;
   }
+  >.inner{
+    max-width: 576/$design-num-sp*100vw;
+    margin: 0 0 0 auto;
+    padding-right: 18/$design-num-sp*100vw;
+    .imgStyle_01{
+      margin-right: -18/$design-num-sp*100vw;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.secStyle_02{
+  //text-align: center;
+  padding: 0;
+  margin-left: 334/$design-num*100vw;
+  >.inner{
+    max-width: none;
+    margin: 0;
+    padding-right: 0;
+    // display: inline-block;
+    // text-align: left;
+    .imgStyle_01{
+      margin-right: 0;
+    }
+  }
+}
+}
+//////////////////////////////////////
+.secStyle_03{
+  @include baseSpPad;
+  padding-right: 40/$design-num-sp*100vw;
+  >.inner{
+    max-width: 557/$design-num-sp*100vw;
+    margin: 0 0 0 auto;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.secStyle_03{
+  padding: 0;
+  >.inner{
+    max-width: 452px;
+    margin: 0 auto;
+  }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -84,6 +126,46 @@
   >*{
     width: 400/1232*100%;
     margin-bottom: 0;
+  }
+}
+}
+////////////////////////////////////
+.colStyle_04{
+  >*{
+    margin-bottom: 28/$design-num-sp*100vw;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.colStyle_04{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  >*{
+    width: 608/1232*100%;
+    margin-bottom: 0;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.articleWrap_01{
+  >*{
+    margin-bottom: 90/$design-num-sp*100vw;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.articleWrap_01{
+  >*{
+    margin-bottom: 45px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 }

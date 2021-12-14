@@ -15,6 +15,18 @@
         <h1 class="logo">
           <a href="javascript:void(0);"><%= pageinit.category %></a>
         </h1>
+        <% } else if (pageinit.category=='about') { %>
+        <h1 class="logo">
+          <a href="javascript:void(0);">About us</a>
+        </h1>
+        <% } else if (pageinit.category=='product_01,detail-product') { %>
+        <h1 class="logo">
+          <a href="javascript:void(0);">BOOSTER OIL</a>
+        </h1>
+        <% } else if (pageinit.category=='product_02,detail-product') { %>
+        <h1 class="logo">
+          <a href="javascript:void(0);">MOISTURE SERUM</a>
+        </h1>
         <% }%>
       <% } else {%>
         {% if template == 'index' %}

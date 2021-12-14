@@ -321,6 +321,9 @@ function judgeWinSize () {
 function setLoaded () {
   $('#loading').addClass('loaded');
   $('#wrapper').addClass('loaded');
+  setTimeout(function () {
+    $('#wrapper').addClass('loadEnd');
+  }, 500);
   $('body,html').animate({
     scrollTop: 0
   }, 0, 'swing');
@@ -340,6 +343,18 @@ function setWay () {
   //    }
   }, {
     offset: '70%'
+  });
+
+  $('.galleryWidget.bottom').waypoint(function (direction) {
+    var activePoint = $(this.element);
+    var target = $(this.element);
+    if (direction === 'down') { // scroll down
+      activePoint.addClass('active');
+    }else {
+      activePoint.removeClass('active');
+    }
+  }, {
+    offset: 55 / 1280 * 100 + '%'
   });
 
   $('.galleryWidget .item').waypoint(function (direction) {
@@ -371,15 +386,15 @@ function setWay () {
   }, {
     offset: '30%'
   });
-  $('.galleryWidget .item').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'up') { // scroll down
-      activePoint.removeClass('move');
-    }
-  }, {
-    offset: '-155px'
-  });
+  // $('.galleryWidget .item').waypoint(function (direction) {
+  //   var activePoint = $(this.element)
+  //   var target = $(this.element)
+  //   if (direction === 'up') { // scroll down
+  //     activePoint.removeClass('move')
+  //   }
+  // }, {
+  //   offset: '-155px'
+  // })
 
   $('#homeWidget .item').waypoint(function (direction) {
     var activePoint = $(this.element);
