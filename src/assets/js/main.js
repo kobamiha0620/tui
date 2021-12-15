@@ -56,6 +56,22 @@ $(window).on('load', function () {
   }
 });
 
+// faqカテゴリフィルター
+function setCateFilter () {
+  $('#faqNav a').on('click', function () {
+    var target = '.' + $(this).attr('class').replace('active ');
+    $(this).parents('#faqNav').find('a').removeClass('active');
+    $(this).addClass('active');
+    if (target == '.type_0') {
+      $('#faqWrap section').fadeIn('fast').removeClass('disp').removeClass('dispOdd');
+    }else {
+      $('#faqWrap section').hide();
+      $('#faqWrap').find(target).fadeIn('fast').addClass('disp');
+      $('#faqWrap').find(target + ':odd').addClass('dispOdd');
+    }
+  });
+}
+
 // 写真切り替え
 function setPhotoChanger () {
   $('.photoChanger').each(function () {

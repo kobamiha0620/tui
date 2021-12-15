@@ -318,6 +318,57 @@
   }
 }
 }
+//////////////////////////////////
+.ttlStyle_08{
+  @include fz_vw(26);
+  line-height: 1em;
+  margin-bottom: 70/$design-num-sp*100vw;
+  letter-spacing: .02em;
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_08{
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+}
+}
+//////////////////////////////////
+.counterTtl{
+  counter-reset: number 0;
+}
+.ttlStyle_09{
+  @include fz_vw(20);
+  font-weight: normal;
+  &::before{
+    counter-increment: number 1;
+    content:  counter(number) ").";
+    padding-right: .5em;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_09{
+  font-size: 1.2rem;
+}
+}
+//////////////////////////////////
+.ttlStyle_10{
+  font-weight: normal;
+  margin-bottom: 0!important;
+}
+//////////////////////////////////
+.ttlStyle_11{
+  @extend .ttlStyle_09;
+  &::before{
+    display: none;
+  }
+}
+//////////////////////////////////
+.ttlStyle_12{
+  @extend .ttlStyle_09;
+  &::before{
+    content: '●';
+    padding-right: .2em;
+  }
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .btnStyle_01{
@@ -505,6 +556,56 @@
   line-height: (30/12)+em;
 }
 }
+////////////////////////////////////
+.summaryStyle_04{
+  line-height: (44/20)+em;
+  @include fz_vw(20);
+  letter-spacing: .02em;
+  p{
+    text-align: justify;
+    word-break: break-all;
+  }
+  >*{
+    margin-bottom: (18/12)+em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.style_01{
+      margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.summaryStyle_04{
+  line-height: (26/12)+em;
+  font-size: 1.2rem;
+}
+}
+////////////////////////////////////
+.summaryStyle_05{
+  line-height: (56/26)+em;
+  @include fz_vw(26);
+  letter-spacing: .02em;
+  p{
+    text-align: justify;
+    word-break: break-all;
+  }
+  >*{
+    margin-bottom: (18/12)+em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.style_01{
+      margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.summaryStyle_05{
+  line-height: (26/12)+em;
+  font-size: 1.2rem;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {
@@ -561,6 +662,91 @@
       content: '◯';
     }
   }
+}
+/////////////////////////////////
+.listStyle_02{
+  counter-reset: number 0;
+  >li{
+    padding-left: 1.8em;
+    position: relative;
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      counter-increment: number 1;
+      content:  "("counter(number) ")";
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.listStyle_02{
+  >li{
+    &::before{
+      content:  "("counter(number) ")";
+    }
+  }
+}
+}
+/////////////////////////////////
+.listStyle_03{
+  >li{
+    padding-left: 1em;
+    text-indent: -1em;
+    line-height: 1.7em;
+    margin-bottom: .3em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &::before{
+      content: '・';
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.linkStyle_01{
+  &:hover{
+    text-decoration: underline;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.dlStyle_01{
+  dl{
+    @include setTbl;
+    margin-bottom: 10/$design-num-sp*100vw;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    >*{
+      vertical-align: top;
+    }
+  }
+  dt{
+    width: 10em;
+    padding-right: 2em;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.dlStyle_01{
+  dl{
+    @include setTbl;
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    >*{
+      vertical-align: top;
+    }
+  }
+  dt{
+    width: 9em;
+    padding-right: 2em;
+  }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

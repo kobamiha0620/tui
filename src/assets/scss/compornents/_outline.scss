@@ -60,6 +60,54 @@
   }
 }
 }
+//////////////////////////////////////
+.secStyle_04{
+  @include baseSpPad;
+  >.inner{
+    max-width: 600/$design-num-sp*100vw;
+    margin: 0 0 0 auto;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.secStyle_04{
+  padding: 0 20px;
+  >.inner{
+    max-width: none;
+    margin: 0;
+    padding-left: 314/1232*100%;
+  }
+}
+}
+//////////////////////////////////////
+.secStyle_05{
+  >.inner{
+    max-width: 575/$design-num-sp*100vw;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.secStyle_05{
+  max-width: 764px;
+  margin: 0;
+  >.inner{
+    max-width: none;
+  }
+}
+}
+//////////////////////////////////////
+.secStyle_06{
+  >.inner{
+    max-width: 575/$design-num-sp*100vw;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.secStyle_06{
+  max-width: 764px;
+  margin: 0;
+  >.inner{
+    max-width: 608px;
+  }
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .colStyle_01{
@@ -166,6 +214,20 @@
     &:last-child{
       margin-bottom: 0;
     }
+  }
+}
+}
+/////////////////////////////////
+.articleWrap_02{
+  >*{
+    border-bottom: 1px solid #dcdddd;
+    padding: 72/$design-num-sp*100vw 0;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.articleWrap_02{
+  >*{
+    padding: 45px 0;
   }
 }
 }

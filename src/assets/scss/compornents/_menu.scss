@@ -97,6 +97,12 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
       display: inline-block;
       line-height: 1em;
       vertical-align: middle;
+			cursor: default;
+			pointer-events: none;
+			.menuOpen &{
+				cursor: pointer;
+				pointer-events: auto;
+			}
     }
     img{
       width: 37/$design-num-sp*100vw;

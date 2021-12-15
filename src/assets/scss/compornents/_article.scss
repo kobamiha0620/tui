@@ -123,7 +123,7 @@
   }
 }
 }
-////////////////////////////////////////////////////////////
+////////////////////////////////////////////
 .articleStyle_03{
   @extend .articleStyle_01;
   a{
@@ -137,6 +137,110 @@
   a{
     .content{
       height: 734/$design-num*100vw;
+    }
+  }
+}
+}
+////////////////////////////////////////////
+.articleStyle_04{
+  h2{
+    line-height: (61/36)+em;
+    @include fz_vw(36);
+    letter-spacing: .02em;
+    margin-bottom: 16/$design-num-sp*100vw;
+    text-align: justify;
+  }
+  .subInfo{
+    @include killSpace;
+    line-height: 1em;
+    @include fontEn;
+    letter-spacing: .04em;
+    color: #898989;
+    @include fz_vw(20);
+    >*{
+      &::after{
+        content: '|';
+        padding: 0 12/$design-num-sp*100vw;
+      }
+      &:last-child::after{
+        display: none;
+      }
+    }
+  }
+  .category{
+    @include killSpace;
+  }
+  .col-ttl{
+    margin-bottom: 60/$design-num-sp*100vw;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.articleStyle_04{
+  >.inner{
+    @include setTbl;
+    >*{
+      vertical-align: top;
+    }
+  }
+  h2{
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .subInfo{
+    font-size: 1.0rem;
+    >*{
+      &::after{
+        padding: 0 6px;
+      }
+    }
+  }
+  .col-ttl{
+    margin-bottom: 0;
+    padding-right: 55/764*100%;
+  }
+  .col-content{
+    width: 452/764*100%;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.postWrap{
+  >*{
+    margin-bottom: 70/$design-num-sp*100vw;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  p{
+    line-height: (56/26)+em;
+    @include fz_vw(26);
+    text-align: justify;
+  }
+  img{
+    @include imgset;
+    border-radius: 10px;
+  }
+  a{
+    text-decoration: underline;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.postWrap{
+  >*{
+    margin-bottom: 40px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  p{
+    line-height: (26/12)+em;
+    font-size: 1.2rem;
+  }
+  a{
+    &:hover{
+      text-decoration: none;
+      opacity: .9;
     }
   }
 }

@@ -686,6 +686,134 @@
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+.navStyle_01{
+  border-bottom: 1px solid #dcdddd;
+  ul{
+    // overflow: auto;
+    // width: auto;
+    // -webkit-overflow-scrolling: touch;
+    // white-space: nowrap;
+    //@include fontEn;
+    // padding-bottom: 30/$design-num-sp*100vw;
+    @include fz_vw(20);
+    line-height: 1em;
+    letter-spacing: .02em;
+  }
+  li{
+    display: inline-block;
+    margin-right: 40/$design-num-sp*100vw;
+    padding-bottom: 30/$design-num-sp*100vw;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  a{
+    color: #9fa0a0;
+    &.current,&.active{
+      cursor: default;
+      pointer-events: none;
+      color: $key-black;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.navStyle_01{
+  ul{
+    font-size: 1.2rem;
+    // padding-bottom: 10px;
+  }
+  li{
+    margin-right: 24px;
+    padding-bottom: 10px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  a{
+    &:hover{
+      color: $key-black;
+    }
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+#faqWrap{
+  section{
+    padding-top: 150/$design-num-sp*100vw;
+  }
+  h2{
+    line-height: (28/16)+em;
+    @include fz_vw(26);
+    letter-spacing: .04em;
+    padding-left: 34/$design-num-sp*100vw;
+    position: relative;
+    margin-bottom: 70/$design-num-sp*100vw;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 12/$design-num-sp*100vw;
+      left: 0;
+      width: 20/$design-num-sp*100vw;
+      height: 20/$design-num-sp*100vw;
+      border-radius: 20/$design-num-sp*100vw;
+      background-color: $key-color1;
+    }
+  }
+  section:nth-child(2n){
+    h2{
+      &::before{
+        background-color:$key-color2;
+      }
+    }
+  }
+  section.disp{
+    h2{
+      &::before{
+        background-color:$key-color1;
+      }
+    }
+  }
+  section.dispOdd{
+    h2{
+      &::before{
+        background-color:$key-color2;
+      }
+    }
+  }
+  .content{
+    line-height: (44/20)+em;
+    @include fz_vw(20);
+    p{
+      text-align: justify;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+#faqWrap{
+  section{
+    padding-top: 80px;
+  }
+  h2{
+    font-size: 1.6rem;
+    padding-left: 18px;
+    margin-bottom: 50px;
+    &::before{
+      top: 7px;
+      width: 13px;
+      height: 13px;
+      border-radius: 13px;
+    }
+  }
+  .content{
+    line-height: (26/12)+em;
+    font-size: 1.2rem;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 .dummy{
   height: 1000px;
   background-color: #ff0000;

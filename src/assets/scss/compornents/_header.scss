@@ -47,6 +47,13 @@ header .col-logo{
   h1.logo{
     opacity: 1;
     transition: .3s;
+    &.ja{
+      font-family: $base-font-family;
+    }
+    &.tx{
+      position: relative;
+      top: -2px;
+    }
     &.hidden{
       opacity: 0;
     }

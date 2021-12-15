@@ -21,6 +21,119 @@
 // }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+.contact-form{
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.grid--half-gutters{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  >*{
+    &:first-child{
+      padding-right: 15px;
+    }
+    &:last-child{
+      padding-left: 15px;
+    }
+  }
+}
+}
+/////////////////
+@media screen and (min-width: $break-point-middle) {
+.medium-up--one-half{
+  width: 50%;
+  box-sizing: border-box;
+}
+}
+/////////////////
+label{
+  display: block;
+  @include fz_vw(26);
+  line-height: 1em;
+  margin-bottom: 12/$design-num-sp*100vw;
+  span{
+    position: relative;
+    top: 0px;
+    padding-left: 3px;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+label{
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  span{
+    font-size: 1.4rem;
+  }
+}
+}
+/////////////////
+input[type="text"],input[type="email"],input[type="tel"],textarea{
+  @include appearance(none);
+	margin: 0 0 60/$design-num-sp*100vw 0;
+	border: none;
+	outline: none;
+  border: 1px solid #c9caca;
+  border-radius: 5px;
+  @include fz_vw(32);
+  line-height: 1em;
+  min-height: 72/$design-num-sp*100vw;
+  width: 100%;
+  padding: 0 20/$design-num-sp*100vw;
+  resize: none;
+}
+@media screen and (min-width: $break-point-middle) {
+input[type="text"],input[type="email"],input[type="tel"],textarea{
+	margin: 0 0 30px 0;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  min-height: 3em;
+  padding: 0 16px;
+}
+}
+/////////////////
+textarea{
+  padding: 20/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+textarea{
+  padding: 16px;
+}
+}
+/////////////////
+input.btn{
+  @include btnsetting;
+  display: block;
+  background-color: $key-color1;
+  width: 120/$design-num-sp*100vw;
+  height: 120/$design-num-sp*100vw;
+  border-radius: 120/$design-num-sp*100vw;
+  text-align: center;
+  line-height: 120/$design-num-sp*100vw;
+  color: $white;
+  @include fz_vw(26);
+  letter-spacing: .1em;
+  font-weight: bold;
+  transition: .3s;
+}
+@media screen and (min-width: $break-point-middle) {
+input.btn{
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  line-height: 70px;
+  font-size: 1.2rem;
+  &:hover{
+    opacity: .8;
+  }
+  &:active{
+    opacity: 1;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {
