@@ -101,7 +101,7 @@ var pageinit = {
       <div class="gallerySep">
         <section class="secStyle_03 setMrg_22">
           <div class="inner">
-            <article class="productSec_01">
+            <article class="productSec_01 way">
               <div class="eyeCatch">
                 <span>
                   <% var imgInfo = {path:'product_img_01',type:'jpg',alt:''};%>
@@ -120,14 +120,24 @@ var pageinit = {
               <!-- /.ttl -->
               <%- include('assets/module/_temp-product_01.ejs') %>
               <div class="btnWrap setMrg_23">
-                <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+                <div class="inner">
+                  <div class="col">
+                    <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col">
+                    <button type="button" class="btnStyle_05"><span>Buy it now</span></button>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
               </div>
               <!-- /.btnWrap -->
               <div class="content">
                 <div class="sec">
                   <h3>体感する浸透力<span>※1</span></h3>
                   <div class="summary">
-                    <p>洗顔後すぐに“オイル”の新習慣。 表皮と親和性の高いオイルが肌表面を柔らかく、ベタつくことなくスーッと肌に馴染んでいく。独自開発したNtDDS<sup>※2</sup>が美容成分を深層部までしっかりと届け、肌をすこやかに保ちます。</p>
+                    <p>洗顔後すぐに“オイル”の新習慣。表皮と親和性の高いオイルが肌表面を柔らかく、ベタつくことなくスーッと肌に馴染んでいく。独自開発したNtDDS<sup>※2</sup>が美容成分を深層部までしっかりと届け、肌をすこやかに保ちます。</p>
                     <ul class="cautionList">
                       <li>※1  角質層まで</li>
                       <li>※2  ナノ分散浸透技術</li>
@@ -160,11 +170,11 @@ var pageinit = {
           <!-- /.inner -->
         </section>
         <!-- /.secStyle_03 -->
-        <div class="setMrg_24">
+        <div class="setMrg_24 way">
           <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
         </div>
         <!-- /.setMrg_24 -->
-        <div class="setMrg_25">
+        <div class="setMrg_25 way">
           <%- include(pageinit.path + 'assets/module/_cont-routine.ejs', {pageinit:pageinit});%>
         </div>
         <!-- /.setMrg_25 -->

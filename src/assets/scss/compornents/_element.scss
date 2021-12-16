@@ -443,27 +443,54 @@
 ////////////////////////////////////////////////////////////
 .btnStyle_05{
   @include btnsetting;
-  background-color: $key-color1;
-  border-radius: 5px;
   display: block;
   width: 100%;
   color: $white;
   @include fontEn;
-  font-size: 1.6rem;
+  @include fz_vw(26);
   line-height: 1em;
-  padding: 14px;
+  padding: 30/$design-num-sp*100vw;
   text-align: left;
   transition: .3s;
+  position: relative;
+  background-color: transparent;
+  &::before{
+    content: '';
+    position: absolute;
+    transition: .3s;
+    background-color: $key-color1;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+  }
   .product_02 &{
-    background-color: $key-color2;
+    &::before{
+      background-color: $key-color2;
+    }
+  }
+  .product_03 &{
+    &::before{
+      background-color: $key-color5;
+    }
   }
   >span{
     transition: .3s;
     position: relative;
     left: 0;
   }
+}
+@media screen and (min-width: $break-point-middle) {
+.btnStyle_05{
+  font-size: 1.6rem;
+  padding: 14px;
   &:hover{
-    opacity: .8;
+    //opacity: .8;
+    &::before{
+      filter: blur(3px);
+    }
     >span{
       left: 5px;
     }
@@ -474,6 +501,7 @@
       left: 0;
     }
   }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -630,6 +658,18 @@
 @media screen and (min-width: $design-width) {
 .txStyle_02{
   @include fz_vwpc(10);
+}
+}
+///////////////////////////////////
+.txStyle_03{
+  line-height: (40/20)+em;
+  @include fz_vw(20);
+  color: $key-color5;
+}
+@media screen and (min-width: $break-point-middle) {
+.txStyle_03{
+  line-height: (20/10)+em;
+  font-size: 1.0rem;
 }
 }
 ////////////////////////////////////////////////////////////

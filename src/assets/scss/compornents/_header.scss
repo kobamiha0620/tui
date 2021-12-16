@@ -76,6 +76,8 @@ header .col-logo{
     @include fontEn;
     line-height: 1em;
     a{
+      cursor: default;
+      pointer-events: none;
       display: inline-block;
       @include over_06;
     }
@@ -120,6 +122,12 @@ header .col-nav{
   a{
     color: $key-black;
     @include over_06;
+    &.current{
+      cursor: default;
+      pointer-events: none;
+      opacity: .8;
+      //left: 5px;
+    }
   }
 }
 }

@@ -1,0 +1,260 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['product_03','detail-product'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ()']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_menu.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div id="container" class="multiGallery">
+      <div class="galleryWidget top nullWay setMrg_12">
+        <div class="inner">
+          <div class="item active">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_15',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+          </div>
+          <!-- /.item -->
+          <div class="item">
+            <div class="bgImg">
+              <div class="inner">
+                <ul class="photoChanger style_02">
+                  <li>
+                    <% var imgInfo = {path:'hero_img_16',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                  <li>
+                    <% var imgInfo = {path:'hero_img_14',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                </ul>
+                <!-- /.photoChanger -->
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content style_07">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <div class="summary">
+                      <p>オイルとセラム、対になるもの</p>
+                    </div>
+                    <!-- /.summary -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.wrap -->
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.item -->
+          <div class="mask">
+            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
+            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+          </div>
+          <!-- /.mask -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.galleryWidget -->
+      <div class="gallerySep">
+        <section class="secStyle_03 setMrg_22">
+          <div class="inner">
+            <article class="productSec_01 way">
+              <div class="eyeCatch">
+                <span>
+                  <% var imgInfo = {path:'product_img_03',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </span>
+              </div>
+              <!-- /.eyeCatch -->
+              <div class="ttl">
+                <h2>SET PACKAGE</h2>
+                <p>セットパッケージ</p>
+              </div>
+              <!-- /.ttl -->
+              <%- include('assets/module/_temp-product_03.ejs') %>
+              <div class="btnWrap setMrg_32">
+                <div class="inner">
+                  <div class="col">
+                    <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col">
+                    <button type="button" class="btnStyle_05"><span>Buy it now</span></button>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.btnWrap -->
+              <p class="txStyle_03 setMrg_23">初回ご購入特典として、ギフトラッピングを無料で承ります。<br>2回目以降のご購入のお客様でギフトラッピングをご希望の場合は、 別途500円（税込）でご購入が可能となります。</p>
+              <!-- /.txStyle_03 -->
+              <div class="content">
+                <div class="sec">
+                  <h3>オイルとセラム、対になるもの</h3>
+                  <div class="summary">
+                    <p>他に余計なステップはいらず、シンプルかつ、肌への最適化を考え抜かれてうまれた組み合わせ、ブースターオイルとモイスチャーセラム。この二つを併せて使うことで、これまでにない肌の仕上がりを体感します。</p>
+                  </div>
+                  <!-- /.summary -->
+                </div>
+                <!-- /.sec -->
+                <div class="sec">
+                  <dl>
+                    <dt>容量</dt>
+                    <dd>〈 ブースターオイル 〉30mL     〈 モイスチャーセラム 〉50mL </dd>
+                  </dl>
+                  <dl>
+                    <dt>使い方</dt>
+                    <dd>〈 ブースターオイル 〉<br>朝晩の洗顔後に1プッシュを手に取り、お顔全体に優しくなじませてください。<br>〈 モイスチャーセラム 〉<br>ブースターオイル使用後に1〜2プッシュを手に取り、<br>お顔全体に優しくなじませてください。<br>乾燥が気になる箇所には重ね付けしてご使用ください。</dd>
+                  </dl>
+                  <dl>
+                    <dt>全成分</dt>
+                    <dd>〈 ブースターオイル 〉<br>ホホバ種子油、リン酸アスコルビルMg、酢酸トコフェロール、水溶性プロテオグリカン、α–アルブチン、ポリリシノレイン酸ポリグリセリル–6、水、BG<br>〈 モイスチャーセラム 〉<br>水、グリセリン、PEG-40水添ヒマシ油、 BG、PEG-60水添ヒマシ油、ホホバ種子油、 リン酸アスコルビルMg、酢酸トコフェロール、ポリリシノレイン酸ポリグリセリル-6、水溶性プロテオグリカン、セラミドEOP、セラミドNP、セラミドAP、 キサンタンガム、(PEG-240/デシルテトラ デセス-20/HDI)コポリマー、ポリソルベート20、PEG-20ソルビタンココエート、フィトスフィンゴシン、コレステロール、カルボマー、ラウロイルラクチレートNa、 カプリリルグリコール、1,2-ヘキサンジオール、フェノキシエタノール</dd>
+                  </dl>
+                  <p class="strong">パラベン、アルコール、合成香料、合成着色料 不使用</p>
+                </div>
+                <!-- /.sec -->
+              </div>
+              <!-- /.content -->
+            </article>
+            <!-- /.productSec_01 -->
+          </div>
+          <!-- /.inner -->
+        </section>
+        <!-- /.secStyle_03 -->
+        <section class="secStyle_03 setMrg_22">
+          <div class="inner">
+            <article class="productSec_01 way">
+              <div class="eyeCatch">
+                <span>
+                  <% var imgInfo = {path:'product_img_04',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </span>
+              </div>
+              <!-- /.eyeCatch -->
+              <div class="ttl">
+                <h2>GIFT WRAPPING</h2>
+                <p>ギフトラッピング</p>
+              </div>
+              <!-- /.ttl -->
+              <div class="price">
+                <p>¥500<span>（税込）</span></p>
+              </div>
+              <!-- /.price -->
+              <div class="btnWrap setMrg_32">
+                <div class="inner">
+                  <div class="col">
+                    <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col">
+                    <button type="button" class="btnStyle_05"><span>Buy it now</span></button>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.btnWrap -->
+              <p class="txStyle_03 setMrg_23">SET PACKAGEを初めてご購入いただいた場合、特典としてこちらの箱に入れて無料でお届けいたします。</p>
+              <!-- /.txStyle_03 -->
+              <div class="content">
+                <div class="sec">
+                  <dl>
+                    <dt>サイズ</dt>
+                    <dd>L18.2×W15.6×H4.7cm</dd>
+                  </dl>
+                  <dl>
+                    <dt>素材</dt>
+                    <dd>ダンボール</dd>
+                  </dl>
+                  <dl>
+                    <dt>ご注意</dt>
+                    <dd>こちらはtuiのブースターオイル、モイスチャーセラム専用のラッピングボックスになります。</dd>
+                  </dl>
+                </div>
+                <!-- /.sec -->
+              </div>
+              <!-- /.content -->
+            </article>
+            <!-- /.productSec_01 -->
+          </div>
+          <!-- /.inner -->
+        </section>
+        <!-- /.secStyle_03 -->
+        <div class="setMrg_24 way">
+          <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
+        </div>
+        <!-- /.setMrg_24 -->
+        <div class="setMrg_25 way">
+          <%- include(pageinit.path + 'assets/module/_cont-routine.ejs', {pageinit:pageinit});%>
+        </div>
+        <!-- /.setMrg_25 -->
+        <%- include(pageinit.path + 'assets/module/_nav-product.ejs', {pageinit:pageinit});%>
+      </div>
+      <!-- /.gallerySep -->
+    </div>
+    <!-- /#container -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+  <% if(pageinit.shopify!=='true'){%>
+  <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+  <% } else {%>
+  {% include 'footer-tui' %}
+  <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>

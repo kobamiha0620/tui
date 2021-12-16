@@ -12,7 +12,7 @@ var pageinit = {
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['setPhotoChanger ()']
+  jsfunc:['setPhotoChanger ();','startScroll ();']
 };
 %>
 <% if(pageinit.shopify!=='true'){%>
@@ -94,7 +94,7 @@ var pageinit = {
       </div>
       <!-- /.galleryWidget -->
       <div class="gallerySep">
-        <section class="secStyle_02 setMrg_14">
+        <section class="secStyle_02 setMrg_14 way">
           <div class="inner">
             <h2 class="ttlStyle_07">
               <% var imgInfo = {path:'tx-09',type:'svg',alt:'肌のしくみ'};%>
@@ -149,7 +149,7 @@ var pageinit = {
           <!-- /.inner -->
         </section>
         <!-- /.secStyle_02 -->
-        <div class="setMrg_15">
+        <div class="setMrg_15 way" id="ntdds">
           <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
         </div>
         <!-- /.setMrg_15 -->
@@ -352,7 +352,7 @@ var pageinit = {
       </div>
       <!-- /.galleryWidget -->
       <div class="gallerySep setMrg_16">
-        <section class="secStyle_02 setMrg_19" id="skincare">
+        <section class="secStyle_02 setMrg_19 way" id="skincare">
           <div class="inner">
             <h2 class="ttlStyle_05 setMrg_01">Skincare Routine</h2>
             <div class="summaryStyle_03 setMrg_17">

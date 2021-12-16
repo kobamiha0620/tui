@@ -273,6 +273,15 @@
   margin-bottom: 30px;
 }
 }
+///////////////////////////////////////
+.setMrg_32{
+  margin-bottom: 40/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_32{
+  margin-bottom: 16px;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {

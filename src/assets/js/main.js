@@ -189,6 +189,9 @@ function setMainMenu () {
       closeFnc();
     }
   });
+  $('#mainNav a').on('click', function (event) {
+    event.stopPropagation();
+  });
 
   $('#clickBlocker,.closeArea').on('click', function () {
     closeFnc();
@@ -383,15 +386,28 @@ function setWay () {
     // 遊び分の200px-ヘッダーサイズ
     offset: '-145px'
   });
-  $('.galleryWidget .item').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'up') { // scroll down
-      activePoint.removeClass('active');
-    }
-  }, {
-    offset: '-155px'
-  });
+  var offsetNum;
+  if ($('#wrapper').hasClass('setPc')) {
+    $('.galleryWidget .item').waypoint(function (direction) {
+      var activePoint = $(this.element);
+      var target = $(this.element);
+      if (direction === 'up') { // scroll down
+        activePoint.removeClass('active');
+      }
+    }, {
+      offset: '-155px'
+    });
+  }else {
+    $('.galleryWidget .item').waypoint(function (direction) {
+      var activePoint = $(this.element);
+      var target = $(this.element);
+      if (direction === 'up') { // scroll down
+        activePoint.removeClass('active');
+      }
+    }, {
+      offset: '-195/375*100vw'
+    });
+  }
 
   $('.galleryWidget .item').waypoint(function (direction) {
     var activePoint = $(this.element);

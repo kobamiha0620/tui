@@ -102,6 +102,13 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 			.menuOpen &{
 				cursor: pointer;
 				pointer-events: auto;
+				&.current{
+					display: none;
+					opacity: .8;
+					cursor: default;
+					pointer-events: none;
+					left: 5px;
+				}
 			}
     }
     img{
@@ -147,6 +154,12 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 	}
 	a{
 		@include over_06;
+		&.current{
+			cursor: default;
+			pointer-events: none;
+			//left: 5px;
+			opacity: .8;
+		}
 	}
 	&::before{
 		filter: blur(0px);

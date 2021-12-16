@@ -28,6 +28,11 @@ footer{
   a{
     display: inline-block;
     @include over_06;
+    &.current{
+      cursor: default;
+      pointer-events: none;
+      opacity: .8;
+    }
   }
 }
 @media screen and (min-width: $break-point-middle) {

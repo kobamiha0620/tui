@@ -526,6 +526,9 @@
     img{
       @include imgset;
     }
+    .loadImg{
+      padding-top: 100%;
+    }
   }
   .ttl{
     margin-bottom: 100/$design-num-sp*100vw;
@@ -539,6 +542,23 @@
     p{
       @include fz_vw(20);
       line-height: 1em;
+    }
+  }
+  .price{
+    @include fz_vw(26);
+    line-height: 1em;
+    margin-bottom: 85/$design-num-sp*100vw;
+    @include fontEn;
+    span{
+      font-family: $base-font-family;
+      @include fz_vw(20);
+    }
+  }
+  .btnWrap{
+    >.inner{
+      >*{
+        margin-bottom: 50/$design-num-sp*100vw;
+      }
     }
   }
   .sec{
@@ -605,6 +625,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .productSec_01{
+  overflow: visible;
   .mikawaya-product-page-widget-container{
     margin-bottom: 40px;
   }
@@ -638,6 +659,27 @@
     }
     p{
       font-size: 1.2rem;
+    }
+  }
+  .price{
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    span{
+      font-size: 1.2rem;
+    }
+  }
+  .btnWrap{
+    >.inner{
+      @include setTbl;
+      >*{
+        margin-bottom: 0;
+        &:first-child{
+          padding-right: 15px;
+        }
+        &:last-child{
+          padding-left: 15px;
+        }
+      }
     }
   }
   .sec{
