@@ -103,11 +103,11 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 				cursor: pointer;
 				pointer-events: auto;
 				&.current{
-					display: none;
+					//display: none;
 					opacity: .8;
 					cursor: default;
 					pointer-events: none;
-					left: 5px;
+					//left: 5px;
 				}
 			}
     }
