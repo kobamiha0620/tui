@@ -1,0 +1,40 @@
+@charset "utf-8";
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+// .multiGallery .gallerySep+.top{
+//   opacity: 0;
+// }
+// .multiGallery .gallerySep.active+.bottom{
+//   opacity: 1;
+// }
+.multiGallery .gallerySep{
+  position: relative;
+  z-index: 110;
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.galleryWidget{
+  height: 100vh;
+  // height: -webkit-calc(100vh - #{$header-size});
+  // height: calc(100vh - #{$header-size});
+  .mask{
+    display: none;
+  }
+  .item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    @for $i from 1 through 50 {
+		  &:nth-child(#{$i}) {
+        z-index: 50 - $i;
+		  }
+		}
+  }
+  .content{
+    display: none;
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+}

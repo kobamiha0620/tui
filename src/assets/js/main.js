@@ -381,6 +381,8 @@ function setWay () {
     var target = $(this.element);
     if (direction === 'down') { // scroll down
       activePoint.addClass('active');
+    // var current_scrollY = $(window).scrollTop()
+    // target.css('top', current_scrollY)
     }
   }, {
     // 遊び分の200px-ヘッダーサイズ
