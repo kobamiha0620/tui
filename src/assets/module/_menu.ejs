@@ -3,7 +3,7 @@
     <div class="cel">
       <div class="inner">
         <p class="logoNav">
-          <a href="./">
+          <a href="{{ routes.root_url }}">
           <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
           <% if(pageinit.shopify!=='true'){%>
             <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
@@ -14,6 +14,7 @@
         </p>
         <div class="mainNavSec">
           <div class="inner">
+            <% if(pageinit.shopify!=='true'){%>
             <div class="mainMenu">
               <nav>
                 <ul class="parent">
@@ -41,6 +42,35 @@
               </nav>
             </div>
             <!-- /.mainMenu -->
+            <% } else {%>
+            <div class="mainMenu">
+              <nav>
+                <ul class="parent">
+                  <li>
+                    <a href="{{ routes.root_url }}pages/products/">Products</a>
+                    <ul class="child">
+                      <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
+                      <li><a href="{{ routes.root_url }}products/moisture-serum.html">MOISTURE SERUM</a></li>
+                      <li><a href="{{ routes.root_url }}products/set-package.html">SET PACKAGE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{{ routes.root_url }}pages/about">About us</a></li>
+                  <li><a href="{{ routes.root_url }}blogs/news">News</a></li>
+                  <li><a href="{{ routes.root_url }}pages/faq">FAQ</a></li>
+                  <li><a href="{{ routes.root_url }}pages/contact">Contact</a></li>
+                </ul>
+                <ul class="smallMenu">
+                  <li><a href="{{ routes.root_url }}pages/sctl">特定商取引法に基づく表記</a></li>
+                  <li><a href="{{ routes.root_url }}pages/privacy-policy">プライバシーポリシー</a></li>
+                  <li><a href="{{ routes.root_url }}account">My page</a></li>
+                  <li><a href="{{ routes.cart_url }}">Cart</a></li>
+                  <li><a href="javascript:void(0);" target="_blank">Instagram</a></li>
+                </ul>
+                <!-- /.smallMenu -->
+              </nav>
+            </div>
+            <!-- /.mainMenu -->
+            <% }%>
           </div>
           <!-- /.inner -->
         </div>

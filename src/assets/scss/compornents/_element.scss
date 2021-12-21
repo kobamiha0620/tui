@@ -481,6 +481,22 @@
     position: relative;
     left: 0;
   }
+  .out{
+    display: none;
+  }
+  &.dis{
+    cursor: default;
+    pointer-events: none;
+    &::before{
+      background-color: #ccc;
+    }
+    .normal{
+      display: none;
+    }
+    .out{
+      display: inline;
+    }
+  }
 }
 @media screen and (min-width: $break-point-middle) {
 .btnStyle_05{

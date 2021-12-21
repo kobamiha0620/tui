@@ -1,10 +1,3 @@
-<% if(pageinit.shopify==='true'){%>
-<a href="{{ routes.cart_url }}" class="site-header__icon site-header__cart">
-  <div id="CartCount" class="site-header__cart-count{% if cart.item_count == 0 %} hide{% endif %} critical-hidden" data-cart-count-bubble>
-    <span data-cart-count>{{ cart.item_count }}</span>
-  </div>
-</a>
-<% }%>
 <header>
   <div class="inner">
     <div class="col-logo">
@@ -37,7 +30,7 @@
         </h1>
         <% } else if (pageinit.category=='faq') { %>
         <h1 class="logo tx">
-          <a href="javascript:void(0);">Faq</a>
+          <a href="javascript:void(0);">FAQ</a>
         </h1>
         <% } else if (pageinit.category=='privacy') { %>
         <h1 class="logo tx">
@@ -55,6 +48,42 @@
       <% } else {%>
         {% if template == 'index' %}
         <%- include(pageinit.path + '_nav-header_01.ejs', {pageinit:pageinit});%>
+        {% elsif template == 'blog' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">News</a>
+        </h1>
+        {% elsif page.handle == 'products' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">Products</a>
+        </h1>
+        {% elsif page.handle == 'about' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">About us</a>
+        </h1>
+        {% elsif page.handle == 'faq' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">FAQ</a>
+        </h1>
+        {% elsif page.handle == 'privacy-policy' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">Privacy policy</a>
+        </h1>
+        {% elsif page.handle == 'sctl' %}
+        <h1 class="logo tx ja">
+          <a href="javascript:void(0);">特定商取引法に基づく表記</a>
+        </h1>
+        {% elsif template == 'product.booster-oil' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">BOOSTER OIL</a>
+        </h1>
+        {% elsif template == 'product.moisture-serum' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">MOISTURE SERUM</a>
+        </h1>
+        {% elsif template == 'product.set-package' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">SET PACKAGE</a>
+        </h1>
         {% else %}
         <h1 class="logo tx">
           <a href="javascript:void(0);">{{page.handle}}</a>
@@ -63,6 +92,7 @@
       <% }%>
     </div>
     <!-- /.col-logo -->
+    <% if(pageinit.shopify!=='true'){%>
     <div class="col-nav">
       <p class="parent"><a href="products.html">View the products</a></p>
       <ul class="productNav">
@@ -73,8 +103,24 @@
       <!-- /.productNav -->
     </div>
     <!-- /.col-nav -->
+    <% } else {%>
+    <div class="col-nav">
+      <p class="parent"><a href="{{ routes.root_url }}pages/products">View the products</a></p>
+      <ul class="productNav">
+        <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
+        <li><a href="{{ routes.root_url }}products/moisture-serum">MOISTURE SERUM</a></li>
+        <li><a href="{{ routes.root_url }}products/set-package">SET PACKAGE</a></li>
+      </ul>
+      <!-- /.productNav -->
+    </div>
+    <!-- /.col-nav -->
+    <% }%>
     <div class="col-EcNav">
+      <% if(pageinit.shopify==='true'){%>
+      <p><a href="{{ routes.cart_url }}">Cart</a></p>
+      <% } else {%>
       <p><a href="javascript:void(0);">Cart</a></p>
+      <% }%>
     </div>
     <!-- /.colEc -->
   </div>

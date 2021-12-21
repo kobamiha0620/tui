@@ -47,7 +47,7 @@ $(window).on('load', function () {
   setWay();
   // setSVG()
   setLoaded();
-  displayCart();
+  // displayCart()
   setMega();
   // setScrollTop()
   // setTextile()
@@ -55,6 +55,25 @@ $(window).on('load', function () {
     // setMainVis()
   }
 });
+
+// 購入ボタン制御
+function setBuyBtn () {
+  if ($('.product-form__cart-submit').attr('aria-label') == '売り切れ') {
+    $('#customCartBtn').addClass('dis');
+  }
+  $('#customCartBtn,#customCartBtn_01').on('click', function () {
+    $('.product-form__cart-submit').click();
+  });
+  $('#customCartBtn_02').on('click', function () {
+    $('#io-related-prd-id .vw-but-re').click();
+  });
+  $('#customBuyBtn').on('click', function () {
+    $('.shopify-payment-button button').click();
+  });
+  $('#optionBtn').on('click', function () {
+    $('#io-related-prd-id .vw-but-re').click();
+  });
+}
 
 // faqカテゴリフィルター
 function setCateFilter () {

@@ -121,15 +121,22 @@
   {% elsif template == 'blog' %}
   news
   {% endif %}
-  {% if collection.handle == 'p1' %}p1 single-product
-  {% elsif collection.handle == 'p6' %}
-  p6 single-product
-  {% elsif collection.handle == 'p124' %}
-  p124 single-product
-  {% elsif collection.handle == 'giftbox' %}
-  giftbox single-product
+  {% if template == 'product.booster-oil' %}
+  product_01 detail-product
+  {% elsif template == 'product.moisture-serum' %}
+  product_02 detail-product
+  {% elsif template == 'product.set-package' %}
+  product_03 detail-product
   {% elsif page.handle == 'about' %}
   about
+  {% elsif page.handle == 'faq' %}
+  faq
+  {% elsif page.handle == 'contact' %}
+  products
+  {% elsif page.handle == 'products' %}
+  products
+  {% elsif page.handle == 'privacy-policy' %}
+  privacy
   {% elsif page.handle == 'sctl' %}
   sctl
   {% endif %}

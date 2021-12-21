@@ -7,12 +7,12 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : '',
+  shopify : 'true',
   category : ['product_02','detail-product'] ,
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['setPhotoChanger ()']
+  jsfunc:['setPhotoChanger ();','setBuyBtn();']
 };
 %>
 <% if(pageinit.shopify!=='true'){%>
@@ -118,16 +118,20 @@ var pageinit = {
                 <p>モイスチャーセラム</p>
               </div>
               <!-- /.ttl -->
+              <% if(pageinit.shopify!=='true'){%>
               <%- include('assets/module/_temp-product_02.ejs') %>
+              <% } else {%>
+              <%- include('assets/module/_temp-product_01_shopify.ejs') %>
+              <% }%>
               <div class="btnWrap setMrg_23">
                 <div class="inner">
                   <div class="col">
-                    <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+                    <button type="button" class="btnStyle_05" id="customCartBtn"><span class="normal">Add to cart</span><span class="out">Out of stock</span></button>
                   </div>
                   <!-- /.col -->
-                  <div class="col">
-                    <button type="button" class="btnStyle_05"><span>Buy it now</span></button>
-                  </div>
+                  <!--div class="col">
+                    <button type="button" class="btnStyle_05" id="customBuyBtn"><span>Buy it now</span></button>
+                  </div-->
                   <!-- /.col -->
                 </div>
                 <!-- /.inner -->

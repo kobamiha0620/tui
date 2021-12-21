@@ -7,12 +7,12 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : '',
+  shopify : 'true',
   category : ['product_01','detail-product'] ,
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['setPhotoChanger ()']
+  jsfunc:['setPhotoChanger ();','setBuyBtn();']
 };
 %>
 <% if(pageinit.shopify!=='true'){%>
@@ -118,16 +118,36 @@ var pageinit = {
                 <p>ブースターオイル</p>
               </div>
               <!-- /.ttl -->
+              <% if(pageinit.shopify!=='true'){%>
               <%- include('assets/module/_temp-product_01.ejs') %>
+              <% } else {%>
+              <%- include('assets/module/_temp-product_01_shopify.ejs') %>
+              <!--div class="mikawaya-product-page-widget-container">
+                <fieldset id="custom-fieldset">
+                  <div class="mikawaya-selling-plan-group-container">
+                    <input type="radio" name="purchase_option" checked="" class="mikawaya-radio-button">
+                    通常の購入
+                    &nbsp;&nbsp;&nbsp;
+                    <span name="one-time-variant-price" data-variant-id="41923353936131">¥5,980</span>
+                  </div>
+                  <div class="mikawaya-selling-plan-group-container">
+                    <div>
+                      <input type="radio" name="purchase_option" class="mikawaya-radio-button">
+                      <span>オイル1ヶ月定期&nbsp;&nbsp;&nbsp;<span name="group-inline-price" data-group-id="6a05ea90b709718d65a9b8c7f6d6155a74e1a10e">¥5,382</span></span>
+                    </div>
+                  </div>
+                </fieldset>
+              </div-->
+              <% }%>
               <div class="btnWrap setMrg_23">
                 <div class="inner">
                   <div class="col">
-                    <button type="button" class="btnStyle_05"><span>Add to cart</span></button>
+                    <button type="button" class="btnStyle_05 customCartBtn" id="customCartBtn"><span class="normal">Add to cart</span><span class="out">Out of stock</span></button>
                   </div>
                   <!-- /.col -->
-                  <div class="col">
+                  <!--div class="col">
                     <button type="button" class="btnStyle_05"><span>Buy it now</span></button>
-                  </div>
+                  </div-->
                   <!-- /.col -->
                 </div>
                 <!-- /.inner -->

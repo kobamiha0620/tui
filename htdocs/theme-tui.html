@@ -103,28 +103,28 @@
   {% elsif template == 'blog' %}
   news
   {% endif %}
-  {% if collection.handle == 'p1' %}p1 single-product
-  {% elsif collection.handle == 'p6' %}
-  p6 single-product
-  {% elsif collection.handle == 'p124' %}
-  p124 single-product
-  {% elsif collection.handle == 'giftbox' %}
-  giftbox single-product
+  {% if template == 'product.booster-oil' %}
+  product_01 detail-product
+  {% elsif template == 'product.moisture-serum' %}
+  product_02 detail-product
+  {% elsif template == 'product.set-package' %}
+  product_03 detail-product
   {% elsif page.handle == 'about' %}
   about
+  {% elsif page.handle == 'faq' %}
+  faq
+  {% elsif page.handle == 'contact' %}
+  products
+  {% elsif page.handle == 'products' %}
+  products
+  {% elsif page.handle == 'privacy-policy' %}
+  privacy
   {% elsif page.handle == 'sctl' %}
   sctl
   {% endif %}
   ">
     <div id="clickBlocker"></div>
 
-
-
-<a href="{{ routes.cart_url }}" class="site-header__icon site-header__cart">
-  <div id="CartCount" class="site-header__cart-count{% if cart.item_count == 0 %} hide{% endif %} critical-hidden" data-cart-count-bubble>
-    <span data-cart-count>{{ cart.item_count }}</span>
-  </div>
-</a>
 
 <header>
   <div class="inner">
@@ -149,6 +149,42 @@
 <p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
 <p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
 
+        {% elsif template == 'blog' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">News</a>
+        </h1>
+        {% elsif page.handle == 'products' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">Products</a>
+        </h1>
+        {% elsif page.handle == 'about' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">About us</a>
+        </h1>
+        {% elsif page.handle == 'faq' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">FAQ</a>
+        </h1>
+        {% elsif page.handle == 'privacy-policy' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">Privacy policy</a>
+        </h1>
+        {% elsif page.handle == 'sctl' %}
+        <h1 class="logo tx ja">
+          <a href="javascript:void(0);">特定商取引法に基づく表記</a>
+        </h1>
+        {% elsif template == 'product.booster-oil' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">BOOSTER OIL</a>
+        </h1>
+        {% elsif template == 'product.moisture-serum' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">MOISTURE SERUM</a>
+        </h1>
+        {% elsif template == 'product.set-package' %}
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">SET PACKAGE</a>
+        </h1>
         {% else %}
         <h1 class="logo tx">
           <a href="javascript:void(0);">{{page.handle}}</a>
@@ -157,18 +193,22 @@
       
     </div>
     <!-- /.col-logo -->
+    
     <div class="col-nav">
-      <p class="parent"><a href="products.html">View the products</a></p>
+      <p class="parent"><a href="{{ routes.root_url }}pages/products">View the products</a></p>
       <ul class="productNav">
-        <li><a href="booster-oil.html">BOOSTER OIL</a></li>
-        <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
-        <li><a href="set-package.html">SET PACKAGE</a></li>
+        <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
+        <li><a href="{{ routes.root_url }}products/moisture-serum">MOISTURE SERUM</a></li>
+        <li><a href="{{ routes.root_url }}products/set-package">SET PACKAGE</a></li>
       </ul>
       <!-- /.productNav -->
     </div>
     <!-- /.col-nav -->
+    
     <div class="col-EcNav">
-      <p><a href="javascript:void(0);">Cart</a></p>
+      
+      <p><a href="{{ routes.cart_url }}">Cart</a></p>
+      
     </div>
     <!-- /.colEc -->
   </div>
@@ -181,7 +221,7 @@
     <div class="cel">
       <div class="inner">
         <p class="logoNav">
-          <a href="./">
+          <a href="{{ routes.root_url }}">
           
           
             
@@ -192,33 +232,35 @@
         </p>
         <div class="mainNavSec">
           <div class="inner">
+            
             <div class="mainMenu">
               <nav>
                 <ul class="parent">
                   <li>
-                    <a href="products.html">Products</a>
+                    <a href="{{ routes.root_url }}pages/products/">Products</a>
                     <ul class="child">
-                      <li><a href="booster-oil.html">BOOSTER OIL</a></li>
-                      <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
-                      <li><a href="set-package.html">SET PACKAGE</a></li>
+                      <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
+                      <li><a href="{{ routes.root_url }}products/moisture-serum.html">MOISTURE SERUM</a></li>
+                      <li><a href="{{ routes.root_url }}products/set-package.html">SET PACKAGE</a></li>
                     </ul>
                   </li>
-                  <li><a href="about.html">About us</a></li>
-                  <li><a href="news.html">News</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="{{ routes.root_url }}pages/about">About us</a></li>
+                  <li><a href="{{ routes.root_url }}blogs/news">News</a></li>
+                  <li><a href="{{ routes.root_url }}pages/faq">FAQ</a></li>
+                  <li><a href="{{ routes.root_url }}pages/contact">Contact</a></li>
                 </ul>
                 <ul class="smallMenu">
-                  <li><a href="sctl.html">特定商取引法に基づく表記</a></li>
-                  <li><a href="privacy.html">プライバシーポリシー</a></li>
-                  <li><a href="javascript:void(0);">My page</a></li>
-                  <li><a href="javascript:void(0);">Cart</a></li>
+                  <li><a href="{{ routes.root_url }}pages/sctl">特定商取引法に基づく表記</a></li>
+                  <li><a href="{{ routes.root_url }}pages/privacy-policy">プライバシーポリシー</a></li>
+                  <li><a href="{{ routes.root_url }}account">My page</a></li>
+                  <li><a href="{{ routes.cart_url }}">Cart</a></li>
                   <li><a href="javascript:void(0);" target="_blank">Instagram</a></li>
                 </ul>
                 <!-- /.smallMenu -->
               </nav>
             </div>
             <!-- /.mainMenu -->
+            
           </div>
           <!-- /.inner -->
         </div>

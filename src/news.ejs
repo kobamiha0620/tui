@@ -7,7 +7,7 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : '',
+  shopify : 'true',
   category : ['news'] ,
   pagename : '',
   css: [],
@@ -29,6 +29,7 @@ var pageinit = {
       <div class="secStyle_04 setMrg_26 way">
         <div class="inner">
           <div class="secStyle_05">
+            <% if(pageinit.shopify!=='true'){%>
             <div class="navStyle_01">
               <nav>
                 <ul>
@@ -41,8 +42,28 @@ var pageinit = {
               </nav>
             </div>
             <!-- /.navStyle_01 -->
+            <% } else {%>
+            {% if blog.all_tags.size > 0 %}
+            <div class="navStyle_01">
+              <nav>
+                <ul>
+                  <li><a href="{{ routes.root_url }}blogs/news/">ALL</a></li>
+                  {% for tag in blog.all_tags %}
+                  {% if current_tags contains tag %}
+                  <li><a href="javascript:void(0);" class="current">{{ tag }}</a></li>
+                  {% else %}
+                  <li>{{ tag | link_to_tag: tag }}</li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </nav>
+            </div>
+            <!-- /.navStyle_01 -->
+            {% endif %}
+            <% }%>
             <div class="inner">
               <div class="articleWrap_02">
+                <% if(pageinit.shopify!=='true'){%>
                 <article class="articleStyle_04">
                   <div class="inner">
                     <div class="col-ttl">
@@ -76,6 +97,37 @@ var pageinit = {
                   <!-- /.inner -->
                 </article>
                 <!-- /.articleStyle_04 -->
+                <% } else {%>
+                {% for article in blog.articles %}
+                <article class="articleStyle_04">
+                  <div class="inner">
+                    <div class="col-ttl">
+                      <h2>{{ article.title }}</h2>
+                      <div class="subInfo">
+                        <p class="upDate">{{ article.published_at | time_tag: '%Y.%m.%d' }}</p>
+                        <ul class="category">
+                          {% for tag in article.tags %}
+                          <li>{{ tag }}</li>
+                          {% endfor %}
+                        </ul>
+                        <!-- /.category -->
+                      </div>
+                      <!-- /.subInfo -->
+                    </div>
+                    <!-- /.col-ttl -->
+                    <div class="col-content">
+                      <div class="postWrap">
+                        {{ article.content }}
+                      </div>
+                      <!-- /.postWrap -->
+                    </div>
+                    <!-- /.col-content -->
+                  </div>
+                  <!-- /.inner -->
+                </article>
+                <!-- /.articleStyle_04 -->
+                {% endfor %}
+                <% }%>
               </div>
               <!-- /.articleWrap_02 -->
             </div>

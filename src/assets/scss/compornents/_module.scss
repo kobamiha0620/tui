@@ -15,6 +15,14 @@
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+main{
+  min-height: -webkit-calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 #homeContainer{
   position: relative;
   z-index: 101;
@@ -434,7 +442,7 @@
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .productSec_01{
-  overflow: hidden;z
+  overflow: hidden;
   .product-single__media-wrapper,.product-single__media-group{
     display: none;
   }
@@ -455,6 +463,9 @@
   }
   .mikawaya-selling-plan-description{
     display: none;
+  }
+  .product-template__container{
+    //display: none;
   }
   .product-form__variants{
     display: none;
@@ -497,6 +508,8 @@
     height: 40/$design-num-sp*100vw;
     position: absolute;
     cursor: pointer;
+    outline: 0!important;
+    margin: 0!important;
     &::before{
       content: '';
       position: absolute;
@@ -673,12 +686,12 @@
       @include setTbl;
       >*{
         margin-bottom: 0;
-        &:first-child{
-          padding-right: 15px;
-        }
-        &:last-child{
-          padding-left: 15px;
-        }
+        // &:first-child{
+        //   padding-right: 15px;
+        // }
+        // &:last-child{
+        //   padding-left: 15px;
+        // }
       }
     }
   }

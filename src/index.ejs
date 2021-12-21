@@ -7,7 +7,7 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : '',
+  shopify : 'true',
   category : ['home'] ,
   pagename : '',
   css: [],
@@ -44,7 +44,7 @@ var pageinit = {
           </div>
           <!-- /.item -->
           <div class="item" id="cont_01">
-            <a href="about.html">
+            <a href="{{ routes.root_url }}pages/about">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_02',type:'jpg',alt:''};%>
@@ -61,7 +61,7 @@ var pageinit = {
           </div>
           <!-- /.item -->
           <div class="item" id="cont_01_02">
-            <a href="about.html">
+            <a href="{{ routes.root_url }}pages/about">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_03',type:'jpg',alt:''};%>
@@ -78,7 +78,7 @@ var pageinit = {
           </div>
           <!-- /.item -->
           <section class="item" id="cont_01_03">
-            <a href="about.html">
+            <a href="{{ routes.root_url }}pages/about">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_04',type:'jpg',alt:''};%>
@@ -112,7 +112,7 @@ var pageinit = {
           </section>
           <!-- /.item -->
           <section class="item" id="cont_02">
-            <a href="booster-oil.html">
+            <a href="{{ routes.root_url }}products/booster-oil">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_05',type:'jpg',alt:''};%>
@@ -152,7 +152,7 @@ var pageinit = {
           </section>
           <!-- /.item -->
           <div class="item" id="cont_03">
-            <a href="moisture-serum.html">
+            <a href="{{ routes.root_url }}products/moisture-serum">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_06',type:'jpg',alt:''};%>
@@ -191,7 +191,7 @@ var pageinit = {
           </div>
           <!-- /.item -->
           <div class="item" id="cont_04">
-            <a href="set-package.html">
+            <a href="{{ routes.root_url }}products/set-package">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_07',type:'jpg',alt:''};%>
@@ -230,7 +230,7 @@ var pageinit = {
           </div>
           <!-- /.item -->
           <div class="item" id="cont_05">
-            <a href="about.html#ntdds">
+            <a href="{{ routes.root_url }}pages/about#ntdds">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_08',type:'jpg',alt:''};%>
@@ -269,7 +269,7 @@ var pageinit = {
           </div>
           <!-- /.item -->
           <div class="item" id="cont_06">
-            <a href="about.html#skincare">
+            <a href="{{ routes.root_url }}pages/about#skincare">
               <div class="bgImg">
                 <div class="inner">
                   <% var imgInfo = {path:'kv_img_09',type:'jpg',alt:''};%>
@@ -320,7 +320,7 @@ var pageinit = {
       <div class="homeContentSec" id="cont_07">
         <div class="inner">
           <section class="way">
-            <a href="news.html">
+            <a href="{{ routes.root_url }}blogs/news">
               <div class="inner">
                 <div class="bg">
                   <% var imgInfo = {path:'home_img_01',type:'jpg',alt:''};%>
@@ -343,7 +343,7 @@ var pageinit = {
             </a>
           </section>
           <section class="way">
-            <a href="contact.html">
+            <a href="{{ routes.root_url }}pages/contact">
               <div class="inner">
                 <div class="bg">
                   <% var imgInfo = {path:'home_img_02',type:'jpg',alt:''};%>

@@ -7,7 +7,7 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : '',
+  shopify : 'true',
   category : ['products'] ,
   pagename : '',
   css: [],
@@ -83,7 +83,7 @@ var pageinit = {
                     <p class="txStyle_01">※角質層まで</p>
                   </div>
                   <!-- /.summaryStyle_01 -->
-                  <div class="elemWrap setMrg_04"><a href="booster-oil.html" class="btnStyle_01"><span>View</span></a></div>
+                  <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/booster-oil" class="btnStyle_01"><span>View</span></a></div>
                   <!-- /.elemWrap -->
                 </div>
                 <!-- /.inner -->
@@ -117,7 +117,7 @@ var pageinit = {
                     <p class="txStyle_01">※セラミドEOP,セラミドNP,セラミドAP</p>
                   </div>
                   <!-- /.summaryStyle_01 -->
-                  <div class="elemWrap setMrg_04"><a href="moisture-serum.html" class="btnStyle_02"><span>View</span></a></div>
+                  <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/moisture-serum" class="btnStyle_02"><span>View</span></a></div>
                   <!-- /.elemWrap -->
                 </div>
                 <!-- /.inner -->
@@ -194,7 +194,7 @@ var pageinit = {
                     <p class="setMrg_03">他に余計なステップはいらず、シンプルかつ、<br class="pc">お肌への最適化を考え抜かれてうまれた組み合わせ、<br class="pc">ブースターオイルとモイスチャーセラム。<br class="pc">この⼆つを併せて使うことで最⼤の効果を発揮します。</p>
                   </div>
                   <!-- /.summaryStyle_01 -->
-                  <div class="elemWrap setMrg_04"><a href="set-package.html" class="btnStyle_03"><span>View</span></a></div>
+                  <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/set-package" class="btnStyle_03"><span>View</span></a></div>
                   <!-- /.elemWrap -->
                 </div>
                 <!-- /.inner -->
@@ -216,7 +216,7 @@ var pageinit = {
         <div class="colStyle_03 way">
           <div class="col sp">
             <section class="articleStyle_01 way">
-              <a href="about.html#ntdds">
+              <a href="{{ routes.root_url }}pages/about#ntdds">
                 <div class="inner">
                   <div class="eyeCatch">
                     <% var imgInfo = {path:'img_10',type:'jpg',alt:''};%>
@@ -243,7 +243,7 @@ var pageinit = {
           <!-- /.col -->
           <div class="col">
             <section class="articleStyle_01 way">
-              <a href="about.html#skincare">
+              <a href="{{ routes.root_url }}pages/about#skincare">
                 <div class="inner">
                   <div class="eyeCatch">
                     <% var imgInfo = {path:'img_07',type:'jpg',alt:''};%>
@@ -270,7 +270,7 @@ var pageinit = {
           <!-- /.col -->
           <div class="col">
             <section class="articleStyle_01 way">
-              <a href="news.html">
+              <a href="{{ routes.root_url }}blogs/news">
                 <div class="inner">
                   <div class="eyeCatch">
                     <% var imgInfo = {path:'img_08',type:'jpg',alt:''};%>
@@ -297,7 +297,7 @@ var pageinit = {
           <!-- /.col -->
           <div class="col">
             <section class="articleStyle_01 way">
-              <a href="contact.html">
+              <a href="{{ routes.root_url }}pages/contact">
                 <div class="inner">
                   <div class="eyeCatch">
                     <% var imgInfo = {path:'img_09',type:'jpg',alt:''};%>
