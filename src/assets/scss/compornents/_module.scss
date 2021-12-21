@@ -421,6 +421,8 @@ main{
   h4{
     line-height: 1em;
     font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .1em;
     margin-bottom: 20px;
   }
   .summary{
@@ -494,7 +496,7 @@ main{
     line-height: 1em;
     padding-left: 44/$design-num-sp*100vw;
     color: $key-color;
-    font-weight: bold;
+    font-weight: 400;
     letter-spacing: .06em;
     margin-bottom: 36/$design-num-sp*100vw;
     &:last-child{

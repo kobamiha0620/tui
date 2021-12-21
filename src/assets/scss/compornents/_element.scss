@@ -217,6 +217,15 @@
 }
 //////////////////////////////////
 .ttlStyle_02{
+  @include fz_vw(34);
+  line-height: 1em;
+  font-weight: normal;
+  letter-spacing: .1em;
+  >span{
+    @include fz_vw(26);
+    position: relative;
+    top: -4px;
+  }
   img{
     width: 287/$design-num-sp*100vw;
     display: inline-block;
@@ -224,6 +233,10 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .ttlStyle_02{
+  font-size: 2.2rem;
+  >span{
+    font-size: 1.6rem;
+  }
   img{
     width: 184px;
   }
@@ -231,6 +244,10 @@
 }
 @media screen and (min-width: $design-width) {
 .ttlStyle_02{
+  @include fz_vwpc(22);
+  >span{
+    @include fz_vwpc(16);
+  }
   img{
     width: 184/$design-num*100vw;
   }
@@ -305,6 +322,10 @@
 }
 //////////////////////////////////
 .ttlStyle_07{
+  line-height: 1em;
+  @include fz_vw(34);
+  font-weight: 400;
+  letter-spacing: .1em;
   margin-bottom: 50/$design-num-sp*100vw;
   img{
     width: 172/$design-num-sp*100vw;
@@ -312,6 +333,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .ttlStyle_07{
+  font-size: 2.2rem;
   margin-bottom: 40px;
   img{
     width: 111px;
@@ -323,7 +345,8 @@
   @include fz_vw(26);
   line-height: 1em;
   margin-bottom: 70/$design-num-sp*100vw;
-  letter-spacing: .02em;
+  letter-spacing: .1em;
+  font-weight: 500;
 }
 @media screen and (min-width: $break-point-middle) {
 .ttlStyle_08{
@@ -368,6 +391,34 @@
     content: '●';
     padding-right: .2em;
   }
+}
+//////////////////////////////////
+.ttlStyle_13{
+  @include fz_vw(34);
+  line-height: 1em;
+  font-weight: normal;
+  letter-spacing: .1em;
+  >span{
+    @include fz_vw(26);
+    position: relative;
+    top: -4px;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_13{
+  font-size: 2.2rem;
+  >span{
+    font-size: 1.6rem;
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.ttlStyle_13{
+  @include fz_vwpc(22);
+  >span{
+    @include fz_vwpc(16);
+  }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -585,7 +636,7 @@
 .summaryStyle_03{
   @include fz_vw(26);
   line-height: (56/26)+em;
-  letter-spacing: .02em;
+  letter-spacing: .05em;
   text-align: justify;
   >*{
     margin-bottom: (12/12)+em;

@@ -58,6 +58,13 @@ $(window).on('load', function () {
 
 // 購入ボタン制御
 function setBuyBtn () {
+  // $('.mikawaya-radio-button').each(function () {
+  //   var targetLabel = $(this).next().text()
+  //   console.log(targetLabel)
+  //   targetLabel.replace('オイル', '').replace('セラム', '').replace('セット', '')
+  //   $(this).next().text(targetLabel)
+  // })
+  //
   if ($('.product-form__cart-submit').attr('aria-label') == '売り切れ') {
     $('#customCartBtn').addClass('dis');
   }

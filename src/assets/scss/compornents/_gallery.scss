@@ -342,14 +342,15 @@ $delayH:200px;
     }
   }
   h2{
-    @include fontEn;
+    //@include fontEn;
     line-height: 1em;
     @include fz_vw(36);
     color: $white;
-    letter-spacing: .01em;
+    letter-spacing: .1em;
     position: relative;
     opacity: 0;
     transition: .8s;
+    font-weight: 500;
     img{
       width: 370/$design-num-sp*100vw;
       margin: 0 auto;
@@ -587,6 +588,11 @@ $delayH:200px;
     }
   }
   h2{
+    @include fz_vw(34);
+    letter-spacing: .1em;
+    color: $white;
+    font-weight: 400;
+    line-height: 1em;
     transition: .8s;
     opacity: 0;
     margin-bottom: 60/$design-num-sp*100vw;
@@ -600,7 +606,7 @@ $delayH:200px;
     color: $white;
     line-height: (54/26)+em;
     @include fz_vw(26);
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: .02em;
     text-align: justify;
   }
@@ -626,6 +632,7 @@ $delayH:200px;
     text-align: left;
   }
   h2{
+    font-size: 2.2rem;
     margin-bottom: 30px;
     img{
       width: 255px;
@@ -669,6 +676,11 @@ $delayH:200px;
     }
   }
   h2{
+    font-size: 2.2rem;
+    color: $white;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: .1em;
     margin-bottom: 35px;
     img{
       width: 415px;
@@ -677,7 +689,7 @@ $delayH:200px;
   .summary{
     line-height: (30/12)+em;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 25px;
     letter-spacing: .06em;
     text-align: justify;
@@ -710,6 +722,7 @@ $delayH:200px;
 @media screen and (min-width: $design-width) {
 .galleryWidget .content.style_04{
   h2{
+    @include fz_vwpc(22);
     margin-bottom: 35/$design-num*100vw;
     img{
       width: 415/$design-num*100vw;
@@ -735,6 +748,8 @@ $delayH:200px;
   }
   h2{
     margin-bottom: 180/$design-num-sp*100vw;
+    @include fz_vw(34);
+    line-height: (60/34)+em;
     img{
       width: 372/$design-num-sp*100vw;
     }
@@ -793,6 +808,7 @@ $delayH:200px;
     }
   }
   h2{
+    font-size: 2.2rem;
     margin-bottom: 35px;
     img{
       width: 415px;
@@ -877,7 +893,8 @@ $delayH:200px;
   }
   h2{
     font-size: 1.6rem;
-    letter-spacing: .05em;
+    font-weight: 500;
+    letter-spacing: .1em;
     line-height: (26/16)+em;
     margin-bottom: 30px;
     span{
@@ -889,7 +906,7 @@ $delayH:200px;
     font-size: 1.2rem;
     letter-spacing: .05em;
     text-align: justify;
-    font-weight: bold;
+    font-weight: 500;
   }
   .specList{
     line-height: (22/12)+em;
@@ -1038,7 +1055,7 @@ $delayH:200px;
     line-height: (30/12)+em;
     font-size: 1.2rem;
     letter-spacing: .05em;
-    font-weight: bold;
+    font-weight: 500;
   }
   .specList{
     line-height: (22/12)+em;
@@ -1106,12 +1123,11 @@ $delayH:200px;
     transition: .8s;
     opacity: 0;
     color: $white;
-    font-weight: bold;
-    letter-spacing: .02em;
+    font-weight: 500;
+    letter-spacing: .15em;
     text-align: justify;
     line-height: (56/26)+em;
     @include fz_vw(26);
-    letter-spacing: .1em;
   }
 }
 .galleryWidget .item.move .content.style_07{

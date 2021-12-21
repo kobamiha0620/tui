@@ -92,7 +92,8 @@
     @include fz_vw(34);
     line-height: (60/34)+em;
     margin-bottom: 50/$design-num-sp*100vw;
-    letter-spacing: .04em;
+    letter-spacing: .1em;
+    font-weight: normal;
   }
   .summary{
     line-height: (48/26)+em;
@@ -146,9 +147,10 @@
   h2{
     line-height: (61/36)+em;
     @include fz_vw(36);
-    letter-spacing: .02em;
+    //letter-spacing: .1em;
     margin-bottom: 16/$design-num-sp*100vw;
     text-align: justify;
+    font-weight: 500;
   }
   .subInfo{
     @include killSpace;
