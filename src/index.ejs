@@ -7,7 +7,7 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : 'true',
+  shopify : '',
   category : ['home'] ,
   pagename : '',
   css: [],
@@ -91,24 +91,6 @@ var pageinit = {
                 <!-- /.inner -->
               </div>
               <!-- /.bgImg -->
-              <div class="content style_01">
-                <div class="wrap">
-                  <div class="inner">
-                    <h2>当たり前を、変えるもの</h2>
-                    <!--h2>
-                      <% var imgInfo = {path:'tx-11',type:'svg',alt:'当たり前を、変えるもの'};%>
-                      <% if(pageinit.shopify!=='true'){%>
-                        <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
-                      <% } else {%>
-                        <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
-                      <% }%>
-                    </h2-->
-                  </div>
-                  <!-- /.inner -->
-                </div>
-                <!-- /.wrap -->
-              </div>
-              <!-- /.content -->
             </a>
           </section>
           <!-- /.item -->
@@ -130,7 +112,7 @@ var pageinit = {
                 <div class="wrap">
                   <div class="inner">
                     <h2>BOOSTER OIL</h2>
-                    <h3>体感する浸透力</h3>
+                    <h3>体感する浸透力<span>※</span></h3>
                     <!--h3>
                       <% var imgInfo = {path:'tx-01',type:'svg',alt:'体感する浸透力'};%>
                       <% if(pageinit.shopify!=='true'){%>

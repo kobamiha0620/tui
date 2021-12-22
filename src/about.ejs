@@ -7,12 +7,12 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : 'true',
+  shopify : '',
   category : ['about'] ,
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['setPhotoChanger ();','startScroll ();']
+  jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
 };
 %>
 <% if(pageinit.shopify!=='true'){%>
@@ -29,7 +29,7 @@ var pageinit = {
       <div class="galleryWidget top nullWay setMrg_12">
         <div class="inner">
           <div class="item active">
-            <div class="bgImg">
+            <div class="bgImg style_02">
               <div class="inner">
                 <% var imgInfo = {path:'hero_img_02',type:'jpg',alt:''};%>
                 <% if(pageinit.shopify!=='true'){%>
@@ -44,7 +44,7 @@ var pageinit = {
           </div>
           <!-- /.item -->
           <section class="item">
-            <div class="bgImg">
+            <div class="bgImg style_01">
               <div class="inner">
                 <% var imgInfo = {path:'hero_img_03',type:'jpg',alt:''};%>
                 <% if(pageinit.shopify!=='true'){%>
@@ -62,7 +62,7 @@ var pageinit = {
                   <div class="col">
                     <h2>当たり前を、変えるもの</h2>
                     <div class="summary">
-                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
+                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした　“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ　“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
                     </div>
                     <!-- /.summary -->
                   </div>
@@ -268,7 +268,7 @@ var pageinit = {
                 <div class="inner">
                   <div class="col">
                     <p class="numbering">Point 2</p>
-                    <h2>ビタミンC<span>（リン酸アスコルビルMg/整肌成分）</span>を<br class="pc">角質層へ、ダイレクトに</h2>
+                    <h2>ビタミンC<span>（リン酸アスコルビルMg/整肌成分）</span>を<br>角質層へ、ダイレクトに</h2>
                     <div class="summary">
                       <p>一般論、肌の弾力を左右する繊維芽細胞はビタミンC（リン酸アスコルビルMg/整肌成分）を与えることで活性化。角質層まで保湿美容成分がダイレクトに浸透することで肌サイクルを取り戻し、肌にハリ・弾力を与えます。</p>
                     </div>
@@ -334,7 +334,7 @@ var pageinit = {
         <section class="secStyle_02 setMrg_19 way" id="skincare">
           <div class="inner">
             <h2 class="ttlStyle_05 setMrg_01">Skincare Routine</h2>
-            <div class="summaryStyle_03 setMrg_17">
+            <div class="summaryStyle_06 setMrg_17">
               <p>ビタミンC<span class="txStyle_02">（リン酸アスコルビルMg/整肌成分）</span>をはじめとする保湿美容成分を集中的に角質層のすみずみまで<br class="pc">届けることで肌サイクルを取り戻す。肌全体のコンディションを根本から整えたい方におすすめ。</p>
             </div>
             <!-- /.summaryStyle_03 -->

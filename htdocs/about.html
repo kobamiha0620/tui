@@ -1,6 +1,197 @@
 
 
-{% layout 'theme.tui' %}
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript">
+  var _ua = (function(u){
+    return {
+      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1)
+        || u.indexOf("ipad") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+        || u.indexOf("kindle") != -1
+        || u.indexOf("silk") != -1
+        || u.indexOf("playbook") != -1,
+      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+        || u.indexOf("iphone") != -1
+        || u.indexOf("ipod") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+        || u.indexOf("blackberry") != -1
+    }
+  })(window.navigator.userAgent.toLowerCase());
+  if(_ua.Mobile){
+  	document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
+  }else{
+  	document.write('<meta name="viewport" content="width=1280">');
+  }
+  </script>
+  
+  <title>tui</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta name="format-detection" content="telephone=no">
+  <script type="text/javascript">
+    if (window.MSInputMethodContext && document.documentMode) {
+      var scripts = document.getElementsByTagName('script')[0];
+      var polyfill = document.createElement("script");
+      polyfill.defer = true;
+      polyfill.src = "{{ 'ie11CustomProperties.min.js' | asset_url }}";
+
+      scripts.parentNode.insertBefore(polyfill, scripts);
+    }
+  </script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'uct3tdv',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <link rel="stylesheet" href="https://use.typekit.net/tfo5tsn.css">
+  
+  <link rel="stylesheet" type="text/css" media="all" href="assets/css/main.css">
+  
+  
+</head>
+
+<body>
+  <div id="loading"></div>
+  <div id="wrapper" class="about ">
+    <div id="clickBlocker"></div>
+
+
+<header>
+  <div class="inner">
+    <div class="col-logo">
+      
+        
+        <h1 class="logo tx">
+          <a href="javascript:void(0);">About us</a>
+        </h1>
+        
+      
+    </div>
+    <!-- /.col-logo -->
+    
+    <div class="col-nav">
+      <p class="parent"><a href="products.html">View the products</a></p>
+      <ul class="productNav">
+        <li><a href="booster-oil.html">BOOSTER OIL</a></li>
+        <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
+        <li><a href="set-package.html">SET PACKAGE</a></li>
+      </ul>
+      <!-- /.productNav -->
+    </div>
+    <!-- /.col-nav -->
+    
+    <div class="col-EcNav">
+      
+      <p><a href="javascript:void(0);">Cart</a></p>
+      
+    </div>
+    <!-- /.colEc -->
+  </div>
+  <!-- /.inner -->
+</header>
+<!-- /header -->
+<div class="headMask">
+  <span class="head"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<path class="st0" d="M10,0H0v10C0,4.5,4.5,0,10,0z"/>
+</svg>
+</span>
+  <span class="head"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<path class="st0" d="M0,0l10,0v10C10,4.5,5.5,0,0,0z"/>
+</svg>
+</span>
+</div>
+<!-- /.headMask -->
+
+<div id="mainNav">
+  <span class="clickArea"></span>
+  <div class="inner">
+    <div class="cel">
+      <div class="inner">
+        
+        <p class="logoNav">
+          <a href="./">
+          
+          
+            
+<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
+
+          
+          </a>
+        </p>
+        
+        <div class="mainNavSec">
+          <div class="inner">
+            
+            <div class="mainMenu">
+              <nav>
+                <ul class="parent">
+                  <li>
+                    <a href="products.html">Products</a>
+                    <ul class="child">
+                      <li><a href="booster-oil.html">BOOSTER OIL</a></li>
+                      <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
+                      <li><a href="set-package.html">SET PACKAGE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="smallMenu">
+                  <li><a href="sctl.html">特定商取引法に基づく表記</a></li>
+                  <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                  <li><a href="javascript:void(0);">My page</a></li>
+                  <li><a href="javascript:void(0);">Cart</a></li>
+                  <li><a href="javascript:void(0);" target="_blank">Instagram</a></li>
+                </ul>
+                <!-- /.smallMenu -->
+              </nav>
+            </div>
+            <!-- /.mainMenu -->
+            
+          </div>
+          <!-- /.inner -->
+        </div>
+        <!-- /.mainNavSec -->
+      </div>
+      <!-- /.inner -->
+    </div>
+    <!-- /.cel -->
+  </div>
+  <!-- /.inner -->
+  <div class="closeBtn">
+    
+    
+      
+<img data-src="assets/images/icon-close.svg" alt="tui" class="lazyload">
+
+    
+  </div>
+  <!-- /.closeBtn -->
+</div>
+<!-- /#mainNav -->
+
 
 <div id="outerMenu">
   
@@ -9,30 +200,21 @@
       <div class="galleryWidget top nullWay setMrg_12">
         <div class="inner">
           <div class="item active">
-            <div class="bgImg">
+            <div class="bgImg style_02">
               <div class="inner">
                 
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'hero_img_02.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_02.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_02.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'hero_img_02_sp.webp' | file_url }} 1x,{{ 'hero_img_02_sp_2x.webp' | file_url }} 2x,{{ 'hero_img_02_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_02_sp.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_02_sp.jpg"
   >
   <img
-    data-src="{{ 'hero_img_02.jpg' | file_url }}"
+    data-src="assets/images/hero_img_02.jpg"
     alt=""
     class="lazyload"
   >
@@ -48,30 +230,21 @@
           </div>
           <!-- /.item -->
           <section class="item">
-            <div class="bgImg">
+            <div class="bgImg style_01">
               <div class="inner">
                 
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'hero_img_03.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_03.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_03.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'hero_img_03_sp.webp' | file_url }} 1x,{{ 'hero_img_03_sp_2x.webp' | file_url }} 2x,{{ 'hero_img_03_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_03_sp.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_03_sp.jpg"
   >
   <img
-    data-src="{{ 'hero_img_03.jpg' | file_url }}"
+    data-src="assets/images/hero_img_03.jpg"
     alt=""
     class="lazyload"
   >
@@ -90,7 +263,7 @@
                   <div class="col">
                     <h2>当たり前を、変えるもの</h2>
                     <div class="summary">
-                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
+                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした　“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ　“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
                     </div>
                     <!-- /.summary -->
                   </div>
@@ -140,24 +313,15 @@
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'img_11.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_11.jpg' | file_url }}"
+    data-srcset="assets/images/img_11.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'img_11_sp.webp' | file_url }} 1x,{{ 'img_11_sp_2x.webp' | file_url }} 2x,{{ 'img_11_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_11_sp.jpg' | file_url }}"
+    data-srcset="assets/images/img_11_sp.jpg"
   >
   <img
-    data-src="{{ 'img_11.jpg' | file_url }}"
+    data-src="assets/images/img_11.jpg"
     alt=""
     class="lazyload"
   >
@@ -206,31 +370,30 @@
         <div class="setMrg_15 way" id="ntdds">
           <section class="secStyle_01">
   <div class="inner">
-    <div class="movieStyle_01 setMrg_07">
+    <div class="movieStyle_01 setMrg_07 videoWay">
       <div class="inner">
+        <!--div class="videoWrap">
+          
+          <video class="video lazyload" muted playsinline poster="assets/images/cover_01.jpg" loop preload="none">
+            <source src="assets/movie/movie.mp4" type="video/mp4">
+          </video>
+          
+        </div-->
+        <!-- /.videoWrap -->
         <div class="cover">
           
           
             
 <picture>
-  <!--source
-    data-srcset="{{ 'cover_01.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'cover_01.jpg' | file_url }}"
+    data-srcset="assets/images/cover_01.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'cover_01_sp.webp' | file_url }} 1x,{{ 'cover_01_sp_2x.webp' | file_url }} 2x,{{ 'cover_01_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'cover_01_sp.jpg' | file_url }}"
+    data-srcset="assets/images/cover_01_sp.jpg"
   >
   <img
-    data-src="{{ 'cover_01.jpg' | file_url }}"
+    data-src="assets/images/cover_01.jpg"
     alt=""
     class="lazyload"
   >
@@ -253,7 +416,7 @@
         </div>
         <!-- /.summaryStyle_03 -->
         <h3 class="ttlStyle_06 setMrg_09 onlyProduct">肌が実感する、<br class="sp">角質層へのアプローチ</h3>
-        <div class="summaryStyle_02 setMrg_10 onlyProduct">
+        <div class="summaryStyle_03 setMrg_10 onlyProduct">
           <p>水溶性・高分子成分をそのままNtDDS技術で油性素材・水溶性素材にナノ分散することで、<br class="pc">角質層のすみずみまでダイレクトに浸透します。</p>
           <ul class="listStyle_01">
             <li>リン酸アスコルビルMg<span>(ビタミンC誘導体)</span></li>
@@ -287,24 +450,15 @@
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'hero_img_04.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_04.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_04.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'hero_img_04_sp.webp' | file_url }} 1x,{{ 'hero_img_04_sp_2x.webp' | file_url }} 2x,{{ 'hero_img_04_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_04_sp.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_04_sp.jpg"
   >
   <img
-    data-src="{{ 'hero_img_04.jpg' | file_url }}"
+    data-src="assets/images/hero_img_04.jpg"
     alt=""
     class="lazyload"
   >
@@ -742,24 +896,15 @@
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'hero_img_05.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_05.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_05.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'hero_img_05_sp.webp' | file_url }} 1x,{{ 'hero_img_05_sp_2x.webp' | file_url }} 2x,{{ 'hero_img_05_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_05_sp.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_05_sp.jpg"
   >
   <img
-    data-src="{{ 'hero_img_05.jpg' | file_url }}"
+    data-src="assets/images/hero_img_05.jpg"
     alt=""
     class="lazyload"
   >
@@ -799,24 +944,15 @@
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'hero_img_06.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_06.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_06.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'hero_img_06_sp.webp' | file_url }} 1x,{{ 'hero_img_06_sp_2x.webp' | file_url }} 2x,{{ 'hero_img_06_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_06_sp.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_06_sp.jpg"
   >
   <img
-    data-src="{{ 'hero_img_06.jpg' | file_url }}"
+    data-src="assets/images/hero_img_06.jpg"
     alt=""
     class="lazyload"
   >
@@ -834,7 +970,7 @@
                 <div class="inner">
                   <div class="col">
                     <p class="numbering">Point 2</p>
-                    <h2>ビタミンC<span>（リン酸アスコルビルMg/整肌成分）</span>を<br class="pc">角質層へ、ダイレクトに</h2>
+                    <h2>ビタミンC<span>（リン酸アスコルビルMg/整肌成分）</span>を<br>角質層へ、ダイレクトに</h2>
                     <div class="summary">
                       <p>一般論、肌の弾力を左右する繊維芽細胞はビタミンC（リン酸アスコルビルMg/整肌成分）を与えることで活性化。角質層まで保湿美容成分がダイレクトに浸透することで肌サイクルを取り戻し、肌にハリ・弾力を与えます。</p>
                     </div>
@@ -856,24 +992,15 @@
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'hero_img_07.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_07.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_07.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'hero_img_07_sp.webp' | file_url }} 1x,{{ 'hero_img_07_sp_2x.webp' | file_url }} 2x,{{ 'hero_img_07_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'hero_img_07_sp.jpg' | file_url }}"
+    data-srcset="assets/images/hero_img_07_sp.jpg"
   >
   <img
-    data-src="{{ 'hero_img_07.jpg' | file_url }}"
+    data-src="assets/images/hero_img_07.jpg"
     alt=""
     class="lazyload"
   >
@@ -940,7 +1067,7 @@
         <section class="secStyle_02 setMrg_19 way" id="skincare">
           <div class="inner">
             <h2 class="ttlStyle_05 setMrg_01">Skincare Routine</h2>
-            <div class="summaryStyle_03 setMrg_17">
+            <div class="summaryStyle_06 setMrg_17">
               <p>ビタミンC<span class="txStyle_02">（リン酸アスコルビルMg/整肌成分）</span>をはじめとする保湿美容成分を集中的に角質層のすみずみまで<br class="pc">届けることで肌サイクルを取り戻す。肌全体のコンディションを根本から整えたい方におすすめ。</p>
             </div>
             <!-- /.summaryStyle_03 -->
@@ -950,24 +1077,15 @@
                 
                   
 <picture>
-  <!--source
-    data-srcset="{{ 'img_12.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_12.jpg' | file_url }}"
+    data-srcset="assets/images/img_12.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'img_12_sp.webp' | file_url }} 1x,{{ 'img_12_sp_2x.webp' | file_url }} 2x,{{ 'img_12_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_12_sp.jpg' | file_url }}"
+    data-srcset="assets/images/img_12_sp.jpg"
   >
   <img
-    data-src="{{ 'img_12.jpg' | file_url }}"
+    data-src="assets/images/img_12.jpg"
     alt=""
     class="lazyload"
   >
@@ -1060,24 +1178,15 @@
               
                 
 <picture>
-  <!--source
-    data-srcset="{{ 'img_13.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_13.jpg' | file_url }}"
+    data-srcset="assets/images/img_13.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'img_13_sp.webp' | file_url }} 1x,{{ 'img_13_sp_2x.webp' | file_url }} 2x,{{ 'img_13_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_13_sp.jpg' | file_url }}"
+    data-srcset="assets/images/img_13_sp.jpg"
   >
   <img
-    data-src="{{ 'img_13.jpg' | file_url }}"
+    data-src="assets/images/img_13.jpg"
     alt=""
     class="lazyload"
   >
@@ -1111,24 +1220,15 @@
               
                 
 <picture>
-  <!--source
-    data-srcset="{{ 'img_14.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_14.jpg' | file_url }}"
+    data-srcset="assets/images/img_14.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'img_14_sp.webp' | file_url }} 1x,{{ 'img_14_sp_2x.webp' | file_url }} 2x,{{ 'img_14_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_14_sp.jpg' | file_url }}"
+    data-srcset="assets/images/img_14_sp.jpg"
   >
   <img
-    data-src="{{ 'img_14.jpg' | file_url }}"
+    data-src="assets/images/img_14.jpg"
     alt=""
     class="lazyload"
   >
@@ -1162,24 +1262,15 @@
               
                 
 <picture>
-  <!--source
-    data-srcset="{{ 'img_15.webp' | file_url }}"
-    media="(min-width: 768px)"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_15.jpg' | file_url }}"
+    data-srcset="assets/images/img_15.jpg"
     media="(min-width: 768px)"
   >
-  <!--source
-    data-srcset="{{ 'img_15_sp.webp' | file_url }} 1x,{{ 'img_15_sp_2x.webp' | file_url }} 2x,{{ 'img_15_sp_3x.webp' | file_url }} 3x"
-    type="image/webp"
-  -->
   <source
-    data-srcset="{{ 'img_15_sp.jpg' | file_url }}"
+    data-srcset="assets/images/img_15_sp.jpg"
   >
   <img
-    data-src="{{ 'img_15.jpg' | file_url }}"
+    data-src="assets/images/img_15.jpg"
     alt=""
     class="lazyload"
   >
@@ -1216,7 +1307,27 @@
   </main>
   
   
-  {% include 'footer-tui' %}
+  <footer>
+  <div class="inner">
+    <ul class="footNav">
+      
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li class="spInlineB"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li><br class="sp">
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="pcTd"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li>
+      
+    </ul>
+    <!-- /.footNav -->
+    <div class="copyRightSec">
+      <small>© tui beauty</small>
+    </div>
+    <!-- /.copyRightSec -->
+  </div>
+  <!-- /.inner -->
+</footer>
+
   
 </div>
 <!-- /#outerMenu -->
@@ -1224,7 +1335,7 @@
 <!-- /#wrapper -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="{{ 'master.js' | asset_url }}" type="text/javascript"></script>
+<script src="assets/js/master.js" type="text/javascript"></script>
 
 
 <script>
@@ -1234,21 +1345,13 @@
     
     startScroll ();
     
+    setVideo();
+    
   });
 </script>
 
-<script type="application/json" data-cart-routes>
-  {
-    "cartUrl": "{{ routes.cart_url }}",
-    "cartAddUrl": "{{ routes.cart_add_url }}",
-    "cartChangeUrl": "{{ routes.cart_change_url }}"
-  }
-</script>
-
-<ul hidden>
-  <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
-  <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
-</ul>
 
 
+</body>
+</html>
 

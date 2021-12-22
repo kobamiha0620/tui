@@ -7,7 +7,7 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : 'true',
+  shopify : '',
   category : ['contact'] ,
   pagename : '',
   css: [''],
@@ -31,7 +31,7 @@ var pageinit = {
           <section class="secStyle_06">
             <div class="inner">
               <div class="summaryStyle_05 setMrg_31">
-                <p>tui公式サイトのご利用方法・商品やサービスについて何かご不明な点などございましたら、<br class="pc">お電話<span class="txStyle_03">（フリーダイヤル <a href="tel:0120-00-0000" class="linkStyle_01">0120-00-0000</a>）</span>または下記のフォームよりお気軽にお問い合わせください。<br>「<a href="{{ routes.root_url }}pages/faq" class="linkStyle_01">FAQ</a>」「<a href="{{ routes.root_url }}pages/sctl" class="linkStyle_01">特定商取引法に基づく表記</a>」をご覧いただくと解決する場合がございます。</p>
+                <p>tui公式サイトのご利用方法・商品やサービスについて何かご不明な点などございましたら、<br class="pc">お電話<span class="txStyle_04">（フリーダイヤル <a href="tel:0120-00-0000" class="linkStyle_01">0120-00-0000</a>）</span>または下記のフォームよりお気軽にお問い合わせください。<br>「<a href="{{ routes.root_url }}pages/faq" class="linkStyle_01">FAQ</a>」「<a href="{{ routes.root_url }}pages/sctl" class="linkStyle_01">特定商取引法に基づく表記</a>」をご覧いただくと解決する場合がございます。</p>
               </div>
               <!-- /.summaryStyle_05 -->
               <div class="contact-form form-vertical">
@@ -53,7 +53,9 @@ var pageinit = {
                   <input type="tel" id="ContactForm-phone" name="contact[電話番号]" pattern="[0-9\-]*" value="" aria-required="true">
                   <label for="ContactForm-message">お問い合わせ内容<span aria-hidden="true">*</span></label>
                   <textarea rows="10" required="" class="”required”" id="ContactForm-message" name="contact[メッセージ]"></textarea>
+                  <div class="inputBtn">
                   <input type="submit" class="btn" value="送信">
+                  </div>
                 </form>
                 <% } else {%>
                   {%- assign formId = 'ContactForm' -%}
@@ -96,8 +98,9 @@ var pageinit = {
 
                     <label for="{{ formId }}-message">お問い合わせ内容<span aria-hidden="true">*</span></label>
                     <textarea rows="10" required class=”required” id="{{ formId }}-message" name="contact[{{ 'contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
-
+                    <div class="inputBtn">
                     <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}">
+                    </div>
 
                   {% endform %}
                 <% }%>

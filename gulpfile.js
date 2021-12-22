@@ -42,7 +42,7 @@ const svgo = require('imagemin-svgo');
 const spritesmith = require('gulp.spritesmith');
 
 // Webp書き出し
-const webp = require('gulp-webp');
+// const webp = require('gulp-webp')
 
 // js 関連
 // const uglifyes = require('uglify-es')
@@ -362,12 +362,12 @@ function taskImagemin (done) {
     .pipe(changed(dir.dist))
     .pipe(imagemin([
       pngquant({
-        quality: [0.6, 0.85],
+        quality: [0.6, 1],
         speed: 1,
         floyd: 0
       }),
       imagemin.mozjpeg({
-        quality: 85,
+        quality: 100,
         progressive: true
       }),
       /*imagemin.svgo({
@@ -385,17 +385,17 @@ function taskImagemin (done) {
 exports.imgmin = taskImagemin;
 
 // webP変換
-function taskWebp (done) {
-  return gulp.src([dir.src + '/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif}', '!' + dir.src + '/assets/favicons/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/iconfont/{,**/,**/**/,**/**/**/}*.*' /*, '!' + dir.src + '/images/imgsvg.svg'*/, '!' + dir.src + '/imgsvg/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/assets/spriteanime/**/*.*', '!' + dir.src + '/assets/images/sprite-*.png'], {
-    base: dir.src
-  })
-    // .pipe(changed(dir.dist))
-    .pipe(webp())
-    .pipe(gulp.dest(dir.dist));
-  done();
-}
-
-exports.webp = taskWebp;
+// function taskWebp (done) {
+//   return gulp.src([dir.src + '/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif}', '!' + dir.src + '/assets/favicons/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/iconfont/{,**/,**/**/,**/**/**/}*.*' /*, '!' + dir.src + '/images/imgsvg.svg'*/, '!' + dir.src + '/imgsvg/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/assets/spriteanime/**/*.*', '!' + dir.src + '/assets/images/sprite-*.png'], {
+//     base: dir.src
+//   })
+//     // .pipe(changed(dir.dist))
+//     .pipe(webp())
+//     .pipe(gulp.dest(dir.dist))
+//   done()
+// }
+//
+// exports.webp = taskWebp
 
 // 複製
 function copyOtherFiles (done) {
@@ -445,7 +445,7 @@ gulp.task('watch', function (done) {
   // gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.css'], gulp.series('cssout', 'bsReload'))
   gulp.watch([dir.src + '/assets/spriteanime/**/*.png'], gulp.series('spriteanime', 'bsReload'));
   gulp.watch([dir.src + '/assets/spriteanime/**/*.png'], gulp.series('spriteanime2', 'bsReload'));
-  gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}images/*.{png,jpeg,jpg,gif,svg}', dir.src + '/{,**/,**/**/,**/**/**/}images/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif,svg}'], gulp.series('imgmin', 'webp', 'bsReload'));
+  gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}images/*.{png,jpeg,jpg,gif,svg}', dir.src + '/{,**/,**/**/,**/**/**/}images/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif,svg}'], gulp.series('imgmin', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.ejs'], gulp.series('taskejs', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*_php.ejs'], gulp.series('taskejsphp', 'bsReload'));
   // gulp.watch([dir.wp + '/{,**/,**/**/,**/**/**/}*.php'], gulp.series('bsReload'))
@@ -462,6 +462,6 @@ gulp.task('default', gulp.parallel(bssync, 'watch'), function (done) {
 });
 
 // ソースから全ファイル出力
-gulp.task('destAll', gulp.series(cleanAll, gulp.parallel(jsbabel, jsmin, taskejs, sassout, fontout, svgout, spriteanime, spriteanime2, taskImagemin, taskWebp), taskejsphp, gulp.series(copyOtherFiles)), function (done) {
+gulp.task('destAll', gulp.series(cleanAll, gulp.parallel(jsbabel, jsmin, taskejs, sassout, fontout, svgout, spriteanime, spriteanime2, taskImagemin), taskejsphp, gulp.series(copyOtherFiles)), function (done) {
   done();
 });

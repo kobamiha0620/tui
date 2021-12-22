@@ -13,6 +13,9 @@
   }
   .imgStyle{
     height: 100%;
+    &.style_01 img{
+      object-position: 0 50%;
+    }
   }
   img{
     -webkit-backface-visibility: hidden;
@@ -130,7 +133,7 @@
     }
     .col{
       max-width: 620px;
-      margin: 0 auto;
+      margin: 0 0 0 300/1192*100%;
     }
   }
   a{
@@ -142,7 +145,7 @@
     .summary{
       line-height: (30/12)+em;
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: 500;
       color: $white;
       span{
         font-size: 1.0rem;
@@ -408,7 +411,8 @@
 .ttlStyle_13{
   font-size: 2.2rem;
   >span{
-    font-size: 1.6rem;
+    top: -8px;
+    font-size: 1.0rem;
   }
 }
 }
@@ -416,7 +420,8 @@
 .ttlStyle_13{
   @include fz_vwpc(22);
   >span{
-    @include fz_vwpc(16);
+    top: -8/$design-num*100vw;
+    @include fz_vwpc(10);
   }
 }
 }
@@ -447,6 +452,12 @@
     height: 8px;
     border-radius: 8px;
     margin-left: 6px;
+    transition: .6s;
+  }
+  &:hover{
+    &::after{
+      filter: blur(3px);
+    }
   }
 }
 }
@@ -489,6 +500,15 @@
   @extend .btnStyle_01;
   &::after{
     background-color: $key-color4;
+    .product_01 &{
+      background-color: $key-color1;
+    }
+    .product_02 &{
+      background-color: $key-color2;
+    }
+    .product_03 &{
+      background-color: $key-color5;
+    }
   }
 }
 ////////////////////////////////////////////////////////////
@@ -557,6 +577,8 @@
     //opacity: .8;
     &::before{
       filter: blur(3px);
+      width: 98%;
+      left: 1%;
     }
     >span{
       left: 5px;
@@ -701,6 +723,25 @@
   font-size: 1.2rem;
 }
 }
+////////////////////////////////////
+.summaryStyle_06{
+  @include fz_vw(26);
+  line-height: (56/26)+em;
+  letter-spacing: .05em;
+  text-align: justify;
+  >*{
+    margin-bottom: (12/12)+em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.summaryStyle_06{
+  font-size: 1.2rem;
+  line-height: (26/12)+em;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {
@@ -735,6 +776,17 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .txStyle_03{
+  line-height: (20/10)+em;
+  font-size: 1.0rem;
+}
+}
+///////////////////////////////////
+.txStyle_04{
+  line-height: (40/20)+em;
+  @include fz_vw(20);
+}
+@media screen and (min-width: $break-point-middle) {
+.txStyle_04{
   line-height: (20/10)+em;
   font-size: 1.0rem;
 }
@@ -834,7 +886,7 @@
 .dlStyle_01{
   dl{
     @include setTbl;
-    margin-bottom: 10/$design-num-sp*100vw;
+    //margin-bottom: 10/$design-num-sp*100vw;
     &:last-child{
       margin-bottom: 0;
     }
@@ -852,7 +904,7 @@
 .dlStyle_01{
   dl{
     @include setTbl;
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
     &:last-child{
       margin-bottom: 0;
     }

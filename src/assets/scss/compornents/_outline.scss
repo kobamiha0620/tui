@@ -29,7 +29,7 @@
 .secStyle_02{
   //text-align: center;
   padding: 0;
-  margin-left: 334/$design-num*100vw;
+  margin-left: 304/1192*100%;
   >.inner{
     max-width: none;
     margin: 0;
@@ -55,7 +55,7 @@
 .secStyle_03{
   padding: 0;
   >.inner{
-    max-width: 608px;
+    max-width: 591px;
     //max-width: 508px;
     margin: 0 auto;
   }
@@ -155,6 +155,13 @@
 .colStyle_02{
   >.inner{
     @include setTbl;
+  }
+  .col-content{
+    text-align: center;
+    >.inner{
+      width: auto;
+      display: inline-block;
+    }
   }
 }
 }

@@ -7,12 +7,12 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : 'true',
+  shopify : '',
   category : ['product_03','detail-product'] ,
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['setPhotoChanger ()','setBuyBtn();']
+  jsfunc:['setBuyBtn();']
 };
 %>
 <% if(pageinit.shopify!=='true'){%>
@@ -46,25 +46,12 @@ var pageinit = {
           <div class="item">
             <div class="bgImg">
               <div class="inner">
-                <ul class="photoChanger style_02">
-                  <li>
-                    <% var imgInfo = {path:'hero_img_16',type:'jpg',alt:''};%>
-                    <% if(pageinit.shopify!=='true'){%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                    <% } else {%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                    <% }%>
-                  </li>
-                  <li>
-                    <% var imgInfo = {path:'hero_img_14',type:'jpg',alt:''};%>
-                    <% if(pageinit.shopify!=='true'){%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                    <% } else {%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                    <% }%>
-                  </li>
-                </ul>
-                <!-- /.photoChanger -->
+                <% var imgInfo = {path:'hero_img_16',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
               </div>
               <!-- /.inner -->
             </div>

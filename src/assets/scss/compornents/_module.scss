@@ -1,9 +1,34 @@
 @charset "utf-8";
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+#loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  z-index: 9999;
+  transition: opacity .5s;
+  &.loaded{
+  }
+  &.loadEnd{
+    opacity: 0;
+    bottom: auto;
+    height: 0;
+  }
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 #wrapper{
+  //position: fixed;
   padding-top: $header-size-sp;
-  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  &.loadEnd{
+    height: auto;
+    position: relative;
+  }
   // &.menuOpen{
   //   position: fixed;
   // }
@@ -25,7 +50,7 @@ main{
 ////////////////////////////////////////////////////////////
 #homeContainer{
   position: relative;
-  z-index: 101;
+  //z-index: 101;
   margin-top: 28/$design-num-sp*100vw;
 }
 @media screen and (min-width: $break-point-middle) {
@@ -217,6 +242,17 @@ main{
   >.inner{
     border-radius: 10px;
     overflow: hidden;
+    //padding-top: 1205/2000*100%;
+    position: relative;
+  }
+  .videoWrap{
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 110%;
+  }
+  video{
+    width: 100%;
   }
   .cover{
     img{
@@ -333,6 +369,7 @@ main{
     }
   }
   h4{
+    font-weight: 500;
     line-height: (60/34)+em;
     @include fz_vw(34);
     margin-bottom: 50/$design-num-sp*100vw;
@@ -415,13 +452,12 @@ main{
     margin-bottom: 10px;
   }
   h3{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 1.2rem;
   }
   h4{
     line-height: 1em;
     font-size: 1.6rem;
-    font-weight: 500;
     letter-spacing: .1em;
     margin-bottom: 20px;
   }
@@ -437,7 +473,7 @@ main{
     margin-top: 8px;
   }
   .elemWrap{
-    margin-top: 55px;
+    margin-top: 36px;
   }
 }
 }
@@ -525,6 +561,9 @@ main{
       .product_02 &{
         border: 1px solid $key-color2;
       }
+      .product_03 &{
+        border: 1px solid $key-color5;
+      }
     }
     &:checked{
       &::before{
@@ -532,13 +571,19 @@ main{
         .product_02 &{
           background-color: $key-color2;
         }
+        .product_03 &{
+          background-color: $key-color5;
+        }
       }
     }
   }
   ////////////////////
   .eyeCatch{
-    margin-bottom: 30/$design-num-sp*100vw;
+    margin-bottom: 180/$design-num-sp*100vw;
+    //overflow: hidden;
     img{
+      transform: scale(1.3);
+      transform-origin: 50% 0%;
       @include imgset;
     }
     .loadImg{
@@ -547,6 +592,7 @@ main{
   }
   .ttl{
     margin-bottom: 100/$design-num-sp*100vw;
+    position: relative;
     h2{
       @include fz_vw(36);
       line-height: 1em;
@@ -665,6 +711,9 @@ main{
   ////////////////////
   .eyeCatch{
     margin-bottom: 20px;
+    img{
+      transform: scale(1);
+    }
   }
   .ttl{
     margin-bottom: 48px;
@@ -711,7 +760,7 @@ main{
     }
   }
   .summary{
-    line-height: (30/12)+em;
+    line-height: (22/12)+em;
     font-size: 1.2rem;
     sup{
       font-size: 1.0rem;
@@ -806,6 +855,7 @@ main{
     padding-left: 34/$design-num-sp*100vw;
     position: relative;
     margin-bottom: 70/$design-num-sp*100vw;
+    font-weight: 500;
     &::before{
       content: '';
       display: block;

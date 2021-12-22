@@ -9,7 +9,7 @@ footer{
 }
 @media screen and (min-width: $break-point-middle) {
 footer{
-  padding: 178px 20px 40px;
+  padding: 178px 20px $header-size;
 }
 }
 ////////////////////////////////////////////////////////////
@@ -40,7 +40,7 @@ footer{
   @include setTbl;
   width: auto;
   table-layout: auto;
-  margin: 0 auto;
+  margin: 0 0 0 314/1232*100%;
   font-size: 1.2rem;
   letter-spacing: .02em;
   padding-bottom: 0;

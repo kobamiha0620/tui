@@ -104,7 +104,6 @@ textarea{
 input.btn{
   @include btnsetting;
   display: block;
-  background-color: $key-color1;
   width: 120/$design-num-sp*100vw;
   height: 120/$design-num-sp*100vw;
   border-radius: 120/$design-num-sp*100vw;
@@ -115,6 +114,8 @@ input.btn{
   letter-spacing: .1em;
   font-weight: bold;
   transition: .3s;
+  position: relative;
+  background-color: transparent;
 }
 @media screen and (min-width: $break-point-middle) {
 input.btn{
@@ -123,11 +124,43 @@ input.btn{
   border-radius: 70px;
   line-height: 70px;
   font-size: 1.2rem;
-  &:hover{
-    opacity: .8;
-  }
   &:active{
     opacity: 1;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.inputBtn{
+  width: 120/$design-num-sp*100vw;
+  height: 120/$design-num-sp*100vw;
+  position: relative;
+  &::before{
+    border-radius: 120/$design-num-sp*100vw;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $key-color1;
+    width: 100%;
+    transition: .3s;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.inputBtn{
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  &::before{
+    border-radius: 70px;
+  }
+  &:hover{
+    &::before{
+      transform: scale(.9);
+      filter: blur(3px);
+    }
   }
 }
 }

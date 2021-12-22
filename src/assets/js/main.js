@@ -49,12 +49,59 @@ $(window).on('load', function () {
   setLoaded();
   // displayCart()
   setMega();
+  setMenuPosition();
   // setScrollTop()
   // setTextile()
   if ($('#wrapper').hasClass('home')) {
     // setMainVis()
   }
 });
+
+// ////////////////////動画制御
+function setVideo () {
+  // $('.movieStyle_01').each(function () {
+  //   var target = $(this).find('.video')
+  //   var video = target.get(0)
+  //   video.play()
+  // })
+  // function playVideos (videos) {
+  //   var startPosition = $(window).scrollTop() + $(window).height()
+  //   videos.each(function (index) {
+  //     if (startPosition > $(this).offset().top) {
+  //       $(this).get(0).play()
+  //     }
+  //   })
+  // }
+  // $(window).on('load', function () {
+  //   var videos = $('.movieStyle_01 video')
+  //   if (videos.length) {
+  //     playVideos(videos)
+  //     $(window).on('scroll', function () {
+  //       playVideos(videos)
+  //     })
+  //   }
+  // })
+}
+
+// メニュー追従制御
+function setMenuPosition () {
+  if (!$('#mainNav').hasClass('active')) {
+    setTimeout(function () {
+      $('#mainNav').addClass('out');
+    }, 1000);
+  }
+  var timer = false;
+  $(window).scroll(function () {
+    $('#mainNav').removeClass('out');
+    if (timer !== false) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(function () {
+      var scroll_top = $(this).scrollTop(); // . スクロール位置
+      $('#mainNav').addClass('out');
+    }, 1000);
+  });
+}
 
 // 購入ボタン制御
 function setBuyBtn () {
@@ -141,61 +188,6 @@ function displayCart () {
   });
 }
 
-// ////////////////////動画制御
-function setVideo () {
-  $('.movieWrap').each(function () {
-    var target = $(this).find('.video');
-    var video = target.get(0);
-    var playBtn = $(this).find('.playBtn');
-    var summary = $(this).parents('.movieSec').find('.videoSummary');
-    playBtn.on('click', function () {
-      video.play();
-      video.setAttribute('controls', 'controls');
-      target.addClass('stand');
-      $(this).addClass('hide');
-      summary.addClass('hide');
-    });
-    $('.movieLink .ttl').on('click', function () {
-      video.play();
-      video.setAttribute('controls', 'controls');
-      target.addClass('stand');
-      playBtn.addClass('hide');
-      summary.addClass('hide');
-    });
-    video.addEventListener('playing', function () {
-      playBtn.addClass('hide');
-      summary.addClass('hide');
-    }, true);
-    video.addEventListener('pause', function () {
-      playBtn.removeClass('hide');
-      summary.removeClass('hide');
-    }, true);
-    video.addEventListener('ended', function () {
-      playBtn.removeClass('hide');
-      summary.removeClass('hide');
-    }, true);
-    // video.addEventListener('canplaythrough', function () {
-    //  playBtn.removeClass('hide')
-    //  summary.removeClass('active')
-    //  startScroll()
-    // }, true)
-    target.mouseover(
-      function () {
-        if (target.hasClass('stand')) {
-          video.setAttribute('controls', 'controls');
-        // summary.addClass('active')
-        }
-      }).mouseout(
-      function () {
-        if (target.hasClass('stand')) {
-          video.setAttribute('controls', 'controls');
-        // summary.removeClass('active')
-        }
-      }
-    );
-  });
-}
-
 // アコーディオン
 function setAcc () {
   $('.accSec h2').on('click', function () {
@@ -208,8 +200,8 @@ var menuOpenFlag = false;
 // //////////////////////////メインメニュー
 function setMainMenu () {
   var current_scrollY;
-  $('#mainNav,h1.logo').on('click', function () {
-    if (!$(this).hasClass('active')) {
+  $('#mainNav .clickArea,h1.logo').on('click', function () {
+    if (!$('#mainNav').hasClass('active')) {
       openFnc();
     }else {
       closeFnc();
@@ -219,7 +211,7 @@ function setMainMenu () {
     event.stopPropagation();
   });
 
-  $('#clickBlocker,.closeArea').on('click', function () {
+  $('#clickBlocker,.closeArea,#mainNav .closeBtn').on('click', function () {
     closeFnc();
   });
 
@@ -254,6 +246,15 @@ function setMainMenu () {
     $('#wrapper').addClass('menuOpen');
     // $('#outerMenu').css('top', -(current_scrollY))
     menuOpenFlag = true;
+    setTimeout(function () {
+      var wrapH = $('#mainNav').height();
+      var navH = $('.mainNavSec').height() + 140;
+      if (wrapH < navH) {
+        $('#mainNav .closeBtn').addClass('style_01');
+      }else {
+        $('#mainNav .closeBtn').removeClass('style_01');
+      }
+    }, 500);
     // スクロール禁止
     document.addEventListener('touchmove', handleTouchMove, { passive: false });
   // setTimeout(function () {
@@ -267,11 +268,15 @@ function setMainMenu () {
     // $('body').removeClass('breakH')
     // $('#wrapper').addClass('breakLuxy')
     $('#mainNav').removeClass('active');
+    $('#mainNav').removeClass('out');
     // $('#outerMenu').css('top', '')
     $('#wrapper').removeClass('menuOpen');
     // スクロール復帰
     document.removeEventListener('touchmove', handleTouchMove, { passive: false });
     menuOpenFlag = false;
+    setTimeout(function () {
+      $('#mainNav').addClass('out');
+    }, 1000);
     $('html, body').prop({
       scrollTop: current_scrollY
     });
@@ -368,7 +373,9 @@ function setLoaded () {
   $('#wrapper').addClass('loaded');
   setTimeout(function () {
     $('#wrapper').addClass('loadEnd');
-  }, 500);
+    $('#loading').addClass('loadEnd');
+    $('#mainNav').removeClass('foot');
+  }, 300);
   $('body,html').animate({
     scrollTop: 0
   }, 0, 'swing');
@@ -390,17 +397,28 @@ function setWay () {
     offset: '70%'
   });
 
-  $('.galleryWidget.bottom').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'down') { // scroll down
-      activePoint.addClass('active');
-    }else {
-      activePoint.removeClass('active');
-    }
-  }, {
-    offset: 55 / 1280 * 100 + '%'
-  });
+  // $('.videoWay').waypoint(function (direction) {
+  //   var activePoint = $(this.element)
+  //   var target = $(this.element)
+  //   if (direction === 'down') { // scroll down
+  //     // setVideo()
+  //   }
+  // }, {
+  //   offset: '70%'
+  // })
+  setTimeout(function () {
+    $('.galleryWidget.bottom').waypoint(function (direction) {
+      var activePoint = $(this.element);
+      var target = $(this.element);
+      if (direction === 'down') { // scroll down
+        activePoint.addClass('active');
+      }else {
+        activePoint.removeClass('active');
+      }
+    }, {
+      offset: 55 / 1280 * 100 + '%'
+    });
+  }, 1000);
 
   $('.galleryWidget .item').waypoint(function (direction) {
     var activePoint = $(this.element);
