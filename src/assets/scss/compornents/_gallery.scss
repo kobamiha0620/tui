@@ -938,6 +938,11 @@ $delayH:200px;
   }
 }
 .galleryWidget .item.move .content.style_05,.galleryWidget .content.style_06{
+  .wrap{
+    &.style_01{
+      margin: 0 0 0 90px;
+    }
+  }
 }
 @media screen and (min-width: $design-width) {
 // .galleryWidget .content.style_05,.galleryWidget .content.style_06{
@@ -1070,7 +1075,7 @@ $delayH:200px;
   .specList{
     line-height: (22/12)+em;
     font-size: $summary-font-size;
-    font-weight: bold;
+    font-weight: 500;
     span{
       font-size: 1.0rem;
     }

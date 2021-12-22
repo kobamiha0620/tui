@@ -201,7 +201,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 	.logoNav{
 		text-align: left;
 		padding-left: 100/$design-num-sp*100vw;
-		margin-bottom: 50/$design-num-sp*100vw;
+		margin-bottom: 30/$design-num-sp*100vw;
 		img{
 			width: 42/$design-num-sp*100vw;
 		}
@@ -217,7 +217,9 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 		bottom: 80/$design-num-sp*100vw;
 		left: 100/$design-num-sp*100vw;
 		&.style_01{
-			bottom: 20/$design-num-sp*100vw;
+			//display: none;
+			left: auto;
+			right: 50/$design-num-sp*100vw;
 		}
 		img{
 			width: 28/$design-num-sp*100vw;

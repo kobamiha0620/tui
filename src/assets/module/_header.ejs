@@ -44,6 +44,10 @@
         <h1 class="logo tx">
           <a href="javascript:void(0);">Contact</a>
         </h1>
+        <% } else if (pageinit.category=='rule') { %>
+        <h1 class="logo tx ja">
+          <a href="javascript:void(0);">利用規約</a>
+        </h1>
         <% }%>
       <% } else {%>
         {% if template == 'index' %}
@@ -71,6 +75,10 @@
         {% elsif page.handle == 'sctl' %}
         <h1 class="logo tx ja">
           <a href="javascript:void(0);">特定商取引法に基づく表記</a>
+        </h1>
+        {% elsif page.handle == 'rule' %}
+        <h1 class="logo tx ja">
+          <a href="javascript:void(0);">利用規約</a>
         </h1>
         {% elsif template == 'product.booster-oil' %}
         <h1 class="logo tx">

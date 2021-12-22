@@ -121,6 +121,8 @@
   privacy
   {% elsif page.handle == 'sctl' %}
   sctl
+  {% elsif page.handle == 'rule' %}
+  rule
   {% endif %}
   ">
     <div id="clickBlocker"></div>
@@ -172,6 +174,10 @@
         {% elsif page.handle == 'sctl' %}
         <h1 class="logo tx ja">
           <a href="javascript:void(0);">特定商取引法に基づく表記</a>
+        </h1>
+        {% elsif page.handle == 'rule' %}
+        <h1 class="logo tx ja">
+          <a href="javascript:void(0);">利用規約</a>
         </h1>
         {% elsif template == 'product.booster-oil' %}
         <h1 class="logo tx">
@@ -268,6 +274,7 @@
                 <ul class="smallMenu">
                   <li><a href="{{ routes.root_url }}pages/sctl">特定商取引法に基づく表記</a></li>
                   <li><a href="{{ routes.root_url }}pages/privacy-policy">プライバシーポリシー</a></li>
+                  <li><a href="{{ routes.root_url }}pages/rule">利用規約</a></li>
                   <li><a href="{{ routes.root_url }}account">My page</a></li>
                   <li><a href="{{ routes.cart_url }}">Cart</a></li>
                   <li><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li>

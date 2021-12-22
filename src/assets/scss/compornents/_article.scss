@@ -71,13 +71,13 @@
 }
 }
 @media screen and (min-width: $design-width) {
-.articleStyle_01{
-  a{
-    h2{
-      @include fz_vwpc(18);
-    }
-  }
-}
+// .articleStyle_01{
+//   a{
+//     h2{
+//       @include fz_vwpc(18);
+//     }
+//   }
+// }
 }
 ///////////////////////////////////////
 .articleStyle_02{

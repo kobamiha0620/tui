@@ -29,7 +29,10 @@
 .secStyle_02{
   //text-align: center;
   padding: 0;
-  margin-left: 304/1192*100%;
+  margin-left: 310/1192*100%;
+  &.style_01{
+    margin-left: 304/1192*100%;
+  }
   >.inner{
     max-width: none;
     margin: 0;

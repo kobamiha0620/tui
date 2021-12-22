@@ -248,7 +248,7 @@ function setMainMenu () {
     menuOpenFlag = true;
     setTimeout(function () {
       var wrapH = $('#mainNav').height();
-      var navH = $('.mainNavSec').height() + 140;
+      var navH = $('.mainNavSec').height() + 120;
       if (wrapH < navH) {
         $('#mainNav .closeBtn').addClass('style_01');
       }else {
