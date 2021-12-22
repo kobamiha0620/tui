@@ -85,7 +85,6 @@
     .btn{
       margin-top: 80/$design-num-sp*100vw;
       @include fontEn;
-      font-weight: normal;
       letter-spacing: .1em;
       @include fz_vw(20);
       line-height: 1em;
@@ -144,7 +143,7 @@
     }
     .summary{
       line-height: (30/12)+em;
-      font-size: 1.2rem;
+      font-size: $summary-font-size;
       font-weight: 500;
       color: $white;
       span{
@@ -154,7 +153,7 @@
     .btn{
       margin-top: 44px;
       font-weight: 400;
-      font-size: 1.2rem;
+      font-size: $summary-font-size;
       color: $white;
       >span{
         &::after{
@@ -372,7 +371,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .ttlStyle_09{
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
 }
 }
 //////////////////////////////////
@@ -446,7 +445,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .btnStyle_01{
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   &::after{
     width: 8px;
     height: 8px;
@@ -471,7 +470,7 @@
     margin-left: 6/$design-num*100vw;
   }
   &.style_01{
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     &::after{
       width: 8px;
       height: 8px;
@@ -613,7 +612,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_01{
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   line-height: (30/12)+em;
   text-align: left;
   sup{
@@ -647,7 +646,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_02{
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   line-height: (24/12)+em;
   span{
     font-size: 1.0rem;
@@ -669,7 +668,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_03{
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   line-height: (30/12)+em;
 }
 }
@@ -695,7 +694,7 @@
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_04{
   line-height: (26/12)+em;
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
 }
 }
 ////////////////////////////////////
@@ -720,7 +719,7 @@
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_05{
   line-height: (26/12)+em;
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
 }
 }
 ////////////////////////////////////
@@ -738,7 +737,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_06{
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   line-height: (26/12)+em;
 }
 }

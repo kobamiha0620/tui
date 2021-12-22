@@ -1,197 +1,6 @@
 
 
-<!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <script type="text/javascript">
-  var _ua = (function(u){
-    return {
-      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1)
-        || u.indexOf("ipad") != -1
-        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
-        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
-        || u.indexOf("kindle") != -1
-        || u.indexOf("silk") != -1
-        || u.indexOf("playbook") != -1,
-      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
-        || u.indexOf("iphone") != -1
-        || u.indexOf("ipod") != -1
-        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
-        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
-        || u.indexOf("blackberry") != -1
-    }
-  })(window.navigator.userAgent.toLowerCase());
-  if(_ua.Mobile){
-  	document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
-  }else{
-  	document.write('<meta name="viewport" content="width=1280">');
-  }
-  </script>
-  
-  <title>tui</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  
-
-  <meta http-equiv="content-script-type" content="text/javascript">
-  <meta name="format-detection" content="telephone=no">
-  <script type="text/javascript">
-    if (window.MSInputMethodContext && document.documentMode) {
-      var scripts = document.getElementsByTagName('script')[0];
-      var polyfill = document.createElement("script");
-      polyfill.defer = true;
-      polyfill.src = "{{ 'ie11CustomProperties.min.js' | asset_url }}";
-
-      scripts.parentNode.insertBefore(polyfill, scripts);
-    }
-  </script>
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'uct3tdv',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
-  <link rel="stylesheet" href="https://use.typekit.net/tfo5tsn.css">
-  
-  <link rel="stylesheet" type="text/css" media="all" href="assets/css/main.css">
-  
-  
-</head>
-
-<body>
-  <div id="loading"></div>
-  <div id="wrapper" class="products ">
-    <div id="clickBlocker"></div>
-
-
-<header>
-  <div class="inner">
-    <div class="col-logo">
-      
-        
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">products</a>
-        </h1>
-        
-      
-    </div>
-    <!-- /.col-logo -->
-    
-    <div class="col-nav">
-      <p class="parent"><a href="products.html">View the products</a></p>
-      <ul class="productNav">
-        <li><a href="booster-oil.html">BOOSTER OIL</a></li>
-        <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
-        <li><a href="set-package.html">SET PACKAGE</a></li>
-      </ul>
-      <!-- /.productNav -->
-    </div>
-    <!-- /.col-nav -->
-    
-    <div class="col-EcNav">
-      
-      <p><a href="javascript:void(0);">Cart</a></p>
-      
-    </div>
-    <!-- /.colEc -->
-  </div>
-  <!-- /.inner -->
-</header>
-<!-- /header -->
-<div class="headMask">
-  <span class="head"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
-<path class="st0" d="M10,0H0v10C0,4.5,4.5,0,10,0z"/>
-</svg>
-</span>
-  <span class="head"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
-<path class="st0" d="M0,0l10,0v10C10,4.5,5.5,0,0,0z"/>
-</svg>
-</span>
-</div>
-<!-- /.headMask -->
-
-<div id="mainNav">
-  <span class="clickArea"></span>
-  <div class="inner">
-    <div class="cel">
-      <div class="inner">
-        
-        <p class="logoNav">
-          <a href="./">
-          
-          
-            
-<img data-src="assets/images/logo-tui_01.svg" alt="tui" class="lazyload">
-
-          
-          </a>
-        </p>
-        
-        <div class="mainNavSec">
-          <div class="inner">
-            
-            <div class="mainMenu">
-              <nav>
-                <ul class="parent">
-                  <li>
-                    <a href="products.html">Products</a>
-                    <ul class="child">
-                      <li><a href="booster-oil.html">BOOSTER OIL</a></li>
-                      <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
-                      <li><a href="set-package.html">SET PACKAGE</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="about.html">About us</a></li>
-                  <li><a href="news.html">News</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <ul class="smallMenu">
-                  <li><a href="sctl.html">特定商取引法に基づく表記</a></li>
-                  <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
-                  <li><a href="javascript:void(0);">My page</a></li>
-                  <li><a href="javascript:void(0);">Cart</a></li>
-                  <li><a href="javascript:void(0);" target="_blank">Instagram</a></li>
-                </ul>
-                <!-- /.smallMenu -->
-              </nav>
-            </div>
-            <!-- /.mainMenu -->
-            
-          </div>
-          <!-- /.inner -->
-        </div>
-        <!-- /.mainNavSec -->
-      </div>
-      <!-- /.inner -->
-    </div>
-    <!-- /.cel -->
-  </div>
-  <!-- /.inner -->
-  <div class="closeBtn">
-    
-    
-      
-<img data-src="assets/images/icon-close.svg" alt="tui" class="lazyload">
-
-    
-  </div>
-  <!-- /.closeBtn -->
-</div>
-<!-- /#mainNav -->
-
+{% layout 'theme.tui' %}
 
 <div id="outerMenu">
   
@@ -203,15 +12,24 @@
           
             
 <picture>
+  <!--source
+    data-srcset="{{ 'hero_img_01.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/hero_img_01.jpg"
+    data-srcset="{{ 'hero_img_01.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'hero_img_01_sp.webp' | file_url }} 1x,{{ 'hero_img_01_sp_2x.webp' | file_url }} 2x,{{ 'hero_img_01_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/hero_img_01_sp.jpg"
+    data-srcset="{{ 'hero_img_01_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/hero_img_01.jpg"
+    data-src="{{ 'hero_img_01.jpg' | file_url }}"
     alt="Products"
     class="lazyload"
   >
@@ -238,15 +56,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_01.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_01.jpg"
+    data-srcset="{{ 'img_01.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_01_sp.webp' | file_url }} 1x,{{ 'img_01_sp_2x.webp' | file_url }} 2x,{{ 'img_01_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_01_sp.jpg"
+    data-srcset="{{ 'img_01_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_01.jpg"
+    data-src="{{ 'img_01.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -261,15 +88,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_02.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_02.jpg"
+    data-srcset="{{ 'img_02.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_02_sp.webp' | file_url }} 1x,{{ 'img_02_sp_2x.webp' | file_url }} 2x,{{ 'img_02_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_02_sp.jpg"
+    data-srcset="{{ 'img_02_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_02.jpg"
+    data-src="{{ 'img_02.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -291,13 +127,13 @@
                     
                     
                       
-<img data-src="assets/images/tx-05.svg" alt="体感する浸透力" class="lazyload">
+<img data-src="{{ 'tx-05.svg' | file_url }}" alt="体感する浸透力" class="lazyload">
 
                     
                   </h3-->
                   <div class="summaryStyle_01">
                     <p class="setMrg_03">洗顔後すぐに“オイル” の新習慣。<br class="pc">表皮と親和性の高いオイルが肌表面を柔らかく、<br class="pc">ベタつくことなくスーッと肌に馴染んでいく。<br class="pc">独自開発したNtDDS<span class="txStyle_02">（ナノ分散浸透技術）</span>が保湿美容成分を<br class="pc">角質層までしっかりと届け、肌をすこやかに保ちます。</p>
-                    <p class="txStyle_01">※角質層まで</p>
+                    <p class="txStyle_02">※角質層まで</p>
                   </div>
                   <!-- /.summaryStyle_01 -->
                   <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/booster-oil" class="btnStyle_01"><span>View</span></a></div>
@@ -326,13 +162,13 @@
                     
                     
                       
-<img data-src="assets/images/tx-06.svg" alt="うるおい、肌にとどまる" class="lazyload">
+<img data-src="{{ 'tx-06.svg' | file_url }}" alt="うるおい、肌にとどまる" class="lazyload">
 
                     
                   </h3-->
                   <div class="summaryStyle_01">
                     <p class="setMrg_03">化粧水なしで“セラム” だけ。<br class="pc">オイルのカプセルをセラムが包み、想像を超える保湿力。<br class="pc">セラミド成分<sup>※</sup>が肌にうるおいを与え、<br class="pc">そのたっぷりの水分を蓄えたままの肌が持続します。<br class="pc">親油性が高く、オイルとの併用も弾かず馴染む圧巻のセラム。</p>
-                    <p class="txStyle_01">※セラミドEOP、セラミドNP、セラミドAP</p>
+                    <p class="txStyle_02">※セラミドEOP、セラミドNP、セラミドAP</p>
                   </div>
                   <!-- /.summaryStyle_01 -->
                   <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/moisture-serum" class="btnStyle_02"><span>View</span></a></div>
@@ -348,15 +184,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_03.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_03.jpg"
+    data-srcset="{{ 'img_03.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_03_sp.webp' | file_url }} 1x,{{ 'img_03_sp_2x.webp' | file_url }} 2x,{{ 'img_03_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_03_sp.jpg"
+    data-srcset="{{ 'img_03_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_03.jpg"
+    data-src="{{ 'img_03.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -371,15 +216,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_04.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_04.jpg"
+    data-srcset="{{ 'img_04.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_04_sp.webp' | file_url }} 1x,{{ 'img_04_sp_2x.webp' | file_url }} 2x,{{ 'img_04_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_04_sp.jpg"
+    data-srcset="{{ 'img_04_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_04.jpg"
+    data-src="{{ 'img_04.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -412,15 +266,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_05.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_05.jpg"
+    data-srcset="{{ 'img_05.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_05_sp.webp' | file_url }} 1x,{{ 'img_05_sp_2x.webp' | file_url }} 2x,{{ 'img_05_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_05_sp.jpg"
+    data-srcset="{{ 'img_05_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_05.jpg"
+    data-src="{{ 'img_05.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -435,15 +298,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_06.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_06.jpg"
+    data-srcset="{{ 'img_06.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_06_sp.webp' | file_url }} 1x,{{ 'img_06_sp_2x.webp' | file_url }} 2x,{{ 'img_06_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_06_sp.jpg"
+    data-srcset="{{ 'img_06_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_06.jpg"
+    data-src="{{ 'img_06.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -465,7 +337,7 @@
                     
                     
                       
-<img data-src="assets/images/tx-07.svg" alt="オイルとセラム、対になるもの" class="lazyload">
+<img data-src="{{ 'tx-07.svg' | file_url }}" alt="オイルとセラム、対になるもの" class="lazyload">
 
                     
                   </h3-->
@@ -494,8 +366,8 @@
       <div class="inner">
         <!--div class="videoWrap">
           
-          <video class="video lazyload" muted playsinline poster="assets/images/cover_01.jpg" loop preload="none">
-            <source src="assets/movie/movie.mp4" type="video/mp4">
+          <video class="video lazyload" muted playsinline poster="{{ 'cover_01.jpg' | file_url }}" loop preload="none">
+            <source src="{{ 'movie.mp4' | file_url }}" type="video/mp4">
           </video>
           
         </div-->
@@ -505,15 +377,24 @@
           
             
 <picture>
+  <!--source
+    data-srcset="{{ 'cover_01.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/cover_01.jpg"
+    data-srcset="{{ 'cover_01.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'cover_01_sp.webp' | file_url }} 1x,{{ 'cover_01_sp_2x.webp' | file_url }} 2x,{{ 'cover_01_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/cover_01_sp.jpg"
+    data-srcset="{{ 'cover_01_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/cover_01.jpg"
+    data-src="{{ 'cover_01.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -570,15 +451,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_10.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_10.jpg"
+    data-srcset="{{ 'img_10.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_10_sp.webp' | file_url }} 1x,{{ 'img_10_sp_2x.webp' | file_url }} 2x,{{ 'img_10_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_10_sp.jpg"
+    data-srcset="{{ 'img_10_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_10.jpg"
+    data-src="{{ 'img_10.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -612,15 +502,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_07.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_07.jpg"
+    data-srcset="{{ 'img_07.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_07_sp.webp' | file_url }} 1x,{{ 'img_07_sp_2x.webp' | file_url }} 2x,{{ 'img_07_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_07_sp.jpg"
+    data-srcset="{{ 'img_07_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_07.jpg"
+    data-src="{{ 'img_07.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -654,15 +553,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_08.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_08.jpg"
+    data-srcset="{{ 'img_08.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_08_sp.webp' | file_url }} 1x,{{ 'img_08_sp_2x.webp' | file_url }} 2x,{{ 'img_08_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_08_sp.jpg"
+    data-srcset="{{ 'img_08_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_08.jpg"
+    data-src="{{ 'img_08.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -696,15 +604,24 @@
                     
                       
 <picture>
+  <!--source
+    data-srcset="{{ 'img_09.webp' | file_url }}"
+    media="(min-width: 768px)"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_09.jpg"
+    data-srcset="{{ 'img_09.jpg' | file_url }}"
     media="(min-width: 768px)"
   >
+  <!--source
+    data-srcset="{{ 'img_09_sp.webp' | file_url }} 1x,{{ 'img_09_sp_2x.webp' | file_url }} 2x,{{ 'img_09_sp_3x.webp' | file_url }} 3x"
+    type="image/webp"
+  -->
   <source
-    data-srcset="assets/images/img_09_sp.jpg"
+    data-srcset="{{ 'img_09_sp.jpg' | file_url }}"
   >
   <img
-    data-src="assets/images/img_09.jpg"
+    data-src="{{ 'img_09.jpg' | file_url }}"
     alt=""
     class="lazyload"
   >
@@ -738,27 +655,7 @@
   </main>
   
   
-  <footer>
-  <div class="inner">
-    <ul class="footNav">
-      
-      <li><a href="products.html">Products</a></li>
-      <li><a href="about.html">About us</a></li>
-      <li class="spInlineB"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li><br class="sp">
-      <li><a href="news.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li class="pcTd"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li>
-      
-    </ul>
-    <!-- /.footNav -->
-    <div class="copyRightSec">
-      <small>© tui beauty</small>
-    </div>
-    <!-- /.copyRightSec -->
-  </div>
-  <!-- /.inner -->
-</footer>
-
+  {% include 'footer-tui' %}
   
 </div>
 <!-- /#outerMenu -->
@@ -766,7 +663,7 @@
 <!-- /#wrapper -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="assets/js/master.js" type="text/javascript"></script>
+<script src="{{ 'master.js' | asset_url }}" type="text/javascript"></script>
 
 
 <script>
@@ -777,8 +674,18 @@
   });
 </script>
 
+<script type="application/json" data-cart-routes>
+  {
+    "cartUrl": "{{ routes.cart_url }}",
+    "cartAddUrl": "{{ routes.cart_add_url }}",
+    "cartChangeUrl": "{{ routes.cart_change_url }}"
+  }
+</script>
+
+<ul hidden>
+  <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+  <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+</ul>
 
 
-</body>
-</html>
 

@@ -117,7 +117,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 				pointer-events: auto;
 				&.current{
 					//display: none;
-					opacity: .8;
+					opacity: 1;
 					cursor: default;
 					pointer-events: none;
 					//left: 5px;
@@ -203,7 +203,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 		padding-left: 100/$design-num-sp*100vw;
 		margin-bottom: 50/$design-num-sp*100vw;
 		img{
-			width: 50/$design-num-sp*100vw;
+			width: 42/$design-num-sp*100vw;
 		}
 	}
 	.mainNavSec{
@@ -294,7 +294,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 		}
 		>li{
 			@include fz_vw(32);
-			margin-bottom: 40/$design-num-sp*100vw;
+			margin-bottom: 30/$design-num-sp*100vw;
 			&:last-child{
 				margin-bottom: 0;
 			}
@@ -304,7 +304,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 		padding-top: 20/$design-num-sp*100vw;
 		li{
 			@include fz_vw(20);
-			margin-bottom: 10/$design-num-sp*100vw;
+			margin-bottom: 20/$design-num-sp*100vw;
 			&:last-child{
 				margin-bottom: 0;
 			}
@@ -316,7 +316,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 		@include fz_vw(20);
 		font-weight: 300;
 		li{
-			margin-bottom: 2/$design-num-sp*100vw;
+			margin-bottom: 10/$design-num-sp*100vw;
 			&:last-child{
 				margin-bottom: 0;
 			}

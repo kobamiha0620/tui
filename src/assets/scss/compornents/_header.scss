@@ -24,7 +24,7 @@ header{
 @media screen and (min-width: $break-point-middle) {
 header{
   padding: 30px 20px 10px;
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   min-height: $header-size;
 }
 }
@@ -87,7 +87,7 @@ header .col-logo{
 header .col-logo{
   width: 314/1232*100%;
   h1{
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
   }
   h1.logo{
     a{
@@ -97,7 +97,7 @@ header .col-logo{
     }
   }
   .navTtl{
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
   }
 }
 }

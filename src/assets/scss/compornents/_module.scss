@@ -202,6 +202,8 @@ main{
   }
   img{
     border-radius: 10px;
+    height: 1500/$design-num-sp*100vw!important;
+    width: auto;
     @include imgset;
   }
 }
@@ -369,7 +371,7 @@ main{
     }
   }
   h4{
-    font-weight: 500;
+    font-weight: 400;
     line-height: (60/34)+em;
     @include fz_vw(34);
     margin-bottom: 50/$design-num-sp*100vw;
@@ -448,14 +450,15 @@ main{
     padding-left: 3px;
   }
   .step{
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     margin-bottom: 10px;
   }
   h3{
     margin-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
   }
   h4{
+    font-weight: 500;
     line-height: 1em;
     font-size: 1.6rem;
     letter-spacing: .1em;
@@ -463,7 +466,7 @@ main{
   }
   .summary{
     line-height: (26/12)+em;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     sup{
       font-size: .8rem;
     }
@@ -619,6 +622,9 @@ main{
     >.inner{
       >*{
         margin-bottom: 50/$design-num-sp*100vw;
+        &:last-child{
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -722,14 +728,14 @@ main{
       margin-bottom: 5px;
     }
     p{
-      font-size: 1.2rem;
+      font-size: $summary-font-size;
     }
   }
   .price{
     font-size: 1.6rem;
     margin-bottom: 24px;
     span{
-      font-size: 1.2rem;
+      font-size: $summary-font-size;
     }
   }
   .btnWrap{
@@ -761,7 +767,7 @@ main{
   }
   .summary{
     line-height: (22/12)+em;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     sup{
       font-size: 1.0rem;
     }
@@ -779,14 +785,14 @@ main{
   dl{
     margin-bottom: 25px;
     line-height: (22/12)+em;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     &:last-child{
       margin-bottom: 0;
     }
   }
   .strong{
     line-height: (22/12)+em;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
   }
 }
 }
@@ -825,7 +831,7 @@ main{
 @media screen and (min-width: $break-point-middle) {
 .navStyle_01{
   ul{
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     // padding-bottom: 10px;
   }
   li{
@@ -915,7 +921,7 @@ main{
   }
   .content{
     line-height: (26/12)+em;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
   }
 }
 }

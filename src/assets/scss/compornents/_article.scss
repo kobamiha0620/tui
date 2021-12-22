@@ -108,7 +108,7 @@
 @media screen and (min-width: $break-point-middle) {
 .articleStyle_02{
   .numbering{
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     margin-bottom: 12px;
   }
   h3{
@@ -117,9 +117,9 @@
   }
   .summary{
     line-height: (26/12)+em;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
     span{
-      font-size: 1.2rem;
+      font-size: $summary-font-size;
     }
   }
 }
@@ -237,7 +237,7 @@
   }
   p{
     line-height: (26/12)+em;
-    font-size: 1.2rem;
+    font-size: $summary-font-size;
   }
   a{
     &:hover{

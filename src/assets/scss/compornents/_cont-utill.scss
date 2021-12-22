@@ -282,6 +282,15 @@
   margin-bottom: 16px;
 }
 }
+///////////////////////////////////////
+.setMrg_33{
+  margin-bottom: 100/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_33{
+  margin-bottom: 70px;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {

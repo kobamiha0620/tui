@@ -60,7 +60,7 @@ label{
 }
 @media screen and (min-width: $break-point-middle) {
 label{
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   margin-bottom: 16px;
   span{
     font-size: 1.4rem;
@@ -86,7 +86,7 @@ input[type="text"],input[type="email"],input[type="tel"],textarea{
 input[type="text"],input[type="email"],input[type="tel"],textarea{
 	margin: 0 0 30px 0;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   min-height: 3em;
   padding: 0 16px;
 }
@@ -123,7 +123,7 @@ input.btn{
   height: 70px;
   border-radius: 70px;
   line-height: 70px;
-  font-size: 1.2rem;
+  font-size: $summary-font-size;
   &:active{
     opacity: 1;
   }
