@@ -112,6 +112,43 @@
   }
 }
 }
+//////////////////////////////////////
+.secStyle_07{
+  @include baseSpPad;
+  >.content{
+    max-width: 576/$design-num-sp*100vw;
+    margin: 0 0 0 auto;
+    padding-right: 18/$design-num-sp*100vw;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.secStyle_07{
+  //text-align: center;
+  padding: 0;
+  margin-left: 310/1192*100%;
+  .detail-product &{
+    margin-left: 0;
+  }
+  >.inner{
+    max-width: 764px;
+    .detail-product &{
+      max-width: 590px;
+      margin: 0 auto;
+    }
+  }
+  >.content{
+    max-width: 764px;
+    margin: 0;
+    padding-right: 0;
+    // display: inline-block;
+    // text-align: left;
+    .detail-product &{
+      max-width: 590px;
+      margin: 0 auto;
+    }
+  }
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .colStyle_01{

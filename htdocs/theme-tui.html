@@ -97,6 +97,8 @@
 
 <body class="template-{{ request.page_type | handle }}">
   <div id="loading"></div>
+  <div class="cursor"></div>
+  <div class="follower"></div>
   <div id="wrapper" class="
   {% if template == 'index' %}
   home
@@ -131,72 +133,9 @@
 <header>
   <div class="inner">
     <div class="col-logo">
-      
-        {% if template == 'index' %}
-        <h1 class="logo">
-  <a href="javascript:void(0);">
-  
-  
-    
-<img data-src="{{ 'logo-tui_01.svg' | file_url }}" alt="tui" class="lazyload">
-
-  
-  </a>
-</h1>
-<p class="navTtl style_01"><a href="javascript:void(0);">About tui</a></p>
-<p class="navTtl style_02"><a href="javascript:void(0);">BOOSTER OIL</a></p>
-<p class="navTtl style_03"><a href="javascript:void(0);">MOISTURE SERUM</a></p>
-<p class="navTtl style_04"><a href="javascript:void(0);">SET PACKAGE</a></p>
-<p class="navTtl style_05"><a href="javascript:void(0);">About NtDDS</a></p>
-<p class="navTtl style_06"><a href="javascript:void(0);">Skinecare Routine</a></p>
-<p class="navTtl style_07"><a href="javascript:void(0);">Information</a></p>
-
-        {% elsif template == 'blog' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">News</a>
-        </h1>
-        {% elsif page.handle == 'products' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">Products</a>
-        </h1>
-        {% elsif page.handle == 'about' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">About us</a>
-        </h1>
-        {% elsif page.handle == 'faq' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">FAQ</a>
-        </h1>
-        {% elsif page.handle == 'privacy-policy' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">Privacy policy</a>
-        </h1>
-        {% elsif page.handle == 'sctl' %}
-        <h1 class="logo tx ja">
-          <a href="javascript:void(0);">特定商取引法に基づく表記</a>
-        </h1>
-        {% elsif page.handle == 'rule' %}
-        <h1 class="logo tx ja">
-          <a href="javascript:void(0);">利用規約</a>
-        </h1>
-        {% elsif template == 'product.booster-oil' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">BOOSTER OIL</a>
-        </h1>
-        {% elsif template == 'product.moisture-serum' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">MOISTURE SERUM</a>
-        </h1>
-        {% elsif template == 'product.set-package' %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">SET PACKAGE</a>
-        </h1>
-        {% else %}
-        <h1 class="logo tx">
-          <a href="javascript:void(0);">{{page.handle}}</a>
-        </h1>
-        {% endif %}
-      
+      <p class="logo tx headMenu">
+        <a href="javascript:void(0);">Menu</a>
+      </p>
     </div>
     <!-- /.col-logo -->
     

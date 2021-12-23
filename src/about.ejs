@@ -31,12 +31,14 @@ var pageinit = {
           <div class="item active">
             <div class="bgImg style_02">
               <div class="inner">
-                <% var imgInfo = {path:'hero_img_02',type:'jpg',alt:''};%>
+                <h1>
+                <% var imgInfo = {path:'hero_img_02',type:'jpg',alt:'About us'};%>
                 <% if(pageinit.shopify!=='true'){%>
                   <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
                 <% } else {%>
                   <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
                 <% }%>
+                </h1>
               </div>
               <!-- /.inner -->
             </div>
@@ -62,7 +64,7 @@ var pageinit = {
                   <div class="col">
                     <h2>当たり前を、変えるもの</h2>
                     <div class="summary">
-                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした　“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ　“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
+                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
                     </div>
                     <!-- /.summary -->
                   </div>

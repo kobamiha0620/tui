@@ -110,11 +110,15 @@
 <% if(pageinit.shopify!=='true'){%>
 <body>
   <div id="loading"></div>
+  <div class="cursor"></div>
+  <div class="follower"></div>
   <div id="wrapper" class="<% if(pageinit.category){pageinit.category.forEach(function (value) {%><%= value %> <% })}; %>">
     <div id="clickBlocker"></div>
 <% } else {%>
 <body class="template-{{ request.page_type | handle }}">
   <div id="loading"></div>
+  <div class="cursor"></div>
+  <div class="follower"></div>
   <div id="wrapper" class="
   {% if template == 'index' %}
   home

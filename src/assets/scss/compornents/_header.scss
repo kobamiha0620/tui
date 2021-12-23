@@ -33,7 +33,7 @@ header{
 header .col-logo{
   width: 60%;
   position: relative;
-  h1{
+  .headMenu{
     @include fz_vw(26);
     letter-spacing: .02em;
     @include fontEn;
@@ -44,7 +44,7 @@ header .col-logo{
       @include over_06;
     }
   }
-  h1.logo{
+  .headMenu.logo{
     opacity: 1;
     transition: .3s;
     &.ja{
@@ -86,10 +86,10 @@ header .col-logo{
 @media screen and (min-width: $break-point-middle) {
 header .col-logo{
   width: 314/1232*100%;
-  h1{
+  .headMenu{
     font-size: $summary-font-size;
   }
-  h1.logo{
+  .headMenu.logo{
     a{
       img{
         width: 22px;

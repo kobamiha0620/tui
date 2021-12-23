@@ -45,6 +45,7 @@ $(window).on('load', function () {
   setMainMenu();
   setAcc();
   setWay();
+  // setMouse()
   // setSVG()
   setLoaded();
   // displayCart()
@@ -57,30 +58,84 @@ $(window).on('load', function () {
   }
 });
 
+// マウスカーソル
+function setMouse () {
+  var cursor = $('.cursor'),
+    follower = $('.follower'),
+    cWidth = 8, // カーソルの大きさ
+    fWidth = 10, // フォロワーの大きさ
+    delay = 10, // 数字を大きくするとフォロワーがより遅れて来る
+    mouseX = 0, // マウスのX座標
+    mouseY = 0, // マウスのY座標
+    posX = 0, // フォロワーのX座標
+    posY = 0; // フォロワーのX座標
+
+  // カーソルの遅延アニメーション
+  // ほんの少ーーーしだけ遅延させる 0.001秒
+  TweenMax.to({}, .001, {
+    repeat: -1,
+    onRepeat: function () {
+      posX += (mouseX - posX) / delay;
+      posY += (mouseY - posY) / delay;
+
+      TweenMax.set(follower, {
+        css: {
+          left: posX - (fWidth / 2),
+          top: posY - (fWidth / 2)
+        }
+      });
+
+      TweenMax.set(cursor, {
+        css: {
+          left: mouseX - (cWidth / 2),
+          top: mouseY - (cWidth / 2)
+        }
+      });
+    }
+  });
+
+  // マウス座標を取得
+  $(document).on('mousemove', function (e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+  });
+
+  $('a').on({
+    'mouseenter': function () {
+      cursor.addClass('is-active');
+      follower.addClass('is-active');
+    },
+    'mouseleave': function () {
+      cursor.removeClass('is-active');
+      follower.removeClass('is-active');
+    }
+  });
+}
+
 // ////////////////////動画制御
 function setVideo () {
-  // $('.movieStyle_01').each(function () {
-  //   var target = $(this).find('.video')
-  //   var video = target.get(0)
-  //   video.play()
-  // })
-  // function playVideos (videos) {
-  //   var startPosition = $(window).scrollTop() + $(window).height()
-  //   videos.each(function (index) {
-  //     if (startPosition > $(this).offset().top) {
-  //       $(this).get(0).play()
-  //     }
-  //   })
-  // }
-  // $(window).on('load', function () {
-  //   var videos = $('.movieStyle_01 video')
-  //   if (videos.length) {
-  //     playVideos(videos)
-  //     $(window).on('scroll', function () {
-  //       playVideos(videos)
-  //     })
-  //   }
-  // })
+  $('.movieStyle_01').each(function () {
+    var target = $(this).find('.video');
+    var video = target.get(0);
+    video.play();
+  });
+  function playVideos (videos) {
+    var startPosition = $(window).scrollTop() + $(window).height();
+    videos.each(function (index) {
+      if (startPosition > $(this).offset().top) {
+        $(this).get(0).play();
+      }
+    });
+  }
+  $(window).on('load', function () {
+    var videos = $('.movieStyle_01 video');
+    if (videos.length) {
+      playVideos(videos);
+      $(window).on('scroll', function () {
+        playVideos(videos);
+      });
+    }
+  });
 }
 
 // メニュー追従制御
@@ -200,7 +255,7 @@ var menuOpenFlag = false;
 // //////////////////////////メインメニュー
 function setMainMenu () {
   var current_scrollY;
-  $('#mainNav .clickArea,h1.logo').on('click', function () {
+  $('#mainNav .clickArea,.headMenu.logo').on('click', function () {
     if (!$('#mainNav').hasClass('active')) {
       openFnc();
     }else {
@@ -474,90 +529,90 @@ function setWay () {
   //   offset: '-155px'
   // })
 
-  $('#homeWidget .item').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'down') { // scroll down
-      if (activePoint.attr('id') == 'cont_01') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_01').show();
-      }else if (activePoint.attr('id') == 'cont_02') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_02').show();
-      }else if (activePoint.attr('id') == 'cont_03') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_03').show();
-      }else if (activePoint.attr('id') == 'cont_04') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_04').show();
-      }else if (activePoint.attr('id') == 'cont_05') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_05').show();
-      }else if (activePoint.attr('id') == 'cont_06') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_06').show();
-      }
-    }
-  }, {
-    offset: '10px'
-  });
-  $('#cont_07').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'down') { // scroll down
-      $('h1.logo').addClass('hidden');
-      $('.navTtl').hide();
-      $('.navTtl.style_07').show();
-    }
-  }, {
-    offset: '90%'
-  });
-  $('#homeWidget .item').waypoint(function (direction) {
-    var activePoint = $(this.element);
-    var target = $(this.element);
-    if (direction === 'up') { // scroll down
-      if (activePoint.attr('id') == 'homeCont') {
-        $('h1.logo').removeClass('hidden');
-        $('.navTtl').hide();
-      }else if (activePoint.attr('id') == 'cont_01' || activePoint.attr('id') == 'cont_01_02' || activePoint.attr('id') == 'cont_01_03') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_01').show();
-      }else if (activePoint.attr('id') == 'cont_02') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_02').show();
-      }else if (activePoint.attr('id') == 'cont_03') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_03').show();
-      }else if (activePoint.attr('id') == 'cont_04') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_04').show();
-      }else if (activePoint.attr('id') == 'cont_05') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_05').show();
-      }else if (activePoint.attr('id') == 'cont_06') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_06').show();
-      }else if (activePoint.attr('id') == 'cont_07') {
-        $('h1.logo').addClass('hidden');
-        $('.navTtl').hide();
-        $('.navTtl.style_07').show();
-      }
-    }
-  }, {
-    offset: '-95%'
-  });
+  // $('#homeWidget .item').waypoint(function (direction) {
+  //   var activePoint = $(this.element)
+  //   var target = $(this.element)
+  //   if (direction === 'down') { // scroll down
+  //     if (activePoint.attr('id') == 'cont_01') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_01').show()
+  //     }else if (activePoint.attr('id') == 'cont_02') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_02').show()
+  //     }else if (activePoint.attr('id') == 'cont_03') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_03').show()
+  //     }else if (activePoint.attr('id') == 'cont_04') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_04').show()
+  //     }else if (activePoint.attr('id') == 'cont_05') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_05').show()
+  //     }else if (activePoint.attr('id') == 'cont_06') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_06').show()
+  //     }
+  //   }
+  // }, {
+  //   offset: '10px'
+  // })
+  // $('#cont_07').waypoint(function (direction) {
+  //   var activePoint = $(this.element)
+  //   var target = $(this.element)
+  //   if (direction === 'down') { // scroll down
+  //     $('h1.logo').addClass('hidden')
+  //     $('.navTtl').hide()
+  //     $('.navTtl.style_07').show()
+  //   }
+  // }, {
+  //   offset: '90%'
+  // })
+  // $('#homeWidget .item').waypoint(function (direction) {
+  //   var activePoint = $(this.element)
+  //   var target = $(this.element)
+  //   if (direction === 'up') { // scroll down
+  //     if (activePoint.attr('id') == 'homeCont') {
+  //       $('h1.logo').removeClass('hidden')
+  //       $('.navTtl').hide()
+  //     }else if (activePoint.attr('id') == 'cont_01' || activePoint.attr('id') == 'cont_01_02' || activePoint.attr('id') == 'cont_01_03') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_01').show()
+  //     }else if (activePoint.attr('id') == 'cont_02') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_02').show()
+  //     }else if (activePoint.attr('id') == 'cont_03') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_03').show()
+  //     }else if (activePoint.attr('id') == 'cont_04') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_04').show()
+  //     }else if (activePoint.attr('id') == 'cont_05') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_05').show()
+  //     }else if (activePoint.attr('id') == 'cont_06') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_06').show()
+  //     }else if (activePoint.attr('id') == 'cont_07') {
+  //       $('h1.logo').addClass('hidden')
+  //       $('.navTtl').hide()
+  //       $('.navTtl.style_07').show()
+  //     }
+  //   }
+  // }, {
+  //   offset: '-95%'
+  // })
 
   $('.shuffle').waypoint(function (direction) {
     var activePoint = $(this.element);

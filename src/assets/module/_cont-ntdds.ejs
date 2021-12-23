@@ -1,57 +1,52 @@
-<section class="secStyle_01">
+<section class="secStyle_07">
   <div class="inner">
     <div class="movieStyle_01 setMrg_07 videoWay">
       <div class="inner">
-        <!--div class="videoWrap">
+        <div class="videoWrap">
           <% if(pageinit.shopify!=='true'){%>
           <video class="video lazyload" muted playsinline poster="assets/images/cover_01.jpg" loop preload="none">
             <source src="assets/movie/movie.mp4" type="video/mp4">
           </video>
           <% } else {%>
-          <video class="video lazyload" muted playsinline poster="{{ 'cover_01.jpg' | file_url }}" loop preload="none">
+          <video class="video lazyload" muted playsinline loop preload="none">
             <source src="{{ 'movie.mp4' | file_url }}" type="video/mp4">
           </video>
           <% }%>
-        </div-->
-        <!-- /.videoWrap -->
-        <div class="cover">
-          <% var imgInfo = {path:'cover_01',type:'jpg',alt:''};%>
-          <% if(pageinit.shopify!=='true'){%>
-            <%- include(pageinit.path + '_img-temp_09.ejs', {imgInfo:imgInfo});%>
-          <% } else {%>
-            <%- include(pageinit.path + '_img-temp_15.ejs', {imgInfo:imgInfo});%>
-          <% }%>
         </div>
-        <!-- /.cover -->
+        <!-- /.videoWrap -->
+        <div class="mask">
+          <span class="head"><%- include('_mask_01.ejs') %></span>
+          <span class="head"><%- include('_mask_02.ejs') %></span>
+          <span class="foot"><%- include('_mask_02.ejs') %></span>
+          <span class="foot"><%- include('_mask_01.ejs') %></span>
+        </div>
+        <!-- /.mask -->
       </div>
       <!-- /.inner -->
     </div>
     <!-- /.movieStyle_01 -->
-    <div class="secStyle_02 style_01">
-      <div class="inner">
-        <h2 class="ttlStyle_05 setMrg_01">About NtDDS</h2>
-        <div class="summaryStyle_03 setMrg_08">
-          <p>“角質層のすみずみにまで保湿美容成分を届ける”ことを可能にする、<br class="pc">独自開発したナノ分散浸透技術 “NtDDS”。 皮膚は、肌表面にある角質層が<br class="pc">乾燥と外部刺激から肌を守るため、疎水性が高く、物質を浸透させることが難しいとされてきました。<br class="pc">そこで、肌と親和性の高いナノサイズカプセルで保湿美容成分を覆い、<br class="pc">美容オイルに可溶化することで「浸透性」「安定性」「肌へのやさしさ」を実現。<br class="pc">NtDDSによる角質層すみずみへの浸透効果が、なめらかな素肌へと導きます。</p>
-        </div>
-        <!-- /.summaryStyle_03 -->
-        <h3 class="ttlStyle_06 setMrg_09 onlyProduct">肌が実感する、<br class="sp">角質層へのアプローチ</h3>
-        <div class="summaryStyle_03 setMrg_10 onlyProduct">
-          <p>水溶性・高分子成分をそのままNtDDS技術で油性素材・水溶性素材にナノ分散することで、<br class="pc">角質層のすみずみまでダイレクトに浸透します。</p>
-          <ul class="listStyle_01">
-            <li>リン酸アスコルビルMg<span>(ビタミンC誘導体)</span></li>
-            <li>酢酸トコフェロール<span>(ビタミンE)</span></li>
-            <li>水溶性プロテオグリカン</li>
-          </ul>
-          <!-- /.listStyle_01 -->
-          <p>これらの保湿美容成分をNtDDS技術で角質層のすみずみまで届けることにより、<br class="pc">肌にうるおいを与えハリや肌荒れなどさまざまな肌悩みに多角的にアプローチします。</p>
-        </div>
-        <!-- /.summaryStyle_02 -->
-        <div class="elemWrap onlyProduct"><a href="{{ routes.root_url }}pages/about#ntdds" class="btnStyle_04 style_01"><span>View</span></a></div>
-      </div>
-      <!-- /.inner -->
+  </div>
+  <!-- /.inner -->
+  <div class="content">
+    <h2 class="ttlStyle_05 setMrg_01">About NtDDS</h2>
+    <div class="summaryStyle_03 setMrg_08">
+      <p>“角質層のすみずみにまで保湿美容成分を届ける”ことを可能にする、<br class="pc">独自開発したナノ分散浸透技術 “NtDDS”。 皮膚は、肌表面にある角質層が<br class="pc">乾燥と外部刺激から肌を守るため、疎水性が高く、物質を浸透させることが難しいとされてきました。<br class="pc">そこで、肌と親和性の高いナノサイズカプセルで保湿美容成分を覆い、<br class="pc">美容オイルに可溶化することで「浸透性」「安定性」「肌へのやさしさ」を実現。<br class="pc">NtDDSによる角質層すみずみへの浸透効果が、なめらかな素肌へと導きます。</p>
     </div>
-    <!-- /.secStyle_02 -->
+    <!-- /.summaryStyle_03 -->
+    <h3 class="ttlStyle_06 setMrg_09 onlyProduct">肌が実感する、<br class="sp">角質層へのアプローチ</h3>
+    <div class="summaryStyle_03 setMrg_10 onlyProduct">
+      <p>水溶性・高分子成分をそのままNtDDS技術で油性素材・水溶性素材にナノ分散することで、<br class="pc">角質層のすみずみまでダイレクトに浸透します。</p>
+      <ul class="listStyle_01">
+        <li>リン酸アスコルビルMg<span>(ビタミンC誘導体)</span></li>
+        <li>酢酸トコフェロール<span>(ビタミンE)</span></li>
+        <li>水溶性プロテオグリカン</li>
+      </ul>
+      <!-- /.listStyle_01 -->
+      <p>これらの保湿美容成分をNtDDS技術で角質層のすみずみまで届けることにより、<br class="pc">肌にうるおいを与えハリや肌荒れなどさまざまな肌悩みに多角的にアプローチします。</p>
+    </div>
+    <!-- /.summaryStyle_02 -->
+    <div class="elemWrap onlyProduct"><a href="{{ routes.root_url }}pages/about#ntdds" class="btnStyle_04 style_01"><span>View</span></a></div>
   </div>
   <!-- /.inner -->
 </section>
-<!-- /.secStyle_01 -->
+<!-- /.secStyle_07 -->
