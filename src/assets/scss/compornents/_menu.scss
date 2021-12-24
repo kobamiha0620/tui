@@ -296,7 +296,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 		}
 		>li{
 			@include fz_vw(32);
-			margin-bottom: 30/$design-num-sp*100vw;
+			margin-bottom: 25/$design-num-sp*100vw;
 			&:last-child{
 				margin-bottom: 0;
 			}
@@ -313,12 +313,12 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 		}
 	}
 	.smallMenu{
-		margin-top: 50/$design-num-sp*100vw;
+		margin-top: 40/$design-num-sp*100vw;
 		font-family: $fontMix;
 		@include fz_vw(20);
 		font-weight: 300;
 		li{
-			margin-bottom: 10/$design-num-sp*100vw;
+			margin-bottom: 3/$design-num-sp*100vw;
 			&:last-child{
 				margin-bottom: 0;
 			}

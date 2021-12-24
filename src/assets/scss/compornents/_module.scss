@@ -719,7 +719,7 @@ main{
   .ttl{
     margin-bottom: 100/$design-num-sp*100vw;
     position: relative;
-    h1{
+    h1,h2{
       @include fz_vw(36);
       line-height: 1em;
       @include fontEn;
@@ -846,7 +846,7 @@ main{
   }
   .ttl{
     margin-bottom: 48px;
-    h1{
+    h1,h2{
       font-size: 2.4rem;
       margin-bottom: 5px;
     }
@@ -1102,6 +1102,14 @@ main{
 .dummy{
   height: 1000px;
   background-color: #ff0000;
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+.productsBr{
+  display: none;
+  .setPc.detail-product &{
+    display: block;
+  }
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

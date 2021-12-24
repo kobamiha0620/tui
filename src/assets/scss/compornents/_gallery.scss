@@ -88,6 +88,11 @@ $delayHSP:400/$design-num-sp*100vw;
       height: 100%;
     }
   }
+  h1{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
   .item{
     position: relative;
     height: -webkit-calc(100vh - #{$header-size-sp} + #{$delayHSP})!important;
@@ -734,8 +739,8 @@ $delayH:200px;
   }
   .childSummary{
     line-height: (18/10)+em;
-    font-size: 1.0rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 500;
   }
 }
 .galleryWidget .item.move .content.style_04{
@@ -870,7 +875,7 @@ $delayH:200px;
   .childSummary{
     padding-left: 0;
     line-height: (18/10)+em;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     font-weight: 500;
   }
 }
@@ -1087,6 +1092,7 @@ $delayH:200px;
     font-weight: 500;
   }
   .specList{
+    margin-top: 4px;
     line-height: (22/12)+em;
     font-size: $summary-font-size;
     font-weight: 500;
