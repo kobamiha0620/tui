@@ -125,6 +125,8 @@
   sctl
   {% elsif page.handle == 'rule' %}
   rule
+  {% elsif page.handle == 'company' %}
+  company
   {% endif %}
   ">
     <div id="clickBlocker"></div>
@@ -211,11 +213,11 @@
                   <li><a href="{{ routes.root_url }}pages/contact">Contact</a></li>
                 </ul>
                 <ul class="smallMenu">
+                  <li><a href="{{ routes.root_url }}pages/company">会社概要</a></li>
                   <li><a href="{{ routes.root_url }}pages/sctl">特定商取引法に基づく表記</a></li>
                   <li><a href="{{ routes.root_url }}pages/privacy-policy">プライバシーポリシー</a></li>
                   <li><a href="{{ routes.root_url }}pages/rule">利用規約</a></li>
                   <li><a href="{{ routes.root_url }}account">My page</a></li>
-                  <li><a href="{{ routes.cart_url }}">Cart</a></li>
                   <li><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li>
                   <li><a href="https://twitter.com/tui_beauty" target="_blank">Twitter</a></li>
                 </ul>

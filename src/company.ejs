@@ -1,0 +1,90 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : 'true',
+  category : ['company'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_menu.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div id="container">
+      <div class="secStyle_04 setMrg_27 way">
+        <div class="inner">
+          <section class="secStyle_06">
+            <div class="inner">
+              <h1 class="ttlStyle_08">会社概要</h1>
+              <div class="setMrg_30">
+                <div class="summaryStyle_04">
+                  <div class="dlStyle_01">
+                    <dl>
+                      <dt>会社名</dt>
+                      <dd>株式会社 tui beauty</dd>
+                    </dl>
+                    <dl>
+                      <dt>運営責任者</dt>
+                      <dd>福山　正之</dd>
+                    </dl>
+                    <dl>
+                      <dt>住所</dt>
+                      <dd>〒150-0001<br>東京都渋谷区神宮前5-46-1</dd>
+                    </dl>
+                    <dl>
+                      <dt>電話番号</dt>
+                      <dd><a href="tel:0364271591" class="linkStyle_01">03-6427-1591</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>メールアドレス</dt>
+                      <dd><a href="mailto:info@tui-beauty.com" class="linkStyle_01">info@tui-beauty.com</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>URL</dt>
+                      <dd><a href="https://tui-beauty.com/" class="linkStyle_01">https://tui-beauty.com/</a></dd>
+                    </dl>
+                  </div>
+                  <!-- /.dlStyle_01 -->
+                </div>
+                <!-- /.summaryStyle_04 -->
+              </div>
+              <!-- /.setMrg_30 -->
+            </div>
+            <!-- /.inner -->
+          </section>
+          <!-- /.secStyle_06 -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.secStyle_04 -->
+    </div>
+    <!-- /#container -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+  <% if(pageinit.shopify!=='true'){%>
+  <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+  <% } else {%>
+  {% include 'footer-tui' %}
+  <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>
