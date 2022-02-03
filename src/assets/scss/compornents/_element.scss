@@ -808,6 +808,25 @@
   font-size: 1.0rem;
 }
 }
+///////////////////////////////////
+.txStyle_05{
+  // padding-left: 1em;
+  // text-indent: -1em;
+  line-height: (40/20)+em;
+  @include fz_vw(20);
+}
+@media screen and (min-width: $break-point-middle) {
+.txStyle_05{
+  line-height: (22/12)+em;
+  font-size: $summary-font-size;
+}
+}
+///////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.txStyle_06{
+  letter-spacing: .03em;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .imgStyle_01{
