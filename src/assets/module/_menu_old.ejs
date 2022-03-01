@@ -1,0 +1,112 @@
+<div id="mainNav">
+  <span class="clickArea"></span>
+  <div class="inner">
+    <div class="cel">
+      <div class="inner">
+        <% if(pageinit.shopify!=='true'){%>
+        <p class="logoNav">
+          <a href="./">
+          <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
+          <% if(pageinit.shopify!=='true'){%>
+            <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+          <% } else {%>
+            <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+          <% }%>
+          </a>
+        </p>
+        <% } else {%>
+        <p class="logoNav">
+          <a href="{{ routes.root_url }}">
+          <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
+          <% if(pageinit.shopify!=='true'){%>
+            <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+          <% } else {%>
+            <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+          <% }%>
+          </a>
+        </p>
+        <% }%>
+        <div class="mainNavSec">
+          <div class="inner">
+            <% if(pageinit.shopify!=='true'){%>
+            <div class="mainMenu">
+              <nav>
+                <ul class="parent">
+                  <li>
+                    <a href="products.html">Products</a>
+                    <ul class="child">
+                      <li><a href="booster-oil.html">BOOSTER OIL</a></li>
+                      <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
+                      <li><a href="set-package.html">SET PACKAGE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="smallMenu">
+                  <li><a href="company.html">会社概要</a></li>
+                  <li><a href="sctl.html">特定商取引法に基づく表記</a></li>
+                  <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                  <li><a href="rule.html">利用規約</a></li>
+                  <li><a href="javascript:void(0);">My page</a></li>
+                  <li><a href="javascript:void(0);" target="_blank">Instagram</a></li>
+                  <li><a href="javascript:void(0);" target="_blank">Twitter</a></li>
+                </ul>
+                <!-- /.smallMenu -->
+              </nav>
+            </div>
+            <!-- /.mainMenu -->
+            <% } else {%>
+            <div class="mainMenu">
+              <nav>
+                <ul class="parent">
+                  <li>
+                    <a href="{{ routes.root_url }}pages/products/">Products</a>
+                    <ul class="child">
+                      <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
+                      <li><a href="{{ routes.root_url }}products/moisture-serum">MOISTURE SERUM</a></li>
+                      <li><a href="{{ routes.root_url }}products/set-package">SET PACKAGE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{{ routes.root_url }}pages/about">About us</a></li>
+                  <li><a href="{{ routes.root_url }}blogs/news">News</a></li>
+                  <li><a href="{{ routes.root_url }}pages/faq">FAQ</a></li>
+                  <li><a href="{{ routes.root_url }}pages/contact">Contact</a></li>
+                </ul>
+                <ul class="smallMenu">
+                  <li><a href="{{ routes.root_url }}pages/company">会社概要</a></li>
+                  <li><a href="{{ routes.root_url }}pages/sctl">特定商取引法に基づく表記</a></li>
+                  <li><a href="{{ routes.root_url }}pages/privacy-policy">プライバシーポリシー</a></li>
+                  <li><a href="{{ routes.root_url }}pages/rule">利用規約</a></li>
+                  <li><a href="{{ routes.root_url }}account">My page</a></li>
+                  <li><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li>
+                  <li><a href="https://twitter.com/tui_beauty" target="_blank">Twitter</a></li>
+                </ul>
+                <!-- /.smallMenu -->
+              </nav>
+            </div>
+            <!-- /.mainMenu -->
+            <% }%>
+          </div>
+          <!-- /.inner -->
+        </div>
+        <!-- /.mainNavSec -->
+      </div>
+      <!-- /.inner -->
+    </div>
+    <!-- /.cel -->
+  </div>
+  <!-- /.inner -->
+  <div class="closeBtn">
+    <% var imgInfo = {path:'icon-close',type:'svg',alt:'tui'};%>
+    <% if(pageinit.shopify!=='true'){%>
+      <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+    <% } else {%>
+      <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+    <% }%>
+  </div>
+  <!-- /.closeBtn -->
+</div>
+<!-- /#mainNav -->

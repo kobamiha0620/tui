@@ -2,41 +2,107 @@
   <div class="inner">
     <div class="col-logo">
       <p class="logo tx headMenu">
-        <a href="javascript:void(0);">Menu</a>
+        <% if(pageinit.shopify!=='true'){%>
+        <a href="./">
+        <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
+        <% if(pageinit.shopify!=='true'){%>
+          <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+        <% } else {%>
+          <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+        <% }%>
+        </a>
+        <% } else {%>
+        <a href="{{ routes.root_url }}">
+        <% var imgInfo = {path:'logo-tui_01',type:'svg',alt:'tui'};%>
+        <% if(pageinit.shopify!=='true'){%>
+          <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+        <% } else {%>
+          <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+        <% }%>
+        </a>
+        <% }%>
       </p>
     </div>
     <!-- /.col-logo -->
     <% if(pageinit.shopify!=='true'){%>
     <div class="col-nav">
       <p class="parent"><a href="products.html">View the products</a></p>
-      <ul class="productNav">
-        <li><a href="booster-oil.html">BOOSTER OIL</a></li>
-        <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
-        <li><a href="set-package.html">SET PACKAGE</a></li>
-      </ul>
-      <!-- /.productNav -->
+      <div class="productNavWrapper">
+        <div class="inner">
+          <ul class="productNav">
+            <li><a href="booster-oil.html">BOOSTER OIL</a></li>
+            <li><a href="moisture-serum.html">MOISTURE SERUM</a></li>
+            <li><a href="set-package.html">SET PACKAGE</a></li>
+          </ul>
+          <!-- /.productNav -->
+          <ul class="productNav">
+            <li class="label">Subscription</li>
+            <li><a href="booster-oil-s.html">BOOSTER OIL</a></li>
+            <li><a href="moisture-serum-s.html">MOISTURE SERUM</a></li>
+            <li><a href="set-package-s.html">SET PACKAGE</a></li>
+          </ul>
+          <!-- /.productNav -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.productNavWrapper -->
     </div>
     <!-- /.col-nav -->
     <% } else {%>
     <div class="col-nav">
       <p class="parent"><a href="{{ routes.root_url }}pages/products">View the products</a></p>
-      <ul class="productNav">
-        <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
-        <li><a href="{{ routes.root_url }}products/moisture-serum">MOISTURE SERUM</a></li>
-        <li><a href="{{ routes.root_url }}products/set-package">SET PACKAGE</a></li>
-      </ul>
-      <!-- /.productNav -->
+      <div class="productNavWrapper">
+        <ul class="productNav">
+          <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
+          <li><a href="{{ routes.root_url }}products/moisture-serum">MOISTURE SERUM</a></li>
+          <li><a href="{{ routes.root_url }}products/set-package">SET PACKAGE</a></li>
+        </ul>
+        <!-- /.productNav -->
+        <ul class="productNav">
+          <li class="label">Subscription</li>
+          <li><a href="{{ routes.root_url }}products/booster-oil-s">BOOSTER OIL</a></li>
+          <li><a href="{{ routes.root_url }}products/moisture-serum-s">MOISTURE SERUM</a></li>
+          <li><a href="{{ routes.root_url }}products/set-package-s">SET PACKAGE</a></li>
+        </ul>
+        <!-- /.productNav -->
+      </div>
+      <!-- /.productNavWrapper -->
     </div>
     <!-- /.col-nav -->
     <% }%>
-    <div class="col-EcNav">
-      <% if(pageinit.shopify==='true'){%>
-      <p><a href="{{ routes.cart_url }}">Cart</a></p>
-      <% } else {%>
-      <p><a href="javascript:void(0);">Cart</a></p>
-      <% }%>
+    <div class="col-iconNav">
+      <ul>
+        <li class="cartNav">
+          <% if(pageinit.shopify==='true'){%>
+          <a href="{{ routes.cart_url }}">
+            <% var imgInfo = {path:'icon-cart',type:'svg',alt:'tui'};%>
+            <% if(pageinit.shopify!=='true'){%>
+              <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+            <% } else {%>
+              <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+            <% }%>
+          </a>
+          <% } else {%>
+          <a href="javascript:void(0);">
+            <% var imgInfo = {path:'icon-cart',type:'svg',alt:'tui'};%>
+            <% if(pageinit.shopify!=='true'){%>
+              <%- include(pageinit.path + '_img-temp_12.ejs', {imgInfo:imgInfo});%>
+            <% } else {%>
+              <%- include(pageinit.path + '_img-temp_13.ejs', {imgInfo:imgInfo});%>
+            <% }%>
+          </a>
+          <% }%>
+        </li>
+        <li>
+          <span class="burgerNav">
+            <span></span>
+            <span></span>
+          </span>
+          <!-- /.burgerNav -->
+        </li>
+      </ul>
     </div>
-    <!-- /.colEc -->
+    <!-- /.col-iconNav -->
   </div>
   <!-- /.inner -->
 </header>

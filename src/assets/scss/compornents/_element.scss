@@ -434,6 +434,14 @@
 //   }
 // }
 }
+//////////////////////////////////
+.ttlStyle_14{
+  line-height: 1em;
+  @include fz_vw(34);
+  margin-bottom: 55/$design-num-sp*100vw;
+  @include fontEn;
+  letter-spacing: .1em;
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .btnStyle_01{
@@ -597,6 +605,72 @@
     opacity: 1;
     >span{
       left: 0;
+    }
+  }
+}
+}
+////////////////////////////////////////////////////////////
+.btnStyle_06{
+  @include fontEn;
+  border-radius: 50px;
+  min-height: 80/$design-num-sp*100vw;
+  display: flex;
+  align-items: center;
+  border: 2/$design-num-sp*100vw solid $white;
+  @include fz_vw(20);
+  color: $white;
+  position: relative;
+  white-space: nowrap;
+  justify-content: center;
+  overflow: hidden;
+  >span{
+    display: block;
+    position: relative;
+  }
+  &::before{
+    position: absolute;
+    background-color: $white;
+    transition: .3s;
+    content: '';
+    display: block;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    bottom: 0;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.btnStyle_06{
+  min-height: 40px;
+  border: 1px solid $white;
+  font-size: 1.0rem;
+  &:hover{
+    color: $key-color;
+    &::before{
+      left: 0;
+    }
+  }
+}
+}
+////////////////////////////////////////////////////////////
+.btnStyle_07{
+  @extend .btnStyle_06;
+  color: $key-gray;
+  border: 2/$design-num-sp*100vw solid $key-gray;
+  //font-weight: bold;
+  &::before{
+    background-color: $key-gray;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.btnStyle_07{
+  border: 1px solid $white;
+  color: $white;
+  //font-weight: bold;
+  &:hover{
+    color: $key-black;
+    &::before{
+      background-color: $white;
     }
   }
 }

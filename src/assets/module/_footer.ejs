@@ -4,22 +4,45 @@
       <% if(pageinit.shopify!=='true'){%>
       <li><a href="products.html">Products</a></li>
       <li><a href="about.html">About us</a></li>
-      <li class="spInlineB"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li><br class="sp">
       <li><a href="news.html">News</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li class="pcTd"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li>
-      <li class="pcTd"><a href="https://twitter.com/tui_beauty" target="_blank">Twitter</a></li>
       <% } else {%>
       <li><a href="{{ routes.root_url }}pages/products">Products</a></li>
       <li><a href="{{ routes.root_url }}pages/about">About us</a></li>
-      <li class="spInlineB"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li><br class="sp">
       <li><a href="{{ routes.root_url }}blogs/news">News</a></li>
+      <li><a href="{{ routes.root_url }}pages/faq">FAQ</a></li>
       <li><a href="{{ routes.root_url }}pages/contact">Contact</a></li>
-      <li class="pcTd"><a href="https://www.instagram.com/tui_beauty_official/" target="_blank">Instagram</a></li>
-      <li class="pcTd"><a href="https://twitter.com/tui_beauty" target="_blank">Twitter</a></li>
       <% }%>
     </ul>
     <!-- /.footNav -->
+    <ul class="footNavJa">
+      <% if(pageinit.shopify!=='true'){%>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="sctl.html">特定商取引法に基づく表記</a></li>
+      <li><a href="rule.html">利用規約</a></li>
+      <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+      <% } else {%>
+      <li><a href="{{ routes.root_url }}pages/company">会社概要</a></li>
+      <li><a href="{{ routes.root_url }}pages/sctl">特定商取引法に基づく表記</a></li>
+      <li><a href="{{ routes.root_url }}pages/rule">利用規約</a></li>
+      <li><a href="{{ routes.root_url }}pages/privacy-policy">プライバシーポリシー</a></li>
+      <% }%>
+    </ul>
+    <!-- /.footNavJa -->
+    <ul class="footIconNav">
+      <li class="instagram">
+        <a href="https://www.instagram.com/tui_beauty_official/" target="_blank">
+          <%- include('_icon-instagram.ejs');%>
+        </a>
+      </li>
+      <li class="twitter">
+        <a href="https://twitter.com/tui_beauty" target="_blank">
+          <%- include('_icon-twitter.ejs');%>
+        </a>
+      </li>
+    </ul>
+    <!-- /.footIconNav -->
     <div class="copyRightSec">
       <small>© tui beauty</small>
     </div>

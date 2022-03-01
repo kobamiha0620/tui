@@ -225,11 +225,11 @@ function setPhotoChanger () {
 // ヘッダーナビメガメニュー
 function setMega () {
   $('header .col-nav .parent a').hover(function () {
-    $('header .productNav').slideDown('fast');
+    $('header .productNavWrapper').slideDown('fast');
     $(this).addClass('active');
   }, function () {});
   $('header').hover(function () {}, function () {
-    $('header .productNav').slideUp('fast');
+    $('header .productNavWrapper').slideUp('fast');
     $('header .col-nav .parent a').removeClass('active');
   });
 }
@@ -255,8 +255,9 @@ var menuOpenFlag = false;
 // //////////////////////////メインメニュー
 function setMainMenu () {
   var current_scrollY;
-  $('#mainNav .clickArea,.headMenu.logo').on('click', function () {
-    if (!$('#mainNav').hasClass('active')) {
+  // $('#mainNav .clickArea,.burgerNav').on('click', function () {
+  $('.burgerNav').on('click', function () {
+    if (!$(this).hasClass('active')) {
       openFnc();
     }else {
       closeFnc();
@@ -294,12 +295,16 @@ function setMainMenu () {
     event.preventDefault();
   }
 
+  var baseHeadG = $('#mainVis').offset().top;
   function openFnc () {
-    current_scrollY = $(window).scrollTop();
+    current_scrollY = $(window).scrollTop() - baseHeadG;
     // $('body').addClass('breakH')
     $('#mainNav').addClass('active');
+    $('.burgerNav').addClass('active');
     $('#wrapper').addClass('menuOpen');
-    // $('#outerMenu').css('top', -(current_scrollY))
+    if ($('#wrapper').hasClass('setSp')) {
+      $('#outerMenu').css('top', -(current_scrollY));
+    }
     menuOpenFlag = true;
     setTimeout(function () {
       var wrapH = $('#mainNav').height();
@@ -310,8 +315,8 @@ function setMainMenu () {
         $('#mainNav .closeBtn').removeClass('style_01');
       }
     }, 500);
-    // スクロール禁止
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
+  // スクロール禁止
+  // document.addEventListener('touchmove', handleTouchMove, { passive: false })
   // setTimeout(function () {
   //   $('html, body').prop({
   //     scrollTop: 0
@@ -323,8 +328,9 @@ function setMainMenu () {
     // $('body').removeClass('breakH')
     // $('#wrapper').addClass('breakLuxy')
     $('#mainNav').removeClass('active');
+    $('.burgerNav').removeClass('active');
     $('#mainNav').removeClass('out');
-    // $('#outerMenu').css('top', '')
+    $('#outerMenu').css('top', '');
     $('#wrapper').removeClass('menuOpen');
     // スクロール復帰
     document.removeEventListener('touchmove', handleTouchMove, { passive: false });

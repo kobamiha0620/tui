@@ -4,14 +4,15 @@ $black:#000;
 $white:#fff;
 
 ///////////
-//$key-black:#595858;
 $key-black:#595757;
+$key-black2:#595858;
 $key-color:$key-black;
 $key-color1:#c3828c;
 $key-color2:#d7be64;
 $key-color3:#98404c;
 $key-color4:#bfc0c0;
 $key-color5:#af3e4b;
+$key-gray:#c8c8c8;
 
 ///////////////
 $text-color:$key-black;
@@ -105,7 +106,7 @@ $kv:100;
 $kvH:$kv+vh;
 //$header-size:90px;
 $header-size:55px;
-$header-size-sp:116/$design-num-sp*100vw;
+$header-size-sp:126/$design-num-sp*100vw;
 
 $side-num:250;
 $side-width:$side-num+px;

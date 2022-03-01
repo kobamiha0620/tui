@@ -1,0 +1,375 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['home'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_menu.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div id="mainVis">
+      <div class="galleryWidget top" id="homeWidget">
+        <div class="inner">
+          <div class="item active" id="homeCont">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'kv_img_01',type:'jpg',alt:'tui'};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
+            <div class="content">
+              <h1>浸透力を追求する<br><span>スキンケアブランド。</span></h1>
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.item -->
+          <div class="item" id="cont_01_02">
+            <a href="{{ routes.root_url }}pages/about">
+              <div class="bgImg">
+                <div class="inner">
+                  <% var imgInfo = {path:'kv_img_03',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.bgImg -->
+            </a>
+          </div>
+          <!-- /.item -->
+          <section class="item" id="cont_01_03">
+            <a href="{{ routes.root_url }}pages/about">
+              <div class="bgImg">
+                <div class="inner">
+                  <% var imgInfo = {path:'kv_img_04',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.bgImg -->
+              <div class="content style_08">
+                <div class="wrap">
+                  <div class="inner">
+                    <h2>当たり前を、変えるもの。</h2>
+                    <div class="btn">
+                      <span class="btnStyle_06"><span>About us</span></span>
+                    </div>
+                    <!-- /.btn -->
+                  </div>
+                  <!-- /.inner -->
+                </div>
+                <!-- /.wrap -->
+              </div>
+              <!-- /.content -->
+            </a>
+          </section>
+          <!-- /.item -->
+          <section class="item" id="cont_02">
+            <a href="{{ routes.root_url }}products/booster-oil">
+              <div class="bgImg">
+                <div class="inner">
+                  <% var imgInfo = {path:'kv_img_05',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.inner -->
+                <div class="content style_02">
+                  <div class="wrap">
+                    <div class="inner">
+                      <h2>BOOSTER OIL</h2>
+                      <h3>体感する浸透力<span>※</span></h3>
+                      <!--h3>
+                        <% var imgInfo = {path:'tx-01',type:'svg',alt:'体感する浸透力'};%>
+                        <% if(pageinit.shopify!=='true'){%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                        <% } else {%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                        <% }%>
+                      </h3-->
+                      <p class="caution">※角質層まで</p>
+                      <div class="btn">
+                        <span>View</span>
+                      </div>
+                      <!-- /.btn -->
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.wrap -->
+                </div>
+                <!-- /.content -->
+              </div>
+              <!-- /.bgImg -->
+            </a>
+          </section>
+          <!-- /.item -->
+          <div class="item" id="cont_03">
+            <a href="{{ routes.root_url }}products/moisture-serum">
+              <div class="bgImg">
+                <div class="inner">
+                  <% var imgInfo = {path:'kv_img_06',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.inner -->
+                <div class="content style_02">
+                  <div class="wrap">
+                    <div class="inner">
+                      <h2>MOISTURE SERUM</h2>
+                      <h3 class="style_01">うるおい、肌にとどまる</h3>
+                      <!--h3 class="style_01">
+                        <% var imgInfo = {path:'tx-02',type:'svg',alt:'うるおい、肌にとどまる'};%>
+                        <% if(pageinit.shopify!=='true'){%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                        <% } else {%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                        <% }%>
+                      </h3-->
+                      <div class="btn">
+                        <span>View</span>
+                      </div>
+                      <!-- /.btn -->
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.wrap -->
+                </div>
+                <!-- /.content -->
+              </div>
+              <!-- /.bgImg -->
+            </a>
+          </div>
+          <!-- /.item -->
+          <div class="item" id="cont_04">
+            <a href="{{ routes.root_url }}products/set-package">
+              <div class="bgImg">
+                <div class="inner">
+                  <% var imgInfo = {path:'kv_img_07',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.inner -->
+                <div class="content style_02">
+                  <div class="wrap">
+                    <div class="inner">
+                      <h2>SET PACKAGE</h2>
+                      <h3 class="style_02">オイルとセラム、対になるもの</h3>
+                      <!--h3 class="style_02">
+                        <% var imgInfo = {path:'tx-03',type:'svg',alt:'オイルとセラム、対になるもの'};%>
+                        <% if(pageinit.shopify!=='true'){%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                        <% } else {%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                        <% }%>
+                      </h3-->
+                      <div class="btn">
+                        <span>View</span>
+                      </div>
+                      <!-- /.btn -->
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.wrap -->
+                </div>
+                <!-- /.content -->
+              </div>
+              <!-- /.bgImg -->
+            </a>
+          </div>
+          <!-- /.item -->
+          <div class="item" id="cont_05">
+            <a href="{{ routes.root_url }}pages/about#ntdds">
+              <div class="bgImg">
+                <div class="inner">
+                  <% var imgInfo = {path:'kv_img_08',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.inner -->
+                <div class="content style_02">
+                  <div class="wrap">
+                    <div class="inner">
+                      <h2>About NtDDS</h2>
+                      <h3 class="style_03">肌が実感する、角質層へのアプローチ</h3>
+                      <!--h3 class="style_03">
+                        <% var imgInfo = {path:'tx-04',type:'svg',alt:'肌が実感する、角質層へのアプローチ'};%>
+                        <% if(pageinit.shopify!=='true'){%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                        <% } else {%>
+                          <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                        <% }%>
+                      </h3-->
+                      <div class="btn">
+                        <span>View</span>
+                      </div>
+                      <!-- /.btn -->
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.wrap -->
+                </div>
+                <!-- /.content -->
+              </div>
+              <!-- /.bgImg -->
+            </a>
+          </div>
+          <!-- /.item -->
+          <div class="item" id="cont_06">
+            <a href="{{ routes.root_url }}pages/about#skincare">
+              <div class="bgImg">
+                <div class="inner">
+                  <% var imgInfo = {path:'kv_img_09',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.inner -->
+                <div class="content style_02">
+                  <div class="wrap">
+                    <div class="inner">
+                      <h2>Skincare Routine</h2>
+                      <div class="summary">
+                        <p>ビタミンC<span>（リン酸アスコルビルMg / 整肌成分）</span>をはじめとする保湿美容成分を<br>集中的に角質層のすみずみまで届けることで肌サイクルを取り戻す。<br>肌全体のコンディションを根本から整えたい方におすすめ。</p>
+                      </div>
+                      <!-- /.summary -->
+                      <div class="btn">
+                        <span>View</span>
+                      </div>
+                      <!-- /.btn -->
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.wrap -->
+                </div>
+                <!-- /.content -->
+              </div>
+              <!-- /.bgImg -->
+            </a>
+          </div>
+          <!-- /.item -->
+          <div class="mask">
+            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
+            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+          </div>
+          <!-- /.mask -->
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.galleryWidget -->
+    </div>
+    <!-- /#mainVis -->
+    <div id="homeContainer">
+      <div class="homeContentSec" id="cont_07">
+        <div class="inner">
+          <section class="way">
+            <a href="{{ routes.root_url }}blogs/news">
+              <div class="inner">
+                <div class="bg">
+                  <% var imgInfo = {path:'home_img_01',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.bg -->
+                <div class="content">
+                  <div class="inner">
+                    <h2>News</h2>
+                  </div>
+                  <!-- /.inner -->
+                </div>
+                <!-- /.content -->
+              </div>
+              <!-- /.inner -->
+            </a>
+          </section>
+          <section class="way">
+            <a href="{{ routes.root_url }}pages/contact">
+              <div class="inner">
+                <div class="bg">
+                  <% var imgInfo = {path:'home_img_02',type:'jpg',alt:''};%>
+                  <% if(pageinit.shopify!=='true'){%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                  <% } else {%>
+                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                  <% }%>
+                </div>
+                <!-- /.bg -->
+                <div class="content">
+                  <div class="inner">
+                    <h2>Contact</h2>
+                  </div>
+                  <!-- /.inner -->
+                </div>
+                <!-- /.content -->
+              </div>
+              <!-- /.inner -->
+            </a>
+          </section>
+        </div>
+        <!-- /.inner -->
+      </div>
+      <!-- /.homeContentSec -->
+    </div>
+    <!-- /#homeContainer -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+  <% if(pageinit.shopify!=='true'){%>
+  <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+  <% } else {%>
+  {% include 'footer-tui' %}
+  <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>

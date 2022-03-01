@@ -300,6 +300,24 @@
   margin-top: 25px;
 }
 }
+///////////////////////////////////////
+.setMrg_35{
+  margin-bottom: 140/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_35{
+  margin-bottom: 20px;
+}
+}
+///////////////////////////////////////
+.setMrg_36{
+  margin-bottom: 28/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_36{
+  margin-bottom: 20px;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {
