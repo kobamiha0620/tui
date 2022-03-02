@@ -458,6 +458,7 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
   .cel{
 		>.inner{
 			padding: 45px 72px;
+			position: relative;
 		}
   }
 	.logoNav{
@@ -507,6 +508,12 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 			margin-bottom: 0;
 		}
 	}
+	.menuNavStyle_02 li{
+		margin-bottom: 58/$design-num-sp*100vw;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 @media screen and (min-width: $break-point-middle) {
 #mainNavSecond .mainNavSec{
@@ -528,6 +535,12 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 			margin-bottom: 0;
 		}
 	}
+	.menuNavStyle_02 li{
+		margin-bottom: 28px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 }
 ////////////////////////////////////////////////////////////
@@ -543,12 +556,15 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 .menuNavStyle_01{
 	font-size: 1.2rem;
 	li{
-		margin-bottom: 30px;
+		margin-bottom: 14px;
 	}
 	a{
 		@include over_06;
 	}
 }
+}
+.menuNavStyle_02{
+	@extend .menuNavStyle_01;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -607,7 +623,9 @@ $menuTrans:.5s cubic-bezier(.645,.045,.355,1);
 }
 @media screen and (min-width: $break-point-middle) {
 .subNavSec{
-	margin-top: 100px;
+	//margin-top: 100px;
+	position: absolute;
+	bottom: 44px;
 	li{
 		margin-right: 18px;
 		&:last-child{

@@ -528,6 +528,11 @@
   padding-right: 28/$design-num-sp*100vw;
 }
 //////////////////////
+@mixin baseSpPad2{
+  padding-left: 70/$design-num-sp*100vw;
+  padding-right: 70/$design-num-sp*100vw;
+}
+//////////////////////
 @function get_keycolor($alpha:1){
   $setC:rgba(53, 123, 94, $alpha);
   @return $setC;

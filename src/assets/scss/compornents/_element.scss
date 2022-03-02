@@ -46,7 +46,7 @@
   >.inner{
   }
   .bgImg{
-    height: 1500/$design-num-sp*100vw;
+    height: 694/$design-num-sp*100vw;
     >.inner{
       height: 100%;
     }
@@ -61,10 +61,10 @@
   .content{
     position: relative;
     padding-top: 112/$design-num-sp*100vw;
-    padding-right: 12/$design-num-sp*100vw;
+    //padding-right: 12/$design-num-sp*100vw;
     .col{
-      max-width: 557/$design-num-sp*100vw;
-      margin: 0 0 0 auto;
+      max-width: 610/$design-num-sp*100vw;
+      margin: 0 auto;
     }
   }
   a{
@@ -89,30 +89,34 @@
     }
     .btn{
       margin-top: 80/$design-num-sp*100vw;
-      @include fontEn;
-      letter-spacing: .1em;
-      @include fz_vw(20);
-      line-height: 1em;
-      color: $key-black;
-      padding: 0;
-      >span{
-        display: inline-block;
-        left: 0;
-        position: relative;
-        transition: .3s;
-        &::after{
-          content: '';
-          width: 12/$design-num-sp*100vw;
-          height: 12/$design-num-sp*100vw;
-          border-radius: 12/$design-num-sp*100vw;
-          line-height: 1em;
-          display: inline-block;
-          background-color: $key-color3;
-          margin-left: 4px;
-          position: relative;
-          bottom: 0;
-        }
+      >*{
+        max-width: 290/$design-num-sp*100vw;
+        margin: 0 auto;
       }
+      // @include fontEn;
+      // letter-spacing: .1em;
+      // @include fz_vw(20);
+      // line-height: 1em;
+      // color: $key-black;
+      // padding: 0;
+      // >span{
+      //   display: inline-block;
+      //   left: 0;
+      //   position: relative;
+      //   transition: .3s;
+      //   &::after{
+      //     content: '';
+      //     width: 12/$design-num-sp*100vw;
+      //     height: 12/$design-num-sp*100vw;
+      //     border-radius: 12/$design-num-sp*100vw;
+      //     line-height: 1em;
+      //     display: inline-block;
+      //     background-color: $key-color3;
+      //     margin-left: 4px;
+      //     position: relative;
+      //     bottom: 0;
+      //   }
+      // }
     }
   }
 }
@@ -158,24 +162,28 @@
     }
     .btn{
       margin-top: 44px;
-      font-weight: 400;
-      font-size: $summary-font-size;
-      color: $white;
-      >span{
-        &::after{
-          width: 8px;
-          height: 8px;
-          border-radius: 8px;
-          background-color: $white;
-          transition: .6s;
-        }
+      >*{
+        max-width: 140px;
+        margin: 0;
       }
-      >span:hover{
-        left: 5px;
-        &::after{
-          filter: blur(3px);
-        }
-      }
+      // font-weight: 400;
+      // font-size: $summary-font-size;
+      // color: $white;
+      // >span{
+      //   &::after{
+      //     width: 8px;
+      //     height: 8px;
+      //     border-radius: 8px;
+      //     background-color: $white;
+      //     transition: .6s;
+      //   }
+      // }
+      // >span:hover{
+      //   left: 5px;
+      //   &::after{
+      //     filter: blur(3px);
+      //   }
+      // }
     }
   }
 }
@@ -208,6 +216,88 @@
 //     }
 //   }
 // }
+}
+//////////////////////////////////
+.heroStyle_03{
+  @include baseSpPad;
+  transition: .3s;
+  >.inner{
+    height: 1500/$design-num-sp*100vw;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+  }
+  .bgImg{
+    height: 100%;
+    >.inner{
+      height: 100%;
+    }
+    ul{
+      height: 100%;
+    }
+    li{
+      height: 100%;
+    }
+  }
+  img{
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%!important;
+    object-fit: cover;
+  }
+  .content{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 230/$design-num-sp*100vw;
+    .col{
+      max-width: 518/$design-num-sp*100vw;
+      margin: 0 auto;
+    }
+    .summary{
+      line-height: (60/34)+em;
+      @include fz_vw(34);
+      color: $white;
+      letter-spacing: .05em;
+      font-weight: 500;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.heroStyle_03{
+  padding: 0 20px;
+  >.inner{
+    height: 734/1232*100vw;
+  }
+  .content{
+    height: 100%;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    .wrap{
+      @include setTbl;
+      height: 100%;
+    }
+    .col{
+      max-width: none;
+      margin: 0;
+      padding-left: 314/$design-num*100vw;
+    }
+    .summary{
+      line-height: (36/20)+em;
+      font-size: 2.0rem;
+    }
+  }
+}
+}
+@media screen and (min-width: $design-width) {
+.heroStyle_03{
+  .content{
+    .col{
+      padding-left: 314px;
+    }
+  }
+}
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -442,6 +532,43 @@
   @include fontEn;
   letter-spacing: .1em;
 }
+//////////////////////////////////
+.ttlStyle_15{
+  line-height: (50/26)+em;
+  @include fz_vw(26);
+  font-weight: normal;
+  letter-spacing: .04em;
+  margin-bottom: 120/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_15{
+  line-height: (22/14)+em;
+  font-size: 1.4rem;
+  margin-bottom: 120px;
+}
+}
+//////////////////////////////////
+.ttlStyle_16{
+  @include fontEn;
+  @include fz_vw(36);
+  line-height: 1em;
+  margin-bottom: 58/$design-num-sp*100vw;
+  letter-spacing: .05em;
+}
+//////////////////////////////////
+.ttlStyle_17{
+  @include fz_vw(34);
+  line-height: 1em;
+  letter-spacing: .05em;
+  font-weight: 500;
+  margin-bottom: 50/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.ttlStyle_17{
+  font-size: 2.0rem;
+  margin-bottom: 26px;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .btnStyle_01{
@@ -590,6 +717,11 @@
 .btnStyle_05{
   font-size: 1.6rem;
   padding: 14px;
+  &.ja{
+    font-size: 1.2rem;
+    font-family: $base-font-family;
+    letter-spacing: .05em;
+  }
   &:hover{
     //opacity: .8;
     &::before{
@@ -673,6 +805,50 @@
       background-color: $white;
     }
   }
+}
+}
+////////////////////////////////////////////////////////////
+.btnStyle_08{
+  @extend .btnStyle_06;
+  color: $key-gray;
+  border: 2/$design-num-sp*100vw solid $key-gray;
+  //font-weight: bold;
+  &::before{
+    background-color: $key-gray;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.btnStyle_08{
+  border: 1px solid $key-gray;
+  color: $key-gray;
+  &:hover{
+    color: $white;
+  }
+}
+}
+////////////////////////////////////////////////////////////
+.btnStyle_09{
+  @extend .btnStyle_05;
+  color: $key-color1;
+  &::before{
+    background-color: $white;
+    border: 1px solid $key-color1;
+  }
+  .product_02 &{
+    &::before{
+      background-color: $white;
+      border: 1px solid $key-color2;
+    }
+  }
+  .product_03 &{
+    &::before{
+      background-color: $white;
+      border: 1px solid $key-color3;
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.btnStyle_09{
 }
 }
 ////////////////////////////////////////////////////////////
@@ -833,6 +1009,19 @@
   line-height: (26/12)+em;
 }
 }
+////////////////////////////////////
+.summaryStyle_07{
+  @include fz_vw(26);
+  line-height: (50/26)+em;
+  text-align: justify;
+  letter-spacing: .03em;
+}
+@media screen and (min-width: $break-point-middle) {
+.summaryStyle_07{
+  font-size: $summary-font-size;
+  line-height: (28/12)+em;
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 @media screen and (min-width: $break-point-middle) {
@@ -899,6 +1088,29 @@
 @media screen and (min-width: $break-point-middle) {
 .txStyle_06{
   letter-spacing: .03em;
+}
+}
+///////////////////////////////////
+.txStyle_07{
+  @include fz_vw(20);
+  line-height: (40/20)+em;
+}
+@media screen and (min-width: $break-point-middle) {
+.txStyle_07{
+  font-size: 1.0rem;
+}
+}
+///////////////////////////////////
+.txStyle_08{
+  @include fz_vw(20);
+  line-height: (40/20)+em;
+  color: $key-color1;
+  margin-top: 20/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.txStyle_08{
+  font-size: 1.0rem;
+  margin-top: 12px;
 }
 }
 ////////////////////////////////////////////////////////////

@@ -629,7 +629,7 @@ main{
     display: none;
   }
   .product-template__container{
-    //display: none;
+    display: none;
   }
   .product-form__variants{
     display: none;
@@ -717,7 +717,7 @@ main{
     }
   }
   .ttl{
-    margin-bottom: 100/$design-num-sp*100vw;
+    margin-bottom: 30/$design-num-sp*100vw;
     position: relative;
     h1,h2{
       @include fz_vw(36);
@@ -741,10 +741,23 @@ main{
       @include fz_vw(20);
     }
   }
+  .priceLabel{
+    .label{
+      @include fontEn;
+      @include fz_vw(26);
+      line-height: 1em;
+      letter-spacing: .05em;
+    }
+    .sub{
+      @include fz_vw(20);
+      line-height: 1em;
+    }
+  }
   .btnWrap{
+    margin-top: 50/$design-num-sp*100vw;
     >.inner{
       >*{
-        margin-bottom: 50/$design-num-sp*100vw;
+        margin-bottom: 30/$design-num-sp*100vw;
         &:last-child{
           margin-bottom: 0;
         }
@@ -812,6 +825,13 @@ main{
     line-height: (40/20)+em;
     text-decoration: underline;
   }
+  .elemWrap{
+    margin-top: 80/$design-num-sp*100vw;
+    >*{
+      max-width: 290/$design-num-sp*100vw;
+      margin: 0 auto;
+    }
+  }
 }
 @media screen and (min-width: $break-point-middle) {
 .productSec_01{
@@ -845,7 +865,7 @@ main{
     }
   }
   .ttl{
-    margin-bottom: 48px;
+    margin-bottom: 14px;
     h1,h2{
       font-size: 2.4rem;
       margin-bottom: 5px;
@@ -861,17 +881,39 @@ main{
       font-size: $summary-font-size;
     }
   }
+  .priceLabel{
+    .label{
+      font-size: 1.4rem;
+    }
+    .sub{
+      font-size: 1.2rem;
+    }
+  }
   .btnWrap{
+    margin-top: 45px;
     >.inner{
       @include setTbl;
       >*{
         margin-bottom: 0;
-        // &:first-child{
-        //   padding-right: 15px;
-        // }
-        // &:last-child{
-        //   padding-left: 15px;
-        // }
+        &:first-child{
+          padding-right: 7px;
+        }
+        &:last-child{
+          padding-left: 7px;
+        }
+      }
+    }
+    &.style_01{
+      width: 296px;
+      >.inner{
+        >*{
+          &:first-child{
+            padding-right: 0px;
+          }
+          &:last-child{
+            padding-left: 0px;
+          }
+        }
       }
     }
   }
@@ -916,6 +958,13 @@ main{
   .strong{
     line-height: (22/12)+em;
     font-size: $summary-font-size;
+  }
+  .elemWrap{
+    margin-top: 50px;
+    >*{
+      max-width: 140px;
+      margin: 0;
+    }
   }
 }
 }

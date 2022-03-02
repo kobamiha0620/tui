@@ -1,0 +1,349 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['products'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ()','setVideo();']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_menu.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+  <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+  <main role="main">
+    <div class="heroStyle_01 setMrg_05">
+      <div class="inner">
+        <div class="imgStyle style_01">
+          <h1>
+          <% var imgInfo = {path:'hero_img_01',type:'jpg',alt:'Products'};%>
+          <% if(pageinit.shopify!=='true'){%>
+            <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+          <% } else {%>
+            <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+          <% }%>
+          </h1>
+        </div>
+        <!-- /.imgStyle -->
+      </div>
+      <!-- /.inner -->
+    </div>
+    <!-- /.heroStyle_01 -->
+    <div id="container">
+      <section class="secStyle_01 setMrg_05">
+        <div class="inner">
+          <div class="colStyle_01">
+            <div class="inner">
+              <div class="col-img">
+                <ul class="photoChanger style_01">
+                  <li>
+                    <% var imgInfo = {path:'img_01',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                  <li>
+                    <% var imgInfo = {path:'img_02',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                </ul>
+                <!-- /.photoChanger -->
+              </div>
+              <!-- /.col-img -->
+              <div class="col-content">
+                <div class="inner">
+                  <h2 class="ttlStyle_01 setMrg_01">BOOSTER OIL</h2>
+                  <h3 class="ttlStyle_13 setMrg_02">体感する浸透力<span>※</span></h3>
+                  <!--h3 class="ttlStyle_02 setMrg_02">
+                    <% var imgInfo = {path:'tx-05',type:'svg',alt:'体感する浸透力'};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </h3-->
+                  <div class="summaryStyle_01">
+                    <p class="setMrg_03">洗顔後すぐに“オイル” の新習慣。<br class="pc">表皮と親和性の高いオイルが肌表面を柔らかく、<br class="pc">ベタつくことなくスーッと肌に馴染んでいく。<br class="pc">独自開発したNtDDS<span class="txStyle_02">（ナノ分散浸透技術）</span>が保湿美容成分を<br class="pc">角質層までしっかりと届け、肌をすこやかに保ちます。</p>
+                    <p class="txStyle_02">※角質層まで</p>
+                  </div>
+                  <!-- /.summaryStyle_01 -->
+                  <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/booster-oil" class="btnStyle_01"><span>View</span></a></div>
+                  <!-- /.elemWrap -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.col-content -->
+            </div>
+            <!-- /.inner -->
+          </div>
+          <!-- /.colStyle_01 -->
+        </div>
+        <!-- /.inner -->
+      </section>
+      <!-- /.secStyle_01 -->
+      <section class="secStyle_01 setMrg_05">
+        <div class="inner">
+          <div class="colStyle_02 way">
+            <div class="inner">
+              <div class="col-content">
+                <div class="inner">
+                  <h2 class="ttlStyle_01 setMrg_01">MOISTURE SERUM</h2>
+                  <h3 class="ttlStyle_13 setMrg_02">うるおい、肌にとどまる</h3>
+                  <!--h3 class="ttlStyle_03 setMrg_02">
+                    <% var imgInfo = {path:'tx-06',type:'svg',alt:'うるおい、肌にとどまる'};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </h3-->
+                  <div class="summaryStyle_01">
+                    <p class="setMrg_03">化粧水なしで“セラム” だけ。<br class="pc">オイルのカプセルをセラムが包み、想像を超える保湿力。<br class="pc">セラミド成分<sup>※</sup>が肌にうるおいを与え、<br class="pc">そのたっぷりの水分を蓄えたままの肌が持続します。<br class="pc">親油性が高く、オイルとの併用も弾かず馴染む圧巻のセラム。</p>
+                    <p class="txStyle_02">※セラミドEOP、セラミドNP、セラミドAP</p>
+                  </div>
+                  <!-- /.summaryStyle_01 -->
+                  <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/moisture-serum" class="btnStyle_02"><span>View</span></a></div>
+                  <!-- /.elemWrap -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.col-content -->
+              <div class="col-img">
+                <ul class="photoChanger style_01">
+                  <li>
+                    <% var imgInfo = {path:'img_03',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                  <li>
+                    <% var imgInfo = {path:'img_04',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                </ul>
+                <!-- /.photoChanger -->
+              </div>
+              <!-- /.col-img -->
+            </div>
+            <!-- /.inner -->
+          </div>
+          <!-- /.colStyle_02 -->
+        </div>
+        <!-- /.inner -->
+      </section>
+      <!-- /.secStyle_01 -->
+      <section class="secStyle_01 setMrg_06">
+        <div class="inner">
+          <div class="colStyle_01 way">
+            <div class="inner">
+              <div class="col-img">
+                <ul class="photoChanger style_01">
+                  <li>
+                    <% var imgInfo = {path:'img_05',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                  <li>
+                    <% var imgInfo = {path:'img_06',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                </ul>
+                <!-- /.photoChanger -->
+              </div>
+              <!-- /.col-img -->
+              <div class="col-content">
+                <div class="inner">
+                  <h2 class="ttlStyle_01 setMrg_01">SET PACKAGE</h2>
+                  <h3 class="ttlStyle_13 setMrg_02">オイルとセラム、対になるもの</h3>
+                  <!--h3 class="ttlStyle_04 setMrg_02">
+                    <% var imgInfo = {path:'tx-07',type:'svg',alt:'オイルとセラム、対になるもの'};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_12.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_13.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </h3-->
+                  <div class="summaryStyle_01">
+                    <p class="setMrg_03">他に余計なステップはいらず、シンプルかつ、<br class="pc">お肌への最適化を考え抜かれてうまれた組み合わせ、<br class="pc">ブースターオイルとモイスチャーセラム。<br class="pc">この⼆つを併せて使うことで、これまでにない肌の仕上がりを体感します。</p>
+                  </div>
+                  <!-- /.summaryStyle_01 -->
+                  <div class="elemWrap setMrg_04"><a href="{{ routes.root_url }}products/set-package" class="btnStyle_03"><span>View</span></a></div>
+                  <!-- /.elemWrap -->
+                </div>
+                <!-- /.inner -->
+              </div>
+              <!-- /.col-content -->
+            </div>
+            <!-- /.inner -->
+          </div>
+          <!-- /.colStyle_01 -->
+        </div>
+        <!-- /.inner -->
+      </section>
+      <!-- /.secStyle_01 -->
+      <div class="pc setMrg_11 way">
+        <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
+      </div>
+      <!-- /.pc -->
+      <div class="secStyle_01">
+        <div class="colStyle_03 way">
+          <div class="col sp">
+            <section class="articleStyle_01 way">
+              <a href="{{ routes.root_url }}pages/about#ntdds">
+                <div class="inner">
+                  <div class="eyeCatch">
+                    <% var imgInfo = {path:'img_10',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </div>
+                  <!-- /.eyeCatch -->
+                  <div class="content">
+                    <div class="inner">
+                      <h2>About NtDDS</h2>
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.content -->
+                </div>
+                <!-- /.inner -->
+              </a>
+            </section>
+            <!-- /.articleStyle_01 -->
+          </div>
+          <!-- /.col -->
+          <div class="col">
+            <section class="articleStyle_01 way">
+              <a href="{{ routes.root_url }}pages/about#skincare">
+                <div class="inner">
+                  <div class="eyeCatch">
+                    <% var imgInfo = {path:'img_07',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </div>
+                  <!-- /.eyeCatch -->
+                  <div class="content">
+                    <div class="inner">
+                      <h2>Skincare Routine</h2>
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.content -->
+                </div>
+                <!-- /.inner -->
+              </a>
+            </section>
+            <!-- /.articleStyle_01 -->
+          </div>
+          <!-- /.col -->
+          <div class="col">
+            <section class="articleStyle_01 way">
+              <a href="{{ routes.root_url }}blogs/news">
+                <div class="inner">
+                  <div class="eyeCatch">
+                    <% var imgInfo = {path:'img_08',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </div>
+                  <!-- /.eyeCatch -->
+                  <div class="content">
+                    <div class="inner">
+                      <h2>News</h2>
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.content -->
+                </div>
+                <!-- /.inner -->
+              </a>
+            </section>
+            <!-- /.articleStyle_01 -->
+          </div>
+          <!-- /.col -->
+          <div class="col">
+            <section class="articleStyle_01 way">
+              <a href="{{ routes.root_url }}pages/contact">
+                <div class="inner">
+                  <div class="eyeCatch">
+                    <% var imgInfo = {path:'img_09',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </div>
+                  <!-- /.eyeCatch -->
+                  <div class="content">
+                    <div class="inner">
+                      <h2>Contact</h2>
+                    </div>
+                    <!-- /.inner -->
+                  </div>
+                  <!-- /.content -->
+                </div>
+                <!-- /.inner -->
+              </a>
+            </section>
+            <!-- /.articleStyle_01 -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.colStyle_03 -->
+      </div>
+      <!-- /.secStyle_01 -->
+    </div>
+    <!-- /#container -->
+  </main>
+  <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+  <% if(pageinit.shopify!=='true'){%>
+  <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+  <% } else {%>
+  {% include 'footer-tui' %}
+  <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+</html>
+<% }%>

@@ -232,8 +232,12 @@
     }
     h3{
       @include fz_vw(40);
-      line-height: 1em;
+      line-height: (60/40)+em;
       font-weight: normal;
+      letter-spacing: .03em;
+      &.style_01{
+        letter-spacing: .05em;
+      }
       >span{
         position: relative;
         @include fz_vw(30);
@@ -248,7 +252,7 @@
     .btn{
       margin-top: 65/$design-num-sp*100vw;
       >*{
-        width: 230/$design-num-sp*100vw;
+        width: 290/$design-num-sp*100vw;
         margin: 0 auto;
       }
     }
@@ -256,6 +260,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .articleStyle_05{
+  $gap:60/$design-num*100vw;
   a{
     .eyeCatch{
       margin-bottom: 0;
@@ -267,37 +272,51 @@
       left: 0;
       @include setTbl;
       height: 734/$design-num*100vw;
+      padding: 0;
       >.inner{
         vertical-align: top;
-        text-align: center;
+        text-align: left;
+        position: absolute;
+        bottom: $gap;
+        left: $gap;
+        width: -webkit-calc(100% - #{$gap});
+        width: calc(100% - #{$gap});
       }
       h2{
         font-size: 1.4rem;
-        margin-bottom: 22px;
-        font-weight: 600;
+        margin-bottom: 8px;
+        font-weight: 500;
         letter-spacing: .15em;
       }
       h3{
         font-size: 2.0rem;
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: .15em;
+        line-height: (28/20)+em;
         >span{
           font-size: 1.5rem;
         }
       }
       .caution{
         font-size: 1.0rem;
-        margin-top: 8px;
+        margin-top: 4px;
         font-weight: 600;
       }
       .btn{
         margin-top: 0;
         position: absolute;
-        bottom: 78/$design-num*100vw;
-        left: 0;
+        bottom:0;
+        right: $gap;
         width: 100%;
         >*{
-          width: 120px;
+          width: 140px;
+          margin: 0 0 0 auto;
+        }
+      }
+      >.inner.style_01{
+        bottom: 52/$design-num*100vw;
+        .btn{
+          bottom: 8/$design-num-sp*100vw;
         }
       }
     }
@@ -370,6 +389,7 @@
       line-height: (28/20)+em;
       font-size: 2.0rem;
       letter-spacing: .15em;
+      font-weight: 500;
       //font-weight: 600;
       margin: 24px 0 40px;
     }
@@ -400,6 +420,117 @@
         position: relative;
         bottom: auto;
         margin-top: 40px;
+      }
+    }
+  }
+}
+}
+////////////////////////////////////////////
+.articleStyle_09{
+  >a,>.wrap{
+    display: block;
+    >.inner{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .eyeCatch{
+      padding-bottom: 60/$design-num-sp*100vw;
+      img{
+        @include imgset;
+      }
+    }
+    .secTtl{
+      margin-bottom: 32/$design-num-sp*100vw;
+    }
+    h2{
+      @include fontEn;
+      @include fz_vw(30);
+      letter-spacing: .15em;
+      line-height: 1em;
+      margin-bottom: 30/$design-num-sp*100vw;
+    }
+    h3{
+      @include fz_vw(34);
+      font-weight: normal;
+      letter-spacing: .15em;
+      line-height: (50/34)+em;
+      >span{
+        @include fz_vw(24);
+        position: relative;
+        top: -4px;
+      }
+    }
+    .summary{
+      line-height: (50/26)+em;
+      @include fz_vw(26);
+      text-align: justify;
+      letter-spacing: .03em;
+    }
+    .btn{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 60/$design-num-sp*100vw;
+      margin-left: 40/$design-num-sp*100vw;
+      margin-right: 40/$design-num-sp*100vw;
+      >*{
+        min-width: 300/$design-num-sp*100vw;
+        &:nth-child(n+2){
+          margin-top: 32/$design-num-sp*100vw;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.articleStyle_09{
+  >a,>.wrap{
+    >.inner{
+      @include setTbl;
+    }
+    .col-content{
+      padding-right: 95/608*100%;
+    }
+    .col-img{
+      width: 224/608*100%;
+    }
+    .eyeCatch{
+      padding-bottom: 0;
+      img{
+        @include imgset;
+      }
+    }
+    .secTtl{
+      margin-bottom: 20px;
+    }
+    h2{
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+    h3{
+      font-size: 2.0rem;
+      line-height: (28/20)+em;
+      >span{
+        font-size: 1.4rem;
+      }
+    }
+    .summary{
+      line-height: (28/14)+em;
+      font-size: 1.4rem;
+    }
+    .btn{
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-left: 0;
+      margin-right: 0;
+      >*{
+        min-width: 140px;
+        &:nth-child(n+2){
+          margin-top: 0;
+        }
+        &:nth-child(n+3){
+          margin-top: 14px;
+        }
       }
     }
   }

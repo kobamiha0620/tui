@@ -167,6 +167,10 @@ function setBuyBtn () {
   //   $(this).next().text(targetLabel)
   // })
   //
+  var priceLabel = $('.price-item--regular').text().replace('JPY', '');
+  priceLabel = $.trim(priceLabel);
+  $('.priceLabel .label').text(priceLabel);
+
   if ($('.product-form__cart-submit').attr('aria-label') == '売り切れ') {
     $('#customCartBtn').addClass('dis');
   }
@@ -295,7 +299,7 @@ function setMainMenu () {
     event.preventDefault();
   }
 
-  var baseHeadG = $('#mainVis').offset().top;
+  var baseHeadG = $('#outerMenu').offset().top;
   function openFnc () {
     current_scrollY = $(window).scrollTop() - baseHeadG;
     // $('body').addClass('breakH')
@@ -339,7 +343,7 @@ function setMainMenu () {
       $('#mainNav').addClass('out');
     }, 1000);
     $('html, body').prop({
-      scrollTop: current_scrollY
+      scrollTop: current_scrollY + baseHeadG
     });
   // setTimeout(function () {
   //   // $('#wrapper').removeClass('breakLuxy')

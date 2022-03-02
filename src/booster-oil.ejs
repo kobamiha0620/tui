@@ -26,78 +26,21 @@ var pageinit = {
   <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
   <main role="main">
     <div id="container" class="multiGallery">
-      <div class="galleryWidget top nullWay setMrg_12">
+      <div class="heroStyle_01 setMrg_05">
         <div class="inner">
-          <div class="item active">
-            <div class="bgImg">
-              <div class="inner">
-                <% var imgInfo = {path:'hero_img_08',type:'jpg',alt:''};%>
-                <% if(pageinit.shopify!=='true'){%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                <% } else {%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                <% }%>
-              </div>
-              <!-- /.inner -->
-            </div>
-            <!-- /.bgImg -->
+          <div class="imgStyle style_01">
+            <% var imgInfo = {path:'hero_img_08',type:'jpg',alt:''};%>
+            <% if(pageinit.shopify!=='true'){%>
+              <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+            <% } else {%>
+              <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+            <% }%>
           </div>
-          <!-- /.item -->
-          <div class="item">
-            <div class="bgImg style_02">
-              <div class="inner">
-                <ul class="photoChanger style_02">
-                  <li>
-                    <% var imgInfo = {path:'hero_img_09',type:'jpg',alt:''};%>
-                    <% if(pageinit.shopify!=='true'){%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                    <% } else {%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                    <% }%>
-                  </li>
-                  <li>
-                    <% var imgInfo = {path:'hero_img_10',type:'jpg',alt:''};%>
-                    <% if(pageinit.shopify!=='true'){%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                    <% } else {%>
-                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                    <% }%>
-                  </li>
-                </ul>
-                <!-- /.photoChanger -->
-              </div>
-              <!-- /.inner -->
-              <div class="content style_07">
-                <div class="wrap">
-                  <div class="inner">
-                    <div class="col">
-                      <div class="summary">
-                        <p>表皮と親和性が高く、<br class="sp">肌にスーッと馴染む、<br>洗顔後すぐに使える“新オイル”</p>
-                      </div>
-                      <!-- /.summary -->
-                    </div>
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.inner -->
-                </div>
-                <!-- /.wrap -->
-              </div>
-              <!-- /.content -->
-            </div>
-            <!-- /.bgImg -->
-          </div>
-          <!-- /.item -->
-          <div class="mask">
-            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
-            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
-            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
-            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
-          </div>
-          <!-- /.mask -->
+          <!-- /.imgStyle -->
         </div>
         <!-- /.inner -->
       </div>
-      <!-- /.galleryWidget -->
+      <!-- /.heroStyle_01 -->
       <div class="gallerySep">
         <section class="secStyle_03 setMrg_22">
           <div class="inner">
@@ -118,6 +61,10 @@ var pageinit = {
                 <p>ブースターオイル</p>
               </div>
               <!-- /.ttl -->
+              <div class="priceLabel">
+                <p><span class="label"></span><span class="sub">（税込）</span></p>
+              </div>
+              <!-- /.price -->
               <% if(pageinit.shopify!=='true'){%>
               <%- include('assets/module/_temp-product_01.ejs') %>
               <% } else {%>
@@ -142,12 +89,16 @@ var pageinit = {
               <div class="btnWrap setMrg_23">
                 <div class="inner">
                   <div class="col">
-                    <button type="button" class="btnStyle_05 customCartBtn" id="customCartBtn"><span class="normal">Add to cart</span><span class="out">Out of stock</span></button>
+                    <button type="button" class="btnStyle_05 ja customCartBtn" id="customCartBtn"><span class="normal">カートに追加する</span><span class="out">Out of stock</span></button>
                   </div>
                   <!-- /.col -->
-                  <!--div class="col">
-                    <button type="button" class="btnStyle_05"><span>Buy it now</span></button>
-                  </div-->
+                  <div class="col">
+                    <% if(pageinit.shopify!=='true'){%>
+                    <a href="booster-oil-s.html" class="btnStyle_09 ja"><span>定期購入はこちら</span></a>
+                    <% } else {%>
+                    <a href="{{ routes.root_url }}products/booster-oil-s" class="btnStyle_09 ja"><span>定期購入はこちら</span></a>
+                    <% }%>
+                  </div>
                   <!-- /.col -->
                 </div>
                 <!-- /.inner -->
@@ -191,6 +142,53 @@ var pageinit = {
           <!-- /.inner -->
         </section>
         <!-- /.secStyle_03 -->
+        <div class="heroStyle_03 setMrg_38">
+          <div class="inner">
+            <div class="bgImg">
+              <div class="inner">
+                <ul class="photoChanger style_02">
+                  <li>
+                    <% var imgInfo = {path:'hero_img_09',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                  <li>
+                    <% var imgInfo = {path:'hero_img_10',type:'jpg',alt:''};%>
+                    <% if(pageinit.shopify!=='true'){%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                    <% } else {%>
+                      <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                    <% }%>
+                  </li>
+                </ul>
+                <!-- /.photoChanger -->
+              </div>
+              <!-- /.inner -->
+              <div class="content way">
+                <div class="wrap">
+                  <div class="inner">
+                    <div class="col">
+                      <div class="summary">
+                        <p>表皮と親和性が高く、<br class="sp">肌にスーッと馴染む、<br>洗顔後すぐに使える“新オイル”</p>
+                      </div>
+                      <!-- /.summary -->
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                  <!-- /.inner -->
+                </div>
+                <!-- /.wrap -->
+              </div>
+              <!-- /.content -->
+            </div>
+            <!-- /.bgImg -->
+          </div>
+          <!-- /.inner -->
+        </div>
+        <!-- /.heroStyle_03 -->
         <div class="setMrg_24 way">
           <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
         </div>

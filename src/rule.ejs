@@ -7,12 +7,12 @@ var pageinit = {
   ogurl : '' ,
   ogimage : '' ,
   path : '' ,
-  shopify : 'true',
+  shopify : '',
   category : ['rule'] ,
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['']
+  jsfunc:['startScroll ();']
 };
 %>
 <% if(pageinit.shopify!=='true'){%>
@@ -78,7 +78,7 @@ var pageinit = {
                 <!-- /.summaryStyle_04 -->
               </div>
               <!-- /.setMrg_28 -->
-              <div class="setMrg_28">
+              <div class="setMrg_28" id="subscription">
                 <h3 class="ttlStyle_09">定期購入サービス</h3>
                 <div class="summaryStyle_04">
                   <p>当サイトにて商品をご注文いただくと、ご注文の受領確認とご注文内容を記載した「ご注文の確認」メールが当サイトから送信されます。お客様からのご注文は、商品購入についての契約の申込となります。当社が販売する商品をご注文いただいた場合、当サイトから「ご注文の発送」メールがお客様に送信されたときにお客様の契約申込は承諾され、契約が成立します。<br>一度に複数の商品をご注文いただいた際、一括で商品が出荷されない場合があります。その場合は、それぞれ商品が出荷されるタイミングで「ご注文の発送」メールが送信され、その送信をもって各々の契約が成立するものとします。</p>
