@@ -11,17 +11,17 @@
 }
 //////////////////////////////////////
 .secStyle_02{
-  @include baseSpPad;
+  //@include baseSpPad;
   &.style_01{
     padding-left: 0;
     padding-right: 12/$design-num-sp*100vw;
   }
   >.inner{
-    max-width: 576/$design-num-sp*100vw;
-    margin: 0 0 0 auto;
-    padding-right: 18/$design-num-sp*100vw;
-    .imgStyle_01{
-      margin-right: -18/$design-num-sp*100vw;
+    max-width: 610/$design-num-sp*100vw;
+    margin: 0 auto;
+    .imgStyle_01,.imgStyle_02{
+      margin-left: -43/$design-num-sp*100vw;
+      margin-right: -43/$design-num-sp*100vw;
     }
   }
 }
@@ -39,8 +39,9 @@
     padding-right: 0;
     // display: inline-block;
     // text-align: left;
-    .imgStyle_01{
+    .imgStyle_01,.imgStyle_02{
       margin-right: 0;
+      margin-left: 0;
     }
   }
 }
@@ -61,10 +62,10 @@
 }
 //////////////////////////////////////
 .secStyle_04{
-  @include baseSpPad;
+  //@include baseSpPad;
   >.inner{
-    max-width: 600/$design-num-sp*100vw;
-    margin: 0 0 0 auto;
+    max-width: 610/$design-num-sp*100vw;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: $break-point-middle) {
@@ -80,7 +81,7 @@
 //////////////////////////////////////
 .secStyle_05{
   >.inner{
-    max-width: 575/$design-num-sp*100vw;
+    //max-width: 575/$design-num-sp*100vw;
   }
 }
 @media screen and (min-width: $break-point-middle) {
@@ -95,7 +96,7 @@
 //////////////////////////////////////
 .secStyle_06{
   >.inner{
-    max-width: 575/$design-num-sp*100vw;
+    //max-width: 575/$design-num-sp*100vw;
   }
 }
 @media screen and (min-width: $break-point-middle) {
@@ -190,6 +191,21 @@
   >.inner{
     max-width: 608px;
     margin: 0 auto;
+  }
+}
+}
+//////////////////////////////////////
+.secStyle_11{
+  >.inner{
+    max-width: 610/$design-num-sp*100vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.secStyle_11{
+  padding: 0 40px;
+  >.inner{
+    max-width: 1126px;
   }
 }
 }

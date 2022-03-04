@@ -299,6 +299,536 @@
   }
 }
 }
+//////////////////////////////////
+.heroStyle_04{
+  @include baseSpPad;
+  transition: .3s;
+  >.inner{
+    position: relative;
+  }
+  .bgImg{
+    height: 694/$design-num-sp*100vw;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    >.inner{
+      height: 100%;
+    }
+  }
+  img{
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%!important;
+    object-fit: cover;
+  }
+  .content{
+    position: relative;
+    width: 610/$design-num-sp*100vw;
+    margin: 0 auto;
+  }
+  h2{
+    margin-top: 72/$design-num-sp*100vw;
+    margin-bottom: 40/$design-num-sp*100vw;
+    @include fz_vw(34);
+    line-height: (60/34)+em;
+    font-weight: 500;
+    letter-spacing: .06em;
+  }
+  .summary{
+    line-height: (60/26)+em;
+    @include fz_vw(26);
+    font-weight: normal;
+    margin-bottom: 65/$design-num-sp*100vw;
+    text-align: justify;
+  }
+  .childWrap{
+    display: block;
+    width: 100%;
+    >*{
+      width: 100%;
+      margin-bottom: 60/$design-num-sp*100vw;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      >.inner{
+        @include setTbl;
+      }
+    }
+  }
+  .eyeCatch{
+    margin-bottom: 0px;
+    width: 260/$design-num-sp*100vw;
+    svg{
+      width: 260/$design-num-sp*100vw;
+      height: 260/$design-num-sp*100vw;
+      fill:$key-black;
+    }
+  }
+  .childSummary{
+    padding-left: 30/$design-num-sp*100vw;
+    line-height: (36/20)+em;
+    @include fz_vw(20);
+    font-weight: normal;
+    text-align: justify;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.heroStyle_04{
+  padding: 0 20px;
+  >.inner{
+    //height: 734/1232*100vw;
+  }
+  .bgImg{
+    height: 734/1232*100vw;
+    // overflow: hidden;
+    // border-radius: 10px;
+    // position: relative;
+    // >.inner{
+    //   height: 100%;
+    // }
+  }
+  .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    .wrap{
+      @include setTbl;
+      height: 100%;
+      transition: .8s;
+      color: $white;
+      width: 50%;
+      margin: 0 0 0 auto;
+      >*{
+        padding: 0 40px;
+      }
+    }
+    h2{
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: $white;
+      font-weight: 500;
+      line-height: 1em;
+      letter-spacing: .1em;
+      margin-bottom: 35px;
+      img{
+        width: 415px;
+      }
+    }
+    .summary{
+      line-height: (30/12)+em;
+      font-size: $summary-font-size;
+      font-weight: 500;
+      margin-bottom: 25px;
+      letter-spacing: .06em;
+      text-align: justify;
+    }
+    .childWrap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 472/$design-num*100vw;
+      >*{
+        width: 140/$design-num*100vw;
+        margin-bottom: 0;
+        >.inner{
+          display: block;
+          >*{
+            display: block;
+          }
+        }
+      }
+    }
+    .eyeCatch{
+      margin-bottom: 10px;
+      width: auto;
+      svg{
+        width: 129/$design-num*100vw;
+        height: 129/$design-num*100vw;
+        fill:$white;
+      }
+    }
+    .childSummary{
+      padding-left: 0;
+      line-height: (18/10)+em;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+}
+}
+//////////////////////////////////
+.heroStyle_05,.heroStyle_06{
+  @include baseSpPad2;
+  transition: .3s;
+  >.inner{
+    position: relative;
+  }
+  .bgImg{
+    height: 382/$design-num-sp*100vw;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    >.inner{
+      height: 100%;
+    }
+  }
+  img{
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%!important;
+    object-fit: cover;
+  }
+  .content{
+    position: relative;
+    width: 610/$design-num-sp*100vw;
+    margin: 0 auto;
+  }
+  .wrap{
+    color: $key-black;
+  }
+  .numbering{
+    margin-top: 85/$design-num-sp*100vw;
+    @include fz_vw(20);
+    margin-bottom: 8/$design-num-sp*100vw;
+  }
+  h2{
+    font-weight: 500;
+    @include fz_vw(34);
+    line-height: (60/34)+em;
+    margin-bottom: 45/$design-num-sp*100vw;
+    letter-spacing: 0;
+    span{
+      @include fz_vw(20);
+      letter-spacing: -.05em;
+    }
+  }
+  .summary{
+    line-height: (60/26)+em;
+    @include fz_vw(26);
+    letter-spacing: .05em;
+    font-weight: normal;
+  }
+  .specList{
+    line-height: (36/20)+em;
+    @include fz_vw(20);
+    font-weight: normal;
+    span{
+      @include fz_vw(20);
+    }
+    li{
+      padding: 18/$design-num-sp*100vw;
+      border: 1px solid $key-black;
+      border-radius: 10px;
+      margin-bottom:16/$design-num-sp*100vw;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.heroStyle_05,.heroStyle_06{
+  padding: 0 20px;
+  .bgImg{
+    height: 734/1232*100vw;
+  }
+  .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    .wrap{
+      @include setTbl;
+      height: 100%;
+      transition: .8s;
+      color: $white;
+      width: 50%;
+      margin: 0 0 0 auto;
+      >*{
+        padding: 0 40px;
+      }
+      .col{
+        width: 452/$design-num*100vw;
+        margin: 0 auto;
+      }
+    }
+  }
+  .numbering{
+    margin-top: 0;
+    line-height: 1em;
+    font-size: $summary-font-size;
+    @include fontEn;
+    letter-spacing: .04em;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    line-height: (26/16)+em;
+    margin-bottom: 30px;
+    span{
+      font-size: $summary-font-size;
+      letter-spacing: .05em;
+    }
+  }
+  .summary{
+    line-height: (30/12)+em;
+    font-size: $summary-font-size;
+    letter-spacing: .05em;
+    text-align: justify;
+    font-weight: 500;
+  }
+  .specList{
+    margin-top: 4px;
+    line-height: (22/12)+em;
+    font-size: $summary-font-size;
+    font-weight: 500;
+    span{
+      font-size: 1.0rem;
+    }
+    li{
+      padding: 8px;
+      border: 1px solid $white;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      text-align: center;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+}
+//////////////////////////////////
+@media screen and (min-width: $break-point-middle) {
+.heroStyle_06{
+  .content{
+    .wrap{
+      margin: 0 0 0 90px;
+      .col{
+        margin: 0 auto;
+      }
+    }
+  }
+}
+}
+//////////////////////////////////
+.heroStyle_07{
+  @include baseSpPad;
+  transition: .3s;
+  >.inner{
+    position: relative;
+  }
+  .bgImg{
+    height: 1097/$design-num-sp*100vw;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    >.inner{
+      height: 100%;
+    }
+  }
+  .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    .wrap{
+      @include setTbl;
+      height: 100%;
+      transition: .8s;
+      color: $white;
+      >*{
+        vertical-align: bottom;
+      }
+      .col{
+        width: 610/$design-num-sp*100vw;
+        margin: 0 auto;
+        padding-bottom: 70/$design-num-sp*100vw;
+      }
+    }
+  }
+  img{
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%!important;
+    object-fit: cover;
+  }
+  h2{
+    margin-bottom: 40/$design-num-sp*100vw;
+    .en{
+      @include fontEn;
+      line-height: 1em;
+      @include fz_vw(34);
+      letter-spacing: .05em;
+    }
+    .ja{
+      line-height: 1em;
+      @include fz_vw(20);
+      font-weight: 500;
+      margin-top: 16/$design-num-sp*100vw;
+      display: block;
+      letter-spacing: .04em;
+      font-weight: normal;
+    }
+  }
+  .summary{
+    line-height: (40/26)+em;
+    @include fz_vw(26);
+    text-align: justify;
+    letter-spacing: .03em;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.heroStyle_07{
+  padding: 0 20px;
+  .bgImg{
+    height: 734/1232*100vw;
+  }
+  .content{
+    .wrap{
+      width: 50%;
+      margin: 0 0 0 90px;
+      >*{
+        vertical-align: middle;
+        padding: 0 40px;
+      }
+      .col{
+        width: 452/$design-num*100vw;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+  }
+  h2{
+    margin-bottom: 34px;
+    .en{
+      font-size: 2.4rem;
+    }
+    .ja{
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+  }
+  .summary{
+    line-height: (28/12)+em;
+    font-size: $base-font-size;
+  }
+}
+}
+//////////////////////////////////
+.heroStyle_08{
+  position: relative;
+  >.inner{
+  }
+  .bgImg{
+    height: 694/$design-num-sp*100vw;
+    >.inner{
+      height: 100%;
+    }
+  }
+  img{
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%!important;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .content{
+    position: relative;
+    padding-top: 112/$design-num-sp*100vw;
+    //padding-right: 12/$design-num-sp*100vw;
+    .col{
+      max-width: 610/$design-num-sp*100vw;
+      margin: 0 auto;
+    }
+  }
+  h2{
+    color: $key-black;
+    line-height: 1em;
+    margin-bottom: 30/$design-num-sp*100vw;
+    .en{
+      @include fz_vw(36);
+      @include fontEn;
+      letter-spacing: .08em;
+    }
+    .ja{
+      display: block;
+      @include fz_vw(20);
+      font-weight: 500;
+      margin-top: 10/$design-num-sp*100vw;
+      letter-spacing: .04em;
+    }
+  }
+  .summary{
+    line-height: (56/26)+em;
+    @include fz_vw(26);
+    font-weight: normal;
+    letter-spacing: .04em;
+    color: $key-black;
+    text-align: justify;
+    span{
+      @include fz_vw(20);
+    }
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.heroStyle_08{
+  >.inner{
+    height: 734/1232*100vw;
+  }
+  .bgImg{
+    height: 100%;
+  }
+  .content{
+    position: absolute;
+    padding-top: 0;
+    padding-right: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .wrap{
+      @include setTbl;
+      width: 50%;
+      margin: 0 0 0 90px;
+      height: 100%;
+    }
+    .col{
+      width: 452/$design-num*100vw;
+    }
+  }
+  h2{
+    color: $white;
+    margin-bottom: 28px;
+    .en{
+      font-size: 2.4rem;
+    }
+    .ja{
+      font-size: 1.2rem;
+      margin-top: 8px;
+    }
+  }
+  .summary{
+    line-height: (30/12)+em;
+    font-size: $summary-font-size;
+    font-weight: 500;
+    color: $white;
+    span{
+      font-size: 1.0rem;
+    }
+  }
+}
+}
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .ttlStyle_01{
@@ -446,14 +976,14 @@
 .ttlStyle_08{
   @include fz_vw(26);
   line-height: 1em;
-  margin-bottom: 70/$design-num-sp*100vw;
+  margin-bottom: 45/$design-num-sp*100vw;
   letter-spacing: .1em;
   font-weight: 500;
 }
 @media screen and (min-width: $break-point-middle) {
 .ttlStyle_08{
   font-size: 1.6rem;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 }
 //////////////////////////////////
@@ -934,7 +1464,7 @@
 }
 ////////////////////////////////////
 .summaryStyle_04{
-  line-height: (44/20)+em;
+  line-height: (34/20)+em;
   @include fz_vw(20);
   letter-spacing: .02em;
   p{
@@ -956,7 +1486,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_04{
-  line-height: (26/12)+em;
+  line-height: (22/12)+em;
   font-size: $summary-font-size;
   >*{
     &.style_02{
@@ -967,9 +1497,9 @@
 }
 ////////////////////////////////////
 .summaryStyle_05{
-  line-height: (56/26)+em;
+  line-height: (50/26)+em;
   @include fz_vw(26);
-  letter-spacing: .02em;
+  letter-spacing: .03em;
   p{
     text-align: justify;
     word-break: break-all;
@@ -986,7 +1516,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_05{
-  line-height: (26/12)+em;
+  line-height: (22/12)+em;
   font-size: $summary-font-size;
 }
 }
@@ -1127,6 +1657,25 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .imgStyle_01{
+  max-width: 764px;
+  .loadImg{
+    padding-top: 455/764*100%;
+  }
+}
+}
+///////////////////////////////////
+.imgStyle_02{
+  border-radius: 10px;
+  overflow: hidden;
+  img{
+    @include imgset;
+  }
+  .loadImg{
+    padding-top: 694/694*100%;
+  }
+}
+@media screen and (min-width: $break-point-middle) {
+.imgStyle_02{
   max-width: 764px;
   .loadImg{
     padding-top: 455/764*100%;

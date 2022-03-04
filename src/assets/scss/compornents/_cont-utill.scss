@@ -226,7 +226,7 @@
 }
 ///////////////////////////////////////
 .setMrg_26{
-  padding-top: 65px;
+  padding-top: 65/$design-num-sp*100vw;
 }
 @media screen and (min-width: $break-point-middle) {
 .setMrg_26{
@@ -235,11 +235,11 @@
 }
 ///////////////////////////////////////
 .setMrg_27{
-  padding-top: 150/$design-num-sp*100vw;
+  padding-top: 80/$design-num-sp*100vw;
 }
 @media screen and (min-width: $break-point-middle) {
 .setMrg_27{
-  padding-top: 130px;
+  padding-top: 60px;
 }
 }
 ///////////////////////////////////////
@@ -257,11 +257,11 @@
 }
 ///////////////////////////////////////
 .setMrg_30{
-  margin-bottom: 60/$design-num-sp*100vw;
+  margin-bottom: 40/$design-num-sp*100vw;
 }
 @media screen and (min-width: $break-point-middle) {
 .setMrg_30{
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 }
 ///////////////////////////////////////
@@ -270,7 +270,7 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .setMrg_31{
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 }
 ///////////////////////////////////////
@@ -356,6 +356,45 @@
 @media screen and (min-width: $break-point-middle) {
 .setMrg_40{
   margin-top: -36px;
+  .home &{
+    margin-top: 0;
+  }
+}
+}
+///////////////////////////////////////
+.setMrg_41{
+  margin-bottom: 130/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_41{
+  margin-bottom: 20px;
+}
+}
+///////////////////////////////////////
+.setMrg_42{
+  margin-bottom: 150/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_42{
+  margin-bottom: 20px;
+}
+}
+///////////////////////////////////////
+.setMrg_43{
+  margin-bottom: 180/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_43{
+  margin-bottom: 20px;
+}
+}
+///////////////////////////////////////
+.setMrg_44{
+  margin-bottom: 60/$design-num-sp*100vw;
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_44{
+  margin-bottom: 50px;
 }
 }
 ////////////////////////////////////////////////////////////

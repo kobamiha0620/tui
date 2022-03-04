@@ -642,12 +642,12 @@ $delayH:200px;
 }
 //////////////////////////////////
 .galleryWidget .content.style_03{
-  padding-bottom: 114/$design-num-sp*100vw;
+  padding-bottom: 70/$design-num-sp*100vw;
   .wrap{
     @include setTbl;
     height: 100%;
-    width: 556/$design-num-sp*100vw;
-    margin: 0 70/$design-num-sp*100vw 0 auto;
+    width: 610/$design-num-sp*100vw;
+    margin: 0 auto;
     >*{
       vertical-align: bottom;
     }
