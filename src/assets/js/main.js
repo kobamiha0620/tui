@@ -714,7 +714,7 @@ function startScroll () {
           }, 10, 'swing');
         }
       });
-    }, 1000);
+    }, 1500);
   }
 }
 

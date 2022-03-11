@@ -790,6 +790,14 @@ main{
       @include fz_vw(20);
       line-height: 1em;
     }
+    .label{
+      @include fontEn;
+      @include fz_vw(20);
+      line-height: 1em;
+      margin-bottom: 15/$design-num-sp*100vw;
+      display: block;
+      letter-spacing: .1em;
+    }
   }
   .price{
     @include fz_vw(26);
@@ -850,6 +858,9 @@ main{
     @include fz_vw(26);
     letter-spacing: .02em;
     text-align: justify;
+    &.style_01{
+      letter-spacing: .03em;
+    }
     sup{
       @include fz_vw(20);
       position: relative;
@@ -935,6 +946,10 @@ main{
     }
     p{
       font-size: $summary-font-size;
+    }
+    .label{
+      font-size: 1.2rem;
+      margin-bottom: 15px;
     }
   }
   .price{

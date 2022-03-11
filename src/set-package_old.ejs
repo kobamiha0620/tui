@@ -12,7 +12,7 @@ var pageinit = {
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['setBuyBtn();','setVideo();','startScroll ();']
+  jsfunc:['setBuyBtn();','setVideo();']
 };
 %>
 <% if(pageinit.shopify!=='true'){%>
@@ -26,21 +26,65 @@ var pageinit = {
   <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
   <main role="main">
     <div id="container" class="multiGallery">
-      <div class="heroStyle_01 setMrg_05">
+      <div class="galleryWidget top nullWay setMrg_12">
         <div class="inner">
-          <div class="imgStyle style_01">
-            <% var imgInfo = {path:'hero_img_16',type:'jpg',alt:''};%>
-            <% if(pageinit.shopify!=='true'){%>
-              <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-            <% } else {%>
-              <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-            <% }%>
+          <div class="item active">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_15',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+            </div>
+            <!-- /.bgImg -->
           </div>
-          <!-- /.imgStyle -->
+          <!-- /.item -->
+          <div class="item">
+            <div class="bgImg">
+              <div class="inner">
+                <% var imgInfo = {path:'hero_img_16',type:'jpg',alt:''};%>
+                <% if(pageinit.shopify!=='true'){%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+                <% } else {%>
+                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+                <% }%>
+              </div>
+              <!-- /.inner -->
+              <div class="content style_07">
+                <div class="wrap">
+                  <div class="inner">
+                    <div class="col">
+                      <div class="summary">
+                        <p>オイルとセラム、対になるもの</p>
+                      </div>
+                      <!-- /.summary -->
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                  <!-- /.inner -->
+                </div>
+                <!-- /.wrap -->
+              </div>
+              <!-- /.content -->
+            </div>
+            <!-- /.bgImg -->
+          </div>
+          <!-- /.item -->
+          <div class="mask">
+            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
+            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
+            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+          </div>
+          <!-- /.mask -->
         </div>
         <!-- /.inner -->
       </div>
-      <!-- /.heroStyle_01 -->
+      <!-- /.galleryWidget -->
       <div class="gallerySep">
         <section class="secStyle_03 setMrg_22">
           <div class="inner">
@@ -69,27 +113,23 @@ var pageinit = {
               <div class="btnWrap setMrg_32">
                 <div class="inner">
                   <div class="col">
-                    <button type="button" class="btnStyle_05 ja customCartBtn" id="customCartBtn"><span class="normal">カートに追加する</span><span class="out">在庫切れ</span></button>
+                    <button type="button" class="btnStyle_05 customCartBtn" id="customCartBtn"><span class="normal">Add to cart</span><span class="out">Out of stock</span></button>
                   </div>
                   <!-- /.col -->
-                  <div class="col">
-                    <% if(pageinit.shopify!=='true'){%>
-                    <a href="set-package-s.html" class="btnStyle_09 ja"><span>定期購入はこちら</span></a>
-                    <% } else {%>
-                    <a href="{{ routes.root_url }}products/set-package-s" class="btnStyle_09 ja"><span>定期購入はこちら</span></a>
-                    <% }%>
-                  </div>
+                  <!--div class="col">
+                    <button type="button" class="btnStyle_05" id="customBuyBtn"><span>Buy it now</span></button>
+                  </div-->
                   <!-- /.col -->
                 </div>
                 <!-- /.inner -->
               </div>
               <!-- /.btnWrap -->
-              <p class="txStyle_03 setMrg_33">初回ご購入特典として、無料でギフトラッピングしてお届けいたします。<br>セット専用のラッピングボックス単体の販売もございます。<br class="sp"><a href="#gift" class="linkStyle_03">ご希望の方はこちら</a></p>
+              <p class="txStyle_03 setMrg_33">初回ご購入特典として、無料でギフトラッピングしてお届けいたします。<br>2回目以降のご購入のお客様でギフトラッピングをご希望の場合は、別途500円（税込）でご購入が可能となります。</p>
               <!-- /.txStyle_03 -->
               <div class="content">
                 <div class="sec">
                   <h3>オイルとセラム、対になるもの</h3>
-                  <div class="summary style_01">
+                  <div class="summary">
                     <p>他に余計なステップはいらず、シンプルかつ、肌への最適化を考え抜かれてうまれた組み合わせ、ブースターオイルとモイスチャーセラム。この二つを併せて使うことで、これまでにない肌の仕上がりを体感します。</p>
                   </div>
                   <!-- /.summary -->
@@ -142,10 +182,10 @@ var pageinit = {
                 <p>¥500<span>（税込）</span></p>
               </div>
               <!-- /.price -->
-              <div class="btnWrap style_01 setMrg_32">
+              <div class="btnWrap setMrg_32">
                 <div class="inner">
                   <div class="col">
-                    <button type="button" class="btnStyle_05 ja" id="optionBtn"><span class="normal">カートに追加する</span><span class="out">在庫切れ</span></button>
+                    <button type="button" class="btnStyle_05" id="optionBtn"><span class="normal">Add to cart</span><span class="out">Out of stock</span></button>
                   </div>
                   <!-- /.col -->
                   <!--div class="col">
@@ -182,40 +222,6 @@ var pageinit = {
           <!-- /.inner -->
         </section>
         <!-- /.secStyle_03 -->
-        <div class="heroStyle_03 setMrg_38">
-          <div class="inner">
-            <div class="bgImg">
-              <div class="inner">
-                <% var imgInfo = {path:'hero_img_15',type:'jpg',alt:''};%>
-                <% if(pageinit.shopify!=='true'){%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                <% } else {%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                <% }%>
-              </div>
-              <!-- /.inner -->
-              <div class="content style_07">
-                <div class="wrap">
-                  <div class="inner">
-                    <div class="col">
-                      <div class="summary style_01">
-                        <p>オイルとセラム、対になるもの</p>
-                      </div>
-                      <!-- /.summary -->
-                    </div>
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.inner -->
-                </div>
-                <!-- /.wrap -->
-              </div>
-              <!-- /.content -->
-            </div>
-            <!-- /.bgImg -->
-          </div>
-          <!-- /.inner -->
-        </div>
-        <!-- /.heroStyle_03 -->
         <div class="setMrg_24 way">
           <%- include(pageinit.path + 'assets/module/_cont-ntdds.ejs', {pageinit:pageinit});%>
         </div>

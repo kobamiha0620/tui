@@ -260,6 +260,9 @@
       color: $white;
       letter-spacing: .05em;
       font-weight: 500;
+      &.style_01{
+        text-align: center;
+      }
     }
   }
 }
@@ -286,6 +289,9 @@
     .summary{
       line-height: (36/20)+em;
       font-size: 2.0rem;
+      &.style_01{
+        text-align: left;
+      }
     }
   }
 }
@@ -1365,12 +1371,14 @@
     border: 1px solid $key-color1;
   }
   .product_02 &{
+    color: $key-color2;
     &::before{
       background-color: $white;
       border: 1px solid $key-color2;
     }
   }
   .product_03 &{
+    color: $key-color3;
     &::before{
       background-color: $white;
       border: 1px solid $key-color3;
@@ -1583,6 +1591,8 @@
   line-height: (40/20)+em;
   @include fz_vw(20);
   color: $key-color5;
+  font-weight: bold;
+  letter-spacing: .03em;
 }
 @media screen and (min-width: $break-point-middle) {
 .txStyle_03{
@@ -1636,11 +1646,20 @@
   line-height: (40/20)+em;
   color: $key-color1;
   margin-top: 20/$design-num-sp*100vw;
+  font-weight: bold;
+  letter-spacing: .05em;
+  .product_02 &{
+    color: $key-color2;
+  }
+  .product_03 &{
+    color: $key-color3;
+  }
 }
 @media screen and (min-width: $break-point-middle) {
 .txStyle_08{
   font-size: 1.0rem;
   margin-top: 12px;
+  white-space: nowrap;
 }
 }
 ////////////////////////////////////////////////////////////
@@ -1748,6 +1767,18 @@
 }
 @media screen and (min-width: $break-point-middle) {
 .linkStyle_02{
+  &:hover{
+    text-decoration: none;
+  }
+}
+}
+//////////////////////////////////////
+.linkStyle_03{
+  color: $key-color3;
+  text-decoration: underline;
+}
+@media screen and (min-width: $break-point-middle) {
+.linkStyle_03{
   &:hover{
     text-decoration: none;
   }
