@@ -26,68 +26,41 @@ var pageinit = {
   <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
   <main role="main">
     <div id="container" class="multiGallery">
-      <div class="galleryWidget top nullWay setMrg_12">
+      <div class="heroStyle_09 setMrg_12">
         <div class="inner">
-          <div class="item active">
-            <div class="bgImg style_02">
-              <div class="inner">
-                <h1>
-                <% var imgInfo = {path:'hero_img_02',type:'jpg',alt:'About us'};%>
-                <% if(pageinit.shopify!=='true'){%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                <% } else {%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                <% }%>
-                </h1>
-              </div>
-              <!-- /.inner -->
+          <div class="bgImg">
+            <div class="inner">
+              <% var imgInfo = {path:'hero_img_03',type:'jpg',alt:''};%>
+              <% if(pageinit.shopify!=='true'){%>
+                <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
+              <% } else {%>
+                <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
+              <% }%>
             </div>
-            <!-- /.bgImg -->
-          </div>
-          <!-- /.item -->
-          <section class="item">
-            <div class="bgImg style_01">
-              <div class="inner">
-                <% var imgInfo = {path:'hero_img_03',type:'jpg',alt:''};%>
-                <% if(pageinit.shopify!=='true'){%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                <% } else {%>
-                  <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                <% }%>
-              </div>
-              <!-- /.inner -->
-              <div class="content style_03">
-                <div class="wrap">
-                  <div class="inner">
-                    <div class="col">
-                      <h2>当たり前を、変えるもの</h2>
-                      <div class="summary">
-                        <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
-                      </div>
-                      <!-- /.summary -->
+            <!-- /.inner -->
+            <div class="content way">
+              <div class="wrap">
+                <div class="inner">
+                  <div class="col">
+                    <h2>当たり前を、変えるもの</h2>
+                    <div class="summary">
+                      <p>この年齢ならこれくらい、この肌質ならこんなもの。<br class="pc">そうした“当たり前” を変えるものがあるとしたら。<br class="pc">自分の中に眠っている可能性を引き出すように、まだ見ぬ“うつくしさ” を追求する。<br class="pc">あなたの当たり前を、変えるもの。いま一度、根幹から。</p>
                     </div>
-                    <!-- /.col -->
+                    <!-- /.summary -->
                   </div>
-                  <!-- /.inner -->
+                  <!-- /.col -->
                 </div>
-                <!-- /.wrap -->
+                <!-- /.inner -->
               </div>
-              <!-- /.content -->
+              <!-- /.wrap -->
             </div>
-            <!-- /.bgImg -->
-          </section>
-          <!-- /.item -->
-          <div class="mask">
-            <span class="head"><%- include('assets/module/_mask_01.ejs') %></span>
-            <span class="head"><%- include('assets/module/_mask_02.ejs') %></span>
-            <span class="foot"><%- include('assets/module/_mask_02.ejs') %></span>
-            <span class="foot"><%- include('assets/module/_mask_01.ejs') %></span>
+            <!-- /.content -->
           </div>
-          <!-- /.mask -->
+          <!-- /.bgImg -->
         </div>
         <!-- /.inner -->
       </div>
-      <!-- /.galleryWidget -->
+      <!-- /.heroStyle_01 -->
       <div class="gallerySep">
         <section class="secStyle_02 setMrg_14 way">
           <div class="inner">
@@ -105,7 +78,6 @@ var pageinit = {
             <!-- /.imgStyle_01 -->
             <div class="articleWrap_01">
               <div class="articleStyle_02">
-                <p class="numbering">Structure 1</p>
                 <h3>角質層の乱れが、<br class="sp">肌を無防備な状態に</h3>
                 <div class="summary">
                   <p>細胞間脂質、NMF、皮脂膜が減少、不足すると角質層の水分が蒸発しやすくなり、<br class="pc">肌の乾燥、肌荒れなどのトラブルを招きます。</p>
@@ -114,7 +86,6 @@ var pageinit = {
               </div>
               <!-- /.articleStyle_02 -->
               <div class="articleStyle_02">
-                <p class="numbering">Structure 2</p>
                 <h3>表皮の新陳代謝と、<br class="sp">肌荒れはつながっている</h3>
                 <div class="summary">
                   <p>表皮の新陳代謝が鈍化すると、肌の生まれ変わり<span>（ターンオーバー）</span>が不安定になり、<br class="pc">キメの乱れ、肌荒れ、保湿機能の衰えを招きます。</p>
@@ -123,7 +94,6 @@ var pageinit = {
               </div>
               <!-- /.articleStyle_02 -->
               <div class="articleStyle_02">
-                <p class="numbering">Structure 3</p>
                 <h3>バリア機能が低下することで<br class="sp">さまざまなトラブルが発生</h3>
                 <div class="summary">
                   <p>間違ったスキンケアをしたり食事や睡眠などの生活が乱れると、角質層の代謝が乱れて健康な角質細胞が育たなくなります。<br class="pc">細胞間脂質も作られにくく、スカスカの状態になると外的刺激が侵入し、<br class="pc">さまざまな肌トラブルを引き起こしやすくなります。</p>

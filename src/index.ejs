@@ -47,23 +47,6 @@ var pageinit = {
             <!-- /.content -->
           </div>
           <!-- /.item -->
-          <div class="item" id="cont_01_02">
-            <a href="{{ routes.root_url }}pages/about">
-              <div class="bgImg">
-                <div class="inner">
-                  <% var imgInfo = {path:'kv_img_03',type:'jpg',alt:''};%>
-                  <% if(pageinit.shopify!=='true'){%>
-                    <%- include(pageinit.path + 'assets/module/_img-temp_09.ejs', {imgInfo:imgInfo});%>
-                  <% } else {%>
-                    <%- include(pageinit.path + 'assets/module/_img-temp_15.ejs', {imgInfo:imgInfo});%>
-                  <% }%>
-                </div>
-                <!-- /.inner -->
-              </div>
-              <!-- /.bgImg -->
-            </a>
-          </div>
-          <!-- /.item -->
           <section class="item" id="cont_01_03">
             <a href="{{ routes.root_url }}pages/about">
               <div class="bgImg">
