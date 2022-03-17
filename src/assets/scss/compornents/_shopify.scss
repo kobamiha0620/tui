@@ -112,7 +112,7 @@ input.btn{
   color: $white;
   @include fz_vw(26);
   letter-spacing: .1em;
-  font-weight: bold;
+  font-weight: 500;
   transition: .3s;
   position: relative;
   background-color: transparent;

@@ -2,7 +2,7 @@
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .setMrg_01{
-  margin-bottom: 80/$design-num-sp*100vw;
+  margin-bottom: 46/$design-num-sp*100vw;
 }
 @media screen and (min-width: $break-point-middle) {
 .setMrg_01{
@@ -98,7 +98,7 @@
 }
 ///////////////////////////////////////
 .setMrg_12{
-  margin-bottom: 266/$design-num-sp*100vw;
+  margin-bottom: 190/$design-num-sp*100vw;
 }
 @media screen and (min-width: $break-point-middle) {
 .setMrg_12{
@@ -199,11 +199,11 @@
 }
 ///////////////////////////////////////
 .setMrg_23{
-  margin-bottom: 140/$design-num-sp*100vw;
+  margin-bottom: 60/$design-num-sp*100vw;
 }
 @media screen and (min-width: $break-point-middle) {
 .setMrg_23{
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 }
 }
 ///////////////////////////////////////
@@ -395,6 +395,14 @@
 @media screen and (min-width: $break-point-middle) {
 .setMrg_44{
   margin-bottom: 50px;
+}
+}
+///////////////////////////////////////
+.setMrg_45{
+}
+@media screen and (min-width: $break-point-middle) {
+.setMrg_45{
+  margin-bottom: 56px;
 }
 }
 ////////////////////////////////////////////////////////////

@@ -217,7 +217,7 @@ $delayH:200px;
       letter-spacing: .15em;
       //font-weight: normal;
       font-size: 1.6rem;
-      left: 66px;
+      left: 170px;
       top:-webkit-calc(50% - 50px);
       top:calc(50% - 50px);
       font-weight: 500;
@@ -1245,6 +1245,7 @@ $delayH:200px;
       @include fz_vw(40);
       line-height: 1em;
       letter-spacing: .15em;
+      font-weight: 500;
     }
     .btn{
       margin-top: 50/$design-num-sp*100vw;

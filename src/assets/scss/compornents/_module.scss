@@ -538,7 +538,7 @@ main{
   }
   .caution{
     @include fz_vw(20);
-    margin-top: 30/$design-num-sp*100vw;
+    margin-top: 0/$design-num-sp*100vw;
   }
   .elemWrap{
     margin-top: 85/$design-num-sp*100vw;
@@ -647,7 +647,7 @@ main{
   }
   .caution{
     font-size: 1.0rem;
-    margin-top: 8px;
+    margin-top: -5px;
   }
   .elemWrap{
     margin-top: 36px;
@@ -854,7 +854,7 @@ main{
     }
   }
   .summary{
-    line-height: (56/26)+em;
+    line-height: (47/26)+em;
     @include fz_vw(26);
     letter-spacing: .02em;
     text-align: justify;
@@ -870,7 +870,7 @@ main{
   .cautionList{
     line-height: 1em;
     @include fz_vw(20);
-    margin-top: 45/$design-num-sp*100vw;
+    margin-top: 10/$design-num-sp*100vw;
     li{
       margin-bottom: 10/$design-num-sp*100vw;
       &:last-child{
@@ -1017,7 +1017,7 @@ main{
   }
   .cautionList{
     font-size: 1.0rem;
-    margin-top: 30px;
+    margin-top: 8px;
     li{
       margin-bottom: 5px;
       &:last-child{
@@ -1050,6 +1050,7 @@ main{
 ////////////////////////////////////////////////////////////
 .navStyle_01{
   border-bottom: 1px solid #dcdddd;
+  @include fontEn;
   ul{
     // overflow: auto;
     // width: auto;

@@ -127,7 +127,7 @@ header .col-nav{
   }
   .productNav{
     //display: block!important;
-    padding: 36px 0 46px;
+    padding: 50px 0 46px;
     position: relative;
     li{
       margin-bottom: 20px;
@@ -314,12 +314,14 @@ header .col-iconNav{
   span{
     width: 10px;
     height: 10px;
-    left: 20px;
+    //left: 20px;
+    left: 19.5px;
   }
   span.head{
     top: $header-size;
     &:nth-child(2){
-      right: 20px;
+      //right: 20px;
+      right: 19.5px;
     }
   }
 }

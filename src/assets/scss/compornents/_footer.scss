@@ -9,7 +9,7 @@ footer{
 }
 @media screen and (min-width: $break-point-middle) {
 footer{
-  padding: 178px 20px $header-size;
+  padding: 178px 20px 20px;
   >.inner{
     text-align: center;
   }
@@ -40,7 +40,7 @@ footer{
 }
 @media screen and (min-width: $break-point-middle) {
 .footNav{
-  font-size: $summary-font-size;
+  font-size: 1.0rem;
   letter-spacing: .02em;
   padding-bottom: 0;
   display: inline-block;
@@ -61,9 +61,12 @@ footer{
   padding-bottom: 35/$design-num-sp*100vw;
   >*{
     display: inline-block;
-    min-width: 185/$design-num-sp*100vw;
+    min-width: 300/$design-num-sp*100vw;
     margin-bottom: 30/$design-num-sp*100vw;
     white-space: nowrap;
+    &:nth-child(1),&:nth-child(3){
+      min-width: 175/$design-num-sp*100vw;
+    }
   }
   a{
     display: inline-block;
@@ -78,7 +81,7 @@ footer{
 @media screen and (min-width: $break-point-middle) {
 .footNavJa{
   display: inline-block;
-  font-size: $summary-font-size;
+  font-size: 1.0rem;
   letter-spacing: .02em;
   padding-bottom: 0;
   >*{
@@ -86,6 +89,9 @@ footer{
     min-width: 0;
     margin-bottom: 0;
     padding: 0 12px;
+    &:nth-child(1),&:nth-child(3){
+      min-width: 0;
+    }
   }
 }
 }
@@ -169,6 +175,7 @@ footer{
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 .copyRightSec{
+  color: #c8c8c8;
   position: absolute;
   right: -42/$design-num-sp*100vw;
   bottom: 20/$design-num-sp*100vw;
@@ -183,7 +190,7 @@ footer{
   right: auto;
   left: 0;
   bottom: auto;
-  top: 0;
+  top: 6px;
 }
 }
 ////////////////////////////////////////////////////////////

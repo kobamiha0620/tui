@@ -112,11 +112,11 @@
     margin-bottom: 12px;
   }
   h3{
-    font-size: 1.6rem;
+    font-size: 2.0rem;
     margin-bottom: 12px;
   }
   .summary{
-    line-height: (26/12)+em;
+    line-height: (22/12)+em;
     font-size: $summary-font-size;
     span{
       font-size: $summary-font-size;
@@ -317,7 +317,12 @@
       >.inner.style_01{
         bottom: 52/$design-num*100vw;
         .btn{
-          bottom: 8/$design-num-sp*100vw;
+          bottom: 5/$design-num*100vw;
+        }
+      }
+      >.inner.style_02{
+        .btn{
+          bottom: -5/$design-num*100vw;
         }
       }
     }
@@ -393,6 +398,12 @@
       font-weight: 500;
       //font-weight: 600;
       margin: 24px 0 40px;
+      &.style_01{
+        span{
+          position: relative;
+          left: 10px;
+        }
+      }
     }
     .btn{
       >*{
@@ -490,7 +501,7 @@
       @include setTbl;
     }
     .col-content{
-      padding-right: 95/608*100%;
+      padding-right: 90/608*100%;
     }
     .col-img{
       width: 224/608*100%;
@@ -511,6 +522,9 @@
     h3{
       font-size: 2.0rem;
       line-height: (28/20)+em;
+      &.style_01{
+        letter-spacing: 0.05em;
+      }
       >span{
         font-size: 1.4rem;
       }
@@ -530,7 +544,7 @@
           margin-top: 0;
         }
         &:nth-child(n+3){
-          margin-top: 14px;
+          margin-top: 12px;
         }
       }
     }

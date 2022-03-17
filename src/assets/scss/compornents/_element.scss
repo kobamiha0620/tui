@@ -152,7 +152,7 @@
       margin-bottom: 28px;
     }
     .summary{
-      line-height: (30/12)+em;
+      line-height: (28/12)+em;
       font-size: $summary-font-size;
       font-weight: 500;
       color: $white;
@@ -249,7 +249,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 230/$design-num-sp*100vw;
+    top: 1100/$design-num-sp*100vw;
     .col{
       max-width: 518/$design-num-sp*100vw;
       margin: 0 auto;
@@ -413,7 +413,7 @@
     }
     h2{
       margin-top: 0;
-      font-size: 1.6rem;
+      font-size: 2.0rem;
       color: $white;
       font-weight: 500;
       line-height: 1em;
@@ -499,6 +499,8 @@
     margin-top: 85/$design-num-sp*100vw;
     @include fz_vw(20);
     margin-bottom: 8/$design-num-sp*100vw;
+    @include fontEn;
+    letter-spacing: .08em;
   }
   h2{
     font-weight: 500;
@@ -529,6 +531,7 @@
       border: 1px solid $key-black;
       border-radius: 10px;
       margin-bottom:16/$design-num-sp*100vw;
+      text-align: center;
       &:last-child{
         margin-bottom: 0;
       }
@@ -568,7 +571,6 @@
     margin-top: 0;
     line-height: 1em;
     font-size: $summary-font-size;
-    @include fontEn;
     letter-spacing: .04em;
     margin-bottom: 10px;
     font-weight: 500;
@@ -604,7 +606,6 @@
       border: 1px solid $white;
       border-radius: 10px;
       margin-bottom: 8px;
-      text-align: center;
       &:last-child{
         margin-bottom: 0;
       }
@@ -771,7 +772,7 @@
       display: block;
       @include fz_vw(20);
       font-weight: 500;
-      margin-top: 10/$design-num-sp*100vw;
+      margin-top: 20/$design-num-sp*100vw;
       letter-spacing: .04em;
     }
   }
@@ -1055,7 +1056,7 @@
 @media screen and (min-width: $break-point-middle) {
 .ttlStyle_06{
   line-height: 1em;
-  font-size: 1.6rem;
+  font-size: 2.0rem;
 }
 }
 //////////////////////////////////
@@ -1567,7 +1568,7 @@
 @media screen and (min-width: $break-point-middle) {
 .summaryStyle_03{
   font-size: $summary-font-size;
-  line-height: (30/12)+em;
+  line-height: (28/12)+em;
 }
 }
 ////////////////////////////////////
