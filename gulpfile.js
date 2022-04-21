@@ -222,54 +222,6 @@ function svgout (done) {
 
 exports.svgout = svgout;
 
-// sprite
-function spriteanime (done) {
-  let spriteData = gulp.src(dir.src + '/assets/spriteanime/logo/*.png')
-    .pipe(spritesmith({
-      imgName: 'sprite-logo.png', // スプライト画像
-      cssName: '_sprite-logo.scss', // 生成される CSS テンプレート
-      imgPath: '../images/sprite-logo.png', // 生成される CSS テンプレートに記載されるスプライト画像パス
-      cssFormat: 'scss', // フォーマット拡張子
-      cssVarMap: (sprite) => {
-        sprite.name = 'sprite-' + sprite.name; // 生成される CSS テンプレートに変数の一覧を記述
-      },
-      algorithm: 'left-right',
-      algorithmOpts: {
-        sort: false
-      }
-    }));
-  spriteData.img
-    .pipe(gulp.dest(dir.src + '/assets/images/')); // imgName で指定したスプライト画像の保存先
-  return spriteData.css
-    .pipe(gulp.dest(dir.src + '/assets/scss/foundations/'));
-  done();
-}
-exports.spriteanime = spriteanime;
-
-function spriteanime2 (done) {
-  let spriteData = gulp.src(dir.src + '/assets/spriteanime/about/*.png')
-    .pipe(spritesmith({
-      imgName: 'sprite-about.png', // スプライト画像
-      cssName: '_sprite-about.scss', // 生成される CSS テンプレート
-      imgPath: '../images/sprite-about.png', // 生成される CSS テンプレートに記載されるスプライト画像パス
-      cssFormat: 'scss', // フォーマット拡張子
-      cssVarMap: (sprite) => {
-        sprite.name = 'sprite-' + sprite.name; // 生成される CSS テンプレートに変数の一覧を記述
-      },
-      algorithm: 'left-right',
-      algorithmOpts: {
-        sort: false
-      }
-    }));
-  spriteData.img
-    .pipe(gulp.dest(dir.src + '/assets/images/')); // imgName で指定したスプライト画像の保存先
-  return spriteData.css
-    .pipe(gulp.dest(dir.src + '/assets/scss/foundations/'));
-
-  done();
-}
-exports.spriteanime2 = spriteanime2;
-
 // アイコンフォント作成タスク
 function fontout (done) {
   return gulp.src([dir.src + '/assets/iconfont/svg/*.svg'], {
@@ -356,7 +308,7 @@ exports.cssout = cssout;
 
 // 画像圧縮
 function taskImagemin (done) {
-  return gulp.src([dir.src + '/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif,svg}', '!' + dir.src + '/assets/iconfont/{,**/,**/**/,**/**/**/}*.*' /*, '!' + dir.src + '/assets/images/imgsvg.svg'*/, '!' + dir.src + '/assets/imgsvg/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/assets/spriteanime/{,**/,**/**/,**/**/**/}*.*'], {
+  return gulp.src([dir.src + '/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif,svg}', '!' + dir.src + '/assets/iconfont/{,**/,**/**/,**/**/**/}*.*' /*, '!' + dir.src + '/assets/images/imgsvg.svg'*/, '!' + dir.src + '/assets/imgsvg/{,**/,**/**/,**/**/**/}*.*'], {
     base: dir.src
   })
     .pipe(changed(dir.dist))
@@ -399,7 +351,7 @@ exports.imgmin = taskImagemin;
 
 // 複製
 function copyOtherFiles (done) {
-  return gulp.src([dir.src + '/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/{,**/,**/**/,**/**/**/}{*.scss,*.css,*.js,*.ejs,*.png,*.jpeg,*.jpg,*.gif,*.svg}', dir.src + '/{,**/,**/**/,**/**/**/}.htaccess', '!' + dir.src + '/iconfont/*.*', '!' + dir.src + '/assets/iconfont/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/assets/imgsvg/*.*', '!' + dir.src + '/assets/spriteanime/**/*.*'], {
+  return gulp.src([dir.src + '/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/{,**/,**/**/,**/**/**/}{*.scss,*.css,*.js,*.ejs,*.png,*.jpeg,*.jpg,*.gif,*.svg}', dir.src + '/{,**/,**/**/,**/**/**/}.htaccess', '!' + dir.src + '/iconfont/*.*', '!' + dir.src + '/assets/iconfont/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/assets/imgsvg/*.*'], {
     base: dir.src
   })
     .pipe(changed(dir.dist))
@@ -443,8 +395,6 @@ gulp.task('watch', function (done) {
   gulp.watch([dir.src + '/assets/iconfont/svg/*.svg'], gulp.series('fontout', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.scss'], gulp.series('sassout', 'bsReload'));
   // gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.css'], gulp.series('cssout', 'bsReload'))
-  gulp.watch([dir.src + '/assets/spriteanime/**/*.png'], gulp.series('spriteanime', 'bsReload'));
-  gulp.watch([dir.src + '/assets/spriteanime/**/*.png'], gulp.series('spriteanime2', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}images/*.{png,jpeg,jpg,gif,svg}', dir.src + '/{,**/,**/**/,**/**/**/}images/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif,svg}'], gulp.series('imgmin', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.ejs'], gulp.series('taskejs', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*_php.ejs'], gulp.series('taskejsphp', 'bsReload'));
@@ -462,6 +412,6 @@ gulp.task('default', gulp.parallel(bssync, 'watch'), function (done) {
 });
 
 // ソースから全ファイル出力
-gulp.task('destAll', gulp.series(cleanAll, gulp.parallel(jsbabel, jsmin, taskejs, sassout, fontout, svgout, spriteanime, spriteanime2, taskImagemin), taskejsphp, gulp.series(copyOtherFiles)), function (done) {
+gulp.task('destAll', gulp.series(cleanAll, gulp.parallel(jsbabel, jsmin, taskejs, sassout, fontout, svgout, taskImagemin), taskejsphp, gulp.series(copyOtherFiles)), function (done) {
   done();
 });
