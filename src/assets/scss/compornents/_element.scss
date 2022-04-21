@@ -88,6 +88,7 @@
       }
     }
     .btn{
+      display: block;
       margin-top: 80/$design-num-sp*100vw;
       >*{
         max-width: 290/$design-num-sp*100vw;
@@ -163,7 +164,7 @@
     .btn{
       margin-top: 44px;
       >*{
-        max-width: 140px;
+        width: 140px;
         margin: 0;
       }
       // font-weight: 400;

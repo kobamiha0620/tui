@@ -109,7 +109,11 @@
   product_01 detail-product
   {% elsif template == 'product.moisture-serum' %}
   product_02 detail-product
+  {% elsif template == 'product.moisture-serum-s' %}
+  product_02 detail-product
   {% elsif template == 'product.set-package' %}
+  product_03 detail-product
+  {% elsif template == 'product.set-package-s' %}
   product_03 detail-product
   {% elsif page.handle == 'about' %}
   about
@@ -157,7 +161,7 @@
           <li><a href="{{ routes.root_url }}products/booster-oil">BOOSTER OIL</a></li>
           <li><a href="{{ routes.root_url }}products/moisture-serum">MOISTURE SERUM</a></li>
           <li><a href="{{ routes.root_url }}products/set-package">SET PACKAGE</a></li>
-          <li><a href="{{ routes.root_url }}products#subscription">SUBSCRIPTION</a></li>
+          <li><a href="{{ routes.root_url }}pages/products#subscription">SUBSCRIPTION</a></li>
         </ul>
         <!-- /.productNav -->
       </div>

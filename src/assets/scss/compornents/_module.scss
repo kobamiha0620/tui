@@ -811,6 +811,8 @@ main{
   }
   .priceLabel{
     .label,.addLabel{
+      padding: 0;
+      color: $key-black;
       @include fontEn;
       @include fz_vw(26);
       line-height: 1em;
@@ -960,6 +962,9 @@ main{
     }
   }
   .priceLabel{
+    .label{
+      color: $key-black;
+    }
     .label,.addLabel{
       font-size: 1.4rem;
     }
