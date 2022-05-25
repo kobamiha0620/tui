@@ -1,5 +1,7 @@
 @charset "utf-8";
 // vars
+
+//クリアフィックス
 @mixin clearfix {
     clear: both;
     &:after {
@@ -8,6 +10,7 @@
         clear: both;
     }
 }
+
 
 ///decorate
 @mixin underShadow{
@@ -47,6 +50,7 @@
   padding-right: 40px;
 }
 
+//テーブルレイアウト
 @mixin setTbl{
 	display:table;
 	width:100%;
