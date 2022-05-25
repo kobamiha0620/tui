@@ -394,11 +394,11 @@ gulp.task('watch', function (done) {
   gulp.watch([dir.src + '/assets/imgsvg/*.svg'], gulp.series('svgout', 'bsReload'));
   gulp.watch([dir.src + '/assets/iconfont/svg/*.svg'], gulp.series('fontout', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.scss'], gulp.series('sassout', 'bsReload'));
-  gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.css'], gulp.series('cssout', 'bsReload'))
+  // gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.css'], gulp.series('cssout', 'bsReload'))
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}images/*.{png,jpeg,jpg,gif,svg}', dir.src + '/{,**/,**/**/,**/**/**/}images/{,**/,**/**/,**/**/**/}*.{png,jpeg,jpg,gif,svg}'], gulp.series('imgmin', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.ejs'], gulp.series('taskejs', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*_php.ejs'], gulp.series('taskejsphp', 'bsReload'));
-  gulp.watch([dir.wp + '/{,**/,**/**/,**/**/**/}*.php'], gulp.series('bsReload'))
+  // gulp.watch([dir.wp + '/{,**/,**/**/,**/**/**/}*.php'], gulp.series('bsReload'))
   gulp.watch([dir.src + '/assets/js/babel/*.js'], gulp.series('jsbabel', 'bsReload'));
   gulp.watch([dir.src + '/assets/js/*.js'], gulp.series('jsmin', 'bsReload'));
   gulp.watch([dir.src + '/{,**/,**/**/,**/**/**/}*.*', '!' + dir.src + '/{,**/,**/**/,**/**/**/}{*.css,*.js,*.ejs,*.png,*.jpeg,*.jpg,*.gif,*.svg}', dir.src + '/{,**/,**/**/,**/**/**/}.htaccess'], gulp.series('taskcopy', 'bsReload'));
