@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+//TOPページ画像のずれ解消
+.galleryWidget .item:first-child .bgImg{
+    top: -25px;
+}

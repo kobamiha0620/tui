@@ -3,6 +3,7 @@
  @include box-sizing(border-box);
 }
 
+
 *:before, *:after {
  @include box-sizing(border-box);
 }
@@ -12,6 +13,7 @@ html {
   font-size: 62.5%;
   height: -webkit-fill-available;
 }
+
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -23,8 +25,8 @@ body {
 	-webkit-text-rendering: optimizelegibility;
 	font-size: 1.2rem;
 	font-weight: 400;
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
+  	text-size-adjust: none;
+  	-webkit-text-size-adjust: none;
 }
 
 input, button, select, textarea {
