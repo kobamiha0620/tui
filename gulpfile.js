@@ -49,7 +49,7 @@ const spritesmith = require('gulp.spritesmith');
 // const composer = require('gulp-uglify/composer')
 // const uglify = composer(uglifyes, console)
 const uglify = require('gulp-uglify');
-// const babel = require('gulp-babel');
+const babel = require('gulp-babel');
 // const uglify = require('gulp-uglify-es')
 
 // ejs関連
