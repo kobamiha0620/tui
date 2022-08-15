@@ -1,0 +1,69 @@
+<%
+// 以下の設定値を記入のこと
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  ogimage : '' ,
+  path : '' ,
+  shopify : '',
+  category : ['para30'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ();','setBuyBtn();','setVideo();']
+};
+%>
+<% if(pageinit.shopify!=='true'){%>
+<%- include(pageinit.path + 'assets/module/_head.ejs',{pageinit : pageinit}) %>
+<%- include(pageinit.path + 'assets/module/_header.ejs',{pageinit : pageinit}) %>
+<% } else {%>
+{% layout 'theme.tui' %}
+<% }%>
+<div id="outerMenu">
+    <%# ▼▼▼ここからページ内のHTMLを記載▼▼▼ %>
+
+    <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
+        <div class="page-width">
+            <div class="grid">
+                <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+                    <div class="section-header text-center">
+                        <h1>para30</h1>
+                    </div>
+                    <style>
+                        header {
+                            display: none !important
+                        }
+
+                        footer {
+                            display: none !important
+                        }
+                    </style>
+                    <div class="rte">
+                        <script>
+                            function redirect(){
+    location.href='https://tui-beauty.com/discount/PARA30?redirect=/pages/discount30';
+}
+    redirect();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <%# ▲▲▲ここまでページ内のHTMLを記載▲▲▲ %>
+    <% if(pageinit.shopify!=='true'){%>
+    <%- include(pageinit.path + 'assets/module/_footer.ejs',{pageinit : pageinit}) %>
+    <% } else {%>
+    {% include 'footer-tui' %}
+    <% }%>
+</div>
+<!-- /#outerMenu -->
+<%- include(pageinit.path + 'assets/module/_foot.ejs',{pageinit : pageinit}) %>
+<% if(pageinit.shopify!=='true'){%>
+</body>
+
+</html>
+<% }%>
